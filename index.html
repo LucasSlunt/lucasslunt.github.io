@@ -4,12 +4,14 @@
 <body style="background-color:green;">
 
 <button type="button" onclick="document.getElementById('buttonText').innerHTML='thanks'">Button</button>
-
 <p id="buttonText">Please press the button</p>
 
+<p id="demo">Click me to change the background</p>
 <script>
-function myfunction() {
+document.getElementById("demo").onclick = function() {myFunction()};
 
+function myfunction() {
+document.body.style.backgroundColor = "powderblue";
   }
 </script>
 </body>
