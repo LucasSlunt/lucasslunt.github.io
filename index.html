@@ -8,10 +8,9 @@
 
 <p id="demo">Click me to change the background</p>
 <script>
-document.getElementById("demo").onclick = function() {myFunction()};
+document.getElementById("demo").onclick = function() {changeBackground()};
 
-function myFunction() {
-  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+function changeBackground() {
   document.body.style.backgroundColor = "red";
 }
 </script>
