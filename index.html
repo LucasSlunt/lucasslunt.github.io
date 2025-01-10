@@ -11,7 +11,10 @@
 document.getElementById("demo").onclick = function() {changeBackground()};
 
 function changeBackground() {
+  if (document.body.style.background == "green")
   document.body.style.backgroundColor = "powderblue";
+  else
+  document.body.style.backgroundColor = "green";
 }
 </script>
 </body>
