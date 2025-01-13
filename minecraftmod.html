@@ -4,14 +4,14 @@
 <h3>An unfinished mod for minecraft java edition, version 1.19</h3>
 <body>
 <p>
-Fishing in minecraft has missed potential. There are only 4 varieties of fish you can catch, and all of them can be caught anywhere. Fishing is unaffected by time, weather, biome, and dimension. The only exception is bamboo, which can be fished up in the jungle. This outlier gave me the idea to make a mod where the player could catch different fish depending on which biome they're in. After all, since the game already had code to determine fishing loot based on biome, how hard could it be to reuse that code for something interesting?
+Fishing in minecraft has missed potential. There are only 4 varieties of fish you can catch, and all of them can be caught anywhere. Fishing is unaffected by time, weather, biome, or dimension. The only exception is bamboo, which can be fished up in the jungle. This outlier gave me the idea to make a mod where the player could catch different fish depending on which biome they're in. After all, since the game already had code to determine fishing loot based on biome, how hard could it be to reuse that code for something interesting?
 </p>
 <p>
 When adding new fish, I wanted a few basic ones to make each biome interesting. I wanted to to make fishing exciting, and encourage players to seek out every fish variety, or at least to try fishing when they entered a new environment. I did this by creating many fish with unique effects, requirements to catch them, or that could be used to craft unique items. To keep the games progression system balanced, everything you can get from fishing fits in with the early to mid game progression.
 </p>
 </body>
 <h2>New Items</h2>
-<img src="C:\Users\slunt\UniversityStuff\UBC_Year_3\githubWebsite\pushedWebsite\minecraft_media\all_items.png" alt = "all items in the mod" width = "400">
+<img src="\minecraft_media\gamplay\all_items.png" alt = "all items in the mod" width = "400">
 <body>
 <p>Arkus's Fishing adds 23 new fish varieties to catch, and 7 new items that can be made from the items you fish up. Below is a full list of all the new items</p>
 
@@ -24,7 +24,7 @@ When adding new fish, I wanted a few basic ones to make each biome interesting. 
 	<th>Use</th>
 </tr>
 <tr>
-    	<td><img src="C:\Users\slunt\UniversityStuff\UBC_Year_3\githubWebsite\pushedWebsite\minecraft_media\textures\item\bass.png" alt="Bass" width="96" class="itemTexture"></td>
+    	<td><img src="\minecraft_media\textures\item\bass.png" alt="Bass" width="96" class="itemTexture"></td>
         <td>Bass</td>
 	<td><p>A fish caught in muddy warm biomes</p></td>
 	<td><p>Fishing in desert, jungle, plains, swamp and river biomes</p></td>
@@ -56,7 +56,7 @@ When adding new fish, I wanted a few basic ones to make each biome interesting. 
         <td>Jellyfish</td>
 	<td><p>A slimy fish from the sea</p></td>
 	<td><p>Fishing in beach, tropical, and ocean biomes during rainy weather</p></td>
-	<td><p>crafted into a slimeball</p></td>
+	<td><p>Crafted into a slimeball. Affects the player with hunger when eaten</p></td>
 </tr>
 <tr>
     	<td><img src="\minecraft_media\textures\item\tigerfish.png" alt="Tigerfish" width="96" class="itemTexture"></td>
@@ -70,14 +70,14 @@ When adding new fish, I wanted a few basic ones to make each biome interesting. 
         <td>Frozen Trout</td>
 	<td><p>A trout who was frozen solid</p></td>
 	<td><p>Fishing in cold biomes</p></td>
-	<td><p>cooked into trout, crafted into an ice block</p></td>
+	<td><p>Cooked into trout, crafted into an ice block</p></td>
 </tr>
 <tr>
     	<td><img src="\minecraft_media\textures\item\tuna.png" alt="Tuna" width="96" class="itemTexture"></td>
         <td>Tuna</td>
 	<td><p>A large fish from the ocean</p></td>
 	<td><p>Fishing in beach and ocean biomes</p></td>
-	<td><p>cooked into large cooked fish</p></td>
+	<td><p>Cooked into large cooked fish</p></td>
 </tr>
 <tr>
     	<td><img src="\minecraft_media\textures\item\coalacanth.png" alt="Coalacanth" width="96" class="itemTexture"></td>
@@ -112,7 +112,7 @@ When adding new fish, I wanted a few basic ones to make each biome interesting. 
         <td>Cave Eel</td>
 	<td><p>A pale unsightly eel</p></td>
 	<td><p>Fishing in caves</p></td>
-	<td><p>An ingredient in eel soup</p></td>
+	<td><p>An ingredient in eel soup. Affects the player with weakness when eaten</p></td>
 </tr>
 <tr>
     	<td><img src="\minecraft_media\textures\item\charged_eel.png" alt="Charged Eel" width="96" class="itemTexture"></td>
@@ -154,7 +154,7 @@ When adding new fish, I wanted a few basic ones to make each biome interesting. 
         <td>Swordfish</td>
 	<td><p>A large fish in the style of a minecraft sword</p></td>
 	<td><p>Fishing anywhere</p></td>
-	<td><p>Effectively the same as an iron sword. Can be enchanted when fished up. Cooked into large fish</p></td>
+	<td><p>Effectively the same as an iron sword. Can be already enchanted when fished up. Cooked into large fish</p></td>
 </tr>
 <tr>
     	<td><img src="\minecraft_media\textures\item\small_cooked_fish.png" alt="Small Cooked Fish" width="96" class="itemTexture"></td>
@@ -189,7 +189,7 @@ When adding new fish, I wanted a few basic ones to make each biome interesting. 
         <td>Starfish</td>
 	<td><p>A starfish. Originally named "fallen starfish"</p></td>
 	<td><p>Fishing in beach and cold biomes</p></td>
-	<td><p>An ingredient in the moon clock and starfish block (unimplemented)</p></td>
+	<td><p>An ingredient in the moon clock (unimplemented), and starfish block</p></td>
 </tr>
 <tr>
     	<td><img src="\minecraft_media\textures\item\urchin_item.png" alt="Sea Urchin" width="96" class="itemTexture"></td>
@@ -198,8 +198,159 @@ When adding new fish, I wanted a few basic ones to make each biome interesting. 
 	<td><p>Fishing in beach, tropical, and ocean biomes</p></td>
 	<td><p>Can be thrown at entities, damaging them</p></td>
 </tr>
+<tr>
+    	<td><img src="\minecraft_media\textures\item\urchin_block.png" alt="Sea Urchin Block" width="96" class="itemTexture"></td>
+        <td>Giant Urchin</td>
+	<td><p>A huge spiny creature</p></td>
+	<td><p>Fishing in beach, tropical, and ocean biomes</p></td>
+	<td><p>Can be placed. Causes damage on contact, like a cactus. When placed outside of water, it will quickly die, transforming into a dead urchin block</p></td>
+</tr>
+<tr>
+    	<td><img src="\minecraft_media\textures\item\starfish_block.png" alt="Starfish Block" width="96" class="itemTexture"></td>
+        <td>Starfish Block</td>
+	<td><p>A block of coral, covered in glowing starfish</p></td>
+	<td><p>Crafted from coral and starfish</p></td>
+	<td><p>Can be placed. Acts as a light source</p></td>
+</tr>
+<tr>
+    	<td><img src="\minecraft_media\textures\item\dead_urchin_block.png" alt="Dead Urchin Block" width="96" class="itemTexture"></td>
+        <td>Dead Urchin Block</td>
+	<td><p>A giant urchin that dried out and lost its spines.</p></td>
+	<td><p>The result of leaving a giant urchin block outside of water</p></td>
+	<td><p>Can be placed. Can be crafted into bonemeal. An ingredient in urchin lanterns</p></td>
+</tr>
+<tr>
+    	<td><img src="\minecraft_media\textures\item\urchin_lantern.png" alt="Urchin Lantern" width="96" class="itemTexture"></td>
+        <td>Urchin Lantern</td>
+	<td><p>The jack 'o' lantern version of a dead urchin</p></td>
+	<td><p>Crafted from a dead urchin block and a torch</p></td>
+	<td><p>Can be placed. Acts as a light source</p></td>
+</tr>
 </table>
+</body>
+<h2>How the fishing system works</h2>
+<h3>The vanilla fishing system</h3>
+<body><p>
+In vanilla minecraft, fishing is calculated through loot tables in JSON files. When a player casts their fishing rod, the game runs the main fishing loot table, randomly selecting the 'fish', 'junk', or 'treasure' loot table. Each element in a loot table has a weight associated with it, the chance that that element gets selected. the 'fish' loot table has an 85% chance of being selected, 'junk' has a 10% chance, and 'treasure' has a 5% chance. If the players fishing rod is enchanted with the Luck of the Sea enchantment, the weight for the 'treasure' loot table is increased, and the weight for the 'junk' loot table is decreased. There are several checks that can be preformed before an element in a loot table is selected, such as the biome the player is in, the weather, dimension, and even how many in-game days have passed.
+</p></body>
+<h3>How I modified the fishing system</h3>
+<body><p>
+Editing the main fishing loot table, I kept the 'junk' and 'treasure' loot tables, but replaced the more general 'fish' loot table with a new table, which I called I called "fishing_biome'. This table condensed the list of nearly 60 biomes in minecraft into 11 biome sub catagories. Each of these 11 biome catagories has its own loot table, filled with different fish that seem appropriate for that biome type. When selected by the main fishing loot table, the fishing biome table would see which biome the player was in, and return the loot table corresponding to it. Some biomes fit into multiple catagories, such as the frozen ocean biome, which I catagorized as both 'ocean' and 'cold'. In cases like these, the fishing biome table randomly selected which of the possible loot tables to use.\nIn addion to biome, some fish require certain weather or time conditions to be caught. This was done by including these conditions inside of the specific biome loot tables I used the weighting system from earlier to make some fish more rare than others, for example, trout are quite common in the biomes they appear in, but moonfish and sturgeon are quite difficult to catch.\nI wanted to include something in both the junk and the treasure tables, as fish that could be caught anywhere, with the chance of catching them affected by Luck of the Sea. Goldfish appear in the treasure table, because gold is quite valuable. Swordfish appear in the junk table, because they are most useful for early and midgame players, without access to higher tiers of swords. Endgame players are likely to find swordfish useless, and as swordfish are tools, they are unstackable and could clog up players inventory. By having them in the junk table, endgame players with Luck of the Sea are less likely to fish them up and become frusterated with fishing.
+</p></body>
+<h3>The biome sub catagories</h3>
+<body>
+<table>
+<tr>
+	<th></th>
+	<th>Biome Catagory</th>
+	<th>Biomes in it</th>
+</tr>
+<tr>
+	<td><img src = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/21/Beach.png/revision/latest/scale-to-width-down/180?cb=20230112181009" width="200"></td>
+	<td>Beach</td>
+	<td>Beach, Mushroom fields, Stoney shore</td>
+</tr>
+<tr>
+	<td><img src = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/68/Dripstone_Caves.png/revision/latest/scale-to-width-down/180?cb=20210705084518" width="200"></td>
+	<td>Cave</td>
+	<td>Deep dark, Dripstone caves, Lush caves</td>
+</tr>
+<tr>
+	<td><img src = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/a/a3/Snowy_Slopes_1.18.png/revision/latest/scale-to-width-down/180?cb=20220513083229" width="200"></td>
+	<td>Cold</td>
+	<td>Deep frozen ocean, Frozen ocean, Frozen peaks, Frozen river, Ice spikes, Jagged Peaks, Snowy beach, Snowy slopes, Snowy taiga, Stoney peaks, Windswept gravelly hills</td>
+</tr>
+<tr>
+	<td><img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/2d/Warm_Ocean.png/revision/latest/scale-to-width-down/180?cb=20230112152109" width ="200" ></td>
+	<td>Tropical</td>
+	<td>Warm ocean</td>
+</tr>
+<tr>
+	<td><img src = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/6d/Desert.png/revision/latest/scale-to-width-down/180?cb=20220103192043" width="200"></td>
+	<td>Desert</td>
+	<td>Badlands, Desert, Eroded badlands, Savanna, Savanna plateau, Windswept savanna, Wooded badlands</td>
+</tr>
+<tr>
+	<td><img src = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/a/ae/Jungle.png/revision/latest/scale-to-width-down/180?cb=20220617002056" width="200"></td>
+	<td>Jungle</td>
+	<td>Bamboo jungle, Jungle, Mangrove swamp, Sparse jungle</td>
+</tr>
+<tr>
+	<td><img src ="https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/57/Mushroom_Fields.png/revision/latest/scale-to-width-down/180?cb=20230112131126" width="200"></td>
+	<td>Mushroom Island</td>
+	<td>Mushroom fields</td>
+</tr>
+<tr>
+	<td><img src = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/16/Deep_Lukewarm_Ocean.png/revision/latest/scale-to-width-down/180?cb=20230112160747" width="200"></td>
+	<td>Ocean</td>
+	<td>Cold ocean, Deep cold ocean, Deep frozen ocean, Deep lukewarm ocean, Deep ocean, Frozen ocean, Lukewarm ocean, Ocean</td>
+</tr>
+<tr>
+	<td><img src = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/52/Plains.png/revision/latest/scale-to-width-down/180?cb=20220324022601" width="200"></td>
+	<td>Plains</td>
+	<td>Birch forest, Cherry grove, Dark forest, Flower forest, Forest, Grove, Meadow, Old growth birch forest, Old growth pine taiga, Old growth spruce taiga, Plains, Sunflower plains, Windswept hills,</td>
+</tr>
+<tr>
+	<td><img src = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/b/ba/River.png/revision/latest/scale-to-width-down/180?cb=20230112121455" width="200"></td>
+	<td>River</td>
+	<td>River</td>
+</tr>
+<tr>
+	<td><img src = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3e/Swamp.png/revision/latest/scale-to-width-down/180?cb=20230112124954" width="200"></td>
+	<td>Swamp</td>
+	<td>Swamp, Mangrove swamp</td>
+</tr>
+<tr>
+	<td><img src = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/11/Nether.png/revision/latest/scale-to-width-down/180?cb=20211221091010" width="200"></td>
+	<td>Nether</td>
+	<td>All nether dimension biomes</td>
+</tr>
+<tr>
+	<td><img src = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/06/Small_End_Islands.png/revision/latest/scale-to-width-down/180?cb=20210310033835" width="200"></td>
+	<td>End</td>
+	<td>All end dimension biomes</td>
+</tr>
+</table
+<p>Images sourced from <a href = "https://minecraft.fandom.com/wiki/Biome" target = "_blank">Minecraft Fandom Wiki</a></p>
+</body>
+<h2>Media</h2>
+<body>
+<img src="\minecraft_media\gamplay\fallen_star_lights.png" width="200">
+<p>Starfish blocks. It was quite hard to draw 5 point stars on a 16x16 pixel canvas, but I like how they turned out.</p>
+<table>
+<tr>
+	<td><img src="\minecraft_media\gamplay\mushroom_stew_crafting_shapeless.png" width = "200"></td>
+	<td><img src="\minecraft_media\gamplay\mushroom_stew_crafting.png" width = "200"></td>
+</tr>
+</table>
+<p>Some crafting recipes are shapeless, like this mushroom soup recipe.</p>
 
+<video width="300">
+<source src="\minecraft_media\gifs\urchin_demo.mp4" type="video/mp4">
+Your browser doesn't support videos :(
+</video>
+
+<img src="\minecraft_media\gamplay\moon_clock.png" width = "200">
+<p>The moon clock is an item that was meant display the current moon phase, like how a regular clock shows the time of day</p>
+<img src="\minecraft_media\gamplay\cooking_fish.gif" width = "200">
+<p>The coalacanth is a fish found in the desert and caves, and can be used as fuel in furnace.</p>
+<img src="\minecraft_media\gamplay\eating_charged_eel.gif" width = "200">
+<p>Some fish have unexpected effects when eaten. Charged eels cause the player damage, as if they explode when eaten.</p>
+<img src="\minecraft_media\gamplay\eating_jellyfish.gif" width = "200">
+<p>Eating jellyfish causes hunger.</p>
+<img src="\minecraft_media\gamplay\jungle_fishing.gif" width = "200">
+<p>Fishing in the jungle</p>
+<img src="\minecraft_media\gamplay\fishing_urchin.gif" width = "200">
+<p>Fishing on the beach</p>
+<img src="\minecraft_media\gamplay\fishing_tuna.gif" width = "200">
+<p>Fishing in the ocean</p>
 
 </body>
+<h2>What I would do differently</h2>
+<body>
+<p>
+I currently have no plans to continue this project, or restart it. If I were to begin this again however, there are a few things I would change. The current system of calling loot tables based on a hand crafted list of biome catagories is tedious, and could lead to confusion if a player doesn't know which biomes are associated with each loot table. It also isn't compatible with with other mods. Instead, I would have loot tables based on minecrafts biome tempurature system, and a few loot tables for specific biomes like mushroom islands. I would also like to implement more fish with unique conditions for catching them, such as player height or moon phase.
+</p>
+</body>
 </html>
+
