@@ -3,7 +3,7 @@
 <a href ="/lucasslunt.github.io/index.html">Main page</a>
 <h1>Arkus's Fishing</h1>
 <h3>An unfinished mod for minecraft java edition, version 1.19</h3>
-<body>
+<body style="background-color:Aquamarine;">
 <p>
 Fishing in minecraft has missed potential. There are only 4 varieties of fish you can catch, and all of them can be caught anywhere. Fishing is unaffected by time, weather, biome, or dimension. The only exception is bamboo, which can be fished up in the jungle. This outlier gave me the idea to make a mod where the player could catch different fish depending on which biome they're in. After all, since the game already had code to determine fishing loot based on biome, how hard could it be to reuse that code for something interesting?
 </p>
@@ -11,19 +11,26 @@ Fishing in minecraft has missed potential. There are only 4 varieties of fish yo
 I created this mod using the <a href="https://docs.minecraftforge.net/en/1.21.x/" target = "_blank">Minecraft Forge</a> modding API, which contains a decompiled and deobfuscated version of minecrafts source code. I wrote new code, reused code from areas of the game, in both java and JSON files. I also created all the textures myself, using <a href="https://www.gimp.org/" target = "_blank">GIMP</a>, a free open source image manipulation software similar to photoshop. Though I never finished the project (I began my second year of university and no longer had the time to obsessively play minecraft), I'm proud of how much I achieved, and may pick it back up one day. You can find the full project on my github <a href ="https://github.com/LucasSlunt/forge-1.20.1-47.1.39-mdk" target = "_blank">here</a>.
 </p>
 <p>
-When adding new fish, I wanted a few basic ones to make each biome interesting. I wanted to to make fishing exciting, and encourage players to seek out every fish variety, or at least to try fishing when they entered a new environment. I did this by creating many fish with unique effects, requirements to catch them, or that could be used to craft unique items. To keep the games progression system balanced, everything you can get from fishing fits in with the early to mid game progression.
-</p>
 </body>
 <h2>New Items</h2>
-<img src="\minecraft_media\gamplay\all_items.png" alt = "all items in the mod" width = "400">
+When adding new fish, I wanted a few basic ones to make each biome interesting. I wanted to to make fishing exciting, and encourage players to seek out every fish variety, or at least to try fishing when they entered a new environment. I did this by creating many fish with unique effects, requirements to catch them, or that could be used to craft unique items. To keep the games progression system balanced, everything you can get from fishing fits in with the early to mid game progression.
+</p>
 <body>
+<img src="\minecraft_media\gamplay\all_items.png" alt = "all items in the mod" width = "400">
 <p>Arkus's Fishing adds 23 new fish varieties to catch, and 7 new items that can be made from the items you fish up. Below is a full list of all the new items</p>
+
 <style>
 .itemTexture{
 image-rendering:pixelated;
 }
+.table{
+border: 1px solid black;
+border-collapse: collapse;
+background-color:bisque;
+}
 </style>
-<table>
+
+<table class = "table">
 <tr>
 	<th>Image</th>
     	<th>Item Name</th>
@@ -40,7 +47,7 @@ image-rendering:pixelated;
 </tr>
 <tr>
     	<td><img src="\minecraft_media\textures\item\trout.png" alt="Trout" width="96" class="itemTexture"></td>
-        <td>Bass</td>
+        <td>Trout</td>
 	<td><p>A fish commonly caught in shallow waters.</p></td>
 	<td><p>Fishing in beach, cold, plains, and river biomes</p></td>
 	<td><p>Cooked into small cooked fish</p></td>
@@ -247,7 +254,7 @@ Editing the main fishing loot table, I kept the 'junk' and 'treasure' loot table
 </p></body>
 <h3>The biome sub catagories</h3>
 <body>
-<table>
+<table class="table">
 <tr>
 	<th></th>
 	<th>Biome Catagory</th>
@@ -336,13 +343,12 @@ Editing the main fishing loot table, I kept the 'junk' and 'treasure' loot table
 <source src="\minecraft_media\gifs\urchin_demo.mp4" type="video/mp4">
 Your browser doesn't support videos :(
 </video>
-<p>A demo of the sea urchins and their uses. The giant urchin block is probably the most complicated asset in this mod! The code for throwing the sea urchins is based on the code for snowballs, and I never figured out how to change the texture of the in-air projectile, which is why it appears as a snowball.</p>
+<p>A demo of the sea urchins and their uses. The giant urchin block is probably the most complicated asset in this mod! There is a cut in the middle of the video, because giant urchins take a long time to die, and transform into dead urchins. The code for throwing the sea urchins is based on the code for snowballs, and I never figured out how to change the texture of the in-air projectile, which is why it appears as a snowball.</p>
 
-<img src="\minecraft_media\gamplay\moon_clock.png" width = "400">
 <table>
 <tr>
 	<td><img src="\minecraft_media\gamplay\moon_clock.png" width = "400"></td>
-	<td><img src="\minecraft_media\gamplay\moon_clock_full.gif" width = "400"></td>
+	<td><img src="\minecraft_media\gifs\moon_clock_full.gif" width = "400"></td>
 </tr>
 </table>
 <p>The moon clock is an item that was meant display the current moon phase, like how a regular clock shows the time of day. It has 8 different textures, one for each phase of the moon.</p>
@@ -353,17 +359,17 @@ Your browser doesn't support videos :(
 <img src="\minecraft_media\gifs\eating_jellyfish.gif" width = "400">
 <p>Eating jellyfish causes hunger.</p>
 <img src="\minecraft_media\gifs\jungle_fishing.gif" width = "400">
-<p>Fishing in the jungle</p>
+<p>Fishing in the jungle.</p>
 <img src="\minecraft_media\gifs\fishing_urchin.gif" width = "400">
-<p>Fishing on the beach</p>
+<p>Fishing on the beach.</p>
 <img src="\minecraft_media\gifs\fishing_tuna.gif" width = "400">
-<p>Fishing in the ocean</p>
+<p>Fishing in the ocean.</p>
 
 </body>
 <h2>What I would do differently</h2>
 <body>
 <p>
-I currently have no plans to continue this project, or restart it. If I were to begin this again however, there are a few things I would change. The current system of calling loot tables based on a hand crafted list of biome catagories is tedious, and could lead to confusion if a player doesn't know which biomes are associated with each loot table. It also isn't compatible with with other mods. Instead, I would have loot tables based on minecrafts biome tempurature system, and a few loot tables for specific biomes like mushroom islands. I would also like to implement more fish with unique conditions for catching them, such as player height or moon phase.
+I currently have no plans to continue this project, or restart it. If I were to begin this again however, there are a few things I would change. The current system of calling loot tables based on a hand crafted list of biome catagories is tedious, and could lead to confusion if a player doesn't know which biomes are associated with each loot table. I knew basically nothing about the software development process when I started this project, so I didn't plan systems like this as well as I would've liked. The fishing system I made also unfortunately isn't compatible with with other mods. To make it compatible, I would have loot tables based on minecrafts biome tempurature system, and a few loot tables for specific biomes like mushroom islands. I would also like to implement more fish with unique conditions for catching them, such as player height or moon phase.
 </p>
 </body>
 </html>
