@@ -55,7 +55,20 @@
     <iframe width="900" height = "480"
     src="https://www.youtube.com/embed/Blzf_Is54uc">
     </iframe>
-    <p class = "video-description">Video description lorem ipsum dolores yabba dabba doo</p>
+    <p class = "description" id = "video-description">
+        In this project, I have used Unity, Gaia, and Blender to create a virtual world
+         around the theme of mountains and berry-picking.
+        One of my goals for the project was to emulate a small part of the water system, where 
+         large rivers are formed by smaller streams in the mountains. I'm particularily proud
+          of the fog, it almost feels refreshing to walk through.
+          <br><br>
+         Although Gaia provided many different types of foliage for the world, I wanted to 
+         create some of my own. I added patches of strawberries as
+         I enjoy picking them in the wild, and 
+         strawberries seemed like a fun plant to model. Along with the foliage , I 
+         added bridges, fences, crates, baskets, and various other pieces of interest to 
+         create a world that's interesting and cohesive.
+    </p>
 </div>
 
 <div class = "media-container">
@@ -67,7 +80,7 @@
 
     <div class = "lower-media-row">
         <button type="button" class = "media-description-button" id = "button-prev"><</button>
-        <p class = "video-description" id = "pictureDesc">Image description 1</p>
+        <p class = "description" id = "pictureDesc">Image description 1</p>
         <button type="button" class = "media-description-button" id = "button-next">></button>
     </div>
     
@@ -128,12 +141,21 @@
         font-family: "Lucida Console", "Courier New", monospace;
 
     }
-    .video-description{
-        font-family: "Lucida Console", "Courier New", sans-serif;
+    .description{
+        font-size: 15px;
+        font-family:  "Courier New", sans-serif;
+        max-width: 35em;
     }
-    #pictureDesc{
-            max-width: 40em;
-        }
+
+    #video-description{
+        padding: 1em;
+        margin-left: 1em;
+        font-size: 18px;
+        max-width: 30em;
+        background-color: rgb(212, 237, 246);
+        border-radius: 2em;
+    }
+
 </style>
 
 </html>
