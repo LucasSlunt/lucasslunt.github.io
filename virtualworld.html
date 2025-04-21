@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+    <body onload="main()"><script src="./virtualworldscript.js"></script></body>
 
-<div class = "project-header">
+<div class = "project-header" >
     
     <div class = "date-and-title-container">
-        <div class = "project-date">Date</div>
-        <div class = "project-title">Project Title</div>
+        <div id = "project-date"> </div>
+        <div id = "project-title">Loading...</div>
     </div>
     <div class = "spacer"></div>
     
-    <div class = "project-description">Project Description lorem ipsum dolores yabba yabba doo aaaaaaaaaa aaaaaaa aaaaaaaaaaa aa aaa</div>
+    <div id = "project-description"> </div>
 </div>
 
 <style>
@@ -34,15 +35,15 @@
         flex: 1;
     }
 
-    .project-date{
+    #project-date{
         font-size: 20px;
     }
 
-    .project-title{
+    #project-title{
         font-size: 50px;
     }
 
-    .project-description{
+    #project-description{
         display: flex;
         text-align: right;
         flex: 1;
@@ -64,4 +65,6 @@ src="https://www.youtube.com/embed/Blzf_Is54uc">
 <img src="./virtual_world_media/Fog.png" width = "400">
 <img src="./virtual_world_media/MountainStream.png" width = "400">
 <img src="./virtual_world_media/ViewFromMountain.png" width = "400">
+
+
 </html>
