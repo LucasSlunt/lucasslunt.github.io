@@ -14,13 +14,13 @@ var ImageSetCounter = 3;
 var imageDirectory = "./virtual_world_media/";
 var images = ["Fields","Mountains","ViewFromMountain","Berries","Berries2","BigBerry","MountainStream","Waterfall","Fog","Anchor","Bridges","CrystalDump"];
 var descriptions = [
-    "The world is big"
+    "This world has lots to explore. It is 512 x 512 unity units large, about half a square kilometre. The terrain offers imposing peaks, steep cliffs, and rolling meadows, all covered by streams and foliage. It's based on a mountain range in the kootenays, where I grew up."
     ,
-    "Strawberries"
+    "I created this project around the theme of berry-picking, an activity I really enjoy. Strawberries are abundant in this world, and often appear with a basket nearby. I modelled these in Blender, which was difficult to learn, but my efforts were quite fruitful. "
     ,
-    "There is lots of water"
+    "Small streams trickle down the mountain, culminating in large rivers and powerful waterfalls. Every stream and river was hand-placed, along with rushing river noises, and billowing clouds of fog to give the effect of realistic immersive waterways"
     ,
-    "Many structures to find throughout the world"
+    "Many structures, ranging from massive stone bridges to tiny baskets, give a sense of direction and story to the world. Large bridges let players cross rivers and rough terrain, while also bringing their origins into question. Mysterious scenes like abandoned cargo and spilt jewels lend a sense of storytelling and wonder to the world"
 ];
 var fileFormat = ".png";
 
