@@ -27,7 +27,16 @@ function initializeImages(){
     
 }
 function nextImages(){
-    ImageSetCounter++;
+    if (ImageSetCounter < 3) ImageSetCounter++;
+    else                     ImageSetCounter = 0;
+picture1.src = imageDirectory+images[ImageSetCounter*3]+fileFormat;
+picture2.src = imageDirectory+images[ImageSetCounter*3+1]+fileFormat;
+picture3.src = imageDirectory+images[ImageSetCounter*3+2]+fileFormat;
+}
+
+function prevImages(){
+    if (ImageSetCounter > 0) ImageSetCounter--;
+    else                     ImageSetCounter = 3;
 picture1.src = imageDirectory+images[ImageSetCounter*3]+fileFormat;
 picture2.src = imageDirectory+images[ImageSetCounter*3+1]+fileFormat;
 picture3.src = imageDirectory+images[ImageSetCounter*3+2]+fileFormat;
@@ -35,4 +44,5 @@ picture3.src = imageDirectory+images[ImageSetCounter*3+2]+fileFormat;
 
 function setupButtons(){
     document.getElementById("button-next").onclick = nextImages;
+    document.getElementById("button-prev").onclick = prevImages;
 }
