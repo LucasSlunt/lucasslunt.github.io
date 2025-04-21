@@ -3,17 +3,13 @@
 
 <div class = "project-header">
     
-    <table class = "date-and-title">
-        <tr>
-            <td><div>Date</div></td>
-        </tr>
-        <tr>
-            <td><h1>Project Title</h1></td>
-        </tr>
-    </table>
+    <div class = "date-and-title-container">
+        <div class = "project-date">Date</div>
+        <div class = "project-title">Project Title</div>
+    </div>
     <div class = "spacer"></div>
     
-    <div class = "project-description">Project Description lorem ipsum dolores yabba yabba doo aaaaaaaaaaaaaaaaa aaaaaaaaaaa aa aaa</div>
+    <div class = "project-description">Project Description lorem ipsum dolores yabba yabba doo aaaaaaaaaa aaaaaaa aaaaaaaaaaa aa aaa</div>
 </div>
 
 <style>
@@ -21,24 +17,37 @@
         display: flex;
         flex-direction: row;
         flex: 1;
+        background-color: darkgray;
+        padding: 2em;
+
+        font-family: "Lucida Console", "Courier New", sans-serif;
     }
-    
+
     .spacer{
         display: flex;
-        flex-direction: row;
         flex: 1;
     }
 
-    .date-and-title{
+    .date-and-title-container{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex: 1;
+    }
+
+    .project-date{
+        font-size: 20px;
+    }
+
+    .project-title{
+        font-size: 50px;
     }
 
     .project-description{
         display: flex;
-        flex-direction: row-reverse;
+        text-align: right;
         flex: 1;
+
+        font-size: 20px;
     }
 
 
