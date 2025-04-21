@@ -10,9 +10,18 @@ function projectTitle() {
     document.getElementById('project-description').innerHTML = 'A vast open world full of nature and surprises. Made with Unity, Gaia, and Blender';
 }
 
-var ImageSetCounter = 0;
+var ImageSetCounter = 3;
 var imageDirectory = "./virtual_world_media/";
 var images = ["Fields","Mountains","ViewFromMountain","Berries","Berries2","BigBerry","MountainStream","Waterfall","Fog","Anchor","Bridges","CrystalDump"];
+var descriptions = [
+    "The world is big"
+    ,
+    "Strawberries"
+    ,
+    "There is lots of water"
+    ,
+    "Many structures to find throughout the world"
+];
 var fileFormat = ".png";
 
 function initializeImages(){
@@ -20,10 +29,9 @@ function initializeImages(){
     var picture1 = document.getElementById('picture1');
     var picture2 = document.getElementById('picture2');
     var picture3 = document.getElementById('picture3');
+    var pictureDesc = document.getElementById('pictureDesc');
 
-    picture1.src = imageDirectory+images[ImageSetCounter*3]+fileFormat;
-    picture2.src = imageDirectory+images[ImageSetCounter*3+1]+fileFormat;
-    picture3.src = imageDirectory+images[ImageSetCounter*3+2]+fileFormat;
+    nextImages();
     
 }
 function nextImages(){
@@ -32,6 +40,7 @@ function nextImages(){
 picture1.src = imageDirectory+images[ImageSetCounter*3]+fileFormat;
 picture2.src = imageDirectory+images[ImageSetCounter*3+1]+fileFormat;
 picture3.src = imageDirectory+images[ImageSetCounter*3+2]+fileFormat;
+pictureDesc.innerHTML= descriptions[ImageSetCounter];
 }
 
 function prevImages(){
@@ -40,6 +49,7 @@ function prevImages(){
 picture1.src = imageDirectory+images[ImageSetCounter*3]+fileFormat;
 picture2.src = imageDirectory+images[ImageSetCounter*3+1]+fileFormat;
 picture3.src = imageDirectory+images[ImageSetCounter*3+2]+fileFormat;
+pictureDesc.innerHTML= descriptions[ImageSetCounter];
 }
 
 function setupButtons(){
