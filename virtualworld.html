@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <body onload="main()"><script src="./virtualworldscript.js"></script></body>
+    <body onload="projectTitle()"><script src="./virtualworldscript.js"></script></body>
 
 <div class = "project-header" >
     
@@ -59,9 +59,9 @@
 
 <div class = "media-container">
     <div class = "upper-media-row">
-        <img src="./virtual_world_media/Anchor.png" width = "400" style = "margin: 0.5em">
-        <img src="./virtual_world_media/Bridges.png" width = "400" style = "margin: 0.5em">
-        <img src="./virtual_world_media/CrystalDump.png" width = "400" style = "margin: 0.5em">
+        <img src="./virtual_world_media/Anchor.png" width = "400" style = "margin: 0.5em" id="picture1">
+        <img src="./virtual_world_media/Bridges.png" width = "400" style = "margin: 0.5em" id="picture2">
+        <img src="./virtual_world_media/CrystalDump.png" width = "400" style = "margin: 0.5em" id="picture3">
     </div>
 
     <div class = "lower-media-row">
@@ -112,7 +112,7 @@
     }
 
     .media-description-button{
-        margin: 2em;
+        margin: 1em;
         background-color: rgb(124, 161, 173);
         color: white;
         border: none;
