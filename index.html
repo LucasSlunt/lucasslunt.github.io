@@ -1,30 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <title>Lucas Slunt</title>
+    <link rel="icon" type="image/x-icon" href="./minecraft_media/textures/item/jellyfish.png">
+</head>
+
 <h1>Lucas Slunt</h1>
 <body style="background-image: url('./main_page_media/ski_hill_summer.JPG');">
-<p>Welcome to my small website. I've made this as a small project to help me learn the basics of web programming, and to document another project I made in my first year of university.</p>
 
 <div class = "projects-box">
-    <div class = project-container>
-        <img src = "./minecraft_media/textures/item/jellyfish.png" style = "image-rendering:pixelated;" class="project-picture">
-        <a href = "./minecraftmod.html" >Arkus's Fishing</a>   
+    <div class = box-title>
+        Programming Projects
     </div>
-    <div class = project-container>
-        <img src = "./virtual_world_media/SquareIcon.png" class="project-picture">
-        <a href = "./virtualworld.html" >Virtual World</a>     
+    <div class = "projects">
+        <div class = project-container>
+            <img src = "./virtual_world_media/SquareIcon.png" class="project-picture">
+            <a href = "./virtualworld.html" >Virtual World</a>     
+        </div>
+        <div class = project-container>
+            <img src = "./minecraft_media/textures/item/jellyfish.png" style = "image-rendering:pixelated;" class="project-picture">
+            <a href = "./minecraftmod.html" >Arkus's Fishing</a>   
+        </div>
+    </div>   
+</div>
+
+<div class = "projects-box">
+    <div class = box-title>
+        Fun
     </div>
+    <div class = "projects">
+        <div class = project-container>
+            <img src = "./virtual_world_media/SquareIcon.png" class="project-picture">
+            <a href = "./photography.html" >Photos</a>     
+        </div>
+        <div class = project-container>
+            <img src = ./ApplePictures/EgremontRusset.png class="project-picture">
+            <a href = "./apples.html" >Apples</a>   
+        </div>
+    </div>   
 </div>
 
 </body>
 <style>
+    .box-title{
+        font-size: 30px;
+    }
     .projects-box{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         padding: 1.5em;
         margin: 1.5em;
         background-color:rgb(191, 207, 163);
         border-radius: 1em;
         max-width: fit-content;
+    }
+    .projects{
+        display: flex;
+        flex-direction: row;
+        
     }
 
     .project-container{
