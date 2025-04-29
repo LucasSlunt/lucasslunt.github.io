@@ -10,7 +10,6 @@ function setupPage(){
 }
 
 function initializeImages(){
-    console.debug("initializing images");
     appleImage = document.getElementById('apple-picture');
 
     nextApple();
@@ -20,14 +19,12 @@ function initializeImages(){
 function nextApple(){
     if (AppleCounter < appleImages.length-1) AppleCounter++;
     else                                   AppleCounter = 0;
-    console.debug("AppleCounter "+AppleCounter);
     appleImage.src = imageDirectory+appleImages[AppleCounter]+fileFormat;
 }
 
 function prevApple(){
     if (AppleCounter > 0) AppleCounter--;
     else                  AppleCounter = appleImages.length-1;
-    console.debug("AppleCounter "+AppleCounter);
     appleImage.src = imageDirectory+appleImages[AppleCounter]+fileFormat;
 }
 

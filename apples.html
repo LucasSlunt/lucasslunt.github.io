@@ -7,7 +7,52 @@
     <body onload="setupPage()"><script src="./applesscript.js"></script></body>
     <a href ="./index.html">Main page</a>
 
-    <img src="./ApplePictures/AuroraGoldenGala.png" height = "400" id="apple-picture">
+    <div class = "carousel">
+        <div class = "carousel-side">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple1">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple2">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple3">
+        </div>
+        <img src="./ApplePictures/AuroraGoldenGala.png" width = "400" id="apple-picture">
+        <div class = "carousel-side">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple4">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple5">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple6">
+        </div>
+    </div>
+    
     <button type="button" class = "selection-button" id = "button-prev"><</button>
     <button type="button" class = "selection-button" id = "button-next">></button>
+
+    <style>
+        .carousel{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 1.5em;
+            margin: 1.5em;
+            background-color: lightblue;
+            border-radius: 2em;
+        }
+
+        .carousel-side{
+            display: flex;
+            flex-direction: row;
+            padding-top: 7em;
+            padding-bottom: 7em;
+            margin: 1em;
+            justify-content: center;
+        }
+
+        .small-apple-pictures{
+            margin:1em;
+            border-radius: 1em;
+        }
+
+
+        #apple-picture{
+            display: flex;
+            border-radius: 2em;
+        }
+    </style>
 </html>
