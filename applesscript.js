@@ -29,21 +29,35 @@ function initializeImages(){
 function nextApple(){
     if (AppleCounter < numOfApples-1) AppleCounter++;
     else                                   AppleCounter = 0;
-    mainImage.src = imageDirectory+appleImages[AppleCounter]+fileFormat;
-
-    htmlElementsArray[0].src = imageDirectory+appleImages[AppleCounter-3]+fileFormat;
-    htmlElementsArray[1].src = imageDirectory+appleImages[AppleCounter-2]+fileFormat;
-    htmlElementsArray[2].src = imageDirectory+appleImages[AppleCounter-1]+fileFormat;
-
-    htmlElementsArray[3].src = imageDirectory+appleImages[AppleCounter+1]+fileFormat;
-    htmlElementsArray[4].src = imageDirectory+appleImages[AppleCounter+2]+fileFormat;
-    htmlElementsArray[5].src = imageDirectory+appleImages[AppleCounter+3]+fileFormat;
+    displayApplePictures();
 }
 
 function prevApple(){
     if (AppleCounter > 0) AppleCounter--;
     else                  AppleCounter = numOfApples-1;
+    displayApplePictures();
+}
+
+function displayApplePictures(){
     mainImage.src = imageDirectory+appleImages[AppleCounter]+fileFormat;
+
+    htmlElementsArray[0].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, -3, numOfApples)]+fileFormat;
+    htmlElementsArray[1].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, -2, numOfApples)]+fileFormat;
+    htmlElementsArray[2].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, -1, numOfApples)]+fileFormat;
+
+    htmlElementsArray[3].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, 1, numOfApples)]+fileFormat;
+    htmlElementsArray[4].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, 2, numOfApples)]+fileFormat;
+    htmlElementsArray[5].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, 3, numOfApples)]+fileFormat;
+}
+
+function validArrayIndex(counter, modifier, maxCounterValue){
+    if (counter + modifier >= maxCounterValue){
+        return (counter+modifier)-maxCounterValue;
+    }
+    if (counter+modifier < 0){
+        return (counter+modifier)+maxCounterValue;
+    }
+    return counter+modifier;
 }
 
 function setupButtons(){
