@@ -21,6 +21,7 @@ var numOfApples = appleImages.length;
 function setupPage(){
     initializeImages();
     setupButtons();
+    initializeTableVariables()
 }
 
 function initializeImages(){
@@ -92,3 +93,16 @@ function setupButtons(){
     document.getElementById("button-prev").onclick = prevApple;
 }
 
+//APPLE TABLE STUFF
+
+var table;
+var rows;
+
+function initializeTableVariables(){
+    table = document.getElementById('apple-table');
+    rows = table.rows;
+
+    for ( var i = 0; i < 3; i++){
+        console.debug(rows[i]);
+    }
+}
