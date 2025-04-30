@@ -42,6 +42,7 @@ function prevApple(){
     if (AppleCounter > 0) AppleCounter--;
     else                  AppleCounter = numOfApples-1;
     displayApplePictures();
+    changeAppleDescription();
 }
 
 function changeAppleDescription(){
