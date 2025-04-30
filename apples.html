@@ -24,12 +24,26 @@
     <div id="main-apple-title">
         apple
     </div>
+    <div class="apple-description-container">
+        <div class = "desc-item" id = "featured-desc">
+            apple
+        </div>
+        <div class = "desc-item">
+            follow da links 2 learn more
+        </div>
+    </div>
     </div>
     
     <button type="button" class = "selection-button" id = "button-prev"><</button>
     <button type="button" class = "selection-button" id = "button-next">></button>
 
     <style>
+
+        .apple-description-container{
+            display: flex;
+            flex-direction: row;
+        }
+
         .carousel-container{
             display: flex;
             flex-direction: column;
@@ -67,6 +81,10 @@
             border-radius: 1em;
         }
 
+        .desc-item{
+            margin: 1em;
+            background-color: rgb(212, 237, 246);
+        }
 
         #apple-picture{
             display: flex;
@@ -76,7 +94,8 @@
         #main-apple-title {
             font-size: 2em;
             margin-top: 0.5em;
-            text-align: center;
-}
+        }
+
+
     </style>
 </html>
