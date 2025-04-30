@@ -7,32 +7,47 @@
     <body onload="setupPage()"><script src="./applesscript.js"></script></body>
     <a href ="./index.html">Main page</a>
 
+    <div class = "carousel-container">
     <div class = "carousel">
         <div class = "carousel-side">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple1">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple2">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple3">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple1">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple2">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple3">
         </div>
         <img src="./ApplePictures/AuroraGoldenGala.png" width = "400" id="apple-picture">
         <div class = "carousel-side">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple4">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple5">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "150" class = "small-apple-pictures" id ="apple6">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple4">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple5">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple6">
         </div>
+    </div>
+    <div id="main-apple-title">
+        apple
+    </div>
     </div>
     
     <button type="button" class = "selection-button" id = "button-prev"><</button>
     <button type="button" class = "selection-button" id = "button-next">></button>
 
     <style>
-        .carousel{
+        .carousel-container{
             display: flex;
-            flex-direction: row;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
             padding: 1.5em;
             margin: 1.5em;
             background-color: lightblue;
             border-radius: 2em;
+        }
+        .carousel{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            
         }
 
         .carousel-side{
