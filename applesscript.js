@@ -115,13 +115,30 @@ function initializeTableVariables(){
     tApples.push(["Img","Lady Alice","Sweet, candy",8,"Long shelf life","Unknown",1]);
     tApples.push(["Img","Gala","Sweet, tangy",5,"Best selling apple in North America","Kidds Orange Redd x Golden Delicious",2]);
     tApples.push(["Img","Aurora Golden Gala","Very sweet",9,"Greasy exterior","Gala x Splendour",3]);
-    tApples.push(["Img","Jazz","Slightly sour",6,"Oblong shape","Gala x BraeBurn",4]);
+    tApples.push(["Img","Jazz","Slightly sour",6,"Oblong shape","Gala x Braeburn",4]);
     tApples.push(["Img","Envy","Fairly sweet, inconsistent",5,"Browns extremely slowly","Gala x Braeburn",5])
 
-
+    addRowsToTable(table);
 }
+
+function addRowsToTable(table){
+    
+  for (var i = 0; i < tApples.length; i++) {
+    const row = document.createElement("tr");
+
+    for (var j = 0; j < 7; j++) {
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(tApples[i][j]);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
+    table.appendChild(row);
+  }
+}
+
+
 function printDataToTable(){
-    for ( var i = 1; i < 4; i++){
+    for ( var i = 1; i <= tApples.length; i++){
         rows[i].innerHTML = "<td>"+tApples[i-1][0]+"</td>"+
                             "<td>"+tApples[i-1][1]+"</td>"+
                             "<td>"+tApples[i-1][2]+"</td>"+
@@ -153,8 +170,9 @@ function sortTableByChrono(){
 
 function sortTableByPrimaryFlavour(){
     function comparator(a,b){
-        console.debug(a[2].toLowerCase().indexOf("sweet"));
-        return a[2].toLowerCase().indexOf("sweet")-b[2].toLowerCase().indexOf("sweet");
+        var aSweetScore = (a[2].toLowerCase().indexOf("sweet") == -1) ? 1000 : a[2].toLowerCase().indexOf("sweet");
+        var bSweetScore = (b[2].toLowerCase().indexOf("sweet") == -1) ? 1000 : b[2].toLowerCase().indexOf("sweet");
+        return aSweetScore-bSweetScore;
     }
     tApples.sort(comparator);
     printDataToTable()
