@@ -158,7 +158,7 @@ function initializeTableVariables(){
     tApples.push(["Img","Hidden Rose","Tart, hints of strawberry lemonade","Crisp",7,"Red-fleshed apple","Unknown",41]);
     tApples.push(["Img","Salish","Sweet, tart","Crisp",6,"named after a group of languages spoken by indigenous people of Canada","Gala x Splendour",42]);
     tApples.push(["Img","September Wonder (Fuji)","Pleasant, watery, slightly tart","Crisp",7,"A sport of Fuji","Fuji",43]);
-    tApples.push(["Img","Piñata","Full, sweet, tart","Crisp",7,"Supposedly has a light pineapple aftertaste","Cox's Orange Pippin x Duchess of Oldenburg x Golden Delicious",44]);
+    tApples.push(["Img","Pinata","Full, sweet, tart","Crisp",7,"Supposedly has a light pineapple aftertaste","Cox's Orange Pippin x Duchess of Oldenburg x Golden Delicious",44]);
     tApples.push(["Img","Unknown Jarred Apples","Cinnamon, spiced","Squishy yet firm, rubber",7,"Crabbapples of unknown variety preserved in a jar","unknown",45]);
     tApples.push(["Img","Nicola","Sweet, barely tart","Dense, crisp",7,"Develops more flavour as the season progresses","Gala x Splendour",46]);
     tApples.push(["Img","Braeburn","Sweet, sour aftertaste","Softer",7,"A parent of many great apples","Red Delicious x Sturmer Pippin",47]);
@@ -270,7 +270,7 @@ function sortTableByPrimaryFlavour(){
         b = bRow[2].toLowerCase();
         
         
-        function determineScore(taste){
+        function determineScoreAsc(taste){
             var score = 0;
             //sorted in order of:
             // very sweet
@@ -282,22 +282,51 @@ function sortTableByPrimaryFlavour(){
             // tart
             // sour
             // very sour
-            if (taste.indexOf("very sweet") != -1){score = 18}
-            else if (taste.indexOf("fairly sweet") != -1){score = 14}
-            else if (taste.indexOf("mildly sweet") != -1){score = 12}
-            else if (taste.indexOf("sweet") != -1){score = 16}
-            else if ((taste.indexOf("sweet") == -1 && taste.indexOf("sour") == -1)){score = 10}
+            if (taste.indexOf("very sweet") != -1){score = 20}
+            else if (taste.indexOf("fairly sweet") != -1){score = 16}
+            else if (taste.indexOf("mildly sweet") != -1){score = 14}
+            else if (taste.indexOf("sweet") != -1){score = 18}
+            else if ((taste.indexOf("sweet") == -1 && taste.indexOf("sour") == -1)){score = 12}
+            else if (taste.indexOf("barely sour") != -1){score = 10}
             else if (taste.indexOf("slightly sour") != -1){score = 8}
             else if (taste.indexOf("tart") != -1){score = 6}
             else if (taste.indexOf("very sour") != -1){score = 2}
             else if (taste.indexOf("sour") != -1){score = 4}
             return score;
         }
-
-        var aScore = determineScore(a);
-        var bScore = determineScore(b);
-        if (sortDir){return bScore-aScore;}
-        else return aScore-bScore;
+        function determineScoreDesc(taste){
+            var score = 0;
+            // sorted in order of 
+            // very Sour
+            // Sour
+            // tart
+            //slightly sour
+            //neither
+            //mildly sweet
+            //fairly sweet
+            //sweet
+            //very sweet
+            if (taste.indexOf("very sour") != -1){score = 20}
+            else if (taste.indexOf("tart") != -1){score = 16}
+            else if (taste.indexOf("slightly sour") != -1){score = 14}
+            else if (taste.indexOf("barely sour") != -1){score = 12}
+            else if (taste.indexOf("sour") != -1){score = 18}
+            else if ((taste.indexOf("sweet") == -1 && taste.indexOf("sour") == -1)){score = 10}
+            else if (taste.indexOf("mildly sweet") != -1){score = 8}
+            else if (taste.indexOf("fairly sweet") != -1){score = 6}
+            else if (taste.indexOf("very sweet") != -1){score = 2}
+            else if (taste.indexOf("sweet") != -1){score = 4}
+            return score;
+        }
+        if (sortDir){
+            var aScore = determineScoreAsc(a);
+            var bScore = determineScoreAsc(b);
+        }else{
+            var aScore = determineScoreDesc(a);
+            var bScore = determineScoreDesc(b);
+        }
+        
+        return bScore-aScore;
     }
     tApples.sort(comparator);
     currentlySortedBy = "PrimaryFlavour";
