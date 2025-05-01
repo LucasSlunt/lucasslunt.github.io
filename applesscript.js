@@ -202,25 +202,27 @@ function sortTableByTexture(){
     function comparator(aRow,bRow){
         a = aRow[3].toLowerCase();
         b = bRow[3].toLowerCase();
-        //sorted in order of:
-        // crunchy
-        // very crisp
-        // crisp
-        // fairly crisp
-        // softer 
-        // soft
-        // very soft
+        
         
         function determineScore(texture){
             var score = 0;
+            //sorted in order of:
+            // very crunchy
+            // crunchy
+            // very crisp
+            // crisp
+            // fairly crisp
+            // softer 
+            // soft
+            // very soft
             if (texture.indexOf("very crunchy") != -1){score = 16}
             else if (texture.indexOf("crunchy") != -1){score = 14}
             else if (texture.indexOf("very crisp") != -1){score = 12}
-            else if (texture.indexOf("crisp") != -1){score = 10}
             else if (texture.indexOf("fairly crisp") != -1){score = 8}
+            else if (texture.indexOf("crisp") != -1){score = 10}
             else if (texture.indexOf("softer") != -1){score = 6}
-            else if (texture.indexOf("soft") != -1){score = 4}
             else if (texture.indexOf("very soft") != -1){score = 2}
+            else if (texture.indexOf("soft") != -1){score = 4}
             return score;
         }
 
