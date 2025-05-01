@@ -188,10 +188,39 @@ function sortTableByChrono(){
 }
 
 function sortTableByPrimaryFlavour(){
-    function comparator(a,b){
-        var aSweetScore = (a[2].toLowerCase().indexOf("sweet") == -1) ? 1000 : a[2].toLowerCase().indexOf("sweet");
-        var bSweetScore = (b[2].toLowerCase().indexOf("sweet") == -1) ? 1000 : b[2].toLowerCase().indexOf("sweet");
-        return aSweetScore-bSweetScore;
+    function comparator(aRow,bRow){
+        a = aRow[2].toLowerCase();
+        b = bRow[2].toLowerCase();
+        
+        
+        function determineScore(taste){
+            var score = 0;
+            //sorted in order of:
+            // very sweet
+            // sweet
+            // fairly sweet
+            // mildly sweet
+            // neither sweet nor sour
+            // slightly sour 
+            // tart
+            // sour
+            // very sour
+            if (taste.indexOf("very sweet") != -1){score = 18}
+            else if (taste.indexOf("fairly sweet") != -1){score = 14}
+            else if (taste.indexOf("mildly sweet") != -1){score = 12}
+            else if (taste.indexOf("sweet") != -1){score = 16}
+            else if ((taste.indexOf("sweet") == -1 && taste.indexOf("sour") == -1)){score = 10}
+            else if (taste.indexOf("slightly sour") != -1){score = 8}
+            else if (taste.indexOf("tart") != -1){score = 6}
+            else if (taste.indexOf("very sour") != -1){score = 2}
+            else if (taste.indexOf("sour") != -1){score = 4}
+            return score;
+        }
+
+        var aScore = determineScore(a);
+        var bScore = determineScore(b);
+
+        return bScore-aScore;
     }
     tApples.sort(comparator);
     printDataToTable()
