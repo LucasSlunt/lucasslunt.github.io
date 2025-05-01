@@ -39,12 +39,12 @@
 
     <table id = "apple-table">
         <tr>
-            <th id="header-picture">Picture</th>
+            <th class = non-button id="header-picture">Picture</th>
             <th id="header-name">Name</th>
             <th id="header-primary-flavour">Primary Flavours</th>
             <th id="header-texture">Texture</th>
             <th id="header-raw-taste-rating">Raw Taste Rating</th>
-            <th id="header-notable-traits">Notable Traits</th>
+            <th class = non-button id="header-notable-traits">Notable Traits</th>
             <th id="header-parents">Parents</th>
             <th id="header-chrono">Documentation Number</th>
         </tr>
@@ -59,21 +59,31 @@
             background-color: rgb(227, 162, 91);
             border-color: rgb(186, 121, 67);
         }
-
-        th{
+        .non-button{
+            border: 3px solid;
+            padding: 4px;
+            background-color: rgb(255, 218, 143);
+            border-color: rgb(161, 92, 49);
+        }
+        th:not(.non-button){
             border: 4px outset;
             padding: 4px;
             background-color: rgb(255, 218, 143);
             border-color: rgb(161, 92, 49);
-            box-shadow: 0 6px 16px 0 rgba(0,0,0,0.2)
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
         }
-        th:hover{
-            border: 4px outset;
-            padding: 4px;
+        th:hover:not(.non-button){
             background-color: rgb(255, 239, 206);
             border-color: rgb(185, 148, 80);
-            box-shadow: 0 6px 16px 0 rgba(0,0,0,0.2)
         }
+        th:active:not(.non-button){
+            border: 4px inset;
+            background-color: rgb(215, 176, 98);
+            border-color: rgb(161, 92, 49);
+            box-shadow: 0
+        }
+
+
 
         td{
             padding: 4px;
