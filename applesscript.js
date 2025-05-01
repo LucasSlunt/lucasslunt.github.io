@@ -94,6 +94,7 @@ function setupButtons(){
 
     document.getElementById("header-name").onclick = sortTable;
     document.getElementById("header-primary-flavour").onclick = sortTableByPrimaryFlavour;
+    //document.getElementById("header-texture").onclick = sortTableByTexture;
     document.getElementById("header-raw-taste-rating").onclick = sortTableByRating;
     //document.getElementById("header-notable-traits").onclick = sortTableByNotableTraits;
     //document.getElementById("header-parents").onclick = sortTableByParents;
@@ -112,26 +113,26 @@ function initializeTableVariables(){
     table = document.getElementById('apple-table');
     rows = table.rows;
 
-    tApples.push(["Img","Lady Alice","Sweet, candy",8,"Long shelf life","Unknown",1]);
-    tApples.push(["Img","Gala","Sweet, tangy",5,"Best selling apple in North America","Kidds Orange Redd x Golden Delicious",2]);
-    tApples.push(["Img","Aurora Golden Gala","Very sweet",9,"Greasy exterior","Gala x Splendour",3]);
-    tApples.push(["Img","Jazz","Slightly sour",6,"Oblong shape","Gala x Braeburn",4]);
-    tApples.push(["Img","Envy","Fairly sweet, inconsistent",5,"Browns extremely slowly","Gala x Braeburn",5]);
-    tApples.push(["Img","Fuji","Pleasant yet watery",5,"Difficult to grow","Ralls Janet x Red Delicious",6]);
-    tApples.push(["Img","Pink Lady","Slightly sour",7,"Also known as \'Cripps Pink\'","Lady Williams x Golden Delicious",7]);
-    tApples.push(["Img","Spartan","Mildly sweet, vinous",5,"Excellent for baking","McIntosh x ?",8]);
-    tApples.push(["Img","Opal","Fairly sweet, floral",7,"Browns slowly","Golden Delicious x Topaz",9]);
-    tApples.push(["Img","Honeycrisp","Sweet, tart",8,"Bruises easily, hard to grow","Keepsake x MN1627",10]);
-    tApples.push(["Img","Cosmic Crisp","Sweet, tart",7,"Intended to replace Honeycrisp","Honeycrisp x Enterprise",11]);
-    tApples.push(["Img","Granny Smith","Very Sour, citrusy",4,"Excellent for baking","Unknown",12]);
-    tApples.push(["Img","Ambrosia","Quite sweet, little flavour",5,"Sugar levels are measured with a brix refractometer before harvest","Red Delicious x Golden Delicious",13]);
-    tApples.push(["Img","Red Delicious","Bland though fairly sweet",2,"Not closely related to \'Golden Delicious\'","Unknown",14]);
-    tApples.push(["Img","Rockit","Very sweet, slightly bitter",6,"Barely larger than a golf ball","Gala x Splendour",15]);
-    tApples.push(["Img","SugarBee","Very Sweet, similar to Ambrosia",6,"Long shelf life","HoneyCrisp x ?",16]);
-    tApples.push(["Img","Orin","Sweet, pear",9,"Tastes like a pear","Golden Delicious x Indo",17]);
-    tApples.push(["Img","Kanzi","Sour, sweet",8,"Quite similar to Honeycrisp","Gala x Braeburn",18]);
-    tApples.push(["Img","Koru","Bland, sweet",4,"Not spicy","Braeburn x Fuji",19]);
-    tApples.push(["Img","Jonagold","Sweet, tangy, dry",5,"Triploid (3 sets of genes)","Jonathan x Golden Delicious",20]);
+    tApples.push(["Img","Lady Alice","Very crisp","Sweet, candy",8,"Long shelf life","Unknown",1]);
+    tApples.push(["Img","Gala","Sweet, tangy","Fairly crisp",5,"Best selling apple in North America","Kidds Orange Redd x Golden Delicious",2]);
+    tApples.push(["Img","Aurora Golden Gala","Very sweet","Crisp",9,"Greasy exterior","Gala x Splendour",3]);
+    tApples.push(["Img","Jazz","Slightly sour","Crunchy",6,"Oblong shape","Gala x Braeburn",4]);
+    tApples.push(["Img","Envy","Fairly sweet, inconsistent","Crisp",5,"Browns extremely slowly","Gala x Braeburn",5]);
+    tApples.push(["Img","Fuji","Pleasant yet watery","Crisp",5,"Difficult to grow","Ralls Janet x Red Delicious",6]);
+    tApples.push(["Img","Pink Lady","Slightly sour","Softer",7,"Also known as \'Cripps Pink\'","Lady Williams x Golden Delicious",7]);
+    tApples.push(["Img","Spartan","Mildly sweet, vinous","Very soft",5,"Excellent for baking","McIntosh x ?",8]);
+    tApples.push(["Img","Opal","Fairly sweet, floral","Crisp",7,"Browns slowly","Golden Delicious x Topaz",9]);
+    tApples.push(["Img","Honeycrisp","Sweet, tart","Crunchy",8,"Bruises easily, hard to grow","Keepsake x MN1627",10]);
+    tApples.push(["Img","Cosmic Crisp","Sweet, tart","Very crunchy",7,"Intended to replace Honeycrisp","Honeycrisp x Enterprise",11]);
+    tApples.push(["Img","Granny Smith","Very Sour, citrusy","Crisp",4,"Excellent for baking","Unknown",12]);
+    tApples.push(["Img","Ambrosia","Quite sweet, little flavour","Fairly crisp",5,"Sugar levels are measured with a brix refractometer before harvest","Red Delicious x Golden Delicious",13]);
+    tApples.push(["Img","Red Delicious","Bland though fairly sweet","Muddy",2,"Not closely related to \'Golden Delicious\'","Unknown",14]);
+    tApples.push(["Img","Rockit","Very sweet, slightly bitter","Crunchy",6,"Barely larger than a golf ball","Gala x Splendour",15]);
+    tApples.push(["Img","SugarBee","Very Sweet, similar to Ambrosia","Crisp",6,"Long shelf life","HoneyCrisp x ?",16]);
+    tApples.push(["Img","Orin","Sweet, pear","Crisp",9,"Tastes like a pear","Golden Delicious x Indo",17]);
+    tApples.push(["Img","Kanzi","Sour, sweet","Crisp",8,"Quite similar to Honeycrisp","Gala x Braeburn",18]);
+    tApples.push(["Img","Koru","Bland, sweet","Crisp",4,"Not spicy","Braeburn x Fuji",19]);
+    tApples.push(["Img","Jonagold","Faintly sweet, dry","Crisp, coarse",5,"Triploid (3 sets of genes)","Jonathan x Golden Delicious",20]);
 
 
 
@@ -176,12 +177,12 @@ function sortTable(){
     //zero or NaN -> a nd b are equal
 
 function sortTableByRating(){
-    tApples.sort((a,b) => {return b[3] - a[3]});
+    tApples.sort((a,b) => {return b[4] - a[4]});
     printDataToTable()
 }
 
 function sortTableByChrono(){
-    tApples.sort((a,b) => {return a[6]-b[6];});
+    tApples.sort((a,b) => {return a[7]-b[7];});
     printDataToTable()
 }
 
