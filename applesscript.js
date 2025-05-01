@@ -156,10 +156,10 @@ function initializeTableVariables(){
     tApples.push(["Img","McIntosh","Fairly sweet, slightly sour, vinous","Softer",8,"National apple of Canada","Unknown",39]);
     tApples.push(["Img","Golden Delicious","Sweet, barely sour","Softer",7,"Not closely related to Red Delicious","Grimes Golden x ?",40]);
     tApples.push(["Img","Hidden Rose","Tart, hints of strawberry lemonade","Crisp",7,"Red-fleshed apple","Unknown",41]);
-    tApples.push(["Img","Salish","Sweet, tart","Crisp",6,"named after a group of languages spoken by indigenous people of Canada","Gala x Splendour",42]);
+    tApples.push(["Img","Salish","Sweet, tart","Crisp",6,"Named after a group of languages spoken by indigenous people of Canada","Gala x Splendour",42]);
     tApples.push(["Img","September Wonder (Fuji)","Pleasant, watery, slightly tart","Crisp",7,"A sport of Fuji","Fuji",43]);
     tApples.push(["Img","Pinata","Full, sweet, tart","Crisp",7,"Supposedly has a light pineapple aftertaste","Cox's Orange Pippin x Duchess of Oldenburg x Golden Delicious",44]);
-    tApples.push(["Img","Unknown Jarred Apples","Cinnamon, spiced","Squishy yet firm, rubber",7,"Crabbapples of unknown variety preserved in a jar","unknown",45]);
+    tApples.push(["Img","Unknown Jarred Apples","Cinnamon, spiced","Squishy yet firm, rubber",7,"Crabbapples of unknown variety preserved in a jar","Unknown",45]);
     tApples.push(["Img","Nicola","Sweet, barely tart","Dense, crisp",7,"Develops more flavour as the season progresses","Gala x Splendour",46]);
     tApples.push(["Img","Braeburn","Sweet, sour aftertaste","Softer",7,"A parent of many great apples","Red Delicious x Sturmer Pippin",47]);
     tApples.push(["Img","Alkmene (Red Windsor)","Sour","Very crisp, dense",5,"Given the Award of Garden Merit by Londons Royal Horticultural Society","Cox's Orange Pippin x Geheimrat Dr. Oldenburg",48]);
@@ -172,7 +172,6 @@ function initializeTableVariables(){
 
 
     addRowsToTable(table);
-    table.setAttribute("border", "2")
     sortTableByChrono();
 }
 
