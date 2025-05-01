@@ -107,6 +107,8 @@ function setupButtons(){
 var table;
 var rows;
 var tApples = [];
+var currentlySortedBy = "";
+var sortDir = true;
 
 
 function initializeTableVariables(){
@@ -169,6 +171,7 @@ function printDataToTable(){
 }
 function sortTable(){
     tApples.sort();
+    currentlySortedBy = "Name";
     printDataToTable();
 }
 
@@ -178,12 +181,22 @@ function sortTable(){
     //zero or NaN -> a nd b are equal
 
 function sortTableByRating(){
-    tApples.sort((a,b) => {return b[4] - a[4]});
+    if (currentlySortedBy == "Rating"){sortDir = !sortDir;}
+    else {sortDir = true;}
+    function comparator(a,b){
+        if (sortDir == true){return b[4] - a[4];}
+        else return a[4]-b[4];
+    }
+    console.debug(currentlySortedBy);
+    console.debug(sortDir)
+    tApples.sort(comparator);
+    currentlySortedBy = "Rating";
     printDataToTable()
 }
 
 function sortTableByChrono(){
     tApples.sort((a,b) => {return a[7]-b[7];});
+    currentlySortedBy = "Chrono";
     printDataToTable()
 }
 
@@ -223,6 +236,7 @@ function sortTableByPrimaryFlavour(){
         return bScore-aScore;
     }
     tApples.sort(comparator);
+    currentlySortedBy = "PrimaryFlavour";
     printDataToTable()
 }
 
@@ -261,5 +275,6 @@ function sortTableByTexture(){
         return bScore-aScore;
     }
     tApples.sort(comparator);
+    currentlySortedBy = "Texture";
     printDataToTable()
 }
