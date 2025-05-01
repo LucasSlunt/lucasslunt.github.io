@@ -94,7 +94,7 @@ function setupButtons(){
 
     document.getElementById("header-name").onclick = sortTable;
     document.getElementById("header-primary-flavour").onclick = sortTableByPrimaryFlavour;
-    //document.getElementById("header-texture").onclick = sortTableByTexture;
+    document.getElementById("header-texture").onclick = sortTableByTexture;
     document.getElementById("header-raw-taste-rating").onclick = sortTableByRating;
     //document.getElementById("header-notable-traits").onclick = sortTableByNotableTraits;
     //document.getElementById("header-parents").onclick = sortTableByParents;
@@ -113,7 +113,7 @@ function initializeTableVariables(){
     table = document.getElementById('apple-table');
     rows = table.rows;
 
-    tApples.push(["Img","Lady Alice","Very crisp","Sweet, candy",8,"Long shelf life","Unknown",1]);
+    tApples.push(["Img","Lady Alice","Sweet, candy","Very crisp",8,"Long shelf life","Unknown",1]);
     tApples.push(["Img","Gala","Sweet, tangy","Fairly crisp",5,"Best selling apple in North America","Kidds Orange Redd x Golden Delicious",2]);
     tApples.push(["Img","Aurora Golden Gala","Very sweet","Crisp",9,"Greasy exterior","Gala x Splendour",3]);
     tApples.push(["Img","Jazz","Slightly sour","Crunchy",6,"Oblong shape","Gala x Braeburn",4]);
@@ -160,10 +160,11 @@ function printDataToTable(){
         rows[i].innerHTML = "<td>"+tApples[i-1][0]+"</td>"+
                             "<td>"+tApples[i-1][1]+"</td>"+
                             "<td>"+tApples[i-1][2]+"</td>"+
-                            "<td>"+tApples[i-1][3]+"/10</td>"+
-                            "<td>"+tApples[i-1][4]+"</td>"+
+                            "<td>"+tApples[i-1][3]+"</td>"+
+                            "<td>"+tApples[i-1][4]+"/10</td>"+
                             "<td>"+tApples[i-1][5]+"</td>"+
-                            "<td>"+tApples[i-1][6]+"</td>";
+                            "<td>"+tApples[i-1][6]+"</td>"+
+                            "<td>"+tApples[i-1][7]+"</td>";
     }
 }
 function sortTable(){
@@ -191,6 +192,42 @@ function sortTableByPrimaryFlavour(){
         var aSweetScore = (a[2].toLowerCase().indexOf("sweet") == -1) ? 1000 : a[2].toLowerCase().indexOf("sweet");
         var bSweetScore = (b[2].toLowerCase().indexOf("sweet") == -1) ? 1000 : b[2].toLowerCase().indexOf("sweet");
         return aSweetScore-bSweetScore;
+    }
+    tApples.sort(comparator);
+    printDataToTable()
+}
+
+function sortTableByTexture(){
+    
+    function comparator(aRow,bRow){
+        a = aRow[3].toLowerCase();
+        b = bRow[3].toLowerCase();
+        //sorted in order of:
+        // crunchy
+        // very crisp
+        // crisp
+        // fairly crisp
+        // softer 
+        // soft
+        // very soft
+        
+        function determineScore(texture){
+            var score = 0;
+            if (texture.indexOf("very crunchy") != -1){score = 16}
+            else if (texture.indexOf("crunchy") != -1){score = 14}
+            else if (texture.indexOf("very crisp") != -1){score = 12}
+            else if (texture.indexOf("crisp") != -1){score = 10}
+            else if (texture.indexOf("fairly crisp") != -1){score = 8}
+            else if (texture.indexOf("softer") != -1){score = 6}
+            else if (texture.indexOf("soft") != -1){score = 4}
+            else if (texture.indexOf("very soft") != -1){score = 2}
+            return score;
+        }
+
+        var aScore = determineScore(a);
+        var bScore = determineScore(b);
+
+        return bScore-aScore;
     }
     tApples.sort(comparator);
     printDataToTable()
