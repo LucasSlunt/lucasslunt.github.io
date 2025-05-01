@@ -115,6 +115,8 @@ function initializeTableVariables(){
     tApples.push(["Img","Lady Alice","Sweet, candy",8,"Long shelf life","Unknown",1]);
     tApples.push(["Img","Gala","Sweet, tangy",5,"Best selling apple in North America","Kidds Orange Redd x Golden Delicious",2]);
     tApples.push(["Img","Aurora Golden Gala","Very sweet",9,"Greasy exterior","Gala x Splendour",3]);
+    tApples.push(["Img","Jazz","Slightly sour",6,"Oblong shape","Gala x BraeBurn",4]);
+    tApples.push(["Img","Envy","Fairly sweet, inconsistent",5,"Browns extremely slowly","Gala x Braeburn",5])
 
 
 }
