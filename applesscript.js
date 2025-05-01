@@ -121,7 +121,7 @@ function initializeTableVariables(){
     tApples.push(["Img","Jazz","Slightly sour","Crunchy",6,"Oblong shape","Braeburn x Gala",4]);
     tApples.push(["Img","Envy","Fairly sweet, inconsistent","Very dense, crisp",5,"Browns extremely slowly","Braeburn x Gala",5]);
     tApples.push(["Img","Fuji","Pleasant yet watery","Crisp",5,"Difficult to grow","Ralls Janet x Red Delicious",6]);
-    tApples.push(["Img","Pink Lady","Slightly sour","Softer",7,"Also known as \'Cripps Pink\'","Golden Delicious x Lady Williams",7]);
+    tApples.push(["Img","Pink Lady (Cripps Pink)","Slightly sour","Softer",7,"Very popular in the UK","Golden Delicious x Lady Williams",7]);
     tApples.push(["Img","Spartan","Mildly sweet, vinous","Very soft",5,"Excellent for baking","McIntosh x ?",8]);
     tApples.push(["Img","Opal","Fairly sweet, floral","Crisp",7,"Browns slowly","Golden Delicious x Topaz",9]);
     tApples.push(["Img","Honeycrisp","Sweet, tart","Crunchy",8,"Bruises easily, hard to grow","Keepsake x MN1627",10]);
@@ -143,20 +143,36 @@ function initializeTableVariables(){
     tApples.push(["Img","Nova Spy","Very sour, sweet","Crisp",6,"Trees are very hardy","Golden Delicious x Northern Spy",26]);
     tApples.push(["Img","Lucy Glo","Sweet, wild berries","Crisp",10,"Red fleshed apple","Hidden Rose x HoneyCrisp",27]);
     tApples.push(["Img","Lucy Rose","Sweet, slightly sour","Very crisp",5,"Red fleshed apple","Hidden Rose x Honeycrisp",28]);
-    tApples.push(["Img","Pazzazz","Sweet, tart","Softer",6,"note","Honeycrisp x ?",29]);
+    tApples.push(["Img","Pazazz","Sweet, tart","Softer",6,"Long shelf life","Honeycrisp x ?",29]);
     tApples.push(["Img","Lodi","Very sour","very soft, mealy",2,"Good for apple sauce, grows early in the season","Mongomery Sweet x Yellow Transparent",30]);
-    tApples.push(["Img","Braeburn","Bland","Softer, mealy",3,"A parent of many great apples","Red Delicious x Sturmer Pippin",31]);
-    tApples.push(["Img","Sunrise","taste","Dense, crunchy",8,"Ripens very early, before Gala","Golden Delicious x McIntosh",32]);
-    tApples.push(["Img","Transparent","Bland, sour","Very soft, muddy",1,"Very short shelf life (~10 days)","Unknown",33]);
-    tApples.push(["Img","Unknown","Mildly bitter, slightly sour","softer",3,"The best crabapples in Chapman Camp","Unknown",34]);
-    tApples.push(["Img","Earligold","Sour, fairly sweet, concord grape","Very soft",8,"Incredible soft apple","Unknown",35]);
-    tApples.push(["Img","Wynoochee Early","Tart, sweet, citrusy","Dense, crisp",6,"Good for cooking and cider","Unknown",36 ]);
+    tApples.push(["Img","Sunrise","taste","Dense, crunchy",8,"Ripens very early, before Gala","Golden Delicious x McIntosh",31]);
+    tApples.push(["Img","Transparent","Bland, sour","Very soft, muddy",1,"Very short shelf life (~10 days)","Unknown",32]);
+    tApples.push(["Img","Unknown","Mildly bitter, slightly sour","Softer",3,"The best crabapples in Chapman Camp","Unknown",33]);
+    tApples.push(["Img","Earligold","Sour, fairly sweet, concord grape","Very soft",8,"Incredible soft apple","Unknown",34]);
+    tApples.push(["Img","Wynoochee Early","Tart, sweet, citrusy","Dense, crisp",6,"Good for cooking and cider","Unknown",35]);
+    tApples.push(["Img","Unknown","Sour, bitter","Soft",2,"Found on along a walk in Kimberley","Unknown",36]);
+    tApples.push(["Img","Jonaprince","Sour, slightly sweet","Crisp yet light",5,"Trees bear lots of fruit, with a long shelf life","Golden Delicious x Jonathan",37]);
+    tApples.push(["Img","Ginger Gold","Sweet, barely tart, dry","Softer",7,"Named 'Ginger' after the farmer who discovered it, not the spice","Golden Delicious x ?",38]);
+    tApples.push(["Img","McIntosh","Fairly sweet, slightly sour, vinous","Softer",8,"National apple of Canada","Unknown",39]);
+    tApples.push(["Img","Golden Delicious","Sweet, barely sour","Softer",7,"Not closely related to Red Delicious","Grimes Golden x ?",40]);
+    tApples.push(["Img","Hidden Rose","Tart, hints of strawberry lemonade","Crisp",7,"Red-fleshed apple","Unknown",41]);
+    tApples.push(["Img","Salish","Sweet, tart","Crisp",6,"named after a group of languages spoken by indigenous people of Canada","Gala x Splendour",42]);
+    tApples.push(["Img","September Wonder (Fuji)","Pleasant, watery, slightly tart","Crisp",7,"A sport of Fuji","Fuji",43]);
+    tApples.push(["Img","Piñata","Full, sweet, tart","Crisp",7,"Supposedly has a light pineapple aftertaste","Cox's Orange Pippin x Duchess of Oldenburg x Golden Delicious",44]);
+    tApples.push(["Img","Unknown Jarred Apples","Cinnamon, spiced","Squishy yet firm, rubber",7,"Crabbapples of unknown variety preserved in a jar","unknown",45]);
+    tApples.push(["Img","Nicola","Sweet, barely tart","Dense, crisp",7,"Develops more flavour as the season progresses","Gala x Splendour",46]);
+    tApples.push(["Img","Braeburn","Sweet, sour aftertaste","Softer",7,"A parent of many great apples","Red Delicious x Sturmer Pippin",47]);
+    tApples.push(["Img","Alkmene (Red Windsor)","Sour","Very crisp, dense",5,"Given the Award of Garden Merit by Londons Royal Horticultural Society","Cox's Orange Pippin x Geheimrat Dr. Oldenburg",48]);
+    tApples.push(["Img","Cox's Orange Pippin (Cox)","Very flavourful, sweet, tart","Crisp, dense",9,"Named after the farmer who grew it, \"Richard Cox\"","Unknown",49]);
+    tApples.push(["Img","Bramley","Very sour","Crisp, hard",3,"Excellent for baking, very large","Gravenstein x ?",50]);
 
-    //tApples.push(["Img","name","taste","texture",rating,"note","A x B",21]);
+
+    //tApples.push(["Img","name","taste","texture",rating,"note","A x B",51]);
 
 
 
     addRowsToTable(table);
+    table.setAttribute("border", "2")
     sortTableByChrono();
 }
 
