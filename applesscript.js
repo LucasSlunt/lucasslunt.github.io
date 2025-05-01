@@ -147,8 +147,8 @@ function initializeTableVariables(){
     tApples.push(["Img","Lodi","Very sour","very soft, mealy",2,"Good for apple sauce, grows early in the season","Mongomery Sweet x Yellow Transparent",30]);
     tApples.push(["Img","Braeburn","Bland","Softer, mealy",3,"A parent of many great apples","Red Delicious x Sturmer Pippin",31]);
     tApples.push(["Img","Sunrise","taste","Dense, crunchy",8,"Ripens very early, before Gala","Golden Delicious x McIntosh",32]);
-    tApples.push(["Img","Transparent","Bland, sour","texture",1,"Very short shelf life (~10 days)","Unknown",33]);
-    tApples.push(["Img","Unknown","Mildly bitter, slightly sour","softer",3,"The best crabapples in Chapman Camp","unknown",34]);
+    tApples.push(["Img","Transparent","Bland, sour","Very soft, muddy",1,"Very short shelf life (~10 days)","Unknown",33]);
+    tApples.push(["Img","Unknown","Mildly bitter, slightly sour","softer",3,"The best crabapples in Chapman Camp","Unknown",34]);
     tApples.push(["Img","Earligold","Sour, fairly sweet, concord grape","Very soft",8,"Incredible soft apple","Unknown",35]);
     tApples.push(["Img","Wynoochee Early","Tart, sweet, citrusy","Dense, crisp",6,"Good for cooking and cider","Unknown",36 ]);
 
@@ -197,8 +197,10 @@ function determineSortDirection(column){
 function sortTable(){
     determineSortDirection("Name");
     function comparator(a,b){
-        if (sortDir) {return b[1].localeCompare(a[1]);}
-        else return a[1].localeCompare(b[1]);
+        if (a[1].toLowerCase().indexOf("unknown") != -1){return 1}
+        else if (b[1].toLowerCase().indexOf("unknown") != -1){return -1}
+        else if (sortDir) {return a[1].localeCompare(b[1]);}
+        else return b[1].localeCompare(a[1]);
     }
     tApples.sort(comparator);
     currentlySortedBy = "Name";
@@ -224,8 +226,10 @@ function sortTableByRating(){
 function sortTableByParents(){
     determineSortDirection("Parents");
     function comparator(a,b){
+        if (a[6].toLowerCase().indexOf("unknown") != -1){return 1}
+        else if (b[6].toLowerCase().indexOf("unknown") != -1){return -1}
         if (sortDir) {return a[6].localeCompare(b[6]);}
-        else return b[6].localeCompare(a[6]);
+        return b[6].localeCompare(a[6]);
     }
     tApples.sort(comparator);
     currentlySortedBy = "Parents";
