@@ -169,8 +169,19 @@ function printDataToTable(){
                             "<td>"+tApples[i-1][7]+"</td>";
     }
 }
+
+function determineSortDirection(column){
+    if (currentlySortedBy == column){sortDir = !sortDir;}
+    else {sortDir = true;}
+}
+
 function sortTable(){
-    tApples.sort();
+    determineSortDirection("Name");
+    function comparator(a,b){
+        if (sortDir) {return b[1].localeCompare(a[1]);}
+        else return a[1].localeCompare(b[1]);
+    }
+    tApples.sort(comparator);
     currentlySortedBy = "Name";
     printDataToTable();
 }
@@ -181,26 +192,29 @@ function sortTable(){
     //zero or NaN -> a nd b are equal
 
 function sortTableByRating(){
-    if (currentlySortedBy == "Rating"){sortDir = !sortDir;}
-    else {sortDir = true;}
+    determineSortDirection("Rating");
     function comparator(a,b){
         if (sortDir == true){return b[4] - a[4];}
         else return a[4]-b[4];
     }
-    console.debug(currentlySortedBy);
-    console.debug(sortDir)
     tApples.sort(comparator);
     currentlySortedBy = "Rating";
     printDataToTable()
 }
 
 function sortTableByChrono(){
-    tApples.sort((a,b) => {return a[7]-b[7];});
+    determineSortDirection("Chrono");
+    function comparator(a,b){
+        if (sortDir == true){return a[7]-b[7];}
+        else return b[7]-a[7];
+    }
+    tApples.sort(comparator);
     currentlySortedBy = "Chrono";
     printDataToTable()
 }
 
 function sortTableByPrimaryFlavour(){
+    determineSortDirection("PrimaryFlavour");
     function comparator(aRow,bRow){
         a = aRow[2].toLowerCase();
         b = bRow[2].toLowerCase();
@@ -232,8 +246,8 @@ function sortTableByPrimaryFlavour(){
 
         var aScore = determineScore(a);
         var bScore = determineScore(b);
-
-        return bScore-aScore;
+        if (sortDir){return bScore-aScore;}
+        else return aScore-bScore;
     }
     tApples.sort(comparator);
     currentlySortedBy = "PrimaryFlavour";
@@ -241,7 +255,7 @@ function sortTableByPrimaryFlavour(){
 }
 
 function sortTableByTexture(){
-    
+    determineSortDirection("Texture");
     function comparator(aRow,bRow){
         a = aRow[3].toLowerCase();
         b = bRow[3].toLowerCase();
@@ -272,7 +286,8 @@ function sortTableByTexture(){
         var aScore = determineScore(a);
         var bScore = determineScore(b);
 
-        return bScore-aScore;
+        if (sortDir){return bScore-aScore;}
+        else return aScore-bScore;
     }
     tApples.sort(comparator);
     currentlySortedBy = "Texture";
