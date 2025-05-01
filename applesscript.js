@@ -91,18 +91,83 @@ function validArrayIndex(counter, modifier, maxCounterValue){
 function setupButtons(){
     document.getElementById("button-next").onclick = nextApple;
     document.getElementById("button-prev").onclick = prevApple;
+
+    document.getElementById("header-name").onclick = sortTableByName;
 }
 
 //APPLE TABLE STUFF
 
 var table;
 var rows;
+var tData;
+var tName = [];
+var tPrimaryFlavour = [];
+var tRawTasteRating = [];
+var tNotableTraits = [];
+var tParents = [];
+var tChrono = [];
+var tApples = [];
+
 
 function initializeTableVariables(){
     table = document.getElementById('apple-table');
     rows = table.rows;
+    tImage = [];
+    tName = ["Lady Alice", "Gala", "Aurora Golden Gala"];
+    tPrimaryFlavour = ["Sweet, candy", "Sweet, tart", "Very sweet"];
+    tRawTasteRating = [8,5,9];
+    tNotableTraits = ["Long shelf life","Best selling apple in North America","Greasy exterior"];
+    tParents = ["Unknown","Kidds Orange Redd x Golden Delicious","Gala x Splendour"];
+    tChrono = [1,2,3];
+    tData = [tImage,tName,tPrimaryFlavour,tRawTasteRating,tNotableTraits,tParents,tChrono];
 
-    for ( var i = 0; i < 3; i++){
+    tApples.push(["Img","Lady Alice","Sweet, candy",8,"Long shelf life","Unknown",1]);
+    tApples.push(["Img","Gala","Sweet, tart",5,"Best selling apple in North America","Kidds Orange Redd x Golden Delicious",2]);
+    tApples.push(["Img","Aurora Golden Gala","Very sweet",9,"Greasy exterior","Gala x Splendour",3]);
+
+    
+    // <th>Picture</th>
+    //         <th>Name</th>
+    //         <th>Primary flavours</th>
+    //         <th>Raw taste rating</th>
+    //         <th>Notable traits</th>
+    //         <th>Parents</th>
+    //         <th>ith variety tried</th>
+
+
+    for ( var i = 1; i < 4; i++){
         console.debug(rows[i]);
+        // rows[i].innerHTML = "<td>"+tData[0][i-1]+"</td>"
+        //                     +"<td>"+tData[1][i-1]+"</td>"
+        //                     +"<td>"+tData[2][i-1]+"</td>"
+        //                     +"<td>"+tData[3][i-1]+"/10</td>"
+        //                     +"<td>"+tData[4][i-1]+"</td>"
+        //                     +"<td>"+tData[5][i-1]+"</td>"
+        //                     +"<td>"+tData[6][i-1]+"</td>";
+        //console.debug(tData[1][i-1]); //prints out the names of each apple
+
+        rows[i].innerHTML = "<td>"+tApples[i-1][0]+"</td>"+
+                            "<td>"+tApples[i-1][1]+"</td>"+
+                            "<td>"+tApples[i-1][2]+"</td>"+
+                            "<td>"+tApples[i-1][3]+"</td>"+
+                            "<td>"+tApples[i-1][4]+"</td>"+
+                            "<td>"+tApples[i-1][5]+"</td>"+
+                            "<td>"+tApples[i-1][6]+"</td>";
+    }
+
+}
+
+function sortTableByName(){
+    tApples.sort();
+    console.debug("sorted rows maybe");
+    for ( var i = 1; i < 4; i++){
+        rows[i].innerHTML = "<td>"+tApples[i-1][0]+"</td>"+
+                            "<td>"+tApples[i-1][1]+"</td>"+
+                            "<td>"+tApples[i-1][2]+"</td>"+
+                            "<td>"+tApples[i-1][3]+"</td>"+
+                            "<td>"+tApples[i-1][4]+"</td>"+
+                            "<td>"+tApples[i-1][5]+"</td>"+
+                            "<td>"+tApples[i-1][6]+"</td>";
     }
 }
+
