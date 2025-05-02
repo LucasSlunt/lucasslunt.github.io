@@ -170,8 +170,9 @@ function initializeTableVariables(){
     //tApples.push(["Img","name","taste","texture",rating,"note","A x B",51]);
     var tableImages = [];
     for (var i = 0; i < tApples.length; i++){
-        tableImages[i] = new Image(100,100);
-        tableImages[i].src = "./ApplePictures/Kanzi.png"
+        tableImages[i] = new Image(80,80);
+        tableImages[i].src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
+        console.debug(tableImages[i].src)
         tApples[i][0] = tableImages[i].outerHTML;
     }
 
