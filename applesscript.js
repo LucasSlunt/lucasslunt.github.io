@@ -110,13 +110,16 @@ var tApples = [];
 var currentlySortedBy = "";
 var sortDir = true;
 
+var userSearchBar;
+var userSearchValue;
 
 function initializeTableVariables(){
     table = document.getElementById('apple-table');
     rows = table.rows;
 
-    userSearch = document.getElementById('table-search-bar');
-    userSearch.addEventListener("keyup", ()=>console.debug(`${userSearch.value}`));
+    userSearchBar = document.getElementById('table-search-bar');
+    userSearchBar.addEventListener("keyup", ()=>{userSearchValue = userSearchBar.value; searchAppleTable(userSearchValue)});
+    
 
     tApples.push(["Img","Lady Alice","Sweet, candy","Very crisp",8,"Long shelf life","Unknown",1]);
     tApples.push(["Img","Gala","Sweet, tangy","Fairly crisp",5,"Best selling apple in North America","Golden Delicious x Kidds Orange Redd ",2]);
@@ -378,4 +381,14 @@ function sortTableByTexture(){
     tApples.sort(comparator);
     currentlySortedBy = "Texture";
     printDataToTable()
+}
+
+function searchAppleTable(searchTerm){
+    for (var i = 0; i < tApples.length; i++){
+        for (var j = 1; j < 8; j++){ //j goes from 1-7 because there are 8 columns, and the 0th column is images (unsearchable)
+            if (tApples[i][j].toString().toLowerCase().indexOf(searchTerm) != -1){
+                console.debug("search term " + searchTerm + " found at cell " + i + ", " + j);
+            }
+        }
+    }
 }
