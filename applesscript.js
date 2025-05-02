@@ -107,6 +107,7 @@ function setupButtons(){
 var table;
 var rows;
 var tApples = [];
+var tDisplay = []; //the data to be displayed
 var currentlySortedBy = "";
 var sortDir = true;
 
@@ -181,9 +182,9 @@ function initializeTableVariables(){
         tableImages[i].src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
         tApples[i][0] = tableImages[i].outerHTML;
     }
-
-    addRowsToTable(table,tApples);
-    numOfRowsInTable = tApples.length;
+    tDisplay = tApples;
+    addRowsToTable(table,tDisplay);
+    numOfRowsInTable = tDisplay.length;
     sortTableByChrono();
 }
 
@@ -203,7 +204,7 @@ function addRowsToTable(table,arrayToBeAdded){
 }
 
 function deleteAllRowsFromTable(){
-    for (var i = numOfRowsInTable; i >= 0; i--){
+    for (var i = numOfRowsInTable; i > 0; i--){
         table.deleteRow(i);
     }
     
@@ -211,14 +212,14 @@ function deleteAllRowsFromTable(){
 
 function printDataToTable(){
     for ( var i = 1; i <=numOfRowsInTable; i++){
-        rows[i].innerHTML = "<td>"+tApples[i-1][0]+"</td>"+
-                            "<td>"+tApples[i-1][1]+"</td>"+
-                            "<td>"+tApples[i-1][2]+"</td>"+
-                            "<td>"+tApples[i-1][3]+"</td>"+
-                            "<td>"+tApples[i-1][4]+"/10</td>"+
-                            "<td>"+tApples[i-1][5]+"</td>"+
-                            "<td>"+tApples[i-1][6]+"</td>"+
-                            "<td>"+tApples[i-1][7]+"</td>";
+        rows[i].innerHTML = "<td>"+tDisplay[i-1][0]+"</td>"+
+                            "<td>"+tDisplay[i-1][1]+"</td>"+
+                            "<td>"+tDisplay[i-1][2]+"</td>"+
+                            "<td>"+tDisplay[i-1][3]+"</td>"+
+                            "<td>"+tDisplay[i-1][4]+"/10</td>"+
+                            "<td>"+tDisplay[i-1][5]+"</td>"+
+                            "<td>"+tDisplay[i-1][6]+"</td>"+
+                            "<td>"+tDisplay[i-1][7]+"</td>";
     }
 }
 
@@ -235,7 +236,7 @@ function sortTable(){
         else if (sortDir) {return a[1].localeCompare(b[1]);}
         else return b[1].localeCompare(a[1]);
     }
-    tApples.sort(comparator);
+    tDisplay.sort(comparator);
     currentlySortedBy = "Name";
     printDataToTable();
 }
@@ -251,7 +252,7 @@ function sortTableByRating(){
         if (sortDir == true){return b[4] - a[4];}
         else return a[4]-b[4];
     }
-    tApples.sort(comparator);
+    tDisplay.sort(comparator);
     currentlySortedBy = "Rating";
     printDataToTable()
 }
@@ -264,7 +265,7 @@ function sortTableByParents(){
         if (sortDir) {return a[6].localeCompare(b[6]);}
         return b[6].localeCompare(a[6]);
     }
-    tApples.sort(comparator);
+    tDisplay.sort(comparator);
     currentlySortedBy = "Parents";
     printDataToTable();
 }
@@ -275,7 +276,7 @@ function sortTableByChrono(){
         if (sortDir == true){return b[7]-a[7];}
         else return a[7]-b[7];
     }
-    tApples.sort(comparator);
+    tDisplay.sort(comparator);
     currentlySortedBy = "Chrono";
     printDataToTable()
 }
@@ -345,7 +346,7 @@ function sortTableByPrimaryFlavour(){
         
         return bScore-aScore;
     }
-    tApples.sort(comparator);
+    tDisplay.sort(comparator);
     currentlySortedBy = "PrimaryFlavour";
     printDataToTable()
 }
@@ -385,7 +386,7 @@ function sortTableByTexture(){
         if (sortDir){return bScore-aScore;}
         else return aScore-bScore;
     }
-    tApples.sort(comparator);
+    tDisplay.sort(comparator);
     currentlySortedBy = "Texture";
     printDataToTable()
 }
@@ -403,8 +404,9 @@ function searchAppleTable(searchTerm){
     }
     console.debug(rowsContainingSearchTerm);
     deleteAllRowsFromTable()
-    //printDataToTable();
-    addRowsToTable(table,rowsContainingSearchTerm);
-    
-    numOfRowsInTable= rowsContainingSearchTerm.length;
+    //console.debug(table);
+    tDisplay = rowsContainingSearchTerm;
+    addRowsToTable(table,tDisplay);
+    printDataToTable();
+    numOfRowsInTable= tDisplay.length;
 }
