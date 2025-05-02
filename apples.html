@@ -37,10 +37,11 @@
     <button type="button" class = "selection-button" id = "button-prev"><</button>
     <button type="button" class = "selection-button" id = "button-next">></button>
 
+    <div id = full-apple-table>
+    <div class = search-bar>
+        <input id = table-search-bar type="text" placeholder="Search apples..">
+    </div>
     <table id = "apple-table">
-        <div class = search-bar>
-            <input id = table-search-bar type="text" placeholder="Search apples..">
-        </div>
         <tr>
             <th class = non-button id="header-picture">Picture</th>
             <th id="header-name">Name</th>
@@ -52,10 +53,10 @@
             <th id="header-chrono">Documentation Number</th>
         </tr>
     </table>
-
+    </div>
 
     <style>
-        #apple-table{
+        #full-apple-table{
             border: 5px outset;
             padding: 3px;
             width: 80%;
@@ -144,6 +145,12 @@
             padding: 1em;
             background-color: rgb(212, 237, 246);
             border-radius: 2em;
+        }
+
+        .search-bar input{
+            margin: 0.2em;
+            border: inset;
+            border-color: rgb(161, 92, 49);
         }
 
         #apple-picture{
