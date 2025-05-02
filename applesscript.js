@@ -112,6 +112,7 @@ var sortDir = true;
 
 var userSearchBar;
 var userSearchValue;
+var numOfRowsInTable;
 
 function initializeTableVariables(){
     table = document.getElementById('apple-table');
@@ -178,22 +179,22 @@ function initializeTableVariables(){
     for (var i = 0; i < tApples.length; i++){
         tableImages[i] = new Image(80,80);
         tableImages[i].src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
-        console.debug(tableImages[i].src)
         tApples[i][0] = tableImages[i].outerHTML;
     }
 
-    addRowsToTable(table);
+    addRowsToTable(table,tApples);
+    numOfRowsInTable = tApples.length;
     sortTableByChrono();
 }
 
-function addRowsToTable(table){
+function addRowsToTable(table,arrayToBeAdded){
     
-  for (var i = 0; i < tApples.length; i++) {
+  for (var i = 0; i < arrayToBeAdded.length; i++) {
     const row = document.createElement("tr");
 
     for (var j = 0; j < 7; j++) {
       var cell = document.createElement("td");
-      var cellText = document.createTextNode(tApples[i][j]);
+      var cellText = document.createTextNode(arrayToBeAdded[i][j]);
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
@@ -201,9 +202,15 @@ function addRowsToTable(table){
   }
 }
 
+function deleteAllRowsFromTable(){
+    for (var i = numOfRowsInTable; i >= 0; i--){
+        table.deleteRow(i);
+    }
+    
+}
 
 function printDataToTable(){
-    for ( var i = 1; i <= tApples.length; i++){
+    for ( var i = 1; i <=numOfRowsInTable; i++){
         rows[i].innerHTML = "<td>"+tApples[i-1][0]+"</td>"+
                             "<td>"+tApples[i-1][1]+"</td>"+
                             "<td>"+tApples[i-1][2]+"</td>"+
@@ -384,11 +391,20 @@ function sortTableByTexture(){
 }
 
 function searchAppleTable(searchTerm){
+    var rowsContainingSearchTerm  =[];
     for (var i = 0; i < tApples.length; i++){
         for (var j = 1; j < 8; j++){ //j goes from 1-7 because there are 8 columns, and the 0th column is images (unsearchable)
             if (tApples[i][j].toString().toLowerCase().indexOf(searchTerm) != -1){
-                console.debug("search term " + searchTerm + " found at cell " + i + ", " + j);
+                //console.debug("search term " + searchTerm + " found at cell " + i + ", " + j);
+                rowsContainingSearchTerm.push(tApples[i]);
+                j = 8;
             }
         }
     }
+    console.debug(rowsContainingSearchTerm);
+    deleteAllRowsFromTable()
+    //printDataToTable();
+    addRowsToTable(table,rowsContainingSearchTerm);
+    
+    numOfRowsInTable= rowsContainingSearchTerm.length;
 }
