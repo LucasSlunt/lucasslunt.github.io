@@ -211,7 +211,8 @@ function deleteAllRowsFromTable(){
 }
 
 function printDataToTable(){
-    for ( var i = 1; i <=numOfRowsInTable; i++){
+    for ( var i = 1; i <=tDisplay.length; i++){
+        console.debug(rows[i]);
         rows[i].innerHTML = "<td>"+tDisplay[i-1][0]+"</td>"+
                             "<td>"+tDisplay[i-1][1]+"</td>"+
                             "<td>"+tDisplay[i-1][2]+"</td>"+
@@ -404,9 +405,10 @@ function searchAppleTable(searchTerm){
     }
     console.debug(rowsContainingSearchTerm);
     deleteAllRowsFromTable()
-    //console.debug(table);
     tDisplay = rowsContainingSearchTerm;
     addRowsToTable(table,tDisplay);
+    console.debug(tDisplay);
     printDataToTable();
     numOfRowsInTable= tDisplay.length;
+    
 }
