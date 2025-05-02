@@ -152,7 +152,7 @@ function initializeTableVariables(){
     tApples.push(["Img","Lucy Rose","Sweet, slightly sour","Very crisp",5,"Red fleshed apple","Hidden Rose x Honeycrisp",28]);
     tApples.push(["Img","Pazazz","Sweet, tart","Softer",6,"Long shelf life","Honeycrisp x ?",29]);
     tApples.push(["Img","Lodi","Very sour","Very soft, mealy",2,"Good for apple sauce, grows early in the season","Mongomery Sweet x Yellow Transparent",30]);
-    tApples.push(["Img","Sunrise","Sweet, sharp","Dense, crunchy",8,"Ripens very early, before Gala","Golden Delicious x McIntosh",31]);
+    tApples.push(["Img","Sunrise","Sweet, sharp, juicy","Dense, crunchy",8,"Ripens very early, before Gala","Golden Delicious x McIntosh",31]);
     tApples.push(["Img","Transparent","Bland, sour","Very soft, muddy",1,"Very short shelf life (~10 days)","Unknown",32]);
     tApples.push(["Img","Unknown","Mildly bitter, slightly sour","Softer",3,"The best crabapples in Chapman Camp","Unknown",33]);
     tApples.push(["Img","Earligold","Sour, fairly sweet, concord grape","Very soft",8,"Incredible soft apple","Unknown",34]);
@@ -189,7 +189,7 @@ function initializeTableVariables(){
     tApples.push(["Img","Rubinette (Rafzubin)","Very sweet, sharp honey flavour","Crisp",7,"Quite small, difficult to grow","Cox's Orange Pippen x Golden Delicious",65]);
     tApples.push(["Img","Amber","Fairly sweet, soft, watery","Softer",5,"Not to be confused with \"Apple Amber\" an Irish dessert similar to an apple custard pie","Unknown",66]);
     tApples.push(["Img","Kissabel (Y101)","Sweet, tangy, vanilla, sweet berries","Between crisp and soft",9,"Kissabel is a trademark name for 6 similar apple varieties","Golden Delicious x SJ109",67]);
-    tApples.push(["Img","CrimsonCrisp","Very sweet, sour","Very crisp, dense",8,"Can stay in storage for several months","PCF2 x-134 x PRI 669-205",68]);
+    tApples.push(["Img","CrimsonCrisp","Very sweet, sour","Very crisp, dense",8,"Can stay in storage for several months","PCF2-134 x PRI 669-205",68]);
     tApples.push(["Img","Magic Star (Sprank, Kentish Kiss)","Very sweet, slightly sour","Very crisp",6,"When grown organically, this apple is marketed under the name \'Natrya\'","Elise x ?",69]);
     tApples.push(["Img","Robijn","Mild, fairly sweet","Fairly soft",4,"This variety is a mutation of a mutation of Jonagold","Jonagold Delcosta",70]);
     tApples.push(["Img","Cheerfull Gold","Full, sweet, balanced sour taste","Crisp",8,"Apples hang onto the tree into winter","Cox's Orange Pippen x Golden Delicious",71]);
