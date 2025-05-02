@@ -168,8 +168,12 @@ function initializeTableVariables(){
 
 
     //tApples.push(["Img","name","taste","texture",rating,"note","A x B",51]);
-
-
+    var tableImages = [];
+    for (var i = 0; i < tApples.length; i++){
+        tableImages[i] = new Image(100,100);
+        tableImages[i].src = "./ApplePictures/Kanzi.png"
+        tApples[i][0] = tableImages[i].outerHTML;
+    }
 
     addRowsToTable(table);
     sortTableByChrono();
