@@ -124,7 +124,7 @@ function initializeTableVariables(){
 
     tApples.push(["Img","Lady Alice","Sweet, candy","Very crisp",8,"Long shelf life","Unknown",1]);
     tApples.push(["Img","Gala","Sweet, tangy","Fairly crisp",5,"Best selling apple in North America","Golden Delicious x Kidds Orange Redd ",2]);
-    tApples.push(["Img","Aurora Golden Gala","Very sweet","Crisp",9,"Greasy exterior","Gala x Splendour",3]);
+    tApples.push(["Img","Aurora Golden Gala","Very sweet","Crisp",9,"The skin feels slightly greasy","Gala x Splendour",3]);
     tApples.push(["Img","Jazz","Slightly sour","Crunchy",6,"Oblong shape","Braeburn x Gala",4]);
     tApples.push(["Img","Envy","Fairly sweet, inconsistent","Very dense, crisp",5,"Browns extremely slowly","Braeburn x Gala",5]);
     tApples.push(["Img","Fuji","Pleasant yet watery","Crisp",5,"Difficult to grow","Ralls Janet x Red Delicious",6]);
@@ -215,7 +215,6 @@ function deleteAllRowsFromTable(){
 
 function printDataToTable(){
     for ( var i = 1; i <=tDisplay.length; i++){
-        console.debug(rows[i]);
         rows[i].innerHTML = "<td>"+tDisplay[i-1][0]+"</td>"+
                             "<td>"+tDisplay[i-1][1]+"</td>"+
                             "<td>"+tDisplay[i-1][2]+"</td>"+
@@ -396,13 +395,13 @@ function sortTableByTexture(){
 }
 
 function searchAppleTable(searchTerm){
+    var hasRowAtIndexBeenAddedToTable= new Array(tApples.length).fill(0);
     var rowsContainingSearchTerm  =[];
-    for (var i = 0; i < tApples.length; i++){
-        for (var j = 1; j < 8; j++){ //j goes from 1-7 because there are 8 columns, and the 0th column is images (unsearchable)
-            if (tApples[i][j].toString().toLowerCase().indexOf(searchTerm) != -1){
-                //console.debug("search term " + searchTerm + " found at cell " + i + ", " + j);
+    for (var j = 1; j < 8; j++){ //j goes from 1-7 because there are 8 columns, and the 0th column is images (unsearchable)
+        for (var i = 0; i < tApples.length; i++){
+            if (hasRowAtIndexBeenAddedToTable[i] == 0 && tApples[i][j].toString().toLowerCase().indexOf(searchTerm) != -1){
                 rowsContainingSearchTerm.push(tApples[i]);
-                j = 8;
+                hasRowAtIndexBeenAddedToTable[i] = 1;
             }
         }
     }
@@ -410,5 +409,4 @@ function searchAppleTable(searchTerm){
     tDisplay = rowsContainingSearchTerm;
     addRowsToTable(table,tDisplay);
     printDataToTable();
-    
 }
