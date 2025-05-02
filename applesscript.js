@@ -151,8 +151,8 @@ function initializeTableVariables(){
     tApples.push(["Img","Lucy Glo","Sweet, wild berries","Crisp",10,"Red fleshed apple","Hidden Rose x HoneyCrisp",27]);
     tApples.push(["Img","Lucy Rose","Sweet, slightly sour","Very crisp",5,"Red fleshed apple","Hidden Rose x Honeycrisp",28]);
     tApples.push(["Img","Pazazz","Sweet, tart","Softer",6,"Long shelf life","Honeycrisp x ?",29]);
-    tApples.push(["Img","Lodi","Very sour","very soft, mealy",2,"Good for apple sauce, grows early in the season","Mongomery Sweet x Yellow Transparent",30]);
-    tApples.push(["Img","Sunrise","taste","Dense, crunchy",8,"Ripens very early, before Gala","Golden Delicious x McIntosh",31]);
+    tApples.push(["Img","Lodi","Very sour","Very soft, mealy",2,"Good for apple sauce, grows early in the season","Mongomery Sweet x Yellow Transparent",30]);
+    tApples.push(["Img","Sunrise","Sweet, sharp","Dense, crunchy",8,"Ripens very early, before Gala","Golden Delicious x McIntosh",31]);
     tApples.push(["Img","Transparent","Bland, sour","Very soft, muddy",1,"Very short shelf life (~10 days)","Unknown",32]);
     tApples.push(["Img","Unknown","Mildly bitter, slightly sour","Softer",3,"The best crabapples in Chapman Camp","Unknown",33]);
     tApples.push(["Img","Earligold","Sour, fairly sweet, concord grape","Very soft",8,"Incredible soft apple","Unknown",34]);
@@ -177,33 +177,33 @@ function initializeTableVariables(){
     tApples.push(["Img","Zari","Sweet, tangy","Crisp",5,"Fairly new variety, from belgium","Delbard Estivale x Elstar",53]);
     tApples.push(["Img","Santana","Sour, vinous","Crisp",6,"Specially developed to minimize the amount of a specific protein that some people are allergic to","Elstar x Priscilla",54]);
     tApples.push(["Img","Rubens (Civni)","Quite sweet, barely sour","Crisp, flakey like an asian pear",7,"All growers of the Rubens variety are required to use minimal pesticides.","Gala x Elstar",55]);
-    tApples.push(["Img","Unknown","fairly sweet, crabappley","Softer",7,"May have been related to Bramley, though it was much sweeter.","Unknown",56]);
-    tApples.push(["Img","Maribelle","Mild","firm",4,"Has a very large yield of apples","Elstar x Gloster x Meiprinses",57]);
+    tApples.push(["Img","Unknown","Fairly sweet, crabappley","Softer",7,"May have been related to Bramley, though it was much sweeter.","Unknown",56]);
+    tApples.push(["Img","Maribelle","Mild","Firm",4,"Has a very large yield of apples","Elstar x Gloster x Meiprinses",57]);
     tApples.push(["Img","Reinette","Mild","Muddy",2,"\'Reinette\' is an umbrella term for ~50 different apples. It is unknown which specific reinette this apple is","Unknown",58]);
     tApples.push(["Img","Samboa","Incredibly sweet, dry","Very crisp",5,"\'Samboa\' is a brand name that cover 3 very similar apples, which only differ in their harvest times","Imperatriz x Pink Lady or Imperatriz x Baronesa",59]);
     tApples.push(["Img","Scarlett Paradise","Sweet, sour, similar to Aurora Golden Gala","Crisp",9,"Only available at select retailers in the UK","Unknown",60]);
-    tApples.push(["Img","Pixie","fairly sweet, sharp tang","Crisp",6,"Very small, barely larger than a mandarin orange","Unknown",61]);
-    tApples.push(["Img","Delgoton","mild, little flavour","soft",3,"This variety may have been created through Delbard Orchards irradiating technique of \'regenesis\'","Unknown",62]);
+    tApples.push(["Img","Pixie","Fairly sweet, sharp tang","Crisp",6,"Very small, barely larger than a mandarin orange","Unknown",61]);
+    tApples.push(["Img","Delgoton","Mild, little flavour","Soft",3,"This variety may have been created through Delbard Orchards irradiating technique of \'regenesis\'","Unknown",62]);
     tApples.push(["Img","Red Dream","Sweet, very similar to Honeycrisp","Crisp",7,"Almost no information about this apple is online","Unknown",63]);
     tApples.push(["Img","Chantecler (Belchard)","Sweet, refreshingly sour","Soft, fine-grained",6,"Tastes similar to Golden delicious","Golden Delicious x Reinette Clochard",64]);
-    tApples.push(["Img","Rubinette (Rafzubin)","Very sweet, sharp honey flavour","texture",7,"Quite small, difficult to grow","Cox x Golden Delicious",65]);
+    tApples.push(["Img","Rubinette (Rafzubin)","Very sweet, sharp honey flavour","Crisp",7,"Quite small, difficult to grow","Cox's Orange Pippen x Golden Delicious",65]);
     tApples.push(["Img","Amber","Fairly sweet, soft, watery","Softer",5,"Not to be confused with \"Apple Amber\" an Irish dessert similar to an apple custard pie","Unknown",66]);
     tApples.push(["Img","Kissabel (Y101)","Sweet, tangy, vanilla, sweet berries","Between crisp and soft",9,"Kissabel is a trademark name for 6 similar apple varieties","Golden Delicious x SJ109",67]);
     tApples.push(["Img","CrimsonCrisp","Very sweet, sour","Very crisp, dense",8,"Can stay in storage for several months","PCF2 x-134 x PRI 669-205",68]);
     tApples.push(["Img","Magic Star (Sprank, Kentish Kiss)","Very sweet, slightly sour","Very crisp",6,"When grown organically, this apple is marketed under the name \'Natrya\'","Elise x ?",69]);
     tApples.push(["Img","Robijn","Mild, fairly sweet","Fairly soft",4,"This variety is a mutation of a mutation of Jonagold","Jonagold Delcosta",70]);
     tApples.push(["Img","Cheerfull Gold","Full, sweet, balanced sour taste","Crisp",8,"Apples hang onto the tree into winter","Cox's Orange Pippen x Golden Delicious",71]);
-    tApples.push(["Img","Cameo","fairly mild, just okay","Dense, crisp",4,"Its colour varies dramatically between apples","Golden Delicious x Red Delicious",72]);
+    tApples.push(["Img","Cameo","Fairly mild, just okay","Dense, crisp",4,"Its colour varies dramatically between apples","Golden Delicious x Red Delicious",72]);
     tApples.push(["Img","Lolipop (Inored)","Incredibly sweet, candy, dry","Very crisp",7,"Can stay in storage for up to 8 months","Pinova x X6398",73]);
     tApples.push(["Img","Red Prince (Red Jonaprince)","Mild","Soft",3,"Taste improves with age","Golden Delicious x Jonathan",74]);
-    tApples.push(["Img","Golden Rose","Sour, fairly sweet","Crisp",6,"Very little information available online","A x B",75]);
+    tApples.push(["Img","Golden Rose","Sour, fairly sweet","Crisp",6,"Very little information available online","Unknown",75]);
     tApples.push(["Img","Rave","Tart, sweet, ridiculously juicy","Very crisp",9,"One of the juiciest apples I have ever tried","Honeycrisp x MonArk",76]);
-    tApples.push(["Img","Gravenstein","Complex, sweet, tart, toffee","soft, mealy",6,"Popular heritage apple over 350 years old","Unknown",77]);
-    tApples.push(["Img","Paula Red","Sweet, sour, floral, strawberry","Crisp, becomes soft later in the season",4,"The farmer who discovered it named it after his wife, Pauline","A x B",78]);
-    tApples.push(["Img","Empire","Sweet, vinous","soft",6,"Has very thick skin","McIntosh x Red Delicious",79]);
-    tApples.push(["Img","SweetTango (Minneiska)","Sweet, tangy, light","Very Crunchy",7,"Long shelf life, though flavour degrades quickly with time","Honeycrisp x Zelstar!",80]);    
+    tApples.push(["Img","Gravenstein","Complex, sweet, tart, toffee","Soft, mealy",6,"Popular heritage apple over 350 years old","Unknown",77]);
+    tApples.push(["Img","Paula Red","Sweet, sour, floral, strawberry","Crisp, becomes soft later in the season",4,"The farmer who discovered it named it after his wife, Pauline","Duchess x McIntosh",78]);
+    tApples.push(["Img","Empire","Sweet, vinous","Soft",6,"Has very thick skin","McIntosh x Red Delicious",79]);
+    tApples.push(["Img","SweetTango (Minneiska)","Sweet, tangy, light","Very crunchy",7,"Long shelf life, though flavour degrades quickly with time","Honeycrisp x Zelstar!",80]);    
     tApples.push(["Img","Bliss","Sweet, slightly tart","Soft",4,"Little information available online.","Unknown",81]);
-    tApples.push(["Img","Autumn GLory","Sweet, cinnamon, caramel","Very crisp",9,"Excellent for applesauce, or savoury dishes","Golden Delicious x Fuji",81]);
+    tApples.push(["Img","Autumn Glory","Sweet, cinnamon, caramel","Very crisp",9,"Excellent for applesauce, or savoury dishes","Golden Delicious x Fuji",82]);
 
 
 
@@ -336,7 +336,8 @@ function sortTableByPrimaryFlavour(){
             // tart
             // sour
             // very sour
-            if (taste.indexOf("very sweet") != -1){score = 20}
+            if (taste.indexOf("incredibly sweet") != -1){score = 22}
+            else if (taste.indexOf("very sweet") != -1){score = 20}
             else if (taste.indexOf("fairly sweet") != -1){score = 16}
             else if (taste.indexOf("mildly sweet") != -1){score = 14}
             else if (taste.indexOf("sweet") != -1){score = 18}
@@ -369,6 +370,7 @@ function sortTableByPrimaryFlavour(){
             else if (taste.indexOf("mildly sweet") != -1){score = 8}
             else if (taste.indexOf("fairly sweet") != -1){score = 6}
             else if (taste.indexOf("very sweet") != -1){score = 2}
+            else if (taste.indexOf("incredibly sweet") != -1){score = 1}
             else if (taste.indexOf("sweet") != -1){score = 4}
             return score;
         }
