@@ -172,11 +172,41 @@ function initializeTableVariables(){
     tApples.push(["Img","Alkmene (Red Windsor)","Sour","Very crisp, dense",5,"Given the Award of Garden Merit by Londons Royal Horticultural Society","Cox's Orange Pippin x Geheimrat Dr. Oldenburg",48]);
     tApples.push(["Img","Cox's Orange Pippin (Cox)","Very flavourful, sweet, tart","Crisp, dense",9,"Named after the farmer who grew it, \'Richard Cox\'","Unknown",49]);
     tApples.push(["Img","Bramley","Very sour","Crisp, hard",3,"Excellent for baking, very large","Gravenstein x ?",50]);
+    tApples.push(["Img","Egremont Russet","Dry, pear-like, nutty, cinnamon, sweet","Crunchy",10,"Traditionally made into cider. The skin is rough like a russet potato","Unknown",51]);
+    tApples.push(["Img","Pirouette","Sweet, a bit tart","Crisp",6,"Popular with organic growers","Clivia x Rubin",52]);
+    tApples.push(["Img","Zari","Sweet, tangy","Crisp",5,"Fairly new variety, from belgium","Delbard Estivale x Elstar",53]);
+    tApples.push(["Img","Santana","Sour, vinous","Crisp",6,"Specially developed to minimize the amount of a specific protein that some people are allergic to","Elstar x Priscilla",54]);
+    tApples.push(["Img","Rubens (Civni)","Quite sweet, barely sour","Crisp, flakey like an asian pear",7,"All growers of the Rubens variety are required to use minimal pesticides.","Gala x Elstar",55]);
+    tApples.push(["Img","Unknown","fairly sweet, crabappley","Softer",7,"May have been related to Bramley, though it was much sweeter.","Unknown",56]);
+    tApples.push(["Img","Maribelle","Mild","firm",4,"Has a very large yield of apples","Elstar x Gloster x Meiprinses",57]);
+    tApples.push(["Img","Reinette","Mild","Muddy",2,"\'Reinette\' is an umbrella term for ~50 different apples. It is unknown which specific reinette this apple is","Unknown",58]);
+    tApples.push(["Img","Samboa","Very sweet, dry","Very crisp",5,"\'Samboa\' is a brand name that cover 3 very similar apples, which only differ in their harvest times","Imperatriz x Pink Lady, Imperatriz x Baronesa",59]);
+    tApples.push(["Img","Scarlett Paradise","Sweet, sour, similar to Aurora Golden Gala","Crisp",9,"Only available at select retailers in the UK","Unknown",60]);
+    tApples.push(["Img","Pixie","fairly sweet, sharp tang","Crisp",6,"Very small, barely larger than a mandarin orange","Unknown",61]);
+    tApples.push(["Img","Delgoton","mild, little flavour","soft",3,"This variety may have been created through Delbard Orchards technique of \'regenesis\'","Unknown",62]);
+    tApples.push(["Img","Red Dream","Sweet, very similar to Honeycrisp","Crisp",7,"Almost no information about this apple is online","Unknown",63]);
+    tApples.push(["Img","Chantecler (Belchard)","Sweet, refreshingly sour","Soft, fine-grained",6,"Tastes similar to Golden delicious","Golden Delicious x Reinette Clochard",64]);
+    tApples.push(["Img","Rubinette (Rafzubin)","Very sweet, sharp honey flavour","texture",7,"Quite small, difficult to grow","Cox x Golden Delicious",65]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",66]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",67]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",68]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",69]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",70]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",71]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",72]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",73]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",74]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",75]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",76]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",77]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",78]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",79]);
+    tApples.push(["Img","name","taste","texture",rating,"note","A x B",80]);
 
 
     //tApples.push(["Img","name","taste","texture",rating,"note","A x B",51]);
-
     addimagesToArray(tApples);
+
     tDisplay = tApples;
     addRowsToTable(table,tDisplay);
     sortTableByChrono();
@@ -409,4 +439,5 @@ function searchAppleTable(searchTerm){
     tDisplay = rowsContainingSearchTerm;
     addRowsToTable(table,tDisplay);
     printDataToTable();
+
 }
