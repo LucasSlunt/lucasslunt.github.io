@@ -113,14 +113,13 @@ var sortDir = true;
 
 var userSearchBar;
 var userSearchValue;
-var numOfRowsInTable;
 
 function initializeTableVariables(){
     table = document.getElementById('apple-table');
     rows = table.rows;
 
     userSearchBar = document.getElementById('table-search-bar');
-    userSearchBar.addEventListener("keyup", ()=>{userSearchValue = userSearchBar.value; searchAppleTable(userSearchValue)});
+    userSearchBar.addEventListener("keyup", ()=>{searchAppleTable(userSearchBar.value)});
     
 
     tApples.push(["Img","Lady Alice","Sweet, candy","Very crisp",8,"Long shelf life","Unknown",1]);
@@ -176,16 +175,20 @@ function initializeTableVariables(){
 
 
     //tApples.push(["Img","name","taste","texture",rating,"note","A x B",51]);
-    var tableImages = [];
-    for (var i = 0; i < tApples.length; i++){
-        tableImages[i] = new Image(80,80);
-        tableImages[i].src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
-        tApples[i][0] = tableImages[i].outerHTML;
-    }
+
+    addimagesToArray(tApples);
     tDisplay = tApples;
     addRowsToTable(table,tDisplay);
-    numOfRowsInTable = tDisplay.length;
     sortTableByChrono();
+}
+
+function addimagesToArray(arrayToAddImagesTo){
+    var tableImages = [];
+    for (var i = 0; i < arrayToAddImagesTo.length; i++){
+        tableImages[i] = new Image(80,80);
+        tableImages[i].src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
+        arrayToAddImagesTo[i][0] = tableImages[i].outerHTML;
+    }
 }
 
 function addRowsToTable(table,arrayToBeAdded){
@@ -204,7 +207,7 @@ function addRowsToTable(table,arrayToBeAdded){
 }
 
 function deleteAllRowsFromTable(){
-    for (var i = numOfRowsInTable; i > 0; i--){
+    for (var i = tDisplay.length; i > 0; i--){
         table.deleteRow(i);
     }
     
@@ -403,12 +406,9 @@ function searchAppleTable(searchTerm){
             }
         }
     }
-    console.debug(rowsContainingSearchTerm);
     deleteAllRowsFromTable()
     tDisplay = rowsContainingSearchTerm;
     addRowsToTable(table,tDisplay);
-    console.debug(tDisplay);
     printDataToTable();
-    numOfRowsInTable= tDisplay.length;
     
 }
