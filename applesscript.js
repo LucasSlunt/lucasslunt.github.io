@@ -115,6 +115,9 @@ function initializeTableVariables(){
     table = document.getElementById('apple-table');
     rows = table.rows;
 
+    userSearch = document.getElementById('table-search-bar');
+    userSearch.addEventListener("keyup", ()=>console.debug(`${userSearch.value}`));
+
     tApples.push(["Img","Lady Alice","Sweet, candy","Very crisp",8,"Long shelf life","Unknown",1]);
     tApples.push(["Img","Gala","Sweet, tangy","Fairly crisp",5,"Best selling apple in North America","Golden Delicious x Kidds Orange Redd ",2]);
     tApples.push(["Img","Aurora Golden Gala","Very sweet","Crisp",9,"Greasy exterior","Gala x Splendour",3]);
