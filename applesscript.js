@@ -133,7 +133,7 @@ function initializeTableVariables(){
     tApples.push(["Img","SugarBee","Very Sweet, similar to Ambrosia","Crisp",6,"Long shelf life","HoneyCrisp x ?",16]);
     tApples.push(["Img","Orin","Sweet, pear","Crisp",9,"Tastes like a pear","Golden Delicious x Indo",17]);
     tApples.push(["Img","Kanzi","Sour, sweet","Crisp",8,"Quite similar to Honeycrisp","Braeburn x Gala",18]);
-    tApples.push(["Img","Koru","Bland, sweet","Crisp",4,"Not spicy","Braeburn x Fuji",19]);
+    tApples.push(["Img","Koru","Bland, sweet","Crisp",4,"Supposedly has a mild spicy flavour","Braeburn x Fuji",19]);
     tApples.push(["Img","Jonagold","Faintly sweet, dry","Crisp, coarse",5,"Triploid (3 sets of genes)","Golden Delicious x Jonathan",20]);
     tApples.push(["Img","Smitten","Fairly sweet, watery","Crisp",6,"Has 4 parents","Braeburn x Falstaff x Fiesta x Gala",21]);
     tApples.push(["Img","Unknown","Sour, citrusy","Very crisp",4,"From Place de la Gare park, Quebec city","Unknown",22]);
@@ -163,7 +163,7 @@ function initializeTableVariables(){
     tApples.push(["Img","Nicola","Sweet, barely tart","Dense, crisp",7,"Develops more flavour as the season progresses","Gala x Splendour",46]);
     tApples.push(["Img","Braeburn","Sweet, sour aftertaste","Softer",7,"A parent of many great apples","Red Delicious x Sturmer Pippin",47]);
     tApples.push(["Img","Alkmene (Red Windsor)","Sour","Very crisp, dense",5,"Given the Award of Garden Merit by Londons Royal Horticultural Society","Cox's Orange Pippin x Geheimrat Dr. Oldenburg",48]);
-    tApples.push(["Img","Cox's Orange Pippin (Cox)","Very flavourful, sweet, tart","Crisp, dense",9,"Named after the farmer who grew it, \"Richard Cox\"","Unknown",49]);
+    tApples.push(["Img","Cox's Orange Pippin (Cox)","Very flavourful, sweet, tart","Crisp, dense",9,"Named after the farmer who grew it, \'Richard Cox\'","Unknown",49]);
     tApples.push(["Img","Bramley","Very sour","Crisp, hard",3,"Excellent for baking, very large","Gravenstein x ?",50]);
 
 
