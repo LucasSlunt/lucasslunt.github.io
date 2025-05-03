@@ -10,29 +10,35 @@
     <div class = "carousel-container">
     <div class = "carousel">
         <div class = "carousel-side">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple1">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple2">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple3">
+            <img  width = "80" class = "small-apple-pictures" id ="apple1">
+            <img  width = "80" class = "small-apple-pictures" id ="apple2">
+            <img  width = "80" class = "small-apple-pictures" id ="apple3">
         </div>
-        <img src="./ApplePictures/AuroraGoldenGala.png" width = "200" id="apple-picture">
+        <img width = "200" id="apple-picture">
         <div class = "carousel-side">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple4">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple5">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple6">
+            <img  width = "80" class = "small-apple-pictures" id ="apple4">
+            <img  width = "80" class = "small-apple-pictures" id ="apple5">
+            <img  width = "80" class = "small-apple-pictures" id ="apple6">
         </div>
     </div>
-    <div id="main-apple-title">
-        apple
+
+    <div class = "horizontal-row">
+        <button type="button" class = "selection-button" id = "button-prev"><</button>
+        <div id="main-apple-title">
+          apple
+        </div>
+        <button type="button" class = "selection-button" id = "button-next">></button>
     </div>
-    <div class="apple-description-container">
+
+    <div class="horizontal-row">
         <div class = "desc-item" id = "featured-desc">
             apple
         </div>
     </div>
     </div>
     
-    <button type="button" class = "selection-button" id = "button-prev"><</button>
-    <button type="button" class = "selection-button" id = "button-next">></button>
+    
+    
 
     <div id = full-apple-table>
     <div class = search-bar>
@@ -57,6 +63,7 @@
             border: 5px outset;
             padding: 3px;
             width: 80%;
+            margin:auto;
             background-color: rgb(227, 162, 91);
             border-color: rgb(186, 121, 67);
         }
@@ -100,10 +107,16 @@
             border-color: rgb(161, 92, 49);
         }
 
-        .apple-description-container{
+        .horizontal-row{
             display: flex;
             flex-direction: row;
 
+        }
+
+        .selection-button{
+            margin-top:1em;
+            margin-left: 1em;
+            margin-right: 1em;
         }
 
         .carousel-container{
@@ -157,8 +170,12 @@
         }
 
         #main-apple-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-size: 1.5em;
             margin-top: 0.5em;
+            min-width: 10em;
         }
 
 
