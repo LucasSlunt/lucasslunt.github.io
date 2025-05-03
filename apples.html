@@ -4,10 +4,13 @@
         <title>Lucas Slunt</title>
         <link rel="icon" type="image/x-icon" href="./minecraft_media/textures/item/jellyfish.png">
     </head>
-    <body onload="setupPage()"><script src="./applesscript.js"></script></body>
+    <body onload="setupPage()" ><script src="./applesscript.js" ></script>
     <a href ="./index.html">Main page</a>
 
     <div class = "carousel-container">
+        <div class="textbox">
+            Featured Apples
+        </div>
     <div class = "carousel">
         <div class = "carousel-side">
             <img  width = "80" class = "small-apple-pictures" id ="apple1">
@@ -110,7 +113,7 @@
         .horizontal-row{
             display: flex;
             flex-direction: row;
-
+            justify-content: center;
         }
 
         .selection-button{
@@ -176,11 +179,29 @@
         .desc-item{
             margin: 1em;
             padding: 1em;
-            min-height: 10em;
-            background-color: rgb(211, 239, 118);
-            border-radius: 2em;
+            max-width: 84%;
+
+
+            border: 3px solid;
+            background-color: rgb(231, 193, 116);
+            border-color: rgb(161, 92, 49);
         }
 
+        .textbox{
+            margin: 1em;
+            padding: 0.5em;
+            min-width: 84%;
+            font-size: 1.5em;
+
+            border: 3px solid;
+            background-color: rgb(231, 193, 116);
+            border-color: rgb(161, 92, 49);
+        }
+
+        body{
+            background-image: url('./ApplePictures/bcgovphoto.jpg');
+            background-attachment: fixed;
+        }
         #apple-picture{
             display: flex;
             margin: 0.5em;
@@ -203,4 +224,5 @@
 
 
     </style>
+    </body>
 </html>
