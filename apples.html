@@ -10,15 +10,15 @@
     <div class = "carousel-container">
     <div class = "carousel">
         <div class = "carousel-side">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple1">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple2">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple3">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple1">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple2">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple3">
         </div>
-        <img src="./ApplePictures/AuroraGoldenGala.png" width = "400" id="apple-picture">
+        <img src="./ApplePictures/AuroraGoldenGala.png" width = "200" id="apple-picture">
         <div class = "carousel-side">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple4">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple5">
-            <img src="./ApplePictures/AuroraGoldenGala.png" width = "100" class = "small-apple-pictures" id ="apple6">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple4">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple5">
+            <img src="./ApplePictures/AuroraGoldenGala.png" width = "80" class = "small-apple-pictures" id ="apple6">
         </div>
     </div>
     <div id="main-apple-title">
@@ -27,9 +27,6 @@
     <div class="apple-description-container">
         <div class = "desc-item" id = "featured-desc">
             apple
-        </div>
-        <div class = "desc-item">
-            follow da links 2 learn more
         </div>
     </div>
     </div>
@@ -97,6 +94,12 @@
             display: block;
         }
 
+        .search-bar input{
+            margin: 0.2em;
+            border: inset;
+            border-color: rgb(161, 92, 49);
+        }
+
         .apple-description-container{
             display: flex;
             flex-direction: row;
@@ -109,7 +112,7 @@
             align-items: center;
 
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: 20px;
+            font-size: 16px;
 
             padding: 1em;
             margin: 1em;
@@ -129,8 +132,7 @@
         .carousel-side{
             display: flex;
             flex-direction: row;
-            padding-top: 7em;
-            padding-bottom: 7em;
+
             margin: 1em;
             justify-content: center;
         }
@@ -143,23 +145,19 @@
         .desc-item{
             margin: 1em;
             padding: 1em;
+            min-height: 10em;
             background-color: rgb(212, 237, 246);
             border-radius: 2em;
         }
 
-        .search-bar input{
-            margin: 0.2em;
-            border: inset;
-            border-color: rgb(161, 92, 49);
-        }
-
         #apple-picture{
             display: flex;
+            margin: 0.5em;
             border-radius: 2em;
         }
 
         #main-apple-title {
-            font-size: 2em;
+            font-size: 1.5em;
             margin-top: 0.5em;
         }
 

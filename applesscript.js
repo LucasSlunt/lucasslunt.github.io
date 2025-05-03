@@ -119,7 +119,7 @@ function initializeTableVariables(){
     rows = table.rows;
 
     userSearchBar = document.getElementById('table-search-bar');
-    userSearchBar.addEventListener("keyup", ()=>{searchAppleTable(userSearchBar.value)});
+    userSearchBar.addEventListener("keyup", ()=>{searchAppleTable(userSearchBar.value.toLowerCase())});
     
 
     tApples.push(["Img","Lady Alice","Sweet, candy","Very crisp",8,"Long shelf life","Unknown",1]);
