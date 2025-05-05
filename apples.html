@@ -27,7 +27,7 @@
 
     <div class = "horizontal-row">
         <button type="button" class = "selection-button" id = "button-prev"><</button>
-        <div id="main-apple-title">
+        <div class = "title-box" id="main-apple-title">
           apple
         </div>
         <button type="button" class = "selection-button" id = "button-next">></button>
@@ -44,6 +44,9 @@
     
 
     <div id = full-apple-table>
+        <div class = "title-box">
+            Apples I have Eaten
+        </div>
     <div class = search-bar>
         <input id = table-search-bar type="text" placeholder="Search apples..">
     </div>
@@ -57,8 +60,40 @@
             <th class = non-button id="header-notable-traits">Notable Traits</th>
             <th id="header-parents">Parents</th>
             <th id="header-chrono">Documentation Number</th>
+            <th id="header-juciness">Juciness</th>
         </tr>
     </table>
+    </div>
+
+    <div class = "footer">
+        <div>
+            <div class = "footer-row-box">
+                <div>
+                    Want to see more detailed descriptions of each apple? Visit&nbsp;
+                </div>
+                <a href="https://www.instagram.com/apples.i.have.eaten/" target = "_blank">@apples.i.have.eaten </a>
+                <div>
+                    &nbsp;on instagram
+                </div>
+            </div>
+            <div class = "footer-row-box">
+                <div class = "footer-row-item">
+                    Other apple sites:
+                </div>
+                <a class = "footer-row-item" href = "https://pomiferous.com/" target = "_blank">
+                    Pomiferous
+                </a>
+                <a class = "footer-row-item" href = "https://www.orangepippin.com/" target = "_blank">
+                    Orange Pippin
+                </a>
+                <a class = "footer-row-item" href="https://www.specialtyproduce.com/" target = "_blank">
+                    Specialty Produce
+                </a>
+                <a class = "footer-row-item" href="https://www.nationalfruitcollection.org.uk/" target = "_blank">
+                    National Fruit Collection UK
+                </a>
+            </div>
+        </div>
     </div>
 
     <style>
@@ -84,7 +119,7 @@
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
         }
         th:hover:not(.non-button){
-            background-color: rgb(255, 239, 206);
+            background-color: rgb(250, 241, 224);
             border-color: rgb(185, 148, 80);
         }
         th:active:not(.non-button){
@@ -127,7 +162,7 @@
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
         }
         .selection-button:hover{
-            background-color: rgb(255, 239, 206);
+            background-color: rgb(250, 241, 224);
             border-color: rgb(185, 148, 80);
         }
         .selection-button:active{
@@ -202,13 +237,8 @@
             background-image: url('./ApplePictures/bcgovphoto.jpg');
             background-attachment: fixed;
         }
-        #apple-picture{
-            display: flex;
-            margin: 0.5em;
-            border-radius: 2em;
-        }
 
-        #main-apple-title {
+        .title-box{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -222,6 +252,30 @@
             border-color: rgb(161, 92, 49);
         }
 
+        .footer{
+            border: 3px solid;
+            padding: 0.5em;
+            background-color: rgb(231, 193, 116);
+            border-color: rgb(161, 92, 49);
+        }
+        
+
+        .footer-row-item{
+            margin-right: 1em;
+        }
+
+        .footer-row-box{
+            display: flex;
+            flex-direction: row;
+            margin: 0.5em;
+            
+        }
+
+        #apple-picture{
+            display: flex;
+            margin: 0.5em;
+            border-radius: 2em;
+        }
 
     </style>
     </body>
