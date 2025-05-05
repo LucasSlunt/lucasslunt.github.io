@@ -5,7 +5,10 @@
         <link rel="icon" type="image/x-icon" href="./minecraft_media/textures/item/jellyfish.png">
     </head>
     <body onload="setupPage()" ><script src="./applesscript.js" ></script>
-    <a href ="./index.html">Main page</a>
+
+    <div class = "header">
+            <a class ="header-item" href ="./index.html">Main page</a>
+    </div>
 
     <div class = "carousel-container">
         <div class="textbox">
@@ -253,10 +256,13 @@
         }
 
         .footer{
-            border: 3px solid;
+            margin-top: 1em;
             padding: 0.5em;
-            background-color: rgb(231, 193, 116);
-            border-color: rgb(161, 92, 49);
+            background-color: rgb(175, 218, 130);
+
+            border: 4px outset;
+            border-color: rgb(196, 234, 156);
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
         }
         
 
@@ -269,6 +275,27 @@
             flex-direction: row;
             margin: 0.5em;
             
+        }
+
+        .header{
+            display: flex;
+            background-color: rgb(175, 218, 130);
+            border: 4px outset;
+            border-color: rgb(196, 234, 156);
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+        }
+
+        .header-item{
+            background-color: rgb(196, 234, 156);
+            font-size: 1.2em;
+            text-decoration: none;
+            color: rgb(0,0,0);
+
+            padding: 0.5em;
+        }
+
+        .header-item:hover{
+            background-color: rgb(227, 247, 205);
         }
 
         #apple-picture{
