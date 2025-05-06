@@ -139,7 +139,6 @@
             border: 4px inset;
             background-color: rgb(215, 176, 98);
             border-color: rgb(161, 92, 49);
-            box-shadow: 0
         }
 
         td{
@@ -150,6 +149,14 @@
 
         img{
             display: block;
+        }
+
+        img:active:not(.small-apple-pictures, #apple-picture){
+            scale: 4;
+            border: 4px outset;
+            background-color: rgb(215, 176, 98);
+            border-color: rgb(161, 92, 49);
+            box-shadow: 0 30px 60px 0 rgba(114, 1, 1, 0.2)
         }
 
         .search-bar input{

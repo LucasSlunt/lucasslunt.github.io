@@ -248,14 +248,14 @@ function deleteAllRowsFromTable(){
 
 function printDataToTable(){
     for ( var i = 1; i <=tDisplay.length; i++){
-        rows[i].innerHTML = "<td>"+tDisplay[i-1][0]+"</td>"+
-                            "<td>"+tDisplay[i-1][1]+"</td>"+
-                            "<td>"+tDisplay[i-1][2]+"</td>"+
-                            "<td>"+tDisplay[i-1][3]+"</td>"+
-                            "<td>"+tDisplay[i-1][4]+"/10</td>"+
-                            "<td>"+tDisplay[i-1][5]+"</td>"+
-                            "<td>"+tDisplay[i-1][6]+"</td>"+
-                            "<td>"+tDisplay[i-1][7]+"</td>";
+        rows[i].innerHTML = "<td>"+tDisplay[i-1][0]+"</td>"+ //picture
+                            "<td>"+tDisplay[i-1][1]+"</td>"+ //name
+                            "<td>"+tDisplay[i-1][2]+"</td>"+ //taste
+                            "<td>"+tDisplay[i-1][3]+"</td>"+ //texture
+                            "<td>"+tDisplay[i-1][4]+"/10</td>"+ //rating
+                            "<td>"+tDisplay[i-1][5]+"</td>"+ //notable traits
+                            "<td>"+tDisplay[i-1][6]+"</td>"+ //parents
+                            "<td>"+tDisplay[i-1][7]+"</td>"; //date documented
     }
 }
 
