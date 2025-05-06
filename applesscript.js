@@ -149,7 +149,7 @@ function initializeTableVariables(){
     tApples.push(["Img","Silken","Sweet, honey","Crisp",7,"Quite an ugly apple","Honeygold x Sunrise","September 24, 2022",25]);
     tApples.push(["Img","Nova Spy","Very sour, sweet","Crisp",6,"Trees are very hardy","Golden Delicious x Northern Spy","October 14, 2022",26]);
     tApples.push(["Img","Lucy Glo","Sweet, wild berries","Crisp",10,"Red fleshed apple","Hidden Rose x HoneyCrisp","November 27, 2022",27]);
-    tApples.push(["Img","Lucy Rose","Sweet, slightly sour","Very crisp",5,"Red fleshed apple","Hidden Rose x Honeycrisp","December 29",28]);
+    tApples.push(["Img","Lucy Rose","Sweet, slightly sour","Very crisp",5,"Red fleshed apple","Hidden Rose x Honeycrisp","December 29, 2022",28]);
     tApples.push(["Img","Pazazz","Sweet, tart","Softer",6,"Long shelf life","Honeycrisp x ?","July 9, 2023",29]);
     tApples.push(["Img","Lodi","Very sour","Very soft, mealy",2,"Good for apple sauce, grows early in the season","Mongomery Sweet x Yellow Transparent","July 28, 2023",30]);
     tApples.push(["Img","Sunrise","Sweet, sharp, juicy","Dense, crunchy",8,"Ripens very early, before Gala","Golden Delicious x McIntosh","August 3, 2023",31]);
@@ -309,8 +309,8 @@ function sortTableByParents(){
 function sortTableByChrono(){
     determineSortDirection("Chrono");
     function comparator(a,b){
-        if (sortDir == true){return b[7]-a[7];}
-        else return a[7]-b[7];
+        if (sortDir == true){return b[8]-a[8];}
+        else return a[8]-b[8];
     }
     tDisplay.sort(comparator);
     currentlySortedBy = "Chrono";
