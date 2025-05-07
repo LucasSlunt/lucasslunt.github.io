@@ -109,7 +109,50 @@
         </div>
     </div>
 
+    <div id="modal"> 
+        <div id="modal-screen">
+
+        </div>
+        <div id="modal-container">
+            <img id="modal-image">
+            hello
+        </div>
+    </div>
+
     <style>
+        #modal-screen{
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #modal-container{
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 35%;
+            top: 15%;
+
+            border: 4px outset;
+            padding: 4px;
+            background-color: rgb(227, 162, 91);
+            border-color: rgb(186, 121, 67);
+
+            
+        }
+
+        #modal-image{
+            width: 30vw;
+            border: 4px inset;
+            border-color: rgb(186, 121, 67);
+        }
+
         #full-apple-table{
             border: 5px outset;
             padding: 3px;

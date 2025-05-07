@@ -240,6 +240,7 @@ function attachModalFunctions(){
         //console.debug(i);
         document.getElementById("apple-id-"+(i+1)).onclick = function() {
             console.debug("Clicked image number " + i);
+            document.getElementById("modal-image").src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
         }
     }
 }
