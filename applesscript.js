@@ -100,6 +100,8 @@ function setupButtons(){
     document.getElementById("header-parents").onclick = sortTableByParents;
     document.getElementById("header-chrono").onclick = sortTableByChrono;
 
+    document.getElementById("modal-screen").onclick = closeModal;
+
 }
 
 //APPLE TABLE STUFF
@@ -243,6 +245,11 @@ function attachModalFunctions(){
             document.getElementById("modal-image").src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
         }
     }
+}
+
+function closeModal(){
+    var modal =document.getElementById("modal");
+    modal.style.display = "none";
 }
 
 
