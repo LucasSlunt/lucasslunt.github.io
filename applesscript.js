@@ -212,17 +212,47 @@ function initializeTableVariables(){
 
     tDisplay = tApples;
     addRowsToTable(table,tDisplay);
+    setupModalFunctions();
     sortTableByChrono();
 }
 
+var tableImages = [];
+
 function addimagesToArray(arrayToAddImagesTo){
-    var tableImages = [];
     for (var i = 0; i < arrayToAddImagesTo.length; i++){
         tableImages[i] = new Image(80,80);
         tableImages[i].src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
+        tableImages[i].id = "apple-id-"+(i+1);
         arrayToAddImagesTo[i][0] = tableImages[i].outerHTML;
     }
+    
 }
+
+function setupModalFunctions(){
+    for (var i = 0; i < tableImages.length; i++){
+        imageID = "apple-id-"+(i+1);
+        image = document.getElementById(imageID);
+        console.debug(image);
+        image.onclick = function() {
+            console.debug("Clicked image number " + i);
+        }
+    }
+}
+
+// function setupModalFunctions() {
+//     for (let i = 0; i < tableImages.length; i++) {
+//         const imgId = "apple-id-" + (i + 1);
+//         const imgEl = document.getElementById(imgId);
+
+//         console.debug("Trying to bind image:", imgId, "=>", imgEl);
+
+//         if (imgEl) {
+//             imgEl.addEventListener("click", () => {
+//                 console.debug("Clicked image number " + (i + 1));
+//             });
+//         }
+//     }
+// }
 
 function addRowsToTable(table,arrayToBeAdded){
     
@@ -231,8 +261,12 @@ function addRowsToTable(table,arrayToBeAdded){
 
     for (var j = 0; j < 7; j++) {
       var cell = document.createElement("td");
+      if (j == 0){// add images as images, not as plaintext
+        cell.innerHTML = arrayToBeAdded[i][j];
+      }else{
       var cellText = document.createTextNode(arrayToBeAdded[i][j]);
       cell.appendChild(cellText);
+      }
       row.appendChild(cell);
     }
     table.appendChild(row);
@@ -446,3 +480,4 @@ function searchAppleTable(searchTerm){
     printDataToTable();
 
 }
+
