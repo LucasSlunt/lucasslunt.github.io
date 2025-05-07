@@ -1,109 +1,3 @@
-var AppleCounter = 0;
-var imageDirectory = "./ApplePictures/";
-var appleImages = ["AllApples/3","AllApples/51","AllApples/18","Kissabel","LucyGlo","AllApples/17","AllApples/60"];
-var appleNames = ["Aurora Golden Gala","Egremont Russet","Kanzi","Kissabel","Lucy Glo","Orin","Scarlett Paradise"];
-var appleDescriptions = ["Despite the name, it's not a different coloured Gala apple, instead it's a cross between the Gala and Splendour varieties. This is a very sweet apple, and some may have a pinkish-red blush. The apples with bigger blushes and more dots (lenticels) are incredibly sweet. It's one of my favourite apples, and its the apple that got me interested in apples in the first place.",
-                        "Russet apples like this one are apples that are pre-disposed to russeting more than usual apples. The russet texture is like fine sandpaper on the apples skin, and is caused by micro-cracks on its surface. Generally, russet apples like this one have a dry taste, more intense flavour, and are often used to make cider. The russeting on apples is the same as the russeting on Russet potatoes, or Bosc pears. Russeting can occur on regular apples too, just not super intensely.\nThe Egremont russet is quite a dry, crunchy apple, like a firm pear. The skin feels dry and rough because of the russeting, but it doesn't leave a bitter aftertaste. This apple has a very unique flavour from any other apple I've tried. It tastes almost like a pear, though not as much as an Orin apple does. It has a faint underlying flavour of nuts, or cinnamon. It's nice and sweet but barely tart.\nThis apple is awesome, I've been wanting to try a russet apple for a long time, and it has exceeded my expectations. I definitely recommend you try it if you have the chance.",
-                        "This apple is very nice, Its a cross between Gala and Braeburn, the same parents as the Jazz and Envy apple varieties. It seems to be more similar to a Jazz apple though, its definitely crisp, and has a light, Honeycrisp-like flavour. Its fairly sour, but a little less sour than a Granny Smith. Because of the large size of Kanzi apples, it seems to be slightly watery, but thats not too noticeable. A great apple for those who prefer them sour.",
-                        "Super flavourful, it's sweet, tangy, and has hints of vanilla and sweet berries. The sweet berry flavour is especially prominent in the dark red flesh area between the stem and the core. The texture is right in between crisp and soft.\nKissabel is a trademark name that covers 6 different varieties. The one I had was most likely Kissabel Y101 from IFO fruit. This varieties parents are Golden Delicious and SJ109, an unpatented apple responsible for Kissabels red flesh. Thanks to Lucy Walters for getting these for me to try!\nThe skin is meant to be yellow, but the pink from the inside bleeds out, making it look orange. It has a conical shape, with pronounced lobes near the base like red delicious. The skin is pretty waxy, almost greasy like Aurora Golden Galas.\nRed flesh apples like this one are amazing, if you ever have the chance to try any, I highly recommend. I rate Kissabel 9/10",
-                        "This apple is probably the coolest one I've tried so far.\nIts a cross between the Honeycrisp and a Hidden Rose varieties, the latter of which is responsible for Lucy Glo's red flesh. The Hidden Rose apple is a descendant of the Niedzwetzkyana apple, an awful tasting apple with blood red flesh.\nAs for the taste, Lucy Glo is really good, its quite sweet and tart, and interestingly tastes kind of like wild berries. I Highly recommend it, I might be a bit biased because of the cool colour of its flesh. Thanks to Declan Armstrong for getting these for me to try!",
-                        "Despite being a green-yellow colour, it's not sour at all. Its quite sweet like a golden gala, and while the skin is crisp and thin, the flesh is more soft. What makes this apple interesting is its flavour, it tastes more like a pear than an apple, and it has dense flesh, also like a pear. I thought this apple was very good, much better than a lot of other apples I've tried. If you are a fan of sweet apples, I highly suggest you try this one.\nI bought this apple at a farmers market where one of the workers told me it was a cross between an apple and a pear. Though it may seem true judging from the taste, crossbreeding apples and pears is impossible, and the Orin apple is actually a cross between a Golden delicious and an Indo apple.",
-                        "Not only is this apple very pretty, it also tastes great. Just the right amount of sour, it's also nicely sweet and juicy. It has a more prevalent flavour than other varieties, reminds me of Aurora Golden Gala, and other dessert apples.\nThe only drawback is that it doesn't have a very long shelf life, lasting about 2 weeks. It's also only available at M&S foods in the UK.\nI emailed the growers for more information about it, though I never got a response."
-                    ];
-var fileFormat = ".jpg";
-var mainImage;
-var mainAppleTitle;
-var featuredAppleDescription;
-var htmlElementsArray = [];
-var numOfApples = appleImages.length;
-
-
-function setupPage(){
-    initializeImages();
-    setupButtons();
-    initializeTableVariables()
-}
-
-function initializeImages(){
-    
-    htmlElementsArray[0] = document.getElementById('apple1'); 
-    htmlElementsArray[1] = document.getElementById('apple2');
-    htmlElementsArray[2] = document.getElementById('apple3');
-
-    mainImage = document.getElementById('apple-picture');
-
-    htmlElementsArray[3] = document.getElementById('apple4');
-    htmlElementsArray[4] = document.getElementById('apple5');
-    htmlElementsArray[5] = document.getElementById('apple6');
-
-    mainAppleTitle = document.getElementById('main-apple-title');
-    featuredAppleDescription = document.getElementById('featured-desc');
-    
-    nextApple();
-}
-
-function nextApple(){
-    if (AppleCounter < numOfApples-1) AppleCounter++;
-    else                                   AppleCounter = 0;
-    displayApplePictures();
-    changeAppleTitle();
-    changeAppleDescription();
-}
-
-function prevApple(){
-    if (AppleCounter > 0) AppleCounter--;
-    else                  AppleCounter = numOfApples-1;
-    displayApplePictures();
-    changeAppleTitle();
-    changeAppleDescription();
-}
-
-function changeAppleTitle(){
-    mainAppleTitle.innerHTML = appleNames[AppleCounter];
-}
-
-function changeAppleDescription(){
-    featuredAppleDescription.innerHTML = appleDescriptions[AppleCounter];
-}
-
-function displayApplePictures(){
-    mainImage.src = imageDirectory+appleImages[AppleCounter]+fileFormat;
-
-    htmlElementsArray[0].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, -3, numOfApples)]+fileFormat;
-    htmlElementsArray[1].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, -2, numOfApples)]+fileFormat;
-    htmlElementsArray[2].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, -1, numOfApples)]+fileFormat;
-
-    htmlElementsArray[3].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, 1, numOfApples)]+fileFormat;
-    htmlElementsArray[4].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, 2, numOfApples)]+fileFormat;
-    htmlElementsArray[5].src = imageDirectory+appleImages[validArrayIndex(AppleCounter, 3, numOfApples)]+fileFormat;
-}
-
-function validArrayIndex(counter, modifier, maxCounterValue){
-    if (counter + modifier >= maxCounterValue){
-        return (counter+modifier)-maxCounterValue;
-    }
-    if (counter+modifier < 0){
-        return (counter+modifier)+maxCounterValue;
-    }
-    return counter+modifier;
-}
-
-function setupButtons(){
-    document.getElementById("button-next").onclick = nextApple;
-    document.getElementById("button-prev").onclick = prevApple;
-
-    document.getElementById("header-name").onclick = sortTable;
-    document.getElementById("header-primary-flavour").onclick = sortTableByPrimaryFlavour;
-    document.getElementById("header-texture").onclick = sortTableByTexture;
-    document.getElementById("header-raw-taste-rating").onclick = sortTableByRating;
-    //document.getElementById("header-notable-traits").onclick = sortTableByNotableTraits;
-    document.getElementById("header-parents").onclick = sortTableByParents;
-    document.getElementById("header-chrono").onclick = sortTableByChrono;
-
-    document.getElementById("modal-screen").onclick = closeModal;
-
-}
-
 //APPLE TABLE STUFF
 
 var table;
@@ -295,63 +189,42 @@ function determineSortDirection(column){
     if (currentlySortedBy == column){sortDir = !sortDir;}
     else {sortDir = true;}
 }
-
-function sortTable(){
-    determineSortDirection("Name");
-    function comparator(a,b){
-        if (a[1].toLowerCase().indexOf("unknown") != -1){return 1}
-        else if (b[1].toLowerCase().indexOf("unknown") != -1){return -1}
-        else if (sortDir) {return a[1].localeCompare(b[1]);}
-        else return b[1].localeCompare(a[1]);
-    }
+function sortTable(comparator,columnName){
+    determineSortDirection(columnName);
     tDisplay.sort(comparator);
-    currentlySortedBy = "Name";
+    currentlySortedBy = columnName;
     printDataToTable();
 }
-
     //COMPARATORS
     //negative result -> a comes before b
     //positive result -> b comes before a
     //zero or NaN -> a nd b are equal
 
-function sortTableByRating(){
-    determineSortDirection("Rating");
-    function comparator(a,b){
+    function comparatorName(a,b){
+        if (a[1].toLowerCase().indexOf("unknown") != -1){return 1}
+        else if (b[1].toLowerCase().indexOf("unknown") != -1){return -1}
+        else if (sortDir) {return a[1].localeCompare(b[1]);}
+        else return b[1].localeCompare(a[1]);
+    }
+
+    function comparatorRating(a,b){
         if (sortDir == true){return b[4] - a[4];}
         else return a[4]-b[4];
     }
-    tDisplay.sort(comparator);
-    currentlySortedBy = "Rating";
-    printDataToTable()
-}
 
-function sortTableByParents(){
-    determineSortDirection("Parents");
-    function comparator(a,b){
+    function comparatorParents(a,b){
         if (a[6].toLowerCase().indexOf("unknown") != -1){return 1}
         else if (b[6].toLowerCase().indexOf("unknown") != -1){return -1}
         if (sortDir) {return a[6].localeCompare(b[6]);}
         return b[6].localeCompare(a[6]);
     }
-    tDisplay.sort(comparator);
-    currentlySortedBy = "Parents";
-    printDataToTable();
-}
 
-function sortTableByChrono(){
-    determineSortDirection("Chrono");
-    function comparator(a,b){
+    function comparatorChrono(a,b){
         if (sortDir == true){return b[8]-a[8];}
         else return a[8]-b[8];
     }
-    tDisplay.sort(comparator);
-    currentlySortedBy = "Chrono";
-    printDataToTable()
-}
 
-function sortTableByPrimaryFlavour(){
-    determineSortDirection("PrimaryFlavour");
-    function comparator(aRow,bRow){
+    function comparatorFlavour(aRow,bRow){
         a = aRow[2].toLowerCase();
         b = bRow[2].toLowerCase();
         
@@ -416,14 +289,8 @@ function sortTableByPrimaryFlavour(){
         
         return bScore-aScore;
     }
-    tDisplay.sort(comparator);
-    currentlySortedBy = "PrimaryFlavour";
-    printDataToTable()
-}
 
-function sortTableByTexture(){
-    determineSortDirection("Texture");
-    function comparator(aRow,bRow){
+    function comparatorTexture(aRow,bRow){
         a = aRow[3].toLowerCase();
         b = bRow[3].toLowerCase();
         
@@ -456,10 +323,6 @@ function sortTableByTexture(){
         if (sortDir){return bScore-aScore;}
         else return aScore-bScore;
     }
-    tDisplay.sort(comparator);
-    currentlySortedBy = "Texture";
-    printDataToTable()
-}
 
 function searchAppleTable(searchTerm){
     var hasRowAtIndexBeenAddedToTable= new Array(tApples.length).fill(0);
