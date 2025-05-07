@@ -231,22 +231,18 @@ function addimagesToArray(arrayToAddImagesTo){
 }
 
 function attachModalFunctions(){
-    // for (var i = 0; i < tableImages.length; i++){
-    //     imageID = "apple-id-"+(i+1);
-    //     image = document.getElementById(imageID);
-    //     //console.debug(i);
-    //     image.onclick = function() {
-    //         console.debug("Clicked image number " + imageID);
-    //     }
-    // }
-    for (let i = 0; i < tableImages.length; i++){
+    for (let i = 0; i < tApples.length; i++){
+        imageID = "apple-id-"+(i+1);
+        image = document.getElementById(imageID);
         //console.debug(i);
-        document.getElementById("apple-id-"+(i+1)).onclick = function() {
-            console.debug("Clicked image number " + i);
-            modal.style.display = "block";
-            document.getElementById("modal-image").src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
-            document.getElementById("modal-title").innerHTML = document.getElementById("apple-id-"+(i+1)).alt;
-        }
+        if(image){
+        image.onclick = function() {
+                    console.debug("Clicked image number " + i);
+                    modal.style.display = "block";
+                    document.getElementById("modal-image").src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
+                    document.getElementById("modal-title").innerHTML = document.getElementById("apple-id-"+(i+1)).alt;
+                }
+            }
     }
 }
 
