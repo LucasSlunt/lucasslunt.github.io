@@ -238,6 +238,7 @@ function attachModalFunctions(){
         image.onclick = function() {
                     modal.style.display = "block";
                     document.getElementById("modal-image").src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
+                    document.getElementById("modal-image").style.cursor = "auto";
                     document.getElementById("modal-title").innerHTML = document.getElementById("apple-id-"+(i+1)).alt;
                 }
             }

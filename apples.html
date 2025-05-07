@@ -164,6 +164,8 @@
             width: 30vw;
             border: 4px inset;
             border-color: rgb(186, 121, 67);
+
+            cursor:crosshair;
         }
 
         #full-apple-table{
@@ -205,6 +207,10 @@
 
         img{
             display: block;
+        }
+
+        img:not(#apple-picture, .small-apple-pictures){
+            cursor:zoom-in;
         }
 
         .search-bar input{
