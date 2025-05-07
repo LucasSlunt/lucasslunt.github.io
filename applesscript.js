@@ -224,6 +224,7 @@ function addimagesToArray(arrayToAddImagesTo){
         tableImages[i] = new Image(80,80);
         tableImages[i].src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
         tableImages[i].id = "apple-id-"+(i+1);
+        tableImages[i].alt = tApples[i][1];
         arrayToAddImagesTo[i][0] = tableImages[i].outerHTML;
     }
     
@@ -242,7 +243,9 @@ function attachModalFunctions(){
         //console.debug(i);
         document.getElementById("apple-id-"+(i+1)).onclick = function() {
             console.debug("Clicked image number " + i);
+            modal.style.display = "block";
             document.getElementById("modal-image").src = "./ApplePictures/AllApples/"+(i+1)+".jpg"
+            document.getElementById("modal-title").innerHTML = document.getElementById("apple-id-"+(i+1)).alt;
         }
     }
 }
