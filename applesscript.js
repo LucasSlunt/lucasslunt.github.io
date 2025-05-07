@@ -30,7 +30,7 @@ function initializeImages(){
     htmlElementsArray[1] = document.getElementById('apple2');
     htmlElementsArray[2] = document.getElementById('apple3');
 
-    mainImage = document.getElementById('apple-picture');
+    mainImage = document.getElementById('main-carousel-picture');
 
     htmlElementsArray[3] = document.getElementById('apple4');
     htmlElementsArray[4] = document.getElementById('apple5');
