@@ -47,12 +47,13 @@
     background-color: rgb(227, 162, 91);
     border-color: rgb(186, 121, 67);
 }
-.non-button{
-    border: 3px solid;
-    padding: 4px;
-    background-color: rgb(231, 193, 116);
-    border-color: rgb(161, 92, 49);
+
+#main-carousel-picture{
+    display: flex;
+    margin: 0.5em;
+    border-radius: 2em;
 }
+
 th:not(.non-button){
     border: 4px outset;
     padding: 4px;
@@ -84,6 +85,10 @@ img:not(#main-carousel-picture, .small-carousel-pictures){
     cursor:zoom-in;
 }
 
+body{
+    background-image: url('./ApplePictures/bcgovphoto.jpg');
+    background-attachment: fixed;
+}
 .search-bar input{
     margin: 0.2em;
     padding: 0.5em;
@@ -91,7 +96,12 @@ img:not(#main-carousel-picture, .small-carousel-pictures){
     border: inset;
     border-color: rgb(161, 92, 49);
 }
-
+.non-button{
+    border: 3px solid;
+    padding: 4px;
+    background-color: rgb(231, 193, 116);
+    border-color: rgb(161, 92, 49);
+}
 .horizontal-row{
     display: flex;
     flex-direction: row;
@@ -180,10 +190,6 @@ img:not(#main-carousel-picture, .small-carousel-pictures){
     border-color: rgb(161, 92, 49);
 }
 
-body{
-    background-image: url('./ApplePictures/bcgovphoto.jpg');
-    background-attachment: fixed;
-}
 
 .title-box{
     display: flex;
@@ -240,11 +246,5 @@ body{
 
 .header-item:hover{
     background-color: rgb(227, 247, 205);
-}
-
-#main-carousel-picture{
-    display: flex;
-    margin: 0.5em;
-    border-radius: 2em;
 }
 
