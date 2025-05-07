@@ -92,15 +92,27 @@ function setupButtons(){
     document.getElementById("button-next").onclick = nextApple;
     document.getElementById("button-prev").onclick = prevApple;
 
-    document.getElementById("header-name").onclick = sortTable;
-    document.getElementById("header-primary-flavour").onclick = sortTableByPrimaryFlavour;
-    document.getElementById("header-texture").onclick = sortTableByTexture;
-    document.getElementById("header-raw-taste-rating").onclick = sortTableByRating;
-    //document.getElementById("header-notable-traits").onclick = sortTableByNotableTraits;
-    document.getElementById("header-parents").onclick = sortTableByParents;
-    document.getElementById("header-chrono").onclick = sortTableByChrono;
+    document.getElementById("header-name").addEventListener('click', function () {
+        sortTable(comparatorName,"Name");});
+
+    document.getElementById("header-primary-flavour").addEventListener('click', function () {
+        sortTable(comparatorFlavour,"PrimaryFlavour");});
+
+    document.getElementById("header-texture").addEventListener('click', function () {
+        sortTable(comparatorTexture,"Texture");});
+
+    document.getElementById("header-raw-taste-rating").addEventListener('click', function () {
+        sortTable(comparatorRating,"Rating");});
+
+    document.getElementById("header-parents").addEventListener('click', function () {
+        sortTable(comparatorParents,"Parents");});
+        
+    document.getElementById("header-chrono").addEventListener('click', function () {
+        sortTable(comparatorChrono,"Chrono");});
 
     document.getElementById("modal-screen").onclick = closeModal;
 
 }
+
+
 

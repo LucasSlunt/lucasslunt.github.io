@@ -189,63 +189,42 @@ function determineSortDirection(column){
     if (currentlySortedBy == column){sortDir = !sortDir;}
     else {sortDir = true;}
 }
-
-function sortTable(){
-    determineSortDirection("Name");
-    function comparator(a,b){
-        if (a[1].toLowerCase().indexOf("unknown") != -1){return 1}
-        else if (b[1].toLowerCase().indexOf("unknown") != -1){return -1}
-        else if (sortDir) {return a[1].localeCompare(b[1]);}
-        else return b[1].localeCompare(a[1]);
-    }
+function sortTable(comparator,columnName){
+    determineSortDirection(columnName);
     tDisplay.sort(comparator);
-    currentlySortedBy = "Name";
+    currentlySortedBy = columnName;
     printDataToTable();
 }
-
     //COMPARATORS
     //negative result -> a comes before b
     //positive result -> b comes before a
     //zero or NaN -> a nd b are equal
 
-function sortTableByRating(){
-    determineSortDirection("Rating");
-    function comparator(a,b){
+    function comparatorName(a,b){
+        if (a[1].toLowerCase().indexOf("unknown") != -1){return 1}
+        else if (b[1].toLowerCase().indexOf("unknown") != -1){return -1}
+        else if (sortDir) {return a[1].localeCompare(b[1]);}
+        else return b[1].localeCompare(a[1]);
+    }
+
+    function comparatorRating(a,b){
         if (sortDir == true){return b[4] - a[4];}
         else return a[4]-b[4];
     }
-    tDisplay.sort(comparator);
-    currentlySortedBy = "Rating";
-    printDataToTable()
-}
 
-function sortTableByParents(){
-    determineSortDirection("Parents");
-    function comparator(a,b){
+    function comparatorParents(a,b){
         if (a[6].toLowerCase().indexOf("unknown") != -1){return 1}
         else if (b[6].toLowerCase().indexOf("unknown") != -1){return -1}
         if (sortDir) {return a[6].localeCompare(b[6]);}
         return b[6].localeCompare(a[6]);
     }
-    tDisplay.sort(comparator);
-    currentlySortedBy = "Parents";
-    printDataToTable();
-}
 
-function sortTableByChrono(){
-    determineSortDirection("Chrono");
-    function comparator(a,b){
+    function comparatorChrono(a,b){
         if (sortDir == true){return b[8]-a[8];}
         else return a[8]-b[8];
     }
-    tDisplay.sort(comparator);
-    currentlySortedBy = "Chrono";
-    printDataToTable()
-}
 
-function sortTableByPrimaryFlavour(){
-    determineSortDirection("PrimaryFlavour");
-    function comparator(aRow,bRow){
+    function comparatorFlavour(aRow,bRow){
         a = aRow[2].toLowerCase();
         b = bRow[2].toLowerCase();
         
@@ -310,14 +289,8 @@ function sortTableByPrimaryFlavour(){
         
         return bScore-aScore;
     }
-    tDisplay.sort(comparator);
-    currentlySortedBy = "PrimaryFlavour";
-    printDataToTable()
-}
 
-function sortTableByTexture(){
-    determineSortDirection("Texture");
-    function comparator(aRow,bRow){
+    function comparatorTexture(aRow,bRow){
         a = aRow[3].toLowerCase();
         b = bRow[3].toLowerCase();
         
@@ -350,10 +323,6 @@ function sortTableByTexture(){
         if (sortDir){return bScore-aScore;}
         else return aScore-bScore;
     }
-    tDisplay.sort(comparator);
-    currentlySortedBy = "Texture";
-    printDataToTable()
-}
 
 function searchAppleTable(searchTerm){
     var hasRowAtIndexBeenAddedToTable= new Array(tApples.length).fill(0);
