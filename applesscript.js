@@ -212,7 +212,6 @@ function initializeTableVariables(){
 
     tDisplay = tApples;
     addRowsToTable(table,tDisplay);
-    setupModalFunctions();
     sortTableByChrono();
 }
 
@@ -228,31 +227,23 @@ function addimagesToArray(arrayToAddImagesTo){
     
 }
 
-function setupModalFunctions(){
-    for (var i = 0; i < tableImages.length; i++){
-        imageID = "apple-id-"+(i+1);
-        image = document.getElementById(imageID);
-        console.debug(image);
-        image.onclick = function() {
+function attachModalFunctions(){
+    // for (var i = 0; i < tableImages.length; i++){
+    //     imageID = "apple-id-"+(i+1);
+    //     image = document.getElementById(imageID);
+    //     //console.debug(i);
+    //     image.onclick = function() {
+    //         console.debug("Clicked image number " + imageID);
+    //     }
+    // }
+    for (let i = 0; i < tableImages.length; i++){
+        //console.debug(i);
+        document.getElementById("apple-id-"+(i+1)).onclick = function() {
             console.debug("Clicked image number " + i);
         }
     }
 }
 
-// function setupModalFunctions() {
-//     for (let i = 0; i < tableImages.length; i++) {
-//         const imgId = "apple-id-" + (i + 1);
-//         const imgEl = document.getElementById(imgId);
-
-//         console.debug("Trying to bind image:", imgId, "=>", imgEl);
-
-//         if (imgEl) {
-//             imgEl.addEventListener("click", () => {
-//                 console.debug("Clicked image number " + (i + 1));
-//             });
-//         }
-//     }
-// }
 
 function addRowsToTable(table,arrayToBeAdded){
     
@@ -291,6 +282,7 @@ function printDataToTable(){
                             "<td>"+tDisplay[i-1][6]+"</td>"+ //parents
                             "<td>"+tDisplay[i-1][7]+"</td>"; //date documented
     }
+    attachModalFunctions(); //please refactor this later, this is terrible
 }
 
 function determineSortDirection(column){
