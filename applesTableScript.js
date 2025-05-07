@@ -18,7 +18,7 @@ function initializeTableVariables(){
     userSearchBar.addEventListener("keyup", ()=>{searchAppleTable(userSearchBar.value.toLowerCase())});
     
 
-    tApples.push(["Img","Lady Alice","Sweet, candy","Very crisp",8,"Long shelf life","Unknown","Jan 23, 2022",1]);
+    tApples.push(["Img","Lady Alice","Sweet, candy","Very crisp",8,"Long shelf life","Unknown","January 23, 2022",1]);
     tApples.push(["Img","Gala","Sweet, tangy","Fairly crisp",5,"Best selling apple in North America","Golden Delicious x Kidds Orange Redd ","January 24, 2022",2]);
     tApples.push(["Img","Aurora Golden Gala","Very sweet","Crisp",9,"The skin feels slightly greasy","Gala x Splendour","January 25, 2022",3]);
     tApples.push(["Img","Jazz","Slightly sour","Crunchy",6,"Oblong shape","Braeburn x Gala","January 25, 2022",4]);
@@ -58,7 +58,7 @@ function initializeTableVariables(){
     tApples.push(["Img","Ginger Gold","Sweet, barely tart, dry","Softer",7,"Named 'Ginger' after the farmer who discovered it, not the spice","Golden Delicious x ?","October 4, 2023",38]);
     tApples.push(["Img","McIntosh","Fairly sweet, slightly sour, vinous","Softer",8,"National apple of Canada","Unknown","October 13, 2023",39]);
     tApples.push(["Img","Golden Delicious","Sweet, barely sour","Softer",7,"Not closely related to Red Delicious","Grimes Golden x ?","October 18, 2023",40]);
-    tApples.push(["Img","Hidden Rose","Tart, hints of strawberry lemonade","Crisp",7,"Red-fleshed apple","Unknown","November 9, 2023",41]);
+    tApples.push(["Img","Hidden Rose","Tart, hints of strawberry lemonade","Crisp",7,"Red fleshed apple","Unknown","November 9, 2023",41]);
     tApples.push(["Img","Salish","Sweet, tart","Crisp",6,"Named after a group of languages spoken by indigenous people of Canada","Gala x Splendour","November 11, 2023",42]);
     tApples.push(["Img","September Wonder (Fuji)","Pleasant, watery, slightly tart","Crisp",7,"A sport of Fuji","Fuji","November 12, 2023",43]);
     tApples.push(["Img","Pinata","Full, sweet, tart","Crisp",7,"Supposedly has a light pineapple aftertaste","Cox's Orange Pippin x Duchess of Oldenburg x Golden Delicious","November 15, 2023",44]);
@@ -108,7 +108,7 @@ function initializeTableVariables(){
 
     tDisplay = tApples;
     addRowsToTable(table,tDisplay);
-    sortTableByChrono();
+    sortTable(comparatorChrono,"Chrono");
 }
 
 var tableImages = [];
