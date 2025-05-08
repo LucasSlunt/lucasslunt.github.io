@@ -1,0 +1,42 @@
+body{
+    background-image: url('./main_page_media/ski_hill_summer.JPG');
+    background-attachment: fixed;
+}
+hr{
+    max-width: 90%;
+}
+
+.page-container{
+    background-color: aliceblue;
+    max-width: 80%;
+    margin: auto;
+}
+
+.project-title{
+
+}
+
+.project-desc{
+    
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    margin: auto;
+    font-size: larger;
+    padding: 1em;
+}
+
+.description{
+    margin:auto;
+}
