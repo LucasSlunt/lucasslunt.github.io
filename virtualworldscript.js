@@ -1,13 +1,8 @@
 function setupPage(){
-    projectTitle();
+    colourNavbar("rgb(124, 161, 173)","lightblue");
+    loadProjectHeader('April 2025','Virtual World','A vast open world full of nature and surprises. Made with Unity, Gaia, and Blender',"lightblue");
     initializeImages();
     setupButtons();
-}
-
-function projectTitle() {
-    document.getElementById('project-date').innerHTML = 'April 2025';
-    document.getElementById('project-title').innerHTML = 'Virtual World';
-    document.getElementById('project-description').innerHTML = 'A vast open world full of nature and surprises. Made with Unity, Gaia, and Blender';
 }
 
 var ImageSetCounter = 3;

@@ -19,6 +19,7 @@ var numOfApples = appleImages.length;
 
 
 function setupPage(){
+    colourNavbar("rgb(175, 218, 130)","rgb(196, 234, 156)");
     initializeImages();
     setupButtons();
     initializeTableVariables()
