@@ -4,11 +4,21 @@
         <title>Lucas Slunt</title>
         <link rel="icon" type="image/x-icon" href="./ApplePictures/Icon.png">
 		<link rel="stylesheet" href="header.css">
+		<link rel="stylesheet" href="navbar.css">
     </head>
 
-	<body onload="loadProjectHeader('August 2023','Arkus\'s Fishing','An exciting expansion of Minecrafts fishing mechanics. Made with the Minecraft Forge API, Java, and GIMP.','bisque')">
-        <script src="./loadHeader.js"></script>
+	<body onload="setupPage()">
+        <script src="./minecraftmod.js"></script>
+		<script src="./loadHeader.js"></script>
+		<script src="./navBar.js"></script>
     </body>
+	
+    <div id = "navbar">
+        <a class ="navbar-item" href ="./index.html">Home</a>
+        <a class ="navbar-item" href ="./apples.html">Apples</a>
+        <a class ="navbar-item" href ="https://github.com/LucasSlunt" target="_blank">Github</a>
+        <a class ="navbar-item" href ="https://www.linkedin.com/in/lucas-slunt-3a170a330/" target="_blank">LinkedIn</a>
+</div>
 
 	<div id = "project-header" >
     
