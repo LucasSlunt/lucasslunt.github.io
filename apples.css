@@ -227,24 +227,4 @@ body{
     
 }
 
-.header{
-    display: flex;
-    background-color: rgb(175, 218, 130);
-    border: 4px outset;
-    border-color: rgb(196, 234, 156);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
-}
-
-.header-item{
-    background-color: rgb(196, 234, 156);
-    font-size: 1.2em;
-    text-decoration: none;
-    color: rgb(0,0,0);
-
-    padding: 0.5em;
-}
-
-.header-item:hover{
-    background-color: rgb(227, 247, 205);
-}
 
