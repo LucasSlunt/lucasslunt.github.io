@@ -2,7 +2,6 @@
         display: flex;
         flex-direction: row;
         flex: 1;
-        background-color: darkgray;
         padding: 2em;
 
         font-family: "Lucida Console", "Courier New", sans-serif;
