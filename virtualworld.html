@@ -3,55 +3,23 @@
     <head>
         <title>Lucas Slunt</title>
         <link rel="icon" type="image/x-icon" href="./ApplePictures/Icon.png">
+        <link rel="stylesheet" href="header.css">
     </head>
-    <body onload="setupPage()"><script src="./virtualworldscript.js"></script></body>
+    <body onload="setupPage()">
+        <script src="./virtualworldscript.js"></script>
+        <script src="./loadHeader.js"></script>
+    </body>
 
 
-<div class = "project-header" >
+<div id = "project-header" >
     
-    <div class = "date-and-title-container">
+    <div id = "date-and-title-container">
         <div id = "project-date"> </div>
         <div id = "project-title">Loading...</div>
     </div>
     
     <div id = "project-description"> </div>
 </div>
-
-<style>
-    .project-header{
-        display: flex;
-        flex-direction: row;
-        flex: 1;
-        background-color: darkgray;
-        padding: 2em;
-
-        font-family: "Lucida Console", "Courier New", sans-serif;
-    }
-
-    .date-and-title-container{
-        display: flex;
-        flex-direction: column;
-        flex: 2;
-    }
-
-    #project-date{
-        font-size: 20px;
-    }
-
-    #project-title{
-        font-size: 70px;
-    }
-
-    #project-description{
-        display: flex;
-        text-align: right;
-        flex: 1;
-
-        font-size: 20px;
-    }
-
-
-</style>
 
 <a href ="./index.html">Main page</a>
 

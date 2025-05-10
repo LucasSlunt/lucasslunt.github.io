@@ -1,0 +1,31 @@
+    #project-header{
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        background-color: darkgray;
+        padding: 2em;
+
+        font-family: "Lucida Console", "Courier New", sans-serif;
+    }
+
+    #date-and-title-container{
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+    }
+
+    #project-date{
+        font-size: 20px;
+    }
+
+    #project-title{
+        font-size: 70px;
+    }
+
+    #project-description{
+        display: flex;
+        text-align: right;
+        flex: 1;
+
+        font-size: 20px;
+    }
