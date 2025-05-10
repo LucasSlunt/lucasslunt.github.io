@@ -1,0 +1,8 @@
+body{
+    background-color: rgb(24, 13, 21);
+}
+
+.flex-row{
+    display:flex;
+    flex-direction: row;
+}
