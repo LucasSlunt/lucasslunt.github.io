@@ -1,12 +1,13 @@
 #navbar{
     display: flex;
     border: 4px;
-    border-style: none solid outset solid;
+    border-style: none none outset none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 10;
 
     position:fixed;
     top:0;
+    left:0;
     width: 100%;
 }
 
@@ -30,6 +31,5 @@
 }
 
 body{
-    margin-top: 0px;
-    margin-left: 0px;
+    margin-top: 5%;
 }
