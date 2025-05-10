@@ -1,5 +1,6 @@
 body{
     background-color: rgb(24, 13, 21);
+    background-image: url("./hello_stars_media/twinkling_stars.gif");
 }
 
 .flex-row{
