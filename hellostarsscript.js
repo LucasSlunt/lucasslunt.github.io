@@ -1,4 +1,4 @@
 function setupPage(){
-    colourNavbar("rgb(124, 161, 173)","lightblue");
-    loadProjectHeader('April 2025','Virtual World','A vast open world full of nature and surprises. Made with Unity, Gaia, and Blender',"lightblue");
+    colourNavbar("rgb(196, 28, 140)","rgb(223, 62, 132)");
+    loadProjectHeader('March 2025','Hello, Stars!','First-place winner of UBCOs GIT Hackathon, densely packed with engaging educational features',"rgb(223, 62, 132)");
 }
