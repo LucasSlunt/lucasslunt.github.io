@@ -1,9 +1,32 @@
 body{
     background-color: rgb(24, 13, 21);
-    background-image: url("./hello_stars_media/twinkling_stars.gif");
 }
 
 .flex-row{
     display:flex;
     flex-direction: row;
 }
+
+.badge-colour-1{
+    fill: #000000; 
+}
+
+.badge-colour-2{
+    fill: #FFFFFF; 
+}
+
+.badge-colour-3{
+    fill: #888888; 
+}
+
+.badge-svg{
+    width: 100%;
+    height:100%;
+}
+
+#badges-container{
+    background-color: brown;
+}
+
+
+
