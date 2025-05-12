@@ -23,10 +23,24 @@ body{
     width: 100%;
     height:100%;
 }
-
+.badge{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 #badges-container{
-    background-color: brown;
+    
+    background-color: rgb(196, 28, 140);
 }
 
+#inner-badge-image{
+    position: absolute;
+    margin-top: 15px;
+    width:200px;
+    height: 200px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: none;
+}
 
 
