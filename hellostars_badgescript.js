@@ -1,6 +1,38 @@
 var numOfBadgeImages = 5;
 
 function setBadgeLevel(level){
+    var colours = setupBadgeColours(level);
+    colourLines(colours);
+
+    var innerBadgeImage = document.getElementById("inner-badge-image");
+    setBadgeImage(innerBadgeImage);
+}
+
+function animateBadge(){
+    var randomNum = Math.floor(Math.random()*3);
+    setBadgeLevel(randomNum);
+        var intervalId = null;
+        var timer = 0;
+        clearInterval(intervalId);
+
+        intervalId = setInterval(frame, 5);
+        function frame() {
+          if (timer == 300) {
+            timer = 0;
+            clearInterval(intervalId);
+            intervalId = setInterval(frame, 5);
+
+            var randomNum = Math.floor(Math.random()*3);
+            setBadgeLevel(randomNum);
+
+          } else {
+            timer++;
+          }
+        }
+
+}
+
+function setupBadgeColours(level){
     var col1 = "#000000";
     var col2 = "#000000";
     var col3 = "#000000";
@@ -18,23 +50,28 @@ function setBadgeLevel(level){
         col3 = "#f7bd02";
         col2 = "#fff038";
     }
+    var colours = [col1,col2,col3];
+    return colours
+}
 
+function colourLines(colours){
     var badgeItems1 = document.getElementsByClassName("badge-colour-1");
     for (var i = 0; i < badgeItems1.length; i++) {
-        badgeItems1[i].style.fill = col1;
+        badgeItems1[i].style.fill = colours[0];
     }
 
     var badgeItems2 = document.getElementsByClassName("badge-colour-2");
     for (var i = 0; i < badgeItems2.length; i++) {
-        badgeItems2[i].style.fill = col2;
+        badgeItems2[i].style.fill = colours[1];
     }
 
     var badgeItems3 = document.getElementsByClassName("badge-colour-3");
     for (var i = 0; i < badgeItems3.length; i++) {
-        badgeItems3[i].style.fill = col3;
+        badgeItems3[i].style.fill = colours[2];
     }
+}
 
-    var innerBadgeImage = document.getElementById("inner-badge-image");
+function setBadgeImage(img){
     var imageTitle = "";
     var randomImageSelector = Math.floor(Math.random()*numOfBadgeImages);
     switch (randomImageSelector){
@@ -55,5 +92,5 @@ function setBadgeLevel(level){
             imageTitle = "ursa-minor";
             break;    
     }
-    innerBadgeImage.src = "./hello_stars_media/"+imageTitle+".png";
+    img.src = "./hello_stars_media/"+imageTitle+".png";
 }

@@ -7,26 +7,3 @@ function setupPage(){
     animateBadge();
 }
 
-function animateBadge(){
-    var randomNum = Math.floor(Math.random()*3);
-    setBadgeLevel(randomNum);
-        var intervalId = null;
-        var timer = 0;
-        clearInterval(intervalId);
-
-        intervalId = setInterval(frame, 5);
-        function frame() {
-          if (timer == 400) {
-            timer = 0;
-            clearInterval(intervalId);
-            intervalId = setInterval(frame, 5);
-
-            var randomNum = Math.floor(Math.random()*3);
-            setBadgeLevel(randomNum);
-
-          } else {
-            timer++;
-          }
-        }
-
-}
