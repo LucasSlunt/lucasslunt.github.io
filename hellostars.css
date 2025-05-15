@@ -161,7 +161,6 @@ end code responsible for starry background
     padding-top: 46%;
     padding-bottom: 0; 
     margin-top: 1.6em; 
-    margin-bottom: 0.9em; 
     margin-right: 7em;
     margin-left: 7em;
     overflow: hidden;
@@ -177,6 +176,27 @@ end code responsible for starry background
     left: 5%; 
     border: none; 
     border-radius: 2em; 
+}
+
+#project-description-container{
+    background-color: rgb(196, 28, 140);
+    margin-left: 7.15em;
+    margin-right: 7.15em;
+    margin-bottom: 1em;
+    padding: 1em;
+
+    outline: solid;
+    outline-width: 0.5em 0em 0em 0em;
+    outline-color: rgb(196, 28, 140);
+
+}
+#hackathon-description{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    background-color: rgb(255, 163, 154);
+    border-radius: 1em;
+    padding: 1em;
+    text-align: left;
 }
 
 
