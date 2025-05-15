@@ -59,16 +59,9 @@ body{
     border-radius: 2em;
 }
 
-#canva-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(198, 51, 144);
-    padding: 2em;
-}
 
 #canva-div{
-    background-color: rgb(223, 62, 132);
+    background-color: rgb(196, 28, 140);
     position: relative; 
     padding-top: 56.2500%;
     padding-bottom: 0; 
@@ -77,7 +70,7 @@ body{
     margin-right: 7em;
     margin-left: 7em;
     overflow: hidden;
-    border-radius: 2em; 
+
     will-change: transform;
 }
 
@@ -85,9 +78,10 @@ body{
     position: absolute; 
     width: 90%; 
     height: 90%; 
-    top: 0; 
-    left: 0; 
+    top: 5%; 
+    left: 5%; 
     border: none; 
+    border-radius: 2em; 
 }
 
 
