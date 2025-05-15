@@ -28,12 +28,18 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+#features-container{
+    background-color: rgb(28, 120, 196);
+    padding: 2em;
+    margin-left: 7em;
+    margin-right: 7em;
+}
+
 #badges-container{
     display:flex;
     justify-content: center;
     margin: 1em;
-    margin-left: 7em;
-    margin-right: 7em;
     background-color: rgb(196, 28, 140);
     border-radius: 2em;
 }
@@ -54,6 +60,7 @@ body{
     font-size: 18px;
 
     margin:0.5em;
+    margin-left: 3em;
     padding: 1em;
     background-color: rgb(223, 62, 132);
     border-radius: 2em;
