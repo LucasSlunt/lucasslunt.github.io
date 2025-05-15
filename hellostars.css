@@ -2,8 +2,10 @@ body{
     background-color: rgb(24, 13, 21);
 }
 
-@import "susy";
-@import "compass/reset";
+/*
+The following code is responsible for the starry background, and is from https://codepen.io/NazarAzhar/pen/zqXMqP
+Thanks to Rowan Fortier, whose website https://blobinaticuber.github.io/astrophotography.html inspired me to add a starry background here
+*/
 
 .stars, .twinkling, .clouds {
 	position:fixed;
@@ -35,7 +37,9 @@ body{
 	from {background-position:0 0;}
 	to {background-position:10000px 0;}
 }
-
+/*
+end code responsible for starry background
+*/ 
 
 
 .inner-feature-box{
