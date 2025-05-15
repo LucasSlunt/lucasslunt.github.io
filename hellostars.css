@@ -115,10 +115,30 @@ end code responsible for starry background
     margin-right: 3em;
 }
 
+#my-work-container{
+    background-color: rgb(196, 28, 140);
+    margin:2em;
+    margin-left: 7em;
+    margin-right: 7em;
+    padding: 2em;
+}
+
+#my-work-body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+#my-work-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
 #features-container{
     background-color: rgb(196, 28, 140);
     background-image: linear-gradient(to bottom, rgb(168, 21, 133),rgb(37, 7, 94));
     padding: 1.5em;
+    padding-top:0.1em;
+    margin-top: 2em;
     margin-left: 7em;
     margin-right: 7em;
 
@@ -196,6 +216,8 @@ end code responsible for starry background
     background-color: rgb(255, 163, 154);
     border-radius: 1em;
     padding: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
     text-align: left;
 }
 
