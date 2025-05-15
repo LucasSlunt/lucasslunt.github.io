@@ -1,0 +1,233 @@
+body{
+    background-color: rgb(24, 13, 21);
+}
+
+/*
+The following code is responsible for the starry background, and is from https://codepen.io/NazarAzhar/pen/zqXMqP
+Thanks to Rowan Fortier, whose website https://blobinaticuber.github.io/astrophotography.html inspired me to add a starry background here
+*/
+
+.stars, .twinkling, .clouds {
+	position:fixed;
+	display:block;
+	top:0; bottom:0;
+	left:0; right:0;
+	width:100%; height:100%;
+
+}
+
+.stars {
+	z-index: -2;
+	background: #000 url('https://i.imgur.com/YKY28eT.png') repeat top center;
+}
+
+.twinkling{
+	z-index: -1;
+	background:transparent url('https://i.imgur.com/XYMF4ca.png') repeat top center;
+	animation: move-twink-back 200s linear infinite;
+}
+
+
+@keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+	from {background-position:0 0;}
+	to {background-position:10000px 0;}
+}
+/*
+end code responsible for starry background
+*/ 
+
+
+.inner-feature-box{
+    display:flex;
+    justify-content: center;
+    margin: 1em;
+    margin-top: 0;
+    border-radius: 2em;
+
+    border-style: solid;
+    border-width: 5px 5px 10px 5px;
+    border-color: rgb(255, 163, 154);
+}
+
+.feature-description{
+    max-width: 40%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+
+    margin:0.5em;
+    padding: 1em;
+    background-color: rgb(223, 62, 132);
+    border-radius: 2em;
+}
+
+.feature-image{
+    height: 280px;
+    margin: 1em;
+    border-radius: 1.5em;
+    align-self: center;
+}
+
+.feature-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    max-width: fit-content;
+
+    margin-top: 2em;
+    margin-left: 10%;
+
+    border-radius: 0.2em;
+    background-color: rgb(255, 163, 154);
+    outline: 0.5em solid;
+    outline-color: rgb(255, 163, 154);
+    
+}
+
+.flex-row{
+    display:flex;
+    flex-direction: row;
+}
+
+.badge-colour-1{
+    fill: #000000; 
+}
+
+.badge-colour-2{
+    fill: #FFFFFF; 
+}
+
+.badge-colour-3{
+    fill: #888888; 
+}
+
+.badge-svg{
+    width: 100%;
+    height:100%;
+}
+.badge{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3em;
+}
+
+#my-work-container{
+    background-color:rgb(37, 7, 94);
+    margin:2em;
+    margin-left: 7em;
+    margin-right: 7em;
+    padding: 2em;
+}
+
+#my-work-body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    background-color: rgb(255, 163, 154);
+    border-radius: 2em;
+    padding: 1em;
+}
+
+#my-work-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    margin-left: 3%;
+    background-color: rgb(223, 62, 132);
+    max-width: fit-content;
+    padding: 0.5em;
+    padding-bottom: 0.2em;
+    border-radius: 1em 1em 0 0;
+}
+
+#features-container{
+    background-color: rgb(196, 28, 140);
+    background-image: linear-gradient(to bottom, rgb(168, 21, 133),rgb(37, 7, 94));
+    padding: 1.5em;
+    padding-top:0.1em;
+    margin-top: 2em;
+    margin-left: 7em;
+    margin-right: 7em;
+
+}
+
+#learn-container{
+    background-color: rgb(196, 28, 140);
+}
+
+#upload-container{
+    background-color: rgb(196, 28, 140);
+}
+
+#map-container{
+    background-color: rgb(196, 28, 140);
+}
+
+#friends-container{
+    background-color: rgb(196, 28, 140);
+}
+
+#badges-container{
+    background-color: rgb(196, 28, 140);
+}
+
+#inner-badge-image{
+    position: absolute;
+    margin-top: 15px;
+    width:205px;
+    height: 205px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: none;
+    z-index: 2;
+}
+
+#canva-div{
+    background-color: rgb(196, 28, 140);
+    position: relative; 
+    padding-top: 46%;
+    padding-bottom: 0; 
+    margin-top: 1.6em; 
+    margin-right: 7em;
+    margin-left: 7em;
+    overflow: hidden;
+
+    will-change: transform;
+}
+
+#canva-iframe{
+    position: absolute; 
+    width: 90%; 
+    height: 90%; 
+    top: 5%; 
+    left: 5%; 
+    border: none; 
+    border-radius: 2em; 
+}
+
+#project-description-container{
+    background-color: rgb(196, 28, 140);
+    margin-left: 7.15em;
+    margin-right: 7.15em;
+    margin-bottom: 1em;
+    padding: 1em;
+
+    outline: solid;
+    outline-width: 0.5em 0em 0em 0em;
+    outline-color: rgb(196, 28, 140);
+
+}
+#hackathon-description{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    background-color: rgb(255, 163, 154);
+    border-radius: 1em;
+    padding: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: left;
+}
+
+
