@@ -6,7 +6,12 @@ body{
     display:flex;
     justify-content: center;
     margin: 1em;
+    margin-top: 0;
     border-radius: 2em;
+
+    border-style: solid;
+    border-width: 5px 5px 10px 5px;
+    border-color: rgb(255, 163, 154);
 }
 
 .feature-description{
@@ -25,6 +30,21 @@ body{
     margin: 1em;
     border-radius: 1.5em;
     align-self: center;
+}
+
+.feature-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    max-width: fit-content;
+
+    margin-top: 2em;
+    margin-left: 10%;
+
+    border-radius: 0.2em;
+    background-color: rgb(255, 163, 154);
+    outline: 0.5em solid;
+    outline-color: rgb(255, 163, 154);
+    
 }
 
 .flex-row{
@@ -57,9 +77,10 @@ body{
 
 #features-container{
     background-color: rgb(28, 120, 196);
-    padding: 2em;
+    padding: 1.5em;
     margin-left: 7em;
     margin-right: 7em;
+
 }
 
 #learn-container{
@@ -91,11 +112,6 @@ body{
     border-radius: 50%;
     overflow: none;
 }
-
-#badge-description{
-
-}
-
 
 #canva-div{
     background-color: rgb(196, 28, 140);
