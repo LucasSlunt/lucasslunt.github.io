@@ -59,4 +59,35 @@ body{
     border-radius: 2em;
 }
 
+#canva-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(198, 51, 144);
+    padding: 2em;
+}
+
+#canva-div{
+    background-color: rgb(223, 62, 132);
+    position: relative; 
+    padding-top: 56.2500%;
+    padding-bottom: 0; 
+    margin-top: 1.6em; 
+    margin-bottom: 0.9em; 
+    margin-right: 7em;
+    margin-left: 7em;
+    overflow: hidden;
+    border-radius: 2em; 
+    will-change: transform;
+}
+
+#canva-iframe{
+    position: absolute; 
+    width: 90%; 
+    height: 90%; 
+    top: 0; 
+    left: 0; 
+    border: none; 
+}
+
 
