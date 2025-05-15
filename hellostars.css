@@ -29,8 +29,13 @@ body{
     justify-content: center;
 }
 #badges-container{
-    
+    display:flex;
+    justify-content: center;
+    margin: 1em;
+    margin-left: 7em;
+    margin-right: 7em;
     background-color: rgb(196, 28, 140);
+    border-radius: 2em;
 }
 
 #inner-badge-image{
