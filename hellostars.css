@@ -2,6 +2,31 @@ body{
     background-color: rgb(24, 13, 21);
 }
 
+.inner-feature-box{
+    display:flex;
+    justify-content: center;
+    margin: 1em;
+    border-radius: 2em;
+}
+
+.feature-description{
+    max-width: 40%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+
+    margin:0.5em;
+    padding: 1em;
+    background-color: rgb(223, 62, 132);
+    border-radius: 2em;
+}
+
+.feature-image{
+    height: 280px;
+    margin: 1em;
+    border-radius: 1.5em;
+    align-self: center;
+}
+
 .flex-row{
     display:flex;
     flex-direction: row;
@@ -27,6 +52,7 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
+    margin-right: 3em;
 }
 
 #features-container{
@@ -36,12 +62,24 @@ body{
     margin-right: 7em;
 }
 
-#badges-container{
-    display:flex;
-    justify-content: center;
-    margin: 1em;
+#learn-container{
     background-color: rgb(196, 28, 140);
-    border-radius: 2em;
+}
+
+#upload-container{
+    background-color: rgb(196, 28, 140);
+}
+
+#map-container{
+    background-color: rgb(196, 28, 140);
+}
+
+#friends-container{
+    background-color: rgb(196, 28, 140);
+}
+
+#badges-container{
+    background-color: rgb(196, 28, 140);
 }
 
 #inner-badge-image{
@@ -55,15 +93,7 @@ body{
 }
 
 #badge-description{
-    max-width: 40%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 18px;
 
-    margin:0.5em;
-    margin-left: 3em;
-    padding: 1em;
-    background-color: rgb(223, 62, 132);
-    border-radius: 2em;
 }
 
 
