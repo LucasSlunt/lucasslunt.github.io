@@ -106,11 +106,12 @@ body{
 #inner-badge-image{
     position: absolute;
     margin-top: 15px;
-    width:200px;
-    height: 200px;
+    width:205px;
+    height: 205px;
     text-align: center;
     border-radius: 50%;
     overflow: none;
+    z-index: 2;
 }
 
 #canva-div{
