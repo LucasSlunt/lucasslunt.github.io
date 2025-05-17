@@ -3,8 +3,17 @@
 image-rendering:pixelated;
 }
 
-table{
-background-color:rgb(249, 196, 133);
+.table-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-align: center;
+
+    border: 3px solid;
+    padding: 4px;
+    background-color: rgb(253, 224, 167);
+    border-color: rgb(239, 171, 76);
+
+    margin-bottom: 0.3em;
 }
 
 td{
@@ -14,11 +23,28 @@ td{
 
     box-shadow: 0 16px 24px 0 rgba(114, 71, 1, 0.2);
     background-color:bisque;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
 }
 
 th{
-    border: 3px solid;
+    border: 4px outset;
     padding: 4px;
-    background-color: rgb(231, 193, 116);
-    border-color: rgb(161, 92, 49);
+    background-color: rgb(253, 224, 167);
+    border-color: rgb(239, 171, 76);
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+#main-page{
+    margin-top: 2em;
+    margin-left: 7em;
+    margin-right: 7em;
+}
+
+#full-table{
+    background-color:rgb(249, 196, 133);
+    padding: 0.5em;
 }
