@@ -1,0 +1,24 @@
+
+.itemTexture{
+image-rendering:pixelated;
+}
+
+table{
+background-color:rgb(249, 196, 133);
+}
+
+td{
+    border: 4px inset;
+    border-color: rgb(239, 171, 76);
+    border-radius: 1em;
+
+    box-shadow: 0 16px 24px 0 rgba(114, 71, 1, 0.2);
+    background-color:bisque;
+}
+
+th{
+    border: 3px solid;
+    padding: 4px;
+    background-color: rgb(231, 193, 116);
+    border-color: rgb(161, 92, 49);
+}
