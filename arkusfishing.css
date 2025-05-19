@@ -63,6 +63,17 @@ image-rendering:pixelated;
     padding: 1em;
 }
 
+.textbox-img{
+    border-radius: 1em;
+}
+
+.textbox-img-desc{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 td{
     border: 4px inset;
     border-color: rgb(239, 171, 76);
@@ -94,5 +105,15 @@ th{
 .full-table{
     background-color:rgb(249, 196, 133);
     padding: 0.5em;
-    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
 }
