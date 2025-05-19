@@ -47,6 +47,10 @@ image-rendering:pixelated;
     
 }
 
+.biome-img{
+    border-radius: 1em;
+}
+
 td{
     border: 4px inset;
     border-color: rgb(239, 171, 76);
@@ -75,7 +79,8 @@ th{
     margin-right: 7em;
 }
 
-#full-table{
+.full-table{
     background-color:rgb(249, 196, 133);
     padding: 0.5em;
+    margin-bottom: 2em;
 }

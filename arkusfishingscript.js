@@ -8,6 +8,9 @@ function setupButtons(){
 
     document.getElementById("item-table-button").addEventListener('click', function () {
         toggleTable("item-table","item-table-button");});
+
+    document.getElementById("biome-table-button").addEventListener('click', function () {
+        toggleTable("biome-table","biome-table-button");});
 }
 
 function toggleTable(tableID,buttonID){
