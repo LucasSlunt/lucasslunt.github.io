@@ -61,6 +61,7 @@ image-rendering:pixelated;
 
     background-color: rgb(254, 222, 94);
     padding: 1em;
+    margin-top: 1em;
 }
 
 .textbox-img{
@@ -72,6 +73,18 @@ image-rendering:pixelated;
     flex-direction: column;
     margin-left: 1em;
     margin-right: 1em;
+}
+
+.textbox-title{
+    font-size: 30px;
+    text-align: center;
+    background-color: bisque;
+    margin-bottom: 0.5em;
+
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-top: 6px;
+    padding-bottom:6px;
 }
 
 td{

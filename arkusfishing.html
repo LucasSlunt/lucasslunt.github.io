@@ -33,13 +33,16 @@
 <body style="background-color:Aquamarine;"></body>
 
 <div id="main-page">
-    <p class = textbox>
+    <div class = textbox>
         Fishing in minecraft has missed potential. There are only 4 varieties of fish you can catch, and all of them can be caught anywhere. Fishing is unaffected by time, weather, biome, or dimension. The only exception is bamboo, which can be fished up in the jungle. This outlier gave me the idea to make a mod where the player could catch different fish depending on which biome they're in. After all, since the game already had code to determine fishing loot based on biome, how hard could it be to reuse that code for something interesting?
         <br>
         <br>
         I created this mod using the <a href="https://docs.minecraftforge.net/en/1.21.x/" target = "_blank">Minecraft Forge</a> modding API, which contains a decompiled and deobfuscated version of minecrafts source code. I wrote new code, reused code from areas of the game, in both java and JSON files. I also created all the textures myself, using <a href="https://www.gimp.org/" target = "_blank">GIMP</a>, a free open source image manipulation software similar to photoshop. You can find the full project on my github <a href ="https://github.com/LucasSlunt/forge-1.20.1-47.1.39-mdk" target = "_blank">here</a>.
-    </p>
+    </div>
 <div class = textbox>
+    <div class = "textbox-title">
+        New Items
+    </div>
     <div class = flex-row>
         <img class = "textbox-img" src=".\minecraft_media\gamplay\all_items.png" alt = "all items in the mod" width = "400">
         <div class ="textbox-img-desc">
@@ -274,6 +277,26 @@
         <td><p>Can be placed. Acts as a light source</p></td>
     </tr>
     </table>
+</div>
+
+<div class = "textbox">
+    <div class = "textbox-title">
+        The vanilla fishing system
+    </div>
+    In vanilla minecraft, fishing is calculated through loot tables in JSON files. When a player casts their fishing rod, the game runs the main fishing loot table, randomly selecting the 'fish', 'junk', or 'treasure' loot table. Each element in a loot table has a weight associated with it, the chance that that element gets selected. the 'fish' loot table has an 85% chance of being selected, 'junk' has a 10% chance, and 'treasure' has a 5% chance. If the players fishing rod is enchanted with the Luck of the Sea enchantment, the weight for the 'treasure' loot table is increased, and the weight for the 'junk' loot table is decreased. There are several checks that can be preformed before an element in a loot table is selected, such as the biome the player is in, the weather, dimension, and even how many in-game days have passed.
+</div>
+
+<div class = "textbox">
+    <div class = "textbox-title">
+        How I modified the fishing system
+    </div>
+    Editing the main fishing loot table, I kept the 'junk' and 'treasure' loot tables, but replaced the more general 'fish' loot table with a new table, which I called I called "fishing_biome'. This table condensed the list of nearly 60 biomes in minecraft into 11 biome sub categories. Each of these 11 biome categories has its own loot table, filled with different fish that seem appropriate for that biome type. When selected by the main fishing loot table, the fishing biome table would see which biome the player was in, and return the loot table corresponding to it. Some biomes fit into multiple categories, such as the frozen ocean biome, which I categorized as both 'ocean' and 'cold'. In cases like these, the fishing biome table randomly selected which of the possible loot tables to use.
+    <br>
+    <br> 
+    In addition to biome specifications, some fish require certain weather or time conditions to be caught. This was done by including these conditions inside of the weighting system of each biome loot tables. The weighting system for each biome allowed me to make some fish more rare than others, for example, trout are quite common, and sturgeons are very rare.
+    <br>
+    <br>
+    I wanted to include something in both the junk and the treasure tables, as fish that could be caught anywhere, with the chance of catching them affected by Luck of the Sea. Goldfish appear in the treasure table, because gold is quite valuable. Swordfish appear in the junk table, because they are most useful for early and midgame players, without access to higher tiers of swords. Endgame players are likely to find swordfish useless, and as swordfish are tools, they are unstackable and could clog up players inventory. By having them in the junk table, endgame players with Luck of the Sea are less likely to fish them up and become frusterated with fishing.
 </div>
 
 <div class ="full-table">
