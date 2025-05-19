@@ -51,6 +51,18 @@ image-rendering:pixelated;
     border-radius: 1em;
 }
 
+.textbox{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+
+    border-style: solid;
+    border-width: 7px 7px 14px 7px;
+    border-color:bisque;
+
+    background-color: rgb(254, 222, 94);
+    padding: 1em;
+}
+
 td{
     border: 4px inset;
     border-color: rgb(239, 171, 76);
