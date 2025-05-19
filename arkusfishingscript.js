@@ -7,15 +7,18 @@ function setupPage(){
 function setupButtons(){
 
     document.getElementById("item-table-button").addEventListener('click', function () {
-        toggleTable("item-table");});
+        toggleTable("item-table","item-table-button");});
 }
 
-function toggleTable(tableID){
-    console.debug("toggle table called, " + document.getElementById(tableID).style.display);
-    if (document.getElementById(tableID).style.display == "none") {
-        document.getElementById(tableID).style.display = "block";
+function toggleTable(tableID,buttonID){
+    var table = document.getElementById(tableID);
+    var button = document.getElementById(buttonID);
+    if (table.style.display == "none") { //if table is hidden
+        table.style.display = "block";
+        button.innerHTML = "&#8679;";
     }
-    else{
-        document.getElementById(tableID).style.display = "none";
+    else{                                 //if table is visible
+        table.style.display = "none";
+        button.innerHTML = "&#8681";
     }
 }

@@ -9,7 +9,6 @@ image-rendering:pixelated;
     text-align: center;
 
     border: 4px solid;
-    padding: 4px;
     background-color: rgb(253, 224, 167);
     border-color: rgb(239, 171, 76);
 
@@ -19,12 +18,14 @@ image-rendering:pixelated;
 .table-title{
     padding-left: 4em;
     padding-right: 4em;
+    padding-top: 6px;
+    padding-bottom:6px;
+    
 }
 
 .table-hide-button{
-    border-radius: 2em;
     width: 1.2em;
-
+    background-color: rgb(255, 239, 208);
     border-style:outset;
 }
 
