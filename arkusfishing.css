@@ -75,6 +75,22 @@ image-rendering:pixelated;
     margin-right: 1em;
 }
 
+.gallery-row-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    
+    margin-left: 3em;
+    margin-right: 3em;
+    padding-bottom: 1em;
+}
+
+.gallery-column{
+    background-color:rgb(254, 222, 94);
+    border-radius: 2em;
+}
+
 .textbox-title{
     font-size: 30px;
     text-align: center;
@@ -115,6 +131,10 @@ th{
     margin-right: 7em;
 }
 
+#gallery{
+    background-color: rgb(249, 196, 133);
+}
+
 .full-table{
     background-color:rgb(249, 196, 133);
     padding: 0.5em;
@@ -129,4 +149,14 @@ th{
 .flex-column{
     display: flex;
     flex-direction: column;
+}
+
+.gallery-row{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    margin-top: 1em;
+
+    padding:1em;
 }
