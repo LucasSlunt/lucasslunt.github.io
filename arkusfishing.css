@@ -115,6 +115,8 @@ th{
     margin-right: 7em;
 }
 
+
+
 .full-table{
     background-color:rgb(249, 196, 133);
     padding: 0.5em;
@@ -129,4 +131,12 @@ th{
 .flex-column{
     display: flex;
     flex-direction: column;
+}
+
+.gallery-row{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    margin-bottom: 1em;
 }
