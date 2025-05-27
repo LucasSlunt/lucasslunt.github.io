@@ -87,7 +87,7 @@ img:not(#main-carousel-picture, .small-carousel-pictures){
 
 body{
     background-image: url('./ApplePictures/bcgovphoto.jpg');
-    background-size: 100%;
+    background-size: 100% 100%;
     background-attachment: fixed;
 }
 .search-bar input{

@@ -1,6 +1,6 @@
 body{
     background-image: url('./main_page_media/ski_hill_summer.JPG');
-    background-size: 100%;
+    background-size: 100% 100%;
     background-attachment: fixed;
 }
 hr{
@@ -120,7 +120,7 @@ hr{
     z-index: 1;
     padding-top: 100px;
     left: 11.5%;
-    top: 6.3%;
+    top: 0%;
     width:14%;
     height: 100%;
 
