@@ -1,5 +1,6 @@
 body{
     background-image: url('./main_page_media/ski_hill_summer.JPG');
+    background-size: 100%;
     background-attachment: fixed;
 }
 hr{
