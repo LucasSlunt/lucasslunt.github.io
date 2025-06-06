@@ -8,7 +8,7 @@ hr{
 }
 
 .page-container{
-    background-color: rgb(255, 250, 240);
+    background-color: rgb(244, 244, 244);
     max-width: 80%;
     margin: auto;
     padding-top:1em;
@@ -47,7 +47,7 @@ hr{
     flex-direction: row;
 
     padding:1em;
-    padding-right: 2em;
+    padding-right: 3em;
     background-color: rgb(183, 190, 196);
     border-radius: 0em 3em 3em 0em;
 
@@ -147,6 +147,11 @@ hr{
 #hello-stars{
     background-color: rgb(213, 42, 116);
     background-image: linear-gradient(to bottom right, rgb(51, 13, 122),rgb(213, 42, 116));
+}
+
+#climate-project{
+    background-color: rgb(231, 241, 255);
+    background-image: linear-gradient(to bottom right, rgb(145, 106, 183), rgb(231, 241, 255));
 }
 
 #title-box{
