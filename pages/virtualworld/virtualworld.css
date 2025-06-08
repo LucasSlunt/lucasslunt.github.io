@@ -4,6 +4,10 @@ body{
     background-attachment: fixed;
 }
 
+#project-header{
+    background-color: lightblue;
+}
+
     .video-container{
         display: flex;
         flex-direction: row;
@@ -37,7 +41,7 @@ body{
         font-family:  "Courier New", sans-serif;
     }
 
-    #gaia-title{
+    .about-title{
         font-family: "Lucida Console", "Courier New", sans-serif;
         font-size: 35px;
     }

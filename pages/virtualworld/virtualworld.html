@@ -2,20 +2,19 @@
 <html lang="en">
     <head>
         <title>Lucas Slunt</title>
-        <link rel="icon" type="image/x-icon" href="./ApplePictures/Icon.png">
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="navbar.css">
+        <link rel="icon" type="image/x-icon" href="../../pageElementFiles/icon.png">
+        <link rel="stylesheet" href="../../pageElementFiles/css/header.css">
+        <link rel="stylesheet" href="../../pageElementFiles/css/navbar.css">
         <link rel="stylesheet" href="virtualworld.css">
     </head>
     <body onload="setupPage()">
-        <script src="./loadHeader.js"></script>
-        <script src="./navBar.js"></script>
+        <script src="../../pageElementFiles/scripts/navBar.js"></script>
         <script src="./virtualworldscript.js"></script>
     </body>
 
     <div id = "navbar">
-        <a class ="navbar-item" href ="./index.html">Home</a>
-        <a class ="navbar-item" href ="./apples.html">Apples</a>
+        <a class ="navbar-item" href ="../mainpage/index.html">Home</a>
+        <a class ="navbar-item" href ="../apples/apples.html">Apples</a>
         <a class ="navbar-item" href ="https://github.com/LucasSlunt" target="_blank">Github</a>
         <a class ="navbar-item" href ="https://www.linkedin.com/in/lucas-slunt-3a170a330/" target="_blank">LinkedIn</a>
 </div>
@@ -23,11 +22,11 @@
 <div id = "project-header" >
     
     <div id = "date-and-title-container">
-        <div id = "project-date"> </div>
-        <div id = "project-title">Loading...</div>
+        <div id = "project-date">April 2025</div>
+        <div id = "project-title">Virtual World</div>
     </div>
     
-    <div id = "project-description"> </div>
+    <div id = "project-description">A vast open world full of nature and surprises. Made with Unity, Gaia, and Blender</div>
 </div>
 
 <div class = "video-container">
@@ -66,12 +65,22 @@
 </div>
 
 <div class = "gaia-about">
-    <div id = "gaia-title">Gaia</div>
+    <div class = "about-title">Download and Play!</div>
+    Unfortunately, this project is much too large to simply play in a browser (978MB unzipped, 515MB zipped).
+     However, there is still an option for Windows users who don't mind downloading the project.
+    This virtual world can be downloaded as a Windows executable file, with the necessary resources here:
+    <a href="https://drive.google.com/file/d/1Ral4Qk9p87GrXdhgrCRe5uyr_Tardwdj/view?usp=sharing" target="_blank">Windows Executable Download</a>
+    To play this world, download the zip file, unzip it, then open the folder to find a file titled '
+    LucasSlunt_VirtualWorld.exe'. Opening this file will allow you to explore the world freely.
+</div>
+
+<div class = "gaia-about">
+    <div class="about-title">Gaia</div>
     <div>
         Gaia is a unity asset that aides in the creation of large terrains like this. 
         With Gaia I was able to quickly generate a terrain based off a heightmap of a 
         mountain range, and paint it with the appropriate textures. The asset comes with 
-        a game object spawer system, to place objects like trees, rocks, flowers, etc. 
+        a game object spawer system, to procedurally generate objects like trees, rocks, flowers, etc. 
         in the appropriate places. It also includes a first person character controller 
         like the one featured in the video showcase. Overall Gaia is a great tool for 
         worldbuilding and it allowed me to quickly create a basic foundation for the 

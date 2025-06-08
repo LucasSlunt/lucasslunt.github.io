@@ -2,6 +2,10 @@ body{
     background-color: rgb(24, 13, 21);
 }
 
+#project-header{
+    background-color: rgb(223, 62, 132);
+}
+
 /*
 The following code is responsible for the starry background, and is from https://codepen.io/NazarAzhar/pen/zqXMqP
 Thanks to Rowan Fortier, whose website https://blobinaticuber.github.io/astrophotography.html inspired me to add a starry background here
