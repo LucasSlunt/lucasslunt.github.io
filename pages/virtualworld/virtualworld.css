@@ -38,11 +38,11 @@ body{
         border-radius: 2em;
 
         font-size: 15px;
-        font-family:  "Courier New", sans-serif;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
     .about-title{
-        font-family: "Lucida Console", "Courier New", sans-serif;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 35px;
     }
 
@@ -86,7 +86,7 @@ body{
     }
     .description{
         font-size: 15px;
-        font-family:  "Courier New", sans-serif;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         max-width: 35em;
 
         padding:1em;
