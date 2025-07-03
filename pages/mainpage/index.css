@@ -154,6 +154,11 @@ hr{
     background-image: linear-gradient(to bottom right, rgb(145, 106, 183), rgb(231, 241, 255));
 }
 
+#art-project{
+    background-color: rgb(231, 241, 255);
+    background-image: linear-gradient(to bottom right, rgb(145, 106, 183), rgb(231, 241, 255));
+}
+
 #title-box{
     background-color: rgb(191, 201, 210);
     margin-left: 25%;
