@@ -82,7 +82,7 @@ function initializeTableVariables(){
     tApples.push(["Img","Delgoton","Mild, little flavour","Soft",3,"This variety may have been created through Delbard Orchards irradiating technique of \'regenesis\'","Unknown","November 5, 2024",62]);
     tApples.push(["Img","Red Dream","Sweet, very similar to Honeycrisp","Crisp",7,"Almost no information about this apple is online","Unknown","November 6, 2024",63]);
     tApples.push(["Img","Chantecler (Belchard)","Sweet, refreshingly sour","Soft, fine-grained",6,"Tastes similar to Golden delicious","Golden Delicious x Reinette Clochard","November 7, 2024",64]);
-    tApples.push(["Img","Rubinette (Rafzubin)","Very sweet, sharp honey flavour","Crisp",7,"Quite small, difficult to grow","Cox's Orange Pippen x Golden Delicious","November 8, 2024",65]);
+    tApples.push(["Img","Rubinette (Rafzubin)","Very sweet, sharp honey flavour","Crisp",7,"Once in a job interview, I was asked why I rated this apple so low. (I got the job)","Cox's Orange Pippen x Golden Delicious","November 8, 2024",65]);
     tApples.push(["Img","Amber","Fairly sweet, soft, watery","Softer",5,"Not to be confused with \"Apple Amber\" an Irish dessert similar to an apple custard pie","Unknown","November 10, 2024",66]);
     tApples.push(["Img","Kissabel (Y101)","Sweet, tangy, vanilla, sweet berries","Between crisp and soft",9,"Kissabel is a trademark name for 6 similar apple varieties","Golden Delicious x SJ109","November 13, 2024",67]);
     tApples.push(["Img","CrimsonCrisp","Very sweet, sour","Very crisp, dense",8,"Can stay in storage for several months","PCF2-134 x PRI 669-205","November 15, 2024",68]);
@@ -100,10 +100,10 @@ function initializeTableVariables(){
     tApples.push(["Img","SweetTango (Minneiska)","Sweet, tangy, light","Very crunchy",7,"Long shelf life, though flavour degrades quickly with time","Honeycrisp x Zelstar!","January 1, 2025",80]);    
     tApples.push(["Img","Bliss","Sweet, slightly tart","Soft",4,"Little information available online.","Unknown","January 2, 2025",81]);
     tApples.push(["Img","Autumn Glory","Sweet, cinnamon, caramel","Very crisp",9,"Excellent for applesauce, or savoury dishes","Golden Delicious x Fuji","March 6, 2025",82]);
+    tApples.push(["Img","Mutsu (Crispin)","Very sour","Crisp",3,"Changes colour based on the amount of sunlight it is exposed to","Indo x Golden Delicious","September 13, 2025",83]);
 
 
-
-    //tApples.push(["Img","name","taste","texture",rating,"note","A x B",81]);
+    //tApples.push(["Img","name","taste","texture",rating,"note","A x B","date",number]);
     addimagesToArray(tApples);
 
     tDisplay = tApples;
