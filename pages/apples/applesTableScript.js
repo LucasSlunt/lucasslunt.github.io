@@ -100,10 +100,10 @@ function initializeTableVariables(){
     tApples.push(["Img","SweetTango (Minneiska)","Sweet, tangy, light","Very crunchy",7,"Long shelf life, though flavour degrades quickly with time","Honeycrisp x Zelstar!","January 1, 2025",80]);    
     tApples.push(["Img","Bliss","Sweet, slightly tart","Soft",4,"Little information available online.","Unknown","January 2, 2025",81]);
     tApples.push(["Img","Autumn Glory","Sweet, cinnamon, caramel","Very crisp",9,"Excellent for applesauce, or savoury dishes","Golden Delicious x Fuji","March 6, 2025",82]);
+    tApples.push(["Img","Mutsu","Very sour","Crisp",3,"Changes colour based on the amount of sunlight it is exposed to","Indo x Golden Delicious","September 13, 2025",83]);
 
 
-
-    //tApples.push(["Img","name","taste","texture",rating,"note","A x B",81]);
+    //tApples.push(["Img","name","taste","texture",rating,"note","A x B","date",number]);
     addimagesToArray(tApples);
 
     tDisplay = tApples;
