@@ -101,7 +101,7 @@ function initializeTableVariables(){
     tApples.push(["Img","Bliss","Sweet, slightly tart","Soft",4,"Little information available online.","Unknown","January 2, 2025",81]);
     tApples.push(["Img","Autumn Glory","Sweet, cinnamon, caramel","Very crisp",9,"Excellent for applesauce, or savoury dishes","Golden Delicious x Fuji","March 6, 2025",82]);
     tApples.push(["Img","Mutsu (Crispin)","Very sour","Crisp",3,"Changes colour based on the amount of sunlight it is exposed to","Indo x Golden Delicious","September 13, 2025",83]);
-    tApples.push(["Img","Snow Cloud","Tart, Sweet","Hard, crisp",4,"A popular ornamental crabapple, the size of a dime","Strawberry Parfait x Crimson Cloud","November 5, 2025",84]);
+    tApples.push(["Img","Snow Cloud","Tart, Sweet","Hard, crisp",4,"A popular ornamental crabapple, the size of a dime","Crimson Cloud x Strawberry Parfait","November 5, 2025",84]);
     tApples.push(["Img","Elstar","Sweet, honeyed","Softer",7,"Very popular in Europe","Golden Delicious x Ingrid Marie","November 6 2025",85]);
     tApples.push(["Img","Winter Banana","Mildly sweet, faint notes of banana and topical fruit","Softer",7,"Smells like a banana when ripe","Unknown","November 7 2025",86]);
     tApples.push(["Img","Easter Orange","Sweet, intense","Dry, dense, crisp",6,"Very orange skin","Unknown","November 8 2025",87]);
@@ -114,10 +114,10 @@ function initializeTableVariables(){
     tApples.push(["Img","Chinook","Refreshingly tart, balanced","Firm, crisp",5,"Created in Summerland B.C. alongside the Silken and Creston varieties","Gala x Splendour","November 15 2025",94]);
     tApples.push(["Img","Johnathan","Light, slightly sour","Soft",4,"Used to be very popular but has been overtaken by modern varieties","Esopus Spitzenburg x Unknown","November 16 2025",95]);
     tApples.push(["Img","Court Royal","Sweet, complex","Soft",5,"Not to be confused with Royal Court, a sport of Cortland","Unknown","November 17 2025",96]);
-    tApples.push(["Img","Snow Apple (Famuese)","Barely tart, delicately vinous","Soft",3,"The 100th variety I've tried","Unknown","November 18 2025",97]);
+    tApples.push(["Img","Snow Apple (Famuese)","Barely tart, delicately vinous","Soft",3,"This heirloom variety used to be very popular in Quebec","Unknown","November 18 2025",97]);
     tApples.push(["Img","Dazzle","Juicy, sweet","Very crisp, like a watermelon",7,"Very popular in Asia","Scired x Sweetie","November 19 2025",98]);
     tApples.push(["Img","Gloster 69","Mildy sweet, barely tart","Crisp, a bit mealy",4,"Released in 1969 (hence the name)","Glockenapfel x Richared Delicious","November 20 2025",99]);
-    tApples.push(["Img","Evercrisp","Ridiculously sweet, tart","Very crunchy, like splitting wood",7,"A very overpowering and intense apple","A x B","November 21 2025",100]);
+    tApples.push(["Img","Evercrisp","Ridiculously sweet, tart","Very crunchy, like splitting wood",7,"A very overpowering and intense apple","Fuji x Honeycrisp","November 21 2025",100]);
 
     //tApples.push(["Img","name","taste","texture",rating,"note","A x B","date",number]);
     addimagesToArray(tApples);
