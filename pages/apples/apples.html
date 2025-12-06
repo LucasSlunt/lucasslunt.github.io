@@ -46,19 +46,19 @@
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
-                <div class="carousel">
-                    <div class="carousel-side">
-                        <img width="80" class="small-carousel-pictures" id="apple1" alt="Featured apple thumbnail">
-                        <img width="80" class="small-carousel-pictures" id="apple2" alt="Featured apple thumbnail">
-                        <img width="80" class="small-carousel-pictures" id="apple3" alt="Featured apple thumbnail">
-                    </div>
-                    <img width="200" id="main-carousel-picture" alt="Main featured apple">
-                    <div class="carousel-side">
-                        <img width="80" class="small-carousel-pictures" id="apple4" alt="Featured apple thumbnail">
-                        <img width="80" class="small-carousel-pictures" id="apple5" alt="Featured apple thumbnail">
-                        <img width="80" class="small-carousel-pictures" id="apple6" alt="Featured apple thumbnail">
-                    </div>
+
+                <div class="carousel-track">
+                    <!-- 7 Items for the 7 apples in data -->
+                    <!-- Initial positions: 0 (far left) to 6 (far right). 3 is center. -->
+                    <img class="carousel-item pos-0" id="item-0" alt="Apple thumbnail">
+                    <img class="carousel-item pos-1" id="item-1" alt="Apple thumbnail">
+                    <img class="carousel-item pos-2" id="item-2" alt="Apple thumbnail">
+                    <img class="carousel-item pos-3" id="item-3" alt="Featured apple">
+                    <img class="carousel-item pos-4" id="item-4" alt="Apple thumbnail">
+                    <img class="carousel-item pos-5" id="item-5" alt="Apple thumbnail">
+                    <img class="carousel-item pos-6" id="item-6" alt="Apple thumbnail">
                 </div>
+
                 <button type="button" class="selection-button" id="button-next" aria-label="Next apple">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">

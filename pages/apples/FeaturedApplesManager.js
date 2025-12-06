@@ -27,15 +27,11 @@ class FeaturedApplesManager {
     }
 
     initializeImages() {
-        this.htmlElementsArray[0] = document.getElementById('apple1');
-        this.htmlElementsArray[1] = document.getElementById('apple2');
-        this.htmlElementsArray[2] = document.getElementById('apple3');
-
-        this.mainImage = document.getElementById('main-carousel-picture');
-
-        this.htmlElementsArray[3] = document.getElementById('apple4');
-        this.htmlElementsArray[4] = document.getElementById('apple5');
-        this.htmlElementsArray[5] = document.getElementById('apple6');
+        // Get all 7 carousel items
+        this.htmlElementsArray = [];
+        for (let i = 0; i < 7; i++) {
+            this.htmlElementsArray[i] = document.getElementById(`item-${i}`);
+        }
 
         this.mainAppleTitle = document.getElementById('main-apple-title');
         this.featuredAppleDescription = document.getElementById('featured-desc');
@@ -47,58 +43,60 @@ class FeaturedApplesManager {
         document.getElementById("button-next").onclick = () => this.nextApple();
         document.getElementById("button-prev").onclick = () => this.prevApple();
 
-        // Add listeners to side images
-        // Left side: offsets -3, -2, -1
-        if (this.htmlElementsArray[0]) this.htmlElementsArray[0].onclick = () => this.shiftApple(-3);
-        if (this.htmlElementsArray[1]) this.htmlElementsArray[1].onclick = () => this.shiftApple(-2);
-        if (this.htmlElementsArray[2]) this.htmlElementsArray[2].onclick = () => this.shiftApple(-1);
-
-        // Right side: offsets 1, 2, 3
-        if (this.htmlElementsArray[3]) this.htmlElementsArray[3].onclick = () => this.shiftApple(1);
-        if (this.htmlElementsArray[4]) this.htmlElementsArray[4].onclick = () => this.shiftApple(2);
-        if (this.htmlElementsArray[5]) this.htmlElementsArray[5].onclick = () => this.shiftApple(3);
+        // Add click listeners to all items to shift focus
+        this.htmlElementsArray.forEach((element, index) => {
+            if (element) {
+                element.onclick = () => {
+                    this.setApple(index);
+                };
+            }
+        });
     }
 
     nextApple() {
-        if (this.appleCounter < this.numOfApples - 1) this.appleCounter++;
-        else this.appleCounter = 0;
+        this.appleCounter = (this.appleCounter + 1) % this.numOfApples;
         this.displayApple();
     }
 
     prevApple() {
-        if (this.appleCounter > 0) this.appleCounter--;
-        else this.appleCounter = this.numOfApples - 1;
+        this.appleCounter = (this.appleCounter - 1 + this.numOfApples) % this.numOfApples;
         this.displayApple();
     }
 
-    shiftApple(offset) {
-        let newIndex = this.appleCounter + offset;
-        while (newIndex < 0) newIndex += this.numOfApples;
-        while (newIndex >= this.numOfApples) newIndex -= this.numOfApples;
-        this.appleCounter = newIndex;
+    setApple(index) {
+        this.appleCounter = index;
         this.displayApple();
-    }
-
-    setupButtons() {
-        document.getElementById("button-next").onclick = () => this.nextApple();
-        document.getElementById("button-prev").onclick = () => this.prevApple();
-
-        // Add listeners to side images
-        // Left side: offsets -3, -2, -1
-        this.htmlElementsArray[0].onclick = () => this.shiftApple(-3);
-        this.htmlElementsArray[1].onclick = () => this.shiftApple(-2);
-        this.htmlElementsArray[2].onclick = () => this.shiftApple(-1);
-
-        // Right side: offsets 1, 2, 3
-        this.htmlElementsArray[3].onclick = () => this.shiftApple(1);
-        this.htmlElementsArray[4].onclick = () => this.shiftApple(2);
-        this.htmlElementsArray[5].onclick = () => this.shiftApple(3);
     }
 
     displayApple() {
-        this.displayApplePictures();
+        this.updateCarouselPositions();
         this.changeAppleTitle();
         this.changeAppleDescription();
+    }
+
+    updateCarouselPositions() {
+        // We have 7 elements and 7 positions (0 to 6).
+        // Position 3 is the center.
+        // Formula: Position = (ElementIndex - appleCounter + 3 + 7) % 7
+
+        for (let i = 0; i < 7; i++) {
+            const element = this.htmlElementsArray[i];
+            if (!element) continue;
+
+            // Calculate target position
+            const targetPos = (i - this.appleCounter + 3 + 7) % 7;
+
+            // Remove all pos- classes
+            for (let p = 0; p < 7; p++) {
+                element.classList.remove(`pos-${p}`);
+            }
+
+            // Add new pos class
+            element.classList.add(`pos-${targetPos}`);
+
+            // Update image source (Element i always holds Data i)
+            element.src = this.imageDirectory + this.appleImages[i] + this.fileFormat;
+        }
     }
 
     changeAppleTitle() {
@@ -111,29 +109,5 @@ class FeaturedApplesManager {
         if (this.featuredAppleDescription) {
             this.featuredAppleDescription.innerHTML = this.appleDescriptions[this.appleCounter];
         }
-    }
-
-    displayApplePictures() {
-        if (this.mainImage) {
-            this.mainImage.src = this.imageDirectory + this.appleImages[this.appleCounter] + this.fileFormat;
-        }
-
-        this.htmlElementsArray[0].src = this.imageDirectory + this.appleImages[this.validArrayIndex(this.appleCounter, -3, this.numOfApples)] + this.fileFormat;
-        this.htmlElementsArray[1].src = this.imageDirectory + this.appleImages[this.validArrayIndex(this.appleCounter, -2, this.numOfApples)] + this.fileFormat;
-        this.htmlElementsArray[2].src = this.imageDirectory + this.appleImages[this.validArrayIndex(this.appleCounter, -1, this.numOfApples)] + this.fileFormat;
-
-        this.htmlElementsArray[3].src = this.imageDirectory + this.appleImages[this.validArrayIndex(this.appleCounter, 1, this.numOfApples)] + this.fileFormat;
-        this.htmlElementsArray[4].src = this.imageDirectory + this.appleImages[this.validArrayIndex(this.appleCounter, 2, this.numOfApples)] + this.fileFormat;
-        this.htmlElementsArray[5].src = this.imageDirectory + this.appleImages[this.validArrayIndex(this.appleCounter, 3, this.numOfApples)] + this.fileFormat;
-    }
-
-    validArrayIndex(counter, modifier, maxCounterValue) {
-        if (counter + modifier >= maxCounterValue) {
-            return (counter + modifier) - maxCounterValue;
-        }
-        if (counter + modifier < 0) {
-            return (counter + modifier) + maxCounterValue;
-        }
-        return counter + modifier;
     }
 }
