@@ -27,68 +27,76 @@
         });
     </script>
 
-    <div id="navbar">
+    <nav id="navbar">
         <a class="navbar-item" href="../../index.html">Home</a>
         <a class="navbar-item" href="./apples.html">Apples</a>
         <a class="navbar-item" href="https://github.com/LucasSlunt" target="_blank">Github</a>
         <a class="navbar-item" href="https://www.linkedin.com/in/lucas-slunt-3a170a330/" target="_blank">LinkedIn</a>
-    </div>
+    </nav>
 
-    <div class="carousel-container">
-        <div class="textbox">
-            Featured Apples
-        </div>
-        <div class="carousel">
-            <div class="carousel-side">
-                <img width="80" class="small-carousel-pictures" id="apple1">
-                <img width="80" class="small-carousel-pictures" id="apple2">
-                <img width="80" class="small-carousel-pictures" id="apple3">
+    <main>
+        <section class="carousel-container" aria-label="Featured Apples">
+            <header class="textbox">
+                Featured Apples
+            </header>
+            <div class="carousel">
+                <div class="carousel-side">
+                    <img width="80" class="small-carousel-pictures" id="apple1" alt="Featured apple thumbnail">
+                    <img width="80" class="small-carousel-pictures" id="apple2" alt="Featured apple thumbnail">
+                    <img width="80" class="small-carousel-pictures" id="apple3" alt="Featured apple thumbnail">
+                </div>
+                <img width="200" id="main-carousel-picture" alt="Main featured apple">
+                <div class="carousel-side">
+                    <img width="80" class="small-carousel-pictures" id="apple4" alt="Featured apple thumbnail">
+                    <img width="80" class="small-carousel-pictures" id="apple5" alt="Featured apple thumbnail">
+                    <img width="80" class="small-carousel-pictures" id="apple6" alt="Featured apple thumbnail">
+                </div>
             </div>
-            <img width="200" id="main-carousel-picture">
-            <div class="carousel-side">
-                <img width="80" class="small-carousel-pictures" id="apple4">
-                <img width="80" class="small-carousel-pictures" id="apple5">
-                <img width="80" class="small-carousel-pictures" id="apple6">
+
+            <div class="horizontal-row">
+                <button type="button" class="selection-button" id="button-prev"
+                    aria-label="Previous apple">&lt;</button>
+                <div class="title-box" id="main-apple-title">
+                    apple
+                </div>
+                <button type="button" class="selection-button" id="button-next" aria-label="Next apple">&gt;</button>
             </div>
-        </div>
 
-        <div class="horizontal-row">
-            <button type="button" class="selection-button" id="button-prev">&lt;</button>
-            <div class="title-box" id="main-apple-title">
-                apple
+            <div class="horizontal-row">
+                <div class="desc-item" id="featured-desc">
+                    apple
+                </div>
             </div>
-            <button type="button" class="selection-button" id="button-next">&gt;</button>
-        </div>
+        </section>
 
-        <div class="horizontal-row">
-            <div class="desc-item" id="featured-desc">
-                apple
+        <section id="full-apple-table" aria-label="Apples List">
+            <header class="title-box">
+                Apples I have Eaten
+            </header>
+            <div class="search-bar">
+                <input id="table-search-bar" type="text" placeholder="Search apples.." aria-label="Search apples">
             </div>
-        </div>
-    </div>
+            <table id="apple-table">
+                <thead>
+                    <tr>
+                        <th class="non-button" id="header-picture">Picture</th>
+                        <th id="header-name" role="button" tabindex="0">Name</th>
+                        <th id="header-primary-flavour" role="button" tabindex="0">Primary Flavours</th>
+                        <th id="header-texture" role="button" tabindex="0">Texture</th>
+                        <th id="header-raw-taste-rating" role="button" tabindex="0">Raw Taste Rating</th>
+                        <th class="non-button" id="header-notable-traits">Notable Traits</th>
+                        <th id="header-parents" role="button" tabindex="0">Parents</th>
+                        <th id="header-chrono" role="button" tabindex="0">Date Documented</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be populated by JS -->
+                </tbody>
+            </table>
+        </section>
+    </main>
 
-    <div id="full-apple-table">
-        <div class="title-box">
-            Apples I have Eaten
-        </div>
-        <div class="search-bar">
-            <input id="table-search-bar" type="text" placeholder="Search apples..">
-        </div>
-        <table id="apple-table">
-            <tr>
-                <th class="non-button" id="header-picture">Picture</th>
-                <th id="header-name">Name</th>
-                <th id="header-primary-flavour">Primary Flavours</th>
-                <th id="header-texture">Texture</th>
-                <th id="header-raw-taste-rating">Raw Taste Rating</th>
-                <th class="non-button" id="header-notable-traits">Notable Traits</th>
-                <th id="header-parents">Parents</th>
-                <th id="header-chrono">Date Documented</th>
-            </tr>
-        </table>
-    </div>
-
-    <div class="footer">
+    <footer class="footer">
         <div>
             <div class="footer-row-box">
                 <div>
@@ -128,13 +136,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <div id="modal">
+    <div id="modal" aria-hidden="true">
         <div id="modal-screen"></div>
         <div id="modal-container">
             <div class="title-box" id="modal-title"></div>
-            <img id="modal-image">
+            <img id="modal-image" alt="Enlarged apple image">
         </div>
     </div>
 </body>

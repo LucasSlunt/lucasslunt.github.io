@@ -1,8 +1,219 @@
+:root {
+    /* Colors */
+    --color-primary-bg: rgb(227, 162, 91);
+    --color-primary-border: rgb(186, 121, 67);
 
-#modal{
+    --color-secondary-bg: rgb(231, 193, 116);
+    --color-secondary-border: rgb(161, 92, 49);
+
+    --color-tertiary-bg: rgb(255, 218, 143);
+    --color-tertiary-hover: rgb(250, 241, 224);
+    --color-tertiary-active: rgb(215, 176, 98);
+
+    --color-accent-bg: rgb(175, 218, 130);
+    --color-accent-border: rgb(196, 234, 156);
+    --color-accent-light: rgb(211, 239, 118);
+
+    --color-table-border: rgb(144, 30, 1);
+
+    --shadow-standard: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    --shadow-heavy: 0 16px 24px 0 rgba(114, 1, 1, 0.2);
+}
+
+body {
+    background-image: url('./ApplePictures/bcgovphoto.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* --- Layout Components --- */
+
+.horizontal-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* --- Carousel Section --- */
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    padding: 1em;
+    margin: 1em;
+    background-color: var(--color-accent-bg);
+    border: 4px outset;
+    border-color: var(--color-accent-border);
+    box-shadow: var(--shadow-standard);
+}
+
+.carousel {
+    display: flex;
+    flex-grow: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent-light);
+    border-radius: 2em;
+}
+
+.carousel-side {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    justify-content: center;
+}
+
+#main-carousel-picture {
+    display: flex;
+    margin: 0.5em;
+    border-radius: 2em;
+}
+
+.small-carousel-pictures {
+    margin: 1em;
+    border-radius: 1em;
+}
+
+.textbox,
+.title-box,
+.desc-item {
+    background-color: var(--color-secondary-bg);
+    border: 3px solid var(--color-secondary-border);
+}
+
+.textbox {
+    margin: 1em;
+    padding: 0.5em;
+    min-width: 84%;
+    font-size: 1.5em;
+}
+
+.title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-top: 0.55em;
+    min-width: 10em;
+    padding: 4px;
+}
+
+.desc-item {
+    margin: 1em;
+    padding: 1em;
+    max-width: 84%;
+}
+
+.selection-button {
+    margin-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 4px outset;
+    background-color: var(--color-tertiary-bg);
+    border-color: var(--color-secondary-border);
+    box-shadow: var(--shadow-standard);
+}
+
+.selection-button:hover {
+    background-color: var(--color-tertiary-hover);
+    border-color: rgb(185, 148, 80);
+}
+
+.selection-button:active {
+    border: 4px inset;
+    background-color: var(--color-tertiary-active);
+    border-color: var(--color-secondary-border);
+    box-shadow: 0;
+}
+
+/* --- Table Section --- */
+
+#full-apple-table {
+    border: 5px outset;
+    padding: 3px;
+    width: 80%;
+    margin: auto;
+    background-color: var(--color-primary-bg);
+    border-color: var(--color-primary-border);
+}
+
+.search-bar input {
+    margin: 0.2em;
+    padding: 0.5em;
+    padding-right: 3.7em;
+    border: inset;
+    border-color: var(--color-secondary-border);
+}
+
+th:not(.non-button) {
+    border: 4px outset;
+    padding: 4px;
+    background-color: var(--color-tertiary-bg);
+    border-color: var(--color-secondary-border);
+    box-shadow: var(--shadow-standard);
+    cursor: pointer;
+}
+
+th:hover:not(.non-button) {
+    background-color: var(--color-tertiary-hover);
+    border-color: rgb(185, 148, 80);
+}
+
+th:active:not(.non-button) {
+    border: 4px inset;
+    background-color: var(--color-tertiary-active);
+    border-color: var(--color-secondary-border);
+}
+
+.non-button {
+    border: 3px solid;
+    padding: 4px;
+    background-color: var(--color-secondary-bg);
+    border-color: var(--color-secondary-border);
+}
+
+td {
+    border: 2px inset;
+    border-color: var(--color-table-border);
+    box-shadow: var(--shadow-heavy);
+}
+
+/* --- Footer --- */
+
+.footer {
+    margin-top: 1em;
+    padding: 0.5em;
+    background-color: var(--color-accent-bg);
+    border: 4px outset;
+    border-color: var(--color-accent-border);
+    box-shadow: var(--shadow-standard);
+}
+
+.footer-row-box {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5em;
+}
+
+.footer-row-item {
+    margin-right: 1em;
+}
+
+/* --- Modal --- */
+
+#modal {
     display: none;
 }
-#modal-screen{
+
+#modal[aria-hidden="false"] {
+    display: block;
+}
+
+#modal-screen {
     display: block;
     position: fixed;
     z-index: 1;
@@ -14,218 +225,34 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#modal-title{
-    margin: 0.3em;
-}
-
-#modal-container{
+#modal-container {
     position: fixed;
     z-index: 1;
     padding-top: 100px;
     left: 35%;
     top: 15%;
-
     border: 4px outset;
     padding: 4px;
-    background-color: rgb(227, 162, 91);
-    border-color: rgb(186, 121, 67);
-
-    
+    background-color: var(--color-primary-bg);
+    border-color: var(--color-primary-border);
 }
 
-#modal-image{
+#modal-title {
+    margin: 0.3em;
+}
+
+#modal-image {
     width: 30vw;
     border: 4px inset;
-    border-color: rgb(186, 121, 67);
+    border-color: var(--color-primary-border);
 }
 
-#full-apple-table{
-    border: 5px outset;
-    padding: 3px;
-    width: 80%;
-    margin:auto;
-    background-color: rgb(227, 162, 91);
-    border-color: rgb(186, 121, 67);
-}
+/* --- Images --- */
 
-#main-carousel-picture{
-    display: flex;
-    margin: 0.5em;
-    border-radius: 2em;
-}
-
-th:not(.non-button){
-    border: 4px outset;
-    padding: 4px;
-    background-color: rgb(255, 218, 143);
-    border-color: rgb(161, 92, 49);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
-}
-th:hover:not(.non-button){
-    background-color: rgb(250, 241, 224);
-    border-color: rgb(185, 148, 80);
-}
-th:active:not(.non-button){
-    border: 4px inset;
-    background-color: rgb(215, 176, 98);
-    border-color: rgb(161, 92, 49);
-}
-
-td{
-    border: 2px inset;
-    border-color: rgb(144, 30, 1);
-    box-shadow: 0 16px 24px 0 rgba(114, 1, 1, 0.2)
-}
-
-img{
+img {
     display: block;
 }
 
-img:not(#main-carousel-picture, .small-carousel-pictures){
-    cursor:zoom-in;
+img:not(#main-carousel-picture, .small-carousel-pictures) {
+    cursor: zoom-in;
 }
-
-body{
-    background-image: url('./ApplePictures/bcgovphoto.jpg');
-    background-size: 100% 100%;
-    background-attachment: fixed;
-}
-.search-bar input{
-    margin: 0.2em;
-    padding: 0.5em;
-    padding-right: 3.7em;
-    border: inset;
-    border-color: rgb(161, 92, 49);
-}
-.non-button{
-    border: 3px solid;
-    padding: 4px;
-    background-color: rgb(231, 193, 116);
-    border-color: rgb(161, 92, 49);
-}
-.horizontal-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.selection-button{
-    margin-top:1em;
-    padding-left: 1em;
-    padding-right: 1em;
-
-    border: 4px outset;
-    background-color: rgb(255, 218, 143);
-    border-color: rgb(161, 92, 49);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
-}
-.selection-button:hover{
-    background-color: rgb(250, 241, 224);
-    border-color: rgb(185, 148, 80);
-}
-.selection-button:active{
-    border: 4px inset;
-    background-color: rgb(215, 176, 98);
-    border-color: rgb(161, 92, 49);
-    box-shadow: 0
-}
-
-.carousel-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-
-    padding: 1em;
-    margin: 1em;
-    background-color: rgb(175, 218, 130);
-
-    border: 4px outset;
-    border-color: rgb(196, 234, 156);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
-}
-.carousel{
-    display: flex;
-    flex-grow: 0;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(211, 239, 118);
-    border-radius: 2em;
-}
-
-.carousel-side{
-    display: flex;
-    flex-direction: row;
-
-    margin: 1em;
-    justify-content: center;
-}
-
-.small-carousel-pictures{
-    margin:1em;
-    border-radius: 1em;
-}
-
-.desc-item{
-    margin: 1em;
-    padding: 1em;
-    max-width: 84%;
-
-
-    border: 3px solid;
-    background-color: rgb(231, 193, 116);
-    border-color: rgb(161, 92, 49);
-}
-
-.textbox{
-    margin: 1em;
-    padding: 0.5em;
-    min-width: 84%;
-    font-size: 1.5em;
-
-    border: 3px solid;
-    background-color: rgb(231, 193, 116);
-    border-color: rgb(161, 92, 49);
-}
-
-
-.title-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    margin-top: 0.55em;
-    min-width: 10em;
-
-    border: 3px solid;
-    padding: 4px;
-    background-color: rgb(231, 193, 116);
-    border-color: rgb(161, 92, 49);
-}
-
-.footer{
-    margin-top: 1em;
-    padding: 0.5em;
-    background-color: rgb(175, 218, 130);
-
-    border: 4px outset;
-    border-color: rgb(196, 234, 156);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
-}
-
-
-.footer-row-item{
-    margin-right: 1em;
-}
-
-.footer-row-box{
-    display: flex;
-    flex-direction: row;
-    margin: 0.5em;
-    
-}
-
-
