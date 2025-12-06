@@ -234,6 +234,12 @@ main {
     opacity: 1;
 }
 
+.is-wrapping {
+    opacity: 0 !important;
+    z-index: -1 !important;
+    transition: opacity 0.2s ease, left 0s 0.2s, transform 0s 0.2s !important;
+}
+
 .carousel-item:hover:not(.pos-3) {
     filter: brightness(1);
     z-index: 20;

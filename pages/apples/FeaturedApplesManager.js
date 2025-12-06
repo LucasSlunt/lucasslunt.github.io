@@ -1,6 +1,6 @@
 class FeaturedApplesManager {
     constructor() {
-        this.appleCounter = 0;
+        this.appleCounter = 3;
         this.imageDirectory = "./ApplePictures/";
         this.fileFormat = ".jpg";
         this.appleImages = ["AllApples/3", "AllApples/51", "AllApples/18", "Kissabel", "LucyGlo", "AllApples/17", "AllApples/60"];
@@ -83,8 +83,29 @@ class FeaturedApplesManager {
             const element = this.htmlElementsArray[i];
             if (!element) continue;
 
+            // Find current position from class list
+            let currentPos = -1;
+            for (let p = 0; p < 7; p++) {
+                if (element.classList.contains(`pos-${p}`)) {
+                    currentPos = p;
+                    break;
+                }
+            }
+
             // Calculate target position
             const targetPos = (i - this.appleCounter + 3 + 7) % 7;
+
+            // Check for wrap-around (diff > 3)
+            if (currentPos !== -1) {
+                const diff = Math.abs(currentPos - targetPos);
+                if (diff > 3) {
+                    element.classList.add('is-wrapping');
+                    // Remove the class after transition completes (0.5s)
+                    setTimeout(() => {
+                        element.classList.remove('is-wrapping');
+                    }, 500);
+                }
+            }
 
             // Remove all pos- classes
             for (let p = 0; p < 7; p++) {
