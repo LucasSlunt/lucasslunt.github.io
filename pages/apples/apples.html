@@ -39,27 +39,36 @@
             <header class="textbox">
                 Featured Apples
             </header>
-            <div class="carousel">
-                <div class="carousel-side">
-                    <img width="80" class="small-carousel-pictures" id="apple1" alt="Featured apple thumbnail">
-                    <img width="80" class="small-carousel-pictures" id="apple2" alt="Featured apple thumbnail">
-                    <img width="80" class="small-carousel-pictures" id="apple3" alt="Featured apple thumbnail">
+            <div class="carousel-wrapper">
+                <button type="button" class="selection-button" id="button-prev" aria-label="Previous apple">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <div class="carousel">
+                    <div class="carousel-side">
+                        <img width="80" class="small-carousel-pictures" id="apple1" alt="Featured apple thumbnail">
+                        <img width="80" class="small-carousel-pictures" id="apple2" alt="Featured apple thumbnail">
+                        <img width="80" class="small-carousel-pictures" id="apple3" alt="Featured apple thumbnail">
+                    </div>
+                    <img width="200" id="main-carousel-picture" alt="Main featured apple">
+                    <div class="carousel-side">
+                        <img width="80" class="small-carousel-pictures" id="apple4" alt="Featured apple thumbnail">
+                        <img width="80" class="small-carousel-pictures" id="apple5" alt="Featured apple thumbnail">
+                        <img width="80" class="small-carousel-pictures" id="apple6" alt="Featured apple thumbnail">
+                    </div>
                 </div>
-                <img width="200" id="main-carousel-picture" alt="Main featured apple">
-                <div class="carousel-side">
-                    <img width="80" class="small-carousel-pictures" id="apple4" alt="Featured apple thumbnail">
-                    <img width="80" class="small-carousel-pictures" id="apple5" alt="Featured apple thumbnail">
-                    <img width="80" class="small-carousel-pictures" id="apple6" alt="Featured apple thumbnail">
-                </div>
+                <button type="button" class="selection-button" id="button-next" aria-label="Next apple">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
             </div>
 
-            <div class="horizontal-row">
-                <button type="button" class="selection-button" id="button-prev"
-                    aria-label="Previous apple">&lt;</button>
-                <div class="title-box" id="main-apple-title">
-                    apple
-                </div>
-                <button type="button" class="selection-button" id="button-next" aria-label="Next apple">&gt;</button>
+            <div class="title-box" id="main-apple-title">
+                apple
             </div>
 
             <div class="horizontal-row">
