@@ -29,6 +29,11 @@ class ApplesTableManager {
             modalScreen.onclick = () => this.closeModal();
         }
 
+        const closeBtn = document.getElementById("modal-close-btn");
+        if (closeBtn) {
+            closeBtn.onclick = () => this.closeModal();
+        }
+
         this.initializeData();
         this.tDisplay = [...this.tApples];
         this.addRowsToTable(this.tDisplay);
@@ -232,7 +237,8 @@ class ApplesTableManager {
 
     openModal(apple) {
         if (this.modal) {
-            this.modal.style.display = "block";
+            this.modal.setAttribute("aria-hidden", "false");
+            this.modal.style.display = ""; // Clear inline style to let CSS take over
             const modalImage = document.getElementById("modal-image");
             modalImage.src = apple.imagePath;
             modalImage.style.cursor = "auto";
@@ -242,7 +248,8 @@ class ApplesTableManager {
 
     closeModal() {
         if (this.modal) {
-            this.modal.style.display = "none";
+            this.modal.setAttribute("aria-hidden", "true");
+            this.modal.style.display = ""; // Clear inline style
         }
     }
 

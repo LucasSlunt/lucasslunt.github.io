@@ -46,6 +46,17 @@ class FeaturedApplesManager {
     setupButtons() {
         document.getElementById("button-next").onclick = () => this.nextApple();
         document.getElementById("button-prev").onclick = () => this.prevApple();
+
+        // Add listeners to side images
+        // Left side: offsets -3, -2, -1
+        if (this.htmlElementsArray[0]) this.htmlElementsArray[0].onclick = () => this.shiftApple(-3);
+        if (this.htmlElementsArray[1]) this.htmlElementsArray[1].onclick = () => this.shiftApple(-2);
+        if (this.htmlElementsArray[2]) this.htmlElementsArray[2].onclick = () => this.shiftApple(-1);
+
+        // Right side: offsets 1, 2, 3
+        if (this.htmlElementsArray[3]) this.htmlElementsArray[3].onclick = () => this.shiftApple(1);
+        if (this.htmlElementsArray[4]) this.htmlElementsArray[4].onclick = () => this.shiftApple(2);
+        if (this.htmlElementsArray[5]) this.htmlElementsArray[5].onclick = () => this.shiftApple(3);
     }
 
     nextApple() {
@@ -58,6 +69,30 @@ class FeaturedApplesManager {
         if (this.appleCounter > 0) this.appleCounter--;
         else this.appleCounter = this.numOfApples - 1;
         this.displayApple();
+    }
+
+    shiftApple(offset) {
+        let newIndex = this.appleCounter + offset;
+        while (newIndex < 0) newIndex += this.numOfApples;
+        while (newIndex >= this.numOfApples) newIndex -= this.numOfApples;
+        this.appleCounter = newIndex;
+        this.displayApple();
+    }
+
+    setupButtons() {
+        document.getElementById("button-next").onclick = () => this.nextApple();
+        document.getElementById("button-prev").onclick = () => this.prevApple();
+
+        // Add listeners to side images
+        // Left side: offsets -3, -2, -1
+        this.htmlElementsArray[0].onclick = () => this.shiftApple(-3);
+        this.htmlElementsArray[1].onclick = () => this.shiftApple(-2);
+        this.htmlElementsArray[2].onclick = () => this.shiftApple(-1);
+
+        // Right side: offsets 1, 2, 3
+        this.htmlElementsArray[3].onclick = () => this.shiftApple(1);
+        this.htmlElementsArray[4].onclick = () => this.shiftApple(2);
+        this.htmlElementsArray[5].onclick = () => this.shiftApple(3);
     }
 
     displayApple() {
