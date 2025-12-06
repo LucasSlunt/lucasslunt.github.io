@@ -1,110 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Lucas Slunt</title>
-            <link rel="icon" type="image/x-icon" href="../../pageElementFiles/icon.png">
-            <link rel="stylesheet" href="../../pageElementFiles/css/navbar.css">
-        <link rel="stylesheet" href="apples.css">
 
-    </head>
-    <body onload="setupPage()" >
-        <script src="./applesFeaturedScript.js" ></script>
-        <script src="./applesTableScript.js"></script>
-        <script src="../../pageElementFiles/scripts/navBar.js"></script>
+<head>
+    <title>Lucas Slunt</title>
+    <link rel="icon" type="image/x-icon" href="../../pageElementFiles/icon.png">
+    <link rel="stylesheet" href="../../pageElementFiles/css/navbar.css">
+    <link rel="stylesheet" href="apples.css">
+</head>
 
-    <div id = "navbar">
-        <a class ="navbar-item" href ="../../index.html">Home</a>
-        <a class ="navbar-item" href ="./apples.html">Apples</a>
-            <a class ="navbar-item" href ="https://github.com/LucasSlunt" target="_blank">Github</a>
-            <a class ="navbar-item" href ="https://www.linkedin.com/in/lucas-slunt-3a170a330/" target="_blank">LinkedIn</a>
+<body>
+    <script src="../../pageElementFiles/scripts/navBar.js"></script>
+    <script src="./Apple.js"></script>
+    <script src="./FeaturedApplesManager.js"></script>
+    <script src="./ApplesTableManager.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            if (typeof colourNavbar === 'function') {
+                colourNavbar("rgb(175, 218, 130)", "rgb(196, 234, 156)");
+            }
+
+            const featuredManager = new FeaturedApplesManager();
+            featuredManager.initialize();
+
+            const tableManager = new ApplesTableManager();
+            tableManager.initialize();
+        });
+    </script>
+
+    <div id="navbar">
+        <a class="navbar-item" href="../../index.html">Home</a>
+        <a class="navbar-item" href="./apples.html">Apples</a>
+        <a class="navbar-item" href="https://github.com/LucasSlunt" target="_blank">Github</a>
+        <a class="navbar-item" href="https://www.linkedin.com/in/lucas-slunt-3a170a330/" target="_blank">LinkedIn</a>
     </div>
 
-    <div class = "carousel-container">
+    <div class="carousel-container">
         <div class="textbox">
             Featured Apples
         </div>
-    <div class = "carousel">
-        <div class = "carousel-side">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple1">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple2">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple3">
+        <div class="carousel">
+            <div class="carousel-side">
+                <img width="80" class="small-carousel-pictures" id="apple1">
+                <img width="80" class="small-carousel-pictures" id="apple2">
+                <img width="80" class="small-carousel-pictures" id="apple3">
+            </div>
+            <img width="200" id="main-carousel-picture">
+            <div class="carousel-side">
+                <img width="80" class="small-carousel-pictures" id="apple4">
+                <img width="80" class="small-carousel-pictures" id="apple5">
+                <img width="80" class="small-carousel-pictures" id="apple6">
+            </div>
         </div>
-        <img width = "200" id="main-carousel-picture">
-        <div class = "carousel-side">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple4">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple5">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple6">
+
+        <div class="horizontal-row">
+            <button type="button" class="selection-button" id="button-prev">&lt;</button>
+            <div class="title-box" id="main-apple-title">
+                apple
+            </div>
+            <button type="button" class="selection-button" id="button-next">&gt;</button>
+        </div>
+
+        <div class="horizontal-row">
+            <div class="desc-item" id="featured-desc">
+                apple
+            </div>
         </div>
     </div>
 
-    <div class = "horizontal-row">
-        <button type="button" class = "selection-button" id = "button-prev"><</button>
-        <div class = "title-box" id="main-apple-title">
-          apple
-        </div>
-        <button type="button" class = "selection-button" id = "button-next">></button>
-    </div>
-
-    <div class="horizontal-row">
-        <div class = "desc-item" id = "featured-desc">
-            apple
-        </div>
-    </div>
-    </div>
-    
-    
-    
-
-    <div id = full-apple-table>
-        <div class = "title-box">
+    <div id="full-apple-table">
+        <div class="title-box">
             Apples I have Eaten
         </div>
-    <div class = search-bar>
-        <input id = table-search-bar type="text" placeholder="Search apples..">
-    </div>
-    <table id = "apple-table">
-        <tr>
-            <th class = non-button id="header-picture">Picture</th>
-            <th id="header-name">Name</th>
-            <th id="header-primary-flavour">Primary Flavours</th>
-            <th id="header-texture">Texture</th>
-            <th id="header-raw-taste-rating">Raw Taste Rating</th>
-            <th class = non-button id="header-notable-traits">Notable Traits</th>
-            <th id="header-parents">Parents</th>
-            <th id="header-chrono">Date Documented</th>
-        </tr>
-    </table>
+        <div class="search-bar">
+            <input id="table-search-bar" type="text" placeholder="Search apples..">
+        </div>
+        <table id="apple-table">
+            <tr>
+                <th class="non-button" id="header-picture">Picture</th>
+                <th id="header-name">Name</th>
+                <th id="header-primary-flavour">Primary Flavours</th>
+                <th id="header-texture">Texture</th>
+                <th id="header-raw-taste-rating">Raw Taste Rating</th>
+                <th class="non-button" id="header-notable-traits">Notable Traits</th>
+                <th id="header-parents">Parents</th>
+                <th id="header-chrono">Date Documented</th>
+            </tr>
+        </table>
     </div>
 
-    <div class = "footer">
+    <div class="footer">
         <div>
-            <div class = "footer-row-box">
+            <div class="footer-row-box">
                 <div>
                     Want to see more detailed descriptions of each apple? Visit&nbsp;
                 </div>
-                <a href="https://www.instagram.com/apples.i.have.eaten/" target = "_blank">@apples.i.have.eaten </a>
+                <a href="https://www.instagram.com/apples.i.have.eaten/" target="_blank">@apples.i.have.eaten </a>
                 <div>
                     &nbsp;on instagram
                 </div>
             </div>
-            <div class = "footer-row-box">
-                <div class = "footer-row-item">
+            <div class="footer-row-box">
+                <div class="footer-row-item">
                     Larger apple collections:
                 </div>
-                <a class = "footer-row-item" href = "https://pomiferous.com/" target = "_blank">
+                <a class="footer-row-item" href="https://pomiferous.com/" target="_blank">
                     Pomiferous
                 </a>
-                <a class = "footer-row-item" href = "https://www.orangepippin.com/" target = "_blank">
+                <a class="footer-row-item" href="https://www.orangepippin.com/" target="_blank">
                     Orange Pippin
                 </a>
-                <a class = "footer-row-item" href="https://www.specialtyproduce.com/" target = "_blank">
+                <a class="footer-row-item" href="https://www.specialtyproduce.com/" target="_blank">
                     Specialty Produce
                 </a>
-                <a class = "footer-row-item" href="https://www.nationalfruitcollection.org.uk/" target = "_blank">
+                <a class="footer-row-item" href="https://www.nationalfruitcollection.org.uk/" target="_blank">
                     National Fruit Collection UK
                 </a>
             </div>
-            <div class = "footer-row-box">
+            <div class="footer-row-box">
                 <div class="footer-row-item">
                     Background photo:
                 </div>
@@ -118,19 +130,13 @@
         </div>
     </div>
 
-    <div id="modal"> 
-        <div id="modal-screen">
-
-        </div>
-        
+    <div id="modal">
+        <div id="modal-screen"></div>
         <div id="modal-container">
-            <div class = "title-box" id="modal-title">
-
-            </div>
+            <div class="title-box" id="modal-title"></div>
             <img id="modal-image">
-            
-            
         </div>
     </div>
-    </body>
+</body>
+
 </html>
