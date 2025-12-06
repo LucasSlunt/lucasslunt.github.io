@@ -40,6 +40,11 @@
 
 body {
     background-color: var(--color-bg);
+    background-image: url('ApplePictures/bcgovphoto.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--color-text-main);
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
@@ -59,7 +64,7 @@ body {
     gap: 2rem;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .navbar-item {
@@ -99,14 +104,16 @@ main {
 /* --- Carousel Section --- */
 
 .carousel-container {
-    background-color: var(--color-card-bg);
+    background: linear-gradient(145deg, #ffffff, #f4f9ed);
+    /* Subtle green gradient */
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 15px 35px rgba(125, 163, 64, 0.15);
+    /* Greenish shadow */
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid var(--color-border);
+    border: 3px solid var(--color-primary);
 }
 
 .textbox {
@@ -125,11 +132,28 @@ main {
     text-align: center;
     max-width: 600px;
     color: var(--color-text-muted);
-    background: var(--color-bg);
-    padding: 1.5rem;
+    background: none;
+    /* Removed background as container has it */
+    padding: 0;
+    /* Removed padding */
+    border: none;
+    /* Removed border */
+    margin-top: 0.5rem;
+}
+
+.featured-info-box {
+    border: 2px solid var(--color-primary);
+    background-color: rgba(125, 163, 64, 0.05);
+    /* Light green tint */
     border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
-    margin-top: 1rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .carousel-wrapper {
@@ -161,6 +185,7 @@ main {
     transition: all 0.5s ease-in-out;
     box-shadow: var(--shadow-sm);
     cursor: pointer;
+    border: 2px solid white;
 }
 
 /* Position 0: Far Left */
