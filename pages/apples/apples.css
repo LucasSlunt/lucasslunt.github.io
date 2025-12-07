@@ -10,6 +10,9 @@
     --color-primary: #7da340;
     /* Fresh Apple Green */
     --color-primary-hover: #668534;
+    --color-primary-light: #eef5e6;
+    /* Light tint of primary green */
+    --color-text-on-primary: #ffffff;
 
     --color-secondary: #c68e56;
     /* Warm Wood Brown */
@@ -55,31 +58,7 @@ body {
 }
 
 /* --- Navigation --- */
-#navbar {
-    background-color: var(--color-card-bg);
-    box-shadow: var(--shadow-sm);
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar-item {
-    text-decoration: none;
-    color: var(--color-text-main);
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-sm);
-    transition: var(--transition-fast);
-}
-
-.navbar-item:hover {
-    background-color: var(--color-primary);
-    color: white;
-}
+/* Navbar styles are now handled by navbar.css */
 
 /* --- Layout Components --- */
 
@@ -352,17 +331,47 @@ main {
     width: 100%;
 }
 
+.table-scroll-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+    border-radius: var(--radius-lg);
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.table-scroll-wrapper.is-draggable {
+    cursor: grab;
+}
+
+.table-scroll-wrapper.is-draggable:active {
+    cursor: grabbing;
+}
+
+.table-content-container {
+    min-width: 100%;
+    width: fit-content;
+}
+
 .table-header-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-primary);
     border-bottom: none;
-    border-top-left-radius: var(--radius-sm);
-    border-top-right-radius: var(--radius-sm);
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
     padding: 1.5rem;
-    background-color: var(--color-bg);
+    background-color: var(--color-primary-light);
 }
 
 .search-bar {
@@ -377,7 +386,7 @@ main {
     width: 100%;
     max-width: 400px;
     padding: 0.8rem 1.2rem;
-    border: 2px solid var(--color-border);
+    border: 2px solid var(--color-primary);
     border-radius: var(--radius-md);
     font-size: 1rem;
     transition: var(--transition-fast);
@@ -385,7 +394,7 @@ main {
 }
 
 .search-bar input:focus {
-    border-color: var(--color-primary);
+    border-color: var(--color-primary-hover);
     box-shadow: 0 0 0 3px rgba(125, 163, 64, 0.2);
 }
 
@@ -404,27 +413,18 @@ table {
 th {
     text-align: left;
     padding: 1rem;
-    background-color: var(--color-bg);
-    color: var(--color-text-main);
+    background-color: var(--color-primary);
+    color: var(--color-text-on-primary);
     font-weight: 600;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-primary-hover);
     cursor: pointer;
     transition: var(--transition-fast);
     user-select: none;
 }
 
-/* Removed border-radius from th since they are now inside the box context */
-th:first-child {
-    /* border-top-left-radius: var(--radius-sm); */
-}
-
-th:last-child {
-    /* border-top-right-radius: var(--radius-sm); */
-}
-
 th:hover:not(.non-button) {
-    background-color: var(--color-border);
-    color: var(--color-primary);
+    background-color: var(--color-primary-hover);
+    color: white;
 }
 
 /* Sort Indicators */
@@ -450,19 +450,19 @@ th:not(.non-button) {
 .arrow-up,
 .arrow-down {
     font-size: 0.6em;
-    color: #ccc;
-    /* Default gray */
+    color: rgba(255, 255, 255, 0.5);
+    /* Semi-transparent white */
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
 /* Active States */
 th.sort-asc .arrow-up {
-    color: var(--color-primary);
+    color: white;
     transform: scale(1.5);
 }
 
 th.sort-desc .arrow-down {
-    color: var(--color-primary);
+    color: white;
     transform: scale(1.5);
 }
 

@@ -5,19 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Slunt</title>
+    <link rel="stylesheet" href="../../pageElementFiles/css/navbar.css">
     <link rel="stylesheet" href="apples.css">
     <link rel="icon" type="image/x-icon" href="../../pageElementFiles/icon.png">
 </head>
 
-<body>
+<body onload="colourNavbar('#ffffff', '#eef5e6')">
+    <script src="../../pageElementFiles/scripts/navBar.js"></script>
 
     <!-- Navigation Bar -->
-    <nav id="navbar">
-        <a href="../../index.html" class="navbar-item">Home</a>
-        <a href="../virtualworld/virtualworld.html" class="navbar-item">Virtual Worlds</a>
-        <a href="../apples/apples.html" class="navbar-item">Apples</a>
-        <a href="../reading/reading.html" class="navbar-item">Reading</a>
-    </nav>
+    <div id="navbar">
+        <a class="navbar-item" href="../../index.html">Home</a>
+        <a class="navbar-item" href="../apples/apples.html">Apples</a>
+        <a class="navbar-item" href="https://github.com/LucasSlunt" target="_blank">Github</a>
+        <a class="navbar-item" href="https://www.linkedin.com/in/lucas-slunt-3a170a330/" target="_blank">LinkedIn</a>
+    </div>
 
     <main>
         <section class="carousel-container" aria-label="Featured Apples Carousel">
@@ -66,80 +68,85 @@
         </section>
 
         <section id="full-apple-table" aria-label="Apples List">
-            <div class="table-header-box">
-                <header class="title-box">
-                    Apples I have Eaten
-                </header>
-                <div class="search-bar">
-                    <input id="table-search-bar" type="text" placeholder="Search apples.." aria-label="Search apples">
-                    <span class="search-helper-text">Or sort apples by column headers!</span>
+            <div class="table-scroll-wrapper">
+                <div class="table-content-container">
+                    <div class="table-header-box">
+                        <header class="title-box">
+                            Apples I have Eaten
+                        </header>
+                        <div class="search-bar">
+                            <input id="table-search-bar" type="text" placeholder="Search apples.."
+                                aria-label="Search apples">
+                            <span class="search-helper-text">Or sort by column headers</span>
+                        </div>
+                    </div>
+                    <table id="apple-table">
+                        <thead>
+                            <tr>
+                                <th class="non-button" id="header-picture">Picture</th>
+                                <th id="header-name" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Name</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th id="header-primary-flavour" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Primary Flavours</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th id="header-texture" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Texture</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th id="header-raw-taste-rating" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Raw Taste Rating</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="non-button" id="header-notable-traits">Notable Traits</th>
+                                <th id="header-parents" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Parents</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th id="header-chrono" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Date Documented</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows will be populated by JS -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <table id="apple-table">
-                <thead>
-                    <tr>
-                        <th class="non-button" id="header-picture">Picture</th>
-                        <th id="header-name" role="button" tabindex="0">
-                            <div class="header-content">
-                                <span class="header-text">Name</span>
-                                <div class="header-arrows">
-                                    <span class="arrow-up">▲</span>
-                                    <span class="arrow-down">▼</span>
-                                </div>
-                            </div>
-                        </th>
-                        <th id="header-primary-flavour" role="button" tabindex="0">
-                            <div class="header-content">
-                                <span class="header-text">Primary Flavours</span>
-                                <div class="header-arrows">
-                                    <span class="arrow-up">▲</span>
-                                    <span class="arrow-down">▼</span>
-                                </div>
-                            </div>
-                        </th>
-                        <th id="header-texture" role="button" tabindex="0">
-                            <div class="header-content">
-                                <span class="header-text">Texture</span>
-                                <div class="header-arrows">
-                                    <span class="arrow-up">▲</span>
-                                    <span class="arrow-down">▼</span>
-                                </div>
-                            </div>
-                        </th>
-                        <th id="header-raw-taste-rating" role="button" tabindex="0">
-                            <div class="header-content">
-                                <span class="header-text">Raw Taste Rating</span>
-                                <div class="header-arrows">
-                                    <span class="arrow-up">▲</span>
-                                    <span class="arrow-down">▼</span>
-                                </div>
-                            </div>
-                        </th>
-                        <th class="non-button" id="header-notable-traits">Notable Traits</th>
-                        <th id="header-parents" role="button" tabindex="0">
-                            <div class="header-content">
-                                <span class="header-text">Parents</span>
-                                <div class="header-arrows">
-                                    <span class="arrow-up">▲</span>
-                                    <span class="arrow-down">▼</span>
-                                </div>
-                            </div>
-                        </th>
-                        <th id="header-chrono" role="button" tabindex="0">
-                            <div class="header-content">
-                                <span class="header-text">Date Documented</span>
-                                <div class="header-arrows">
-                                    <span class="arrow-up">▲</span>
-                                    <span class="arrow-down">▼</span>
-                                </div>
-                            </div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Rows will be populated by JS -->
-                </tbody>
-            </table>
         </section>
     </main>
 

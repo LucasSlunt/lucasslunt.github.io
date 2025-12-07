@@ -43,6 +43,8 @@ class ApplesTableManager {
 
         // Initialize sort icons (Chrono is default)
         this.updateHeaderIcons("Chrono");
+
+        this.setupDragScroll();
     }
 
     initializeData() {
@@ -469,5 +471,50 @@ class ApplesTableManager {
         });
 
         this.addRowsToTable(this.tDisplay);
+    }
+    setupDragScroll() {
+        const slider = document.querySelector('.table-scroll-wrapper');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        const checkOverflow = () => {
+            if (slider.scrollWidth > slider.clientWidth) {
+                slider.classList.add('is-draggable');
+            } else {
+                slider.classList.remove('is-draggable');
+                isDown = false;
+                slider.classList.remove('active');
+            }
+        };
+
+        checkOverflow();
+        window.addEventListener('resize', checkOverflow);
+
+        slider.addEventListener('mousedown', (e) => {
+            if (!slider.classList.contains('is-draggable')) return;
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+        });
     }
 }
