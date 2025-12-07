@@ -40,6 +40,9 @@ class ApplesTableManager {
         this.sortTable((a, b) => this.comparatorChrono(a, b), "Chrono");
 
         this.setupHeaderListeners();
+
+        // Initialize sort icons (Chrono is default)
+        this.updateHeaderIcons("Chrono");
     }
 
     initializeData() {
@@ -279,6 +282,57 @@ class ApplesTableManager {
         });
     }
 
+    updateHeaderIcons(columnName) {
+        // Map column names to element IDs
+        const headerMap = {
+            "Name": "header-name",
+            "PrimaryFlavour": "header-primary-flavour",
+            "Texture": "header-texture",
+            "Rating": "header-raw-taste-rating",
+            "Parents": "header-parents",
+            "Chrono": "header-chrono"
+        };
+
+        // Clear existing sort classes
+        Object.values(headerMap).forEach(id => {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.remove("sort-asc", "sort-desc");
+            }
+        });
+
+        // Add class to active header
+        const activeId = headerMap[columnName];
+        if (activeId) {
+            const el = document.getElementById(activeId);
+            if (el) {
+                // Determine direction based on column type and this.sortDir
+                // Name & Parents: true = Asc (A-Z) -> sort-asc
+                // Others (Rating, Chrono, Texture, Flavour): true = Desc (High-Low) -> sort-desc
+                // Wait, let's check the comparators again.
+
+                let isAscending = this.sortDir;
+
+                // Special handling for columns where "true" means Descending logic (High->Low)
+                // Rating: true = b - a (Desc)
+                // Chrono: true = b - a (Desc)
+                // Texture: true = b - a (Desc)
+                // Flavour: true = b - a (Desc)
+
+                // Name: true = a.localeCompare(b) (Asc)
+                // Parents: true = a.localeCompare(b) (Asc)
+
+                if (columnName === "Name" || columnName === "Parents") {
+                    // true = Asc
+                    el.classList.add(this.sortDir ? "sort-asc" : "sort-desc");
+                } else {
+                    // true = Desc
+                    el.classList.add(this.sortDir ? "sort-desc" : "sort-asc");
+                }
+            }
+        }
+    }
+
     determineSortDirection(column) {
         if (this.currentlySortedBy == column) { this.sortDir = !this.sortDir; }
         else { this.sortDir = true; }
@@ -289,6 +343,7 @@ class ApplesTableManager {
         this.tDisplay.sort(comparator);
         this.currentlySortedBy = columnName;
         this.addRowsToTable(this.tDisplay);
+        this.updateHeaderIcons(columnName);
     }
 
     // Comparators

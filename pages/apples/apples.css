@@ -302,7 +302,10 @@ main {
     background: none;
     border: none;
     min-width: auto;
-    margin-top: 1rem;
+    margin-top: 0;
+    /* Removed margin-top as it's handled by container padding */
+    text-align: center;
+    width: 100%;
 }
 
 .selection-button {
@@ -349,10 +352,25 @@ main {
     width: 100%;
 }
 
+.table-header-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--color-border);
+    border-bottom: none;
+    border-top-left-radius: var(--radius-sm);
+    border-top-right-radius: var(--radius-sm);
+    padding: 1.5rem;
+    background-color: var(--color-bg);
+}
+
 .search-bar {
-    margin-bottom: 1.5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
 }
 
 .search-bar input {
@@ -371,10 +389,16 @@ main {
     box-shadow: 0 0 0 3px rgba(125, 163, 64, 0.2);
 }
 
+.search-helper-text {
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
+    margin-top: 0;
+    /* Flush with header box */
 }
 
 th {
@@ -383,23 +407,63 @@ th {
     background-color: var(--color-bg);
     color: var(--color-text-main);
     font-weight: 600;
-    border-bottom: 2px solid var(--color-border);
+    border: 1px solid var(--color-border);
     cursor: pointer;
     transition: var(--transition-fast);
     user-select: none;
 }
 
+/* Removed border-radius from th since they are now inside the box context */
 th:first-child {
-    border-top-left-radius: var(--radius-sm);
+    /* border-top-left-radius: var(--radius-sm); */
 }
 
 th:last-child {
-    border-top-right-radius: var(--radius-sm);
+    /* border-top-right-radius: var(--radius-sm); */
 }
 
 th:hover:not(.non-button) {
     background-color: var(--color-border);
     color: var(--color-primary);
+}
+
+/* Sort Indicators */
+th:not(.non-button) {
+    /* Restore default table cell behavior */
+    padding-right: 0.5rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-arrows {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-left: 10px;
+}
+
+.arrow-up,
+.arrow-down {
+    font-size: 0.6em;
+    color: #ccc;
+    /* Default gray */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Active States */
+th.sort-asc .arrow-up {
+    color: var(--color-primary);
+    transform: scale(1.5);
+}
+
+th.sort-desc .arrow-down {
+    color: var(--color-primary);
+    transform: scale(1.5);
 }
 
 td {
