@@ -1,110 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Lucas Slunt</title>
-            <link rel="icon" type="image/x-icon" href="../../pageElementFiles/icon.png">
-            <link rel="stylesheet" href="../../pageElementFiles/css/navbar.css">
-        <link rel="stylesheet" href="apples.css">
 
-    </head>
-    <body onload="setupPage()" >
-        <script src="./applesFeaturedScript.js" ></script>
-        <script src="./applesTableScript.js"></script>
-        <script src="../../pageElementFiles/scripts/navBar.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Slunt</title>
+    <link rel="stylesheet" href="../../pageElementFiles/css/navbar.css">
+    <link rel="stylesheet" href="apples.css">
+    <link rel="icon" type="image/x-icon" href="../../pageElementFiles/icon.png">
+</head>
 
-    <div id = "navbar">
-        <a class ="navbar-item" href ="../../index.html">Home</a>
-        <a class ="navbar-item" href ="./apples.html">Apples</a>
-            <a class ="navbar-item" href ="https://github.com/LucasSlunt" target="_blank">Github</a>
-            <a class ="navbar-item" href ="https://www.linkedin.com/in/lucas-slunt-3a170a330/" target="_blank">LinkedIn</a>
+<body onload="colourNavbar('#7da340','#eef5e6')">
+    <script src="../../pageElementFiles/scripts/navBar.js"></script>
+
+    <!-- Navigation Bar -->
+    <div id="navbar">
+        <a class="navbar-item" href="../../index.html">Home</a>
+        <a class="navbar-item" href="../apples/apples.html">Apples</a>
+        <a class="navbar-item" href="https://github.com/LucasSlunt" target="_blank">Github</a>
+        <a class="navbar-item" href="https://www.linkedin.com/in/lucas-slunt-3a170a330/" target="_blank">LinkedIn</a>
     </div>
 
-    <div class = "carousel-container">
-        <div class="textbox">
-            Featured Apples
-        </div>
-    <div class = "carousel">
-        <div class = "carousel-side">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple1">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple2">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple3">
-        </div>
-        <img width = "200" id="main-carousel-picture">
-        <div class = "carousel-side">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple4">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple5">
-            <img  width = "80" class = "small-carousel-pictures" id ="apple6">
-        </div>
-    </div>
+    <main>
+        <section class="carousel-container" aria-label="Featured Apples Carousel">
+            <button class="textbox" id="carousel-title-button">
+                Featured Apples
+            </button>
 
-    <div class = "horizontal-row">
-        <button type="button" class = "selection-button" id = "button-prev"><</button>
-        <div class = "title-box" id="main-apple-title">
-          apple
-        </div>
-        <button type="button" class = "selection-button" id = "button-next">></button>
-    </div>
+            <div class="carousel-wrapper">
+                <button type="button" class="selection-button" id="button-prev" aria-label="Previous apple">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
 
-    <div class="horizontal-row">
-        <div class = "desc-item" id = "featured-desc">
-            apple
-        </div>
-    </div>
-    </div>
-    
-    
-    
-
-    <div id = full-apple-table>
-        <div class = "title-box">
-            Apples I have Eaten
-        </div>
-    <div class = search-bar>
-        <input id = table-search-bar type="text" placeholder="Search apples..">
-    </div>
-    <table id = "apple-table">
-        <tr>
-            <th class = non-button id="header-picture">Picture</th>
-            <th id="header-name">Name</th>
-            <th id="header-primary-flavour">Primary Flavours</th>
-            <th id="header-texture">Texture</th>
-            <th id="header-raw-taste-rating">Raw Taste Rating</th>
-            <th class = non-button id="header-notable-traits">Notable Traits</th>
-            <th id="header-parents">Parents</th>
-            <th id="header-chrono">Date Documented</th>
-        </tr>
-    </table>
-    </div>
-
-    <div class = "footer">
-        <div>
-            <div class = "footer-row-box">
-                <div>
-                    Want to see more detailed descriptions of each apple? Visit&nbsp;
+                <div class="carousel-track">
+                    <!-- 7 Items for the 7 apples in data -->
+                    <!-- Initial positions: 0 (far left) to 6 (far right). 3 is center. -->
+                    <img class="carousel-item pos-0" id="item-0" alt="Apple thumbnail">
+                    <img class="carousel-item pos-1" id="item-1" alt="Apple thumbnail">
+                    <img class="carousel-item pos-2" id="item-2" alt="Apple thumbnail">
+                    <img class="carousel-item pos-3" id="item-3" alt="Featured apple">
+                    <img class="carousel-item pos-4" id="item-4" alt="Apple thumbnail">
+                    <img class="carousel-item pos-5" id="item-5" alt="Apple thumbnail">
+                    <img class="carousel-item pos-6" id="item-6" alt="Apple thumbnail">
                 </div>
-                <a href="https://www.instagram.com/apples.i.have.eaten/" target = "_blank">@apples.i.have.eaten </a>
-                <div>
-                    &nbsp;on instagram
+
+                <button type="button" class="selection-button" id="button-next" aria-label="Next apple">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="featured-info-box">
+                <div class="title-box" id="main-apple-title">
+                    apple
+                </div>
+                <div class="horizontal-row">
+                    <div class="desc-item" id="featured-desc">
+                        apple
+                    </div>
                 </div>
             </div>
-            <div class = "footer-row-box">
-                <div class = "footer-row-item">
+        </section>
+
+        <section id="full-apple-table" aria-label="Apples List">
+            <div class="table-scroll-wrapper">
+                <div class="table-content-container">
+                    <div class="table-header-box">
+                        <header class="title-box">
+                            Apples I have Eaten
+                        </header>
+                        <div class="search-bar">
+                            <input id="table-search-bar" type="text" placeholder="Search apples.."
+                                aria-label="Search apples">
+                            <span class="search-helper-text">Or sort by column headers</span>
+                        </div>
+                    </div>
+                    <table id="apple-table">
+                        <thead>
+                            <tr>
+                                <th class="non-button" id="header-picture">Picture</th>
+                                <th id="header-name" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Name</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th id="header-primary-flavour" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Primary Flavours</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th id="header-texture" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Texture</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th id="header-raw-taste-rating" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Raw Taste Rating</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="non-button" id="header-notable-traits">Notable Traits</th>
+                                <th id="header-parents" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Parents</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th id="header-chrono" role="button" tabindex="0">
+                                    <div class="header-content">
+                                        <span class="header-text">Date Documented</span>
+                                        <div class="header-arrows">
+                                            <span class="arrow-up">▲</span>
+                                            <span class="arrow-down">▼</span>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows will be populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <div class="footer-row-box">
+                <div>
+                    Want to see more detailed descriptions of each apple? Visit
+                </div>
+                <a href="https://www.instagram.com/apples.i.have.eaten/" target="_blank">@apples.i.have.eaten </a>
+                <div>
+                    on instagram
+                </div>
+            </div>
+            <div class="footer-row-box">
+                <div class="footer-row-item">
                     Larger apple collections:
                 </div>
-                <a class = "footer-row-item" href = "https://pomiferous.com/" target = "_blank">
+                <a class="footer-row-item" href="https://pomiferous.com/" target="_blank">
                     Pomiferous
                 </a>
-                <a class = "footer-row-item" href = "https://www.orangepippin.com/" target = "_blank">
+                <a class="footer-row-item" href="https://www.orangepippin.com/" target="_blank">
                     Orange Pippin
                 </a>
-                <a class = "footer-row-item" href="https://www.specialtyproduce.com/" target = "_blank">
+                <a class="footer-row-item" href="https://www.specialtyproduce.com/" target="_blank">
                     Specialty Produce
                 </a>
-                <a class = "footer-row-item" href="https://www.nationalfruitcollection.org.uk/" target = "_blank">
+                <a class="footer-row-item" href="https://www.nationalfruitcollection.org.uk/" target="_blank">
                     National Fruit Collection UK
                 </a>
             </div>
-            <div class = "footer-row-box">
+            <div class="footer-row-box">
                 <div class="footer-row-item">
                     Background photo:
                 </div>
@@ -112,25 +186,39 @@
                     "Summerland"
                 </a>
                 <div class="footer-row-item">
-                    &nbsp;by Province of British Columbia on Flickr © 2008 CC-BY-ND 2.0
+                    by Province of British Columbia on Flickr © 2008 CC-BY-ND 2.0
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <div id="modal"> 
-        <div id="modal-screen">
-
-        </div>
-        
+    <!-- Modal for Apple Details -->
+    <div id="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div id="modal-screen"></div>
         <div id="modal-container">
-            <div class = "title-box" id="modal-title">
-
-            </div>
-            <img id="modal-image">
-            
-            
+            <button id="modal-close-btn" aria-label="Close modal">&times;</button>
+            <h2 id="modal-title">Apple Name</h2>
+            <img id="modal-image" src="" alt="Apple detail">
         </div>
     </div>
-    </body>
+
+    <!-- Scripts -->
+    <script src="Apple.js"></script>
+    <script src="FeaturedApplesManager.js"></script>
+    <script src="ApplesTableManager.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Featured Apples Carousel
+            const featuredManager = new FeaturedApplesManager();
+            featuredManager.initialize();
+
+            // Initialize Apples Table
+            const tableManager = new ApplesTableManager();
+            tableManager.initialize();
+        });
+    </script>
+
+</body>
+
 </html>
