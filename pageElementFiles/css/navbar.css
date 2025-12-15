@@ -9,6 +9,9 @@
     width: 100%;
     z-index: 1000;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    height: 60px;
+    /* Fixed height for consistency */
+    box-sizing: border-box;
     /* Background color is set via JS */
 }
 
@@ -24,8 +27,10 @@
     border-radius: 8px;
     transition: all 0.3s ease;
     min-width: 60px;
+    position: relative;
+    /* Anchor for absolute label */
 
-    /* Background color is set via JS, but we can add a subtle default interaction */
+    /* Background color is set via JS */
 }
 
 /* Icon Styling */
@@ -33,7 +38,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2px;
+    z-index: 2;
+    /* Ensure icon stays above label if overlap (rare) */
 }
 
 .nav-svg {
@@ -42,17 +48,41 @@
     transition: transform 0.3s ease;
 }
 
-/* Label Styling (Hidden by default) */
+/* Label Styling (Tooltip style, Floating) */
 .nav-label {
-    font-size: 0.8em;
-    font-weight: 500;
+    font-size: 0.75em;
+    font-weight: 600;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    max-height: 0;
+
+    /* Positioning */
+    position: absolute;
+    top: 100%;
+    /* Push below element */
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    /* Start slightly raised */
+
+    /* Box Model */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 4px 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+
+    /* Transition States */
     opacity: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    visibility: hidden;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Bouncy pop effect */
+    pointer-events: none;
+    /* Let clicks pass through if needed */
+
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    margin-top: 8px;
+    /* Space from button */
+
+    color: #000;
 }
 
 /* Hover Effects */
@@ -68,10 +98,10 @@
 }
 
 .navbar-item:hover .nav-label {
-    max-height: 20px;
-    /* Enough space for one line of text */
     opacity: 1;
-    margin-top: 4px;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    /* Settle into place */
 }
 
 body {
