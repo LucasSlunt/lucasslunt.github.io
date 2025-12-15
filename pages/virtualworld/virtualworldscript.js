@@ -1,12 +1,12 @@
-function setupPage(){
-    colourNavbar("rgb(124, 161, 173)","lightblue");
+function setupPage() {
+    setupNavbar("../../", "rgb(124, 161, 173)", "lightblue");
     initializeImages();
     setupButtons();
 }
 
 var ImageSetCounter = 3;
 var imageDirectory = "./virtual_world_media/";
-var images = ["Fields","Mountains","ViewFromMountain","Berries","Berries2","BigBerry","MountainStream","Waterfall","Fog","Anchor","Bridges","CrystalDump"];
+var images = ["Fields", "Mountains", "ViewFromMountain", "Berries", "Berries2", "BigBerry", "MountainStream", "Waterfall", "Fog", "Anchor", "Bridges", "CrystalDump"];
 var descriptions = [
     "This world has lots to explore. It is 512 x 512 unity units large, about half a square kilometre. The terrain offers imposing peaks, steep cliffs, and rolling meadows, all covered by streams and foliage. It's based on a mountain range in the kootenays, where I grew up."
     ,
@@ -18,7 +18,7 @@ var descriptions = [
 ];
 var fileFormat = ".png";
 
-function initializeImages(){
+function initializeImages() {
     console.debug("initializing images");
     var picture1 = document.getElementById('picture1');
     var picture2 = document.getElementById('picture2');
@@ -26,27 +26,27 @@ function initializeImages(){
     var pictureDesc = document.getElementById('pictureDesc');
 
     nextImages();
-    
+
 }
-function nextImages(){
+function nextImages() {
     if (ImageSetCounter < 3) ImageSetCounter++;
-    else                     ImageSetCounter = 0;
-picture1.src = imageDirectory+images[ImageSetCounter*3]+fileFormat;
-picture2.src = imageDirectory+images[ImageSetCounter*3+1]+fileFormat;
-picture3.src = imageDirectory+images[ImageSetCounter*3+2]+fileFormat;
-pictureDesc.innerHTML= descriptions[ImageSetCounter];
+    else ImageSetCounter = 0;
+    picture1.src = imageDirectory + images[ImageSetCounter * 3] + fileFormat;
+    picture2.src = imageDirectory + images[ImageSetCounter * 3 + 1] + fileFormat;
+    picture3.src = imageDirectory + images[ImageSetCounter * 3 + 2] + fileFormat;
+    pictureDesc.innerHTML = descriptions[ImageSetCounter];
 }
 
-function prevImages(){
+function prevImages() {
     if (ImageSetCounter > 0) ImageSetCounter--;
-    else                     ImageSetCounter = 3;
-picture1.src = imageDirectory+images[ImageSetCounter*3]+fileFormat;
-picture2.src = imageDirectory+images[ImageSetCounter*3+1]+fileFormat;
-picture3.src = imageDirectory+images[ImageSetCounter*3+2]+fileFormat;
-pictureDesc.innerHTML= descriptions[ImageSetCounter];
+    else ImageSetCounter = 3;
+    picture1.src = imageDirectory + images[ImageSetCounter * 3] + fileFormat;
+    picture2.src = imageDirectory + images[ImageSetCounter * 3 + 1] + fileFormat;
+    picture3.src = imageDirectory + images[ImageSetCounter * 3 + 2] + fileFormat;
+    pictureDesc.innerHTML = descriptions[ImageSetCounter];
 }
 
-function setupButtons(){
+function setupButtons() {
     document.getElementById("button-next").onclick = nextImages;
     document.getElementById("button-prev").onclick = prevImages;
 }
