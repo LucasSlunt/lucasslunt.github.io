@@ -1,36 +1,106 @@
-#navbar{
+#navbar {
     display: flex;
-    border: 4px;
-    border-style: none none outset none;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 10;
-
-    position:fixed;
-    top:0;
-    left:0;
-    width: 100%;
-}
-
-.navbar-item{
-    font-size: 1.2em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-decoration: none;
-    color: rgb(0,0,0);
-
+    justify-content: center;
+    gap: 1em;
     padding: 0.5em;
-
-    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    height: 70px;
+    /* Comfortable fixed height */
+    box-sizing: border-box;
+    /* Background color is set via JS */
 }
 
-.navbar-item:hover{
-    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.4);
+.navbar-item {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal layout */
+    align-items: center;
+    justify-content: center;
+    /* Centers content initially (just icon) and when expanded (icon + text) */
 
-    z-index: 11;
-    outline: 4px solid;
-    outline-color: aliceblue;
+    text-decoration: none;
+    color: #333;
+    padding: 0;
+    /* Padding handled by size */
 
+    border-radius: 30px;
+    /* Pill shape looks better for this interaction */
+
+    /* Fixed Dimensions for consistency */
+    width: 140px;
+    height: 46px;
+    /* slightly smaller than navbar height */
+
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+    overflow: hidden;
+    /* Encapsulate the reveal */
+
+    /* Background color is set via JS */
 }
 
-body{
-    margin-top: 5%;
+/* Icon Styling */
+.nav-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    /* Keep above if needed */
+    flex-shrink: 0;
+    /* Prevent squishing */
+}
+
+.nav-svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* Label Styling (Horizontal Reveal) */
+.nav-label {
+    font-size: 0.9em;
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    white-space: nowrap;
+
+    /* Animation Props */
+    max-width: 0;
+    opacity: 0;
+    transform: translateX(-10px);
+    /* Start slightly left (behind icon feeling) */
+
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy expand */
+
+    color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Hover Effects */
+.navbar-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.05);
+}
+
+.navbar-item:hover .nav-svg {
+    transform: scale(1.1);
+}
+
+.navbar-item:hover .nav-label {
+    max-width: 100px;
+    /* Allow expansion */
+    opacity: 1;
+    transform: translateX(0);
+    margin-left: 10px;
+    /* Gap between icon and text */
+}
+
+body {
+    margin-top: 80px;
 }
