@@ -15,15 +15,6 @@ class ApplesTableManager {
         this.userSearchBar.addEventListener("keyup", () => { this.searchAppleTable(this.userSearchBar.value.toLowerCase()) });
 
         this.modal = document.getElementById("modal");
-        // Modal close logic is handled in setupButtons in FeaturedApplesManager or here?
-        // The original code had it in setupButtons. I'll add it here too or ensure it's handled.
-        // Actually, the modal is shared. I'll add a listener here just in case, or relies on the HTML structure.
-        // The original code had `document.getElementById("modal-screen").onclick = closeModal;` in `setupButtons` in `applesFeaturedScript.js` AND `applesTableScript.js`?
-        // No, `applesFeaturedScript.js` had `setupButtons` which added it.
-        // `applesTableScript.js` had `closeModal` function but didn't seem to attach it in `initializeTableVariables`?
-        // Wait, `applesFeaturedScript.js` calls `setupButtons` which adds `onclick = closeModal`.
-        // `applesTableScript.js` has `attachModalFunctions` which sets up opening the modal.
-        // I'll add the close listener here as well to be self-contained.
         const modalScreen = document.getElementById("modal-screen");
         if (modalScreen) {
             modalScreen.onclick = () => this.closeModal();
@@ -148,7 +139,11 @@ class ApplesTableManager {
             ["Img", "Snow Apple (Famuese)", "Barely tart, delicately vinous", "Soft", 3, "This heirloom variety used to be very popular in Quebec", "Unknown", "November 18 2025", 97],
             ["Img", "Dazzle", "Juicy, sweet", "Very crisp, like a watermelon", 7, "Very popular in Asia", "Scired x Sweetie", "November 19 2025", 98],
             ["Img", "Gloster 69", "Mildy sweet, barely tart", "Crisp, a bit mealy", 4, "Released in 1969 (hence the name)", "Glockenapfel x Richared Delicious", "November 20 2025", 99],
-            ["Img", "Evercrisp", "Ridiculously sweet, tart", "Very crunchy, like splitting wood", 7, "A very overpowering and intense apple", "Fuji x Honeycrisp", "November 21 2025", 100]
+            ["Img", "Evercrisp", "Ridiculously sweet, tart", "Very crunchy, like splitting wood", 8, "A very overpowering and intense apple", "Fuji x Honeycrisp", "November 21 2025", 100],
+            ["Img", "Red Rome", "Sweet, subtle candy flavour", "Soft, mealy", 3, "Excellent for baking", "Rome", "December 9 2025", 101],
+            ["Img", "Arkansas Black", "Tart, vinous", "Dense, crisp", 6, "Exceeding dark skin, and keeps well", "Winesap x ?", "December 26 2025", 102],
+            ["Img", "Scarlet Spur", "More sweet than sour, floral", "Crisp", 7, "Seems like a much better version of Red Delicious", "Red Delicious", "December 27 2025", 103],
+            ["Img", "Melrose", "Sweet, refreshingly acidic. Notes of citrus", "Softer", 7, "Official state apple of Ohio", "Johnathan x Red Delicious", "December 30 2025", 104]
         ];
 
         this.tApples = rawData.map(data => new Apple(
@@ -164,19 +159,6 @@ class ApplesTableManager {
     }
 
     addRowsToTable(apples) {
-        // Clear existing rows except header
-        // The original code used `deleteAllRowsFromTable` which deleted from `tDisplay.length` down to 0.
-        // But `rows` is `table.rows`.
-        // I'll just clear the table body or remove rows.
-        // The original code:
-        /*
-        function deleteAllRowsFromTable(){
-            for (var i = tDisplay.length; i > 0; i--){
-                table.deleteRow(i);
-            }
-        }
-        */
-        // I'll implement a clear method.
         this.clearTable();
 
         apples.forEach(apple => {
@@ -308,21 +290,6 @@ class ApplesTableManager {
         if (activeId) {
             const el = document.getElementById(activeId);
             if (el) {
-                // Determine direction based on column type and this.sortDir
-                // Name & Parents: true = Asc (A-Z) -> sort-asc
-                // Others (Rating, Chrono, Texture, Flavour): true = Desc (High-Low) -> sort-desc
-                // Wait, let's check the comparators again.
-
-                let isAscending = this.sortDir;
-
-                // Special handling for columns where "true" means Descending logic (High->Low)
-                // Rating: true = b - a (Desc)
-                // Chrono: true = b - a (Desc)
-                // Texture: true = b - a (Desc)
-                // Flavour: true = b - a (Desc)
-
-                // Name: true = a.localeCompare(b) (Asc)
-                // Parents: true = a.localeCompare(b) (Asc)
 
                 if (columnName === "Name" || columnName === "Parents") {
                     // true = Asc
@@ -369,10 +336,6 @@ class ApplesTableManager {
     }
 
     comparatorChrono(a, b) {
-        // The original code used `a[8]` which is the ID/Number, not the date string.
-        // `tApples.push(["Img",...,1]);` -> index 8 is number.
-        // `comparatorChrono` used `a[8]-b[8]`.
-        // So it sorts by ID.
         if (this.sortDir == true) { return b.id - a.id; }
         else return a.id - b.id;
     }
@@ -450,10 +413,6 @@ class ApplesTableManager {
     }
 
     searchAppleTable(searchTerm) {
-        // The original logic used `hasRowAtIndexBeenAddedToTable` to avoid duplicates if multiple columns matched.
-        // But `tApples` is unique.
-        // I can just filter `tApples`.
-        // The original logic searched columns 1-7 (Name to Date).
 
         this.tDisplay = this.tApples.filter(apple => {
             // Check all searchable properties
