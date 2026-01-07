@@ -334,6 +334,16 @@ class ApplesTableManager {
 
         this.addRowsToTable(this.tDisplay);
     }
+
+    filterByRating(rating) {
+        this.tDisplay = this.tApples.filter(apple => Math.round(Number(apple.rating)) === rating);
+        this.addRowsToTable(this.tDisplay);
+
+        if (this.userSearchBar) {
+            this.userSearchBar.value = ""; // Clear manual search
+            this.userSearchBar.placeholder = `Filtered by Rating: ${rating}`;
+        }
+    }
     setupDragScroll() {
         const slider = document.querySelector('.table-scroll-wrapper');
         let isDown = false;

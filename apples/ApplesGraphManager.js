@@ -2,9 +2,11 @@ class ApplesGraphManager {
     constructor() {
         this.graphContainer = null;
         this.maxCount = 0;
+        this.tableManager = null;
     }
 
-    async initialize() {
+    async initialize(tableManager) {
+        this.tableManager = tableManager;
         this.graphContainer = document.getElementById('rating-graph-container');
         if (!this.graphContainer) return;
 
@@ -45,7 +47,7 @@ class ApplesGraphManager {
             html += `
                 <div class="test-bar-group">
                     <div class="test-bar-wrapper">
-                        <div class="test-bar" style="height: ${height}%;" data-count="${count}">
+                        <div class="test-bar" style="height: ${height}%;" data-count="${count}" data-rating="${i}" role="button" tabindex="0" aria-label="Filter by rating ${i}">
                             <div class="test-tooltip">${count} Apples</div>
                         </div>
                     </div>
@@ -55,5 +57,29 @@ class ApplesGraphManager {
         }
 
         this.graphContainer.innerHTML = html;
+
+        // Add Click Listeners
+        const bars = this.graphContainer.querySelectorAll('.test-bar');
+        bars.forEach(bar => {
+            bar.onclick = () => {
+                const rating = parseInt(bar.dataset.rating);
+                if (this.tableManager && !isNaN(rating)) {
+                    this.tableManager.filterByRating(rating);
+                    // Smooth scroll to table header
+                    const tableHeader = document.querySelector('.table-header-box');
+                    if (tableHeader) {
+                        tableHeader.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            };
+
+            // Allow keyboard activation
+            bar.onkeydown = (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    bar.click();
+                }
+            };
+        });
     }
 }

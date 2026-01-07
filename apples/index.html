@@ -214,8 +214,8 @@
     <!-- Scripts -->
     <script src="Apple.js"></script>
     <script src="FeaturedApplesManager.js"></script>
-    <script src="ApplesTableManager.js"></script>
-    <script src="ApplesGraphManager.js"></script>
+    <script src="ApplesTableManager.js?v=2"></script>
+    <script src="ApplesGraphManager.js?v=2"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -229,7 +229,7 @@
 
             // Initialize Graph
             const graphManager = new ApplesGraphManager();
-            graphManager.initialize();
+            graphManager.initialize(tableManager);
         });
     </script>
 
