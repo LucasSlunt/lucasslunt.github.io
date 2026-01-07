@@ -36,8 +36,10 @@ class ApplesGraphManager {
 
         // Generate HTML
         let html = '';
+        let totalApples = 0;
         for (let i = 1; i <= 10; i++) {
             const count = counts[i];
+            totalApples += count;
             const percentage = this.maxCount > 0 ? (count / this.maxCount) * 100 : 0;
 
             // Allow bars to be at least a little visible if they have data (e.g. min 1%)
@@ -57,6 +59,12 @@ class ApplesGraphManager {
         }
 
         this.graphContainer.innerHTML = html;
+
+        // Update Total Count Label
+        const bottomLabel = document.getElementById('graph-label-bottom');
+        if (bottomLabel) {
+            bottomLabel.innerText = `Total Apples Reviewed: ${totalApples}`;
+        }
 
         // Add Click Listeners
         const bars = this.graphContainer.querySelectorAll('.test-bar');

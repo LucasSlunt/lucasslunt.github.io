@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Slunt</title>
     <link rel="stylesheet" href="../pageElementFiles/css/navbar.css">
-    <link rel="stylesheet" href="apples.css?v=3">
+    <link rel="stylesheet" href="apples.css?v=10">
     <link rel="icon" type="image/x-icon" href="../pageElementFiles/icon.png">
 </head>
 
@@ -18,45 +18,47 @@
 
     <main>
         <section class="carousel-container" aria-label="Featured Apples Carousel">
-            <button class="textbox" id="carousel-title-button">
-                Featured Apples
-            </button>
+            <div class="featured-header-box">
+                <div class="title-box">Featured Apples</div>
 
-            <div class="carousel-wrapper">
-                <button type="button" class="selection-button" id="button-prev" aria-label="Previous apple">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
+                <div class="carousel-wrapper">
+                    <button type="button" class="selection-button" id="button-prev" aria-label="Previous apple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
 
-                <div class="carousel-track">
-                    <!-- 7 Items for the 7 apples in data -->
-                    <!-- Initial positions: 0 (far left) to 6 (far right). 3 is center. -->
-                    <img class="carousel-item pos-0" id="item-0" alt="Apple thumbnail">
-                    <img class="carousel-item pos-1" id="item-1" alt="Apple thumbnail">
-                    <img class="carousel-item pos-2" id="item-2" alt="Apple thumbnail">
-                    <img class="carousel-item pos-3" id="item-3" alt="Featured apple">
-                    <img class="carousel-item pos-4" id="item-4" alt="Apple thumbnail">
-                    <img class="carousel-item pos-5" id="item-5" alt="Apple thumbnail">
-                    <img class="carousel-item pos-6" id="item-6" alt="Apple thumbnail">
+                    <div class="carousel-track">
+                        <!-- 7 Items for the 7 apples in data -->
+                        <!-- Initial positions: 0 (far left) to 6 (far right). 3 is center. -->
+                        <img class="carousel-item pos-0" id="item-0" alt="Apple thumbnail">
+                        <img class="carousel-item pos-1" id="item-1" alt="Apple thumbnail">
+                        <img class="carousel-item pos-2" id="item-2" alt="Apple thumbnail">
+                        <img class="carousel-item pos-3" id="item-3" alt="Featured apple">
+                        <img class="carousel-item pos-4" id="item-4" alt="Apple thumbnail">
+                        <img class="carousel-item pos-5" id="item-5" alt="Apple thumbnail">
+                        <img class="carousel-item pos-6" id="item-6" alt="Apple thumbnail">
+                    </div>
+
+                    <button type="button" class="selection-button" id="button-next" aria-label="Next apple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
                 </div>
-
-                <button type="button" class="selection-button" id="button-next" aria-label="Next apple">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
             </div>
 
-            <div class="featured-info-box">
-                <div class="title-box" id="main-apple-title">
-                    apple
-                </div>
-                <div class="horizontal-row">
-                    <div class="desc-item" id="featured-desc">
+            <div class="featured-content-wrapper">
+                <div class="featured-info-box">
+                    <div class="title-box" id="main-apple-title">
                         apple
+                    </div>
+                    <div class="horizontal-row">
+                        <div class="desc-item" id="featured-desc">
+                            apple
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,13 +149,13 @@
         <section id="graph-section" aria-label="Rating Distribution Graph">
             <div class="graph-box">
                 <header class="title-box">
-                    Rating Distribution
+                    Rating Distribution (out of 10)
                 </header>
                 <div class="graph-content">
                     <div id="rating-graph-container" class="bar-chart">
                         <!-- Bars will be injected by JS -->
                     </div>
-                    <div class="graph-x-axis-label">Rating / 10</div>
+                    <div class="graph-x-axis-label" id="graph-label-bottom">Rating / 10</div>
                 </div>
             </div>
         </section>
@@ -214,8 +216,8 @@
     <!-- Scripts -->
     <script src="Apple.js"></script>
     <script src="FeaturedApplesManager.js"></script>
-    <script src="ApplesTableManager.js?v=2"></script>
-    <script src="ApplesGraphManager.js?v=2"></script>
+    <script src="ApplesTableManager.js?v=3"></script>
+    <script src="ApplesGraphManager.js?v=3"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
