@@ -143,6 +143,20 @@
                 </div>
             </div>
         </section>
+
+        <section id="graph-section" aria-label="Rating Distribution Graph">
+            <div class="graph-box">
+                <header class="title-box">
+                    Rating Distribution
+                </header>
+                <div class="graph-content">
+                    <div id="rating-graph-container" class="bar-chart">
+                        <!-- Bars will be injected by JS -->
+                    </div>
+                    <div class="graph-x-axis-label">Rating / 10</div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -201,6 +215,7 @@
     <script src="Apple.js"></script>
     <script src="FeaturedApplesManager.js"></script>
     <script src="ApplesTableManager.js"></script>
+    <script src="ApplesGraphManager.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -211,6 +226,10 @@
             // Initialize Apples Table
             const tableManager = new ApplesTableManager();
             tableManager.initialize();
+
+            // Initialize Graph
+            const graphManager = new ApplesGraphManager();
+            graphManager.initialize();
         });
     </script>
 
