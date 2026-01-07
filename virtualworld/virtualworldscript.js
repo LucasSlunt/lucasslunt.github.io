@@ -1,5 +1,5 @@
 function setupPage() {
-    setupNavbar("../../", "rgb(124, 161, 173)", "lightblue");
+    setupNavbar("../", "rgb(124, 161, 173)", "lightblue");
     initializeImages();
     setupButtons();
 }

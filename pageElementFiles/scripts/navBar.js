@@ -18,7 +18,7 @@ function setupNavbar(rootPath, bgColour, itemColour) {
   // Define links
   const links = [
     { text: 'Home', icon: icons.home, href: rootPath + 'index.html' },
-    { text: 'Apples', icon: icons.apple, href: rootPath + 'pages/apples/apples.html' },
+    { text: 'Apples', icon: icons.apple, href: rootPath + 'apples/index.html' },
     { text: 'Github', icon: icons.github, href: 'https://github.com/LucasSlunt', target: '_blank' },
     { text: 'LinkedIn', icon: icons.linkedin, href: 'https://www.linkedin.com/in/lucas-slunt-3a170a330/', target: '_blank' }
   ];

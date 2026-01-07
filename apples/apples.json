@@ -1,0 +1,1042 @@
+[
+    {
+        "id": 1,
+        "name": "Lady Alice",
+        "taste": "Sweet, candy",
+        "texture": "Very crisp",
+        "rating": 8,
+        "notableTraits": "Long shelf life",
+        "parents": "Unknown",
+        "dateDocumented": "January 23, 2022"
+    },
+    {
+        "id": 2,
+        "name": "Gala",
+        "taste": "Sweet, tangy",
+        "texture": "Fairly crisp",
+        "rating": 5,
+        "notableTraits": "Best selling apple in North America",
+        "parents": "Golden Delicious x Kidds Orange Redd ",
+        "dateDocumented": "January 24, 2022"
+    },
+    {
+        "id": 3,
+        "name": "Aurora Golden Gala",
+        "taste": "Very sweet",
+        "texture": "Crisp",
+        "rating": 9,
+        "notableTraits": "The skin feels slightly greasy",
+        "parents": "Gala x Splendour",
+        "dateDocumented": "January 25, 2022"
+    },
+    {
+        "id": 4,
+        "name": "Jazz",
+        "taste": "Slightly sour",
+        "texture": "Crunchy",
+        "rating": 6,
+        "notableTraits": "Oblong shape",
+        "parents": "Braeburn x Gala",
+        "dateDocumented": "January 25, 2022"
+    },
+    {
+        "id": 5,
+        "name": "Envy",
+        "taste": "Fairly sweet, inconsistent",
+        "texture": "Very dense, crisp",
+        "rating": 5,
+        "notableTraits": "Browns extremely slowly",
+        "parents": "Braeburn x Gala",
+        "dateDocumented": "January 26, 2022"
+    },
+    {
+        "id": 6,
+        "name": "Fuji",
+        "taste": "Pleasant yet watery",
+        "texture": "Crisp",
+        "rating": 5,
+        "notableTraits": "Difficult to grow",
+        "parents": "Ralls Janet x Red Delicious",
+        "dateDocumented": "January 26, 2022"
+    },
+    {
+        "id": 7,
+        "name": "Pink Lady (Cripps Pink)",
+        "taste": "Slightly sour",
+        "texture": "Softer",
+        "rating": 7,
+        "notableTraits": "Very popular in the UK",
+        "parents": "Golden Delicious x Lady Williams",
+        "dateDocumented": "February 2, 2022"
+    },
+    {
+        "id": 8,
+        "name": "Spartan",
+        "taste": "Mildly sweet, vinous",
+        "texture": "Very soft",
+        "rating": 5,
+        "notableTraits": "Excellent for baking",
+        "parents": "McIntosh x ?",
+        "dateDocumented": "February 3, 2022"
+    },
+    {
+        "id": 9,
+        "name": "Opal",
+        "taste": "Fairly sweet, floral",
+        "texture": "Crisp",
+        "rating": 7,
+        "notableTraits": "Browns slowly",
+        "parents": "Golden Delicious x Topaz",
+        "dateDocumented": "February 9, 2022"
+    },
+    {
+        "id": 10,
+        "name": "Honeycrisp",
+        "taste": "Sweet, tart",
+        "texture": "Crunchy",
+        "rating": 8,
+        "notableTraits": "Bruises easily, hard to grow",
+        "parents": "Keepsake x MN1627",
+        "dateDocumented": "February 10, 2022"
+    },
+    {
+        "id": 11,
+        "name": "Cosmic Crisp",
+        "taste": "Sweet, tart",
+        "texture": "Very crunchy",
+        "rating": 7,
+        "notableTraits": "Intended to replace Honeycrisp",
+        "parents": "Enterprise x Honeycrisp",
+        "dateDocumented": "February 11, 2022"
+    },
+    {
+        "id": 12,
+        "name": "Granny Smith",
+        "taste": "Very Sour, citrusy",
+        "texture": "Crisp",
+        "rating": 4,
+        "notableTraits": "Excellent for baking",
+        "parents": "Unknown",
+        "dateDocumented": "February 14, 2022"
+    },
+    {
+        "id": 13,
+        "name": "Ambrosia",
+        "taste": "Quite sweet, little flavour",
+        "texture": "Fairly crisp",
+        "rating": 5,
+        "notableTraits": "Sugar levels are measured with a brix refractometer before harvest",
+        "parents": "Golden Delicious x Red Delicious",
+        "dateDocumented": "February 16, 2022"
+    },
+    {
+        "id": 14,
+        "name": "Red Delicious",
+        "taste": "Bland though fairly sweet",
+        "texture": "Muddy",
+        "rating": 2,
+        "notableTraits": "Not closely related to 'Golden Delicious'",
+        "parents": "Unknown",
+        "dateDocumented": "February 22, 2022"
+    },
+    {
+        "id": 15,
+        "name": "Rockit",
+        "taste": "Very sweet, slightly bitter",
+        "texture": "Crunchy",
+        "rating": 6,
+        "notableTraits": "Barely larger than a golf ball",
+        "parents": "Gala x Splendour",
+        "dateDocumented": "March 22, 2022"
+    },
+    {
+        "id": 16,
+        "name": "SugarBee",
+        "taste": "Very Sweet, similar to Ambrosia",
+        "texture": "Crisp",
+        "rating": 6,
+        "notableTraits": "Long shelf life",
+        "parents": "HoneyCrisp x ?",
+        "dateDocumented": "March 22, 2022"
+    },
+    {
+        "id": 17,
+        "name": "Orin",
+        "taste": "Sweet, pear",
+        "texture": "Crisp",
+        "rating": 9,
+        "notableTraits": "Tastes like a pear",
+        "parents": "Golden Delicious x Indo",
+        "dateDocumented": "March 24, 2022"
+    },
+    {
+        "id": 18,
+        "name": "Kanzi",
+        "taste": "Sour, sweet",
+        "texture": "Crisp",
+        "rating": 8,
+        "notableTraits": "Quite similar to Honeycrisp",
+        "parents": "Braeburn x Gala",
+        "dateDocumented": "March 24, 2022"
+    },
+    {
+        "id": 19,
+        "name": "Koru",
+        "taste": "Bland, sweet",
+        "texture": "Crisp",
+        "rating": 4,
+        "notableTraits": "Supposedly has a mild spicy flavour",
+        "parents": "Braeburn x Fuji",
+        "dateDocumented": "April 16, 2022"
+    },
+    {
+        "id": 20,
+        "name": "Jonagold",
+        "taste": "Faintly sweet, dry",
+        "texture": "Crisp, coarse",
+        "rating": 5,
+        "notableTraits": "Triploid (3 sets of genes)",
+        "parents": "Golden Delicious x Jonathan",
+        "dateDocumented": "July 28, 2022"
+    },
+    {
+        "id": 21,
+        "name": "Smitten",
+        "taste": "Fairly sweet, watery",
+        "texture": "Crisp",
+        "rating": 6,
+        "notableTraits": "Has 4 parents",
+        "parents": "Braeburn x Falstaff x Fiesta x Gala",
+        "dateDocumented": "August 2, 2022"
+    },
+    {
+        "id": 22,
+        "name": "Unknown",
+        "taste": "Sour, citrusy",
+        "texture": "Very crisp",
+        "rating": 4,
+        "notableTraits": "From Place de la Gare park, Quebec city",
+        "parents": "Unknown",
+        "dateDocumented": "August 30, 2022"
+    },
+    {
+        "id": 23,
+        "name": "Unknown",
+        "taste": "Sour, Fuji-like",
+        "texture": "Crisp",
+        "rating": 4,
+        "notableTraits": "From Place de la Gare park, Quebec city",
+        "parents": "Unknown",
+        "dateDocumented": "August 30, 2022"
+    },
+    {
+        "id": 24,
+        "name": "Unknown",
+        "taste": "Tart, sweet",
+        "texture": "Softer",
+        "rating": 6,
+        "notableTraits": "From Hazeldell Orchard, Kelowna",
+        "parents": "Unknown",
+        "dateDocumented": "September 24, 2022"
+    },
+    {
+        "id": 25,
+        "name": "Silken",
+        "taste": "Sweet, honey",
+        "texture": "Crisp",
+        "rating": 7,
+        "notableTraits": "Quite an ugly apple",
+        "parents": "Honeygold x Sunrise",
+        "dateDocumented": "September 24, 2022"
+    },
+    {
+        "id": 26,
+        "name": "Nova Spy",
+        "taste": "Very sour, sweet",
+        "texture": "Crisp",
+        "rating": 6,
+        "notableTraits": "Trees are very hardy",
+        "parents": "Golden Delicious x Northern Spy",
+        "dateDocumented": "October 14, 2022"
+    },
+    {
+        "id": 27,
+        "name": "Lucy Glo",
+        "taste": "Sweet, wild berries",
+        "texture": "Crisp",
+        "rating": 10,
+        "notableTraits": "Red fleshed apple",
+        "parents": "Hidden Rose x HoneyCrisp",
+        "dateDocumented": "November 27, 2022"
+    },
+    {
+        "id": 28,
+        "name": "Lucy Rose",
+        "taste": "Sweet, slightly sour",
+        "texture": "Very crisp",
+        "rating": 5,
+        "notableTraits": "Red fleshed apple",
+        "parents": "Hidden Rose x Honeycrisp",
+        "dateDocumented": "December 29, 2022"
+    },
+    {
+        "id": 29,
+        "name": "Pazazz",
+        "taste": "Sweet, tart",
+        "texture": "Softer",
+        "rating": 6,
+        "notableTraits": "Long shelf life",
+        "parents": "Honeycrisp x ?",
+        "dateDocumented": "July 9, 2023"
+    },
+    {
+        "id": 30,
+        "name": "Lodi",
+        "taste": "Very sour",
+        "texture": "Very soft, mealy",
+        "rating": 2,
+        "notableTraits": "Good for apple sauce, grows early in the season",
+        "parents": "Mongomery Sweet x Yellow Transparent",
+        "dateDocumented": "July 28, 2023"
+    },
+    {
+        "id": 31,
+        "name": "Sunrise",
+        "taste": "Sweet, sharp, juicy",
+        "texture": "Dense, crunchy",
+        "rating": 8,
+        "notableTraits": "Ripens very early, before Gala",
+        "parents": "Golden Delicious x McIntosh",
+        "dateDocumented": "August 3, 2023"
+    },
+    {
+        "id": 32,
+        "name": "Transparent",
+        "taste": "Bland, sour",
+        "texture": "Very soft, muddy",
+        "rating": 1,
+        "notableTraits": "Very short shelf life (~10 days)",
+        "parents": "Unknown",
+        "dateDocumented": "August 4, 2023"
+    },
+    {
+        "id": 33,
+        "name": "Unknown",
+        "taste": "Mildly bitter, slightly sour",
+        "texture": "Softer",
+        "rating": 3,
+        "notableTraits": "The best crabapples in Chapman Camp",
+        "parents": "Unknown",
+        "dateDocumented": "August 14, 2023"
+    },
+    {
+        "id": 34,
+        "name": "Earligold",
+        "taste": "Sour, fairly sweet, concord grape",
+        "texture": "Very soft",
+        "rating": 8,
+        "notableTraits": "Incredible soft apple",
+        "parents": "Unknown",
+        "dateDocumented": "August 15, 2023"
+    },
+    {
+        "id": 35,
+        "name": "Wynoochee Early",
+        "taste": "Tart, sweet, citrusy",
+        "texture": "Dense, crisp",
+        "rating": 6,
+        "notableTraits": "Good for cooking and cider",
+        "parents": "Unknown",
+        "dateDocumented": "August 18, 2023"
+    },
+    {
+        "id": 36,
+        "name": "Unknown",
+        "taste": "Sour, bitter",
+        "texture": "Soft",
+        "rating": 2,
+        "notableTraits": "Found on along a walk in Kimberley",
+        "parents": "Unknown",
+        "dateDocumented": "August 27, 2023"
+    },
+    {
+        "id": 37,
+        "name": "Jonaprince",
+        "taste": "Sour, slightly sweet",
+        "texture": "Crisp yet light",
+        "rating": 5,
+        "notableTraits": "Trees bear lots of fruit, with a long shelf life",
+        "parents": "Golden Delicious x Jonathan",
+        "dateDocumented": "September 17, 2023"
+    },
+    {
+        "id": 38,
+        "name": "Ginger Gold",
+        "taste": "Sweet, barely tart, dry",
+        "texture": "Softer",
+        "rating": 7,
+        "notableTraits": "Named 'Ginger' after the farmer who discovered it, not the spice",
+        "parents": "Golden Delicious x ?",
+        "dateDocumented": "October 4, 2023"
+    },
+    {
+        "id": 39,
+        "name": "McIntosh",
+        "taste": "Fairly sweet, slightly sour, vinous",
+        "texture": "Softer",
+        "rating": 8,
+        "notableTraits": "National apple of Canada",
+        "parents": "Unknown",
+        "dateDocumented": "October 13, 2023"
+    },
+    {
+        "id": 40,
+        "name": "Golden Delicious",
+        "taste": "Sweet, barely sour",
+        "texture": "Softer",
+        "rating": 7,
+        "notableTraits": "Not closely related to Red Delicious",
+        "parents": "Grimes Golden x ?",
+        "dateDocumented": "October 18, 2023"
+    },
+    {
+        "id": 41,
+        "name": "Hidden Rose",
+        "taste": "Tart, hints of strawberry lemonade",
+        "texture": "Crisp",
+        "rating": 7,
+        "notableTraits": "Red fleshed apple",
+        "parents": "Unknown",
+        "dateDocumented": "November 9, 2023"
+    },
+    {
+        "id": 42,
+        "name": "Salish",
+        "taste": "Sweet, tart",
+        "texture": "Crisp",
+        "rating": 6,
+        "notableTraits": "Named after a group of languages spoken by indigenous people of Canada",
+        "parents": "Gala x Splendour",
+        "dateDocumented": "November 11, 2023"
+    },
+    {
+        "id": 43,
+        "name": "September Wonder (Fuji)",
+        "taste": "Pleasant, watery, slightly tart",
+        "texture": "Crisp",
+        "rating": 7,
+        "notableTraits": "A sport of Fuji",
+        "parents": "Fuji",
+        "dateDocumented": "November 12, 2023"
+    },
+    {
+        "id": 44,
+        "name": "Pinata",
+        "taste": "Full, sweet, tart",
+        "texture": "Crisp",
+        "rating": 7,
+        "notableTraits": "Supposedly has a light pineapple aftertaste",
+        "parents": "Cox's Orange Pippin x Duchess of Oldenburg x Golden Delicious",
+        "dateDocumented": "November 15, 2023"
+    },
+    {
+        "id": 45,
+        "name": "Unknown Jarred Apples",
+        "taste": "Cinnamon, spiced",
+        "texture": "Squishy yet firm, rubber",
+        "rating": 7,
+        "notableTraits": "Crabbapples of unknown variety preserved in a jar",
+        "parents": "Unknown",
+        "dateDocumented": "January 5, 2024"
+    },
+    {
+        "id": 46,
+        "name": "Nicola",
+        "taste": "Sweet, barely tart",
+        "texture": "Dense, crisp",
+        "rating": 7,
+        "notableTraits": "Develops more flavour as the season progresses",
+        "parents": "Gala x Splendour",
+        "dateDocumented": "January 25, 2024"
+    },
+    {
+        "id": 47,
+        "name": "Braeburn",
+        "taste": "Sweet, sour aftertaste",
+        "texture": "Softer",
+        "rating": 7,
+        "notableTraits": "A parent of many great apples",
+        "parents": "Red Delicious x Sturmer Pippin",
+        "dateDocumented": "February 25, 2024"
+    },
+    {
+        "id": 48,
+        "name": "Alkmene (Red Windsor)",
+        "taste": "Sour",
+        "texture": "Very crisp, dense",
+        "rating": 5,
+        "notableTraits": "Given the Award of Garden Merit by Londons Royal Horticultural Society",
+        "parents": "Cox's Orange Pippin x Geheimrat Dr. Oldenburg",
+        "dateDocumented": "September 12, 2024"
+    },
+    {
+        "id": 49,
+        "name": "Cox's Orange Pippin (Cox)",
+        "taste": "Very flavourful, sweet, tart",
+        "texture": "Crisp, dense",
+        "rating": 9,
+        "notableTraits": "Named after the farmer who grew it, 'Richard Cox'",
+        "parents": "Unknown",
+        "dateDocumented": "September 23, 2024"
+    },
+    {
+        "id": 50,
+        "name": "Bramley",
+        "taste": "Very sour",
+        "texture": "Crisp, hard",
+        "rating": 3,
+        "notableTraits": "Excellent for baking, very large",
+        "parents": "Gravenstein x ?",
+        "dateDocumented": "September 24, 2024"
+    },
+    {
+        "id": 51,
+        "name": "Egremont Russet",
+        "taste": "Dry, pear-like, nutty, cinnamon, sweet",
+        "texture": "Crunchy",
+        "rating": 10,
+        "notableTraits": "Traditionally made into cider. The skin is rough like a russet potato",
+        "parents": "Unknown",
+        "dateDocumented": "September 25, 2024"
+    },
+    {
+        "id": 52,
+        "name": "Pirouette",
+        "taste": "Sweet, a bit tart",
+        "texture": "Crisp",
+        "rating": 6,
+        "notableTraits": "Popular with organic growers",
+        "parents": "Clivia x Rubin",
+        "dateDocumented": "September 26, 2024"
+    },
+    {
+        "id": 53,
+        "name": "Zari",
+        "taste": "Sweet, tangy",
+        "texture": "Crisp",
+        "rating": 5,
+        "notableTraits": "Fairly new variety, from belgium",
+        "parents": "Delbard Estivale x Elstar",
+        "dateDocumented": "October 2, 2024"
+    },
+    {
+        "id": 54,
+        "name": "Santana",
+        "taste": "Sour, vinous",
+        "texture": "Crisp",
+        "rating": 6,
+        "notableTraits": "Specially developed to minimize the amount of a specific protein that some people are allergic to",
+        "parents": "Elstar x Priscilla",
+        "dateDocumented": "October 6, 2024"
+    },
+    {
+        "id": 55,
+        "name": "Rubens (Civni)",
+        "taste": "Quite sweet, barely sour",
+        "texture": "Crisp, flakey like an asian pear",
+        "rating": 7,
+        "notableTraits": "All growers of the Rubens variety are required to use minimal pesticides.",
+        "parents": "Gala x Elstar",
+        "dateDocumented": "October 16, 2024"
+    },
+    {
+        "id": 56,
+        "name": "Unknown",
+        "taste": "Fairly sweet, crabappley",
+        "texture": "Softer",
+        "rating": 7,
+        "notableTraits": "May have been related to Bramley, though it was much sweeter.",
+        "parents": "Unknown",
+        "dateDocumented": "October 19, 2024"
+    },
+    {
+        "id": 57,
+        "name": "Maribelle",
+        "taste": "Mild",
+        "texture": "Firm",
+        "rating": 4,
+        "notableTraits": "Has a very large yield of apples",
+        "parents": "Elstar x Gloster x Meiprinses",
+        "dateDocumented": "October 22, 2024"
+    },
+    {
+        "id": 58,
+        "name": "Reinette",
+        "taste": "Mild",
+        "texture": "Muddy",
+        "rating": 2,
+        "notableTraits": "'Reinette' is an umbrella term for ~50 different apples. It is unknown which specific reinette this apple is",
+        "parents": "Unknown",
+        "dateDocumented": "November 1, 2024"
+    },
+    {
+        "id": 59,
+        "name": "Samboa",
+        "taste": "Incredibly sweet, dry",
+        "texture": "Very crisp",
+        "rating": 5,
+        "notableTraits": "'Samboa' is a brand name that cover 3 very similar apples, which only differ in their harvest times",
+        "parents": "Imperatriz x Pink Lady or Imperatriz x Baronesa",
+        "dateDocumented": "November 2, 2024"
+    },
+    {
+        "id": 60,
+        "name": "Scarlett Paradise",
+        "taste": "Sweet, sour, similar to Aurora Golden Gala",
+        "texture": "Crisp",
+        "rating": 9,
+        "notableTraits": "Only available at select retailers in the UK",
+        "parents": "Unknown",
+        "dateDocumented": "November 3, 2024"
+    },
+    {
+        "id": 61,
+        "name": "Pixie",
+        "taste": "Fairly sweet, sharp tang",
+        "texture": "Crisp",
+        "rating": 6,
+        "notableTraits": "Very small, barely larger than a mandarin orange",
+        "parents": "Unknown",
+        "dateDocumented": "November 4, 2024"
+    },
+    {
+        "id": 62,
+        "name": "Delgoton",
+        "taste": "Mild, little flavour",
+        "texture": "Soft",
+        "rating": 3,
+        "notableTraits": "This variety may have been created through Delbard Orchards irradiating technique of 'regenesis'",
+        "parents": "Unknown",
+        "dateDocumented": "November 5, 2024"
+    },
+    {
+        "id": 63,
+        "name": "Red Dream",
+        "taste": "Sweet, very similar to Honeycrisp",
+        "texture": "Crisp",
+        "rating": 7,
+        "notableTraits": "Almost no information about this apple is online",
+        "parents": "Unknown",
+        "dateDocumented": "November 6, 2024"
+    },
+    {
+        "id": 64,
+        "name": "Chantecler (Belchard)",
+        "taste": "Sweet, refreshingly sour",
+        "texture": "Soft, fine-grained",
+        "rating": 6,
+        "notableTraits": "Tastes similar to Golden delicious",
+        "parents": "Golden Delicious x Reinette Clochard",
+        "dateDocumented": "November 7, 2024"
+    },
+    {
+        "id": 65,
+        "name": "Rubinette (Rafzubin)",
+        "taste": "Very sweet, sharp honey flavour",
+        "texture": "Crisp",
+        "rating": 7,
+        "notableTraits": "Once in a job interview, I was asked why I rated this apple so low. (I got the job)",
+        "parents": "Cox's Orange Pippen x Golden Delicious",
+        "dateDocumented": "November 8, 2024"
+    },
+    {
+        "id": 66,
+        "name": "Amber",
+        "taste": "Fairly sweet, soft, watery",
+        "texture": "Softer",
+        "rating": 5,
+        "notableTraits": "Not to be confused with \"Apple Amber\" an Irish dessert similar to an apple custard pie",
+        "parents": "Unknown",
+        "dateDocumented": "November 10, 2024"
+    },
+    {
+        "id": 67,
+        "name": "Kissabel (Y101)",
+        "taste": "Sweet, tangy, vanilla, sweet berries",
+        "texture": "Between crisp and soft",
+        "rating": 9,
+        "notableTraits": "Kissabel is a trademark name for 6 similar apple varieties",
+        "parents": "Golden Delicious x SJ109",
+        "dateDocumented": "November 13, 2024"
+    },
+    {
+        "id": 68,
+        "name": "CrimsonCrisp",
+        "taste": "Very sweet, sour",
+        "texture": "Very crisp, dense",
+        "rating": 8,
+        "notableTraits": "Can stay in storage for several months",
+        "parents": "PCF2-134 x PRI 669-205",
+        "dateDocumented": "November 15, 2024"
+    },
+    {
+        "id": 69,
+        "name": "Magic Star (Sprank, Kentish Kiss)",
+        "taste": "Very sweet, slightly sour",
+        "texture": "Very crisp",
+        "rating": 6,
+        "notableTraits": "When grown organically, this apple is marketed under the name 'Natrya'",
+        "parents": "Elise x ?",
+        "dateDocumented": "November 16, 2024"
+    },
+    {
+        "id": 70,
+        "name": "Robijn",
+        "taste": "Mild, fairly sweet",
+        "texture": "Fairly soft",
+        "rating": 4,
+        "notableTraits": "This variety is a mutation of a mutation of Jonagold",
+        "parents": "Jonagold Delcosta",
+        "dateDocumented": "November 17, 2024"
+    },
+    {
+        "id": 71,
+        "name": "Cheerfull Gold",
+        "taste": "Full, sweet, balanced sour taste",
+        "texture": "Crisp",
+        "rating": 8,
+        "notableTraits": "Apples hang onto the tree into winter",
+        "parents": "Cox's Orange Pippen x Golden Delicious",
+        "dateDocumented": "November 28, 2024"
+    },
+    {
+        "id": 72,
+        "name": "Cameo",
+        "taste": "Fairly mild, just okay",
+        "texture": "Dense, crisp",
+        "rating": 4,
+        "notableTraits": "Its colour varies dramatically between apples",
+        "parents": "Golden Delicious x Red Delicious",
+        "dateDocumented": "November 28, 2024"
+    },
+    {
+        "id": 73,
+        "name": "Lolipop (Inored)",
+        "taste": "Incredibly sweet, candy, dry",
+        "texture": "Very crisp",
+        "rating": 7,
+        "notableTraits": "Can stay in storage for up to 8 months",
+        "parents": "Pinova x X6398",
+        "dateDocumented": "December 21, 2024"
+    },
+    {
+        "id": 74,
+        "name": "Red Prince (Red Jonaprince)",
+        "taste": "Mild",
+        "texture": "Soft",
+        "rating": 3,
+        "notableTraits": "Taste improves with age",
+        "parents": "Golden Delicious x Jonathan",
+        "dateDocumented": "December 23, 2024"
+    },
+    {
+        "id": 75,
+        "name": "Golden Rose",
+        "taste": "Sour, fairly sweet",
+        "texture": "Crisp",
+        "rating": 6,
+        "notableTraits": "Very little information available online",
+        "parents": "Unknown",
+        "dateDocumented": "December 26, 2024"
+    },
+    {
+        "id": 76,
+        "name": "Rave",
+        "taste": "Tart, sweet, ridiculously juicy",
+        "texture": "Very crisp",
+        "rating": 9,
+        "notableTraits": "One of the juiciest apples I have ever tried",
+        "parents": "Honeycrisp x MonArk",
+        "dateDocumented": "December 28, 2024"
+    },
+    {
+        "id": 77,
+        "name": "Gravenstein",
+        "taste": "Complex, sweet, tart, toffee",
+        "texture": "Soft, mealy",
+        "rating": 6,
+        "notableTraits": "Popular heritage apple over 350 years old",
+        "parents": "Unknown",
+        "dateDocumented": "December 29, 2024"
+    },
+    {
+        "id": 78,
+        "name": "Paula Red",
+        "taste": "Sweet, sour, floral, strawberry",
+        "texture": "Crisp, becomes soft later in the season",
+        "rating": 4,
+        "notableTraits": "The farmer who discovered it named it after his wife, Pauline",
+        "parents": "Duchess x McIntosh",
+        "dateDocumented": "December 30, 2024"
+    },
+    {
+        "id": 79,
+        "name": "Empire",
+        "taste": "Sweet, vinous",
+        "texture": "Soft",
+        "rating": 6,
+        "notableTraits": "Has very thick skin",
+        "parents": "McIntosh x Red Delicious",
+        "dateDocumented": "December 31, 2024"
+    },
+    {
+        "id": 80,
+        "name": "SweetTango (Minneiska)",
+        "taste": "Sweet, tangy, light",
+        "texture": "Very crunchy",
+        "rating": 7,
+        "notableTraits": "Long shelf life, though flavour degrades quickly with time",
+        "parents": "Honeycrisp x Zelstar!",
+        "dateDocumented": "January 1, 2025"
+    },
+    {
+        "id": 81,
+        "name": "Bliss",
+        "taste": "Sweet, slightly tart",
+        "texture": "Soft",
+        "rating": 4,
+        "notableTraits": "Little information available online.",
+        "parents": "Unknown",
+        "dateDocumented": "January 2, 2025"
+    },
+    {
+        "id": 82,
+        "name": "Autumn Glory",
+        "taste": "Sweet, cinnamon, caramel",
+        "texture": "Very crisp",
+        "rating": 9,
+        "notableTraits": "Excellent for applesauce, or savoury dishes",
+        "parents": "Golden Delicious x Fuji",
+        "dateDocumented": "March 6, 2025"
+    },
+    {
+        "id": 83,
+        "name": "Mutsu (Crispin)",
+        "taste": "Very sour",
+        "texture": "Crisp",
+        "rating": 3,
+        "notableTraits": "Changes colour based on the amount of sunlight it is exposed to",
+        "parents": "Indo x Golden Delicious",
+        "dateDocumented": "September 13, 2025"
+    },
+    {
+        "id": 84,
+        "name": "Snow Cloud",
+        "taste": "Tart, Sweet",
+        "texture": "Hard, crisp",
+        "rating": 4,
+        "notableTraits": "A popular ornamental crabapple, the size of a dime",
+        "parents": "Crimson Cloud x Strawberry Parfait",
+        "dateDocumented": "November 5, 2025"
+    },
+    {
+        "id": 85,
+        "name": "Elstar",
+        "taste": "Sweet, honeyed",
+        "texture": "Softer",
+        "rating": 7,
+        "notableTraits": "Very popular in Europe",
+        "parents": "Golden Delicious x Ingrid Marie",
+        "dateDocumented": "November 6 2025"
+    },
+    {
+        "id": 86,
+        "name": "Winter Banana",
+        "taste": "Mildly sweet, faint notes of banana and topical fruit",
+        "texture": "Softer",
+        "rating": 7,
+        "notableTraits": "Smells like a banana when ripe",
+        "parents": "Unknown",
+        "dateDocumented": "November 7 2025"
+    },
+    {
+        "id": 87,
+        "name": "Easter Orange",
+        "taste": "Sweet, intense",
+        "texture": "Dry, dense, crisp",
+        "rating": 6,
+        "notableTraits": "Very orange skin",
+        "parents": "Unknown",
+        "dateDocumented": "November 8 2025"
+    },
+    {
+        "id": 88,
+        "name": "Golden Russet",
+        "taste": "Subtly sweet, tart, molasses, caramel, spice",
+        "texture": "Very dense, tough",
+        "rating": 7,
+        "notableTraits": "Very strong flavour, generally used for cider",
+        "parents": "Unknown",
+        "dateDocumented": "November 9 2025"
+    },
+    {
+        "id": 89,
+        "name": "Lady (Api)",
+        "taste": "sweet, bright, citrus, floral",
+        "texture": "Fairly crisp",
+        "rating": 7,
+        "notableTraits": "A 400 year old variety, historically used in Christmas wreaths and garlands",
+        "parents": "Unknown",
+        "dateDocumented": "November 10 2025"
+    },
+    {
+        "id": 90,
+        "name": "Winesap",
+        "taste": "tangy, sweet, vinous",
+        "texture": "softer",
+        "rating": 6,
+        "notableTraits": "Often used for cider",
+        "parents": "Unknown",
+        "dateDocumented": "November 11 2025"
+    },
+    {
+        "id": 91,
+        "name": "Sekai Ichi (World #1)",
+        "taste": "Very sweet, light",
+        "texture": "Very crisp",
+        "rating": 6,
+        "notableTraits": "Sekai Ichi means World's Number One in Japanese",
+        "parents": "Golden Delicous x Red Delicious",
+        "dateDocumented": "November 12 2025"
+    },
+    {
+        "id": 92,
+        "name": "Discovery",
+        "taste": "Mildly sweet",
+        "texture": "Soft, smooth, almost buttery",
+        "rating": 7,
+        "notableTraits": "Generally used for applesauce, and exceedingly fit to do so",
+        "parents": "Beauty of Bath x Worcester Pearmain",
+        "dateDocumented": "November 13 2025"
+    },
+    {
+        "id": 93,
+        "name": "Crawley Beauty",
+        "taste": "Light, slightly sour",
+        "texture": "softer",
+        "rating": 5,
+        "notableTraits": "Blindingly white flesh",
+        "parents": "Unknown",
+        "dateDocumented": "November 14 2025"
+    },
+    {
+        "id": 94,
+        "name": "Chinook",
+        "taste": "Refreshingly tart, balanced",
+        "texture": "Firm, crisp",
+        "rating": 5,
+        "notableTraits": "Created in Summerland B.C. alongside the Silken and Creston varieties",
+        "parents": "Gala x Splendour",
+        "dateDocumented": "November 15 2025"
+    },
+    {
+        "id": 95,
+        "name": "Johnathan",
+        "taste": "Light, slightly sour",
+        "texture": "Soft",
+        "rating": 4,
+        "notableTraits": "Used to be very popular but has been overtaken by modern varieties",
+        "parents": "Esopus Spitzenburg x Unknown",
+        "dateDocumented": "November 16 2025"
+    },
+    {
+        "id": 96,
+        "name": "Court Royal",
+        "taste": "Sweet, complex",
+        "texture": "Soft",
+        "rating": 5,
+        "notableTraits": "Not to be confused with Royal Court, a sport of Cortland",
+        "parents": "Unknown",
+        "dateDocumented": "November 17 2025"
+    },
+    {
+        "id": 97,
+        "name": "Snow Apple (Famuese)",
+        "taste": "Barely tart, delicately vinous",
+        "texture": "Soft",
+        "rating": 3,
+        "notableTraits": "This heirloom variety used to be very popular in Quebec",
+        "parents": "Unknown",
+        "dateDocumented": "November 18 2025"
+    },
+    {
+        "id": 98,
+        "name": "Dazzle",
+        "taste": "Juicy, sweet",
+        "texture": "Very crisp, like a watermelon",
+        "rating": 7,
+        "notableTraits": "Very popular in Asia",
+        "parents": "Scired x Sweetie",
+        "dateDocumented": "November 19 2025"
+    },
+    {
+        "id": 99,
+        "name": "Gloster 69",
+        "taste": "Mildy sweet, barely tart",
+        "texture": "Crisp, a bit mealy",
+        "rating": 4,
+        "notableTraits": "Released in 1969 (hence the name)",
+        "parents": "Glockenapfel x Richared Delicious",
+        "dateDocumented": "November 20 2025"
+    },
+    {
+        "id": 100,
+        "name": "Evercrisp",
+        "taste": "Ridiculously sweet, tart",
+        "texture": "Very crunchy, like splitting wood",
+        "rating": 8,
+        "notableTraits": "A very overpowering and intense apple",
+        "parents": "Fuji x Honeycrisp",
+        "dateDocumented": "November 21 2025"
+    },
+    {
+        "id": 101,
+        "name": "Red Rome",
+        "taste": "Sweet, subtle candy flavour",
+        "texture": "Soft, mealy",
+        "rating": 3,
+        "notableTraits": "Excellent for baking",
+        "parents": "Rome",
+        "dateDocumented": "December 9 2025"
+    },
+    {
+        "id": 102,
+        "name": "Arkansas Black",
+        "taste": "Tart, vinous",
+        "texture": "Dense, crisp",
+        "rating": 6,
+        "notableTraits": "Exceeding dark skin, and keeps well",
+        "parents": "Winesap x ?",
+        "dateDocumented": "December 26 2025"
+    },
+    {
+        "id": 103,
+        "name": "Scarlet Spur",
+        "taste": "More sweet than sour, floral",
+        "texture": "Crisp",
+        "rating": 7,
+        "notableTraits": "Seems like a much better version of Red Delicious",
+        "parents": "Red Delicious",
+        "dateDocumented": "December 27 2025"
+    },
+    {
+        "id": 104,
+        "name": "Melrose",
+        "taste": "Sweet, refreshingly acidic. Notes of citrus",
+        "texture": "Softer",
+        "rating": 7,
+        "notableTraits": "Official state apple of Ohio",
+        "parents": "Johnathan x Red Delicious",
+        "dateDocumented": "December 30 2025"
+    }
+]
