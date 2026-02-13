@@ -55,17 +55,42 @@ let canvas;
 let numRoots;
 
 //Hyper parameters
-//these should all scale between -1 and 1, defaulting at 0
-let hyper_temperature = 0; //how erratic the results are
-let hyper_isRandomColourMode = true;
-let hyper_colourHue = 180; //colour to use
+let hyper_temperature = 0; //how erratic the results are. Scales between -1 and 1
+let hyper_isRandomColourMode = true; //whether to use random colours or the user selected colour.
+let hyper_colourHue = 0; //colour that the user has selected. Scales between 0 and 360.
+
 
 
 function setup() {
-    createCanvas(sizeX, sizeY);
+    let canvas = createCanvas(sizeX, sizeY);
+    canvas.parent('canvas-container');
     colorMode(HSB, 360, 100, 100, 100);
     noStroke();
     frameRate(90);
+
+    // UI Event Listeners
+    let tempSlider = select('#temperature');
+    let randomColorCheckbox = select('#random-color');
+    let hueSlider = select('#hue');
+
+    // Initialize UI values
+    tempSlider.value(hyper_temperature);
+    randomColorCheckbox.checked(hyper_isRandomColourMode);
+    hueSlider.value(hyper_colourHue);
+    select('#temperature-val').html(hyper_temperature);
+
+    tempSlider.input(() => {
+        hyper_temperature = parseFloat(tempSlider.value());
+        select('#temperature-val').html(hyper_temperature);
+    });
+
+    randomColorCheckbox.changed(() => {
+        hyper_isRandomColourMode = randomColorCheckbox.checked();
+    });
+
+    hueSlider.input(() => {
+        hyper_colourHue = parseFloat(hueSlider.value());
+    });
     resetSketch();
 }
 
@@ -73,7 +98,7 @@ function resetSketch() {
     headCells = [];
     cellSize = 5 * ((floor(random(2, 10))));
     numRoots = floor(random(1, 6));
-    println("number of roots: " + numRoots);
+    //println("number of roots: " + numRoots);
 
     canvas = new Board(floor(sizeX / cellSize), floor(sizeY / cellSize), cellSize);
     background(canvas.emptyCells2);
@@ -82,13 +107,14 @@ function resetSketch() {
     }
     if (random(100) < 33) {
         invisibleBox();
-        println("box spawned");
+        //println("box spawned");
     }
+    //print(hyper_colourHue);
 }
 
 function draw() {
     if (headCells.length > 0) {
-        let c = headCells.shift(); 
+        let c = headCells.shift();
         let result = c;
 
         while (result == c) {
@@ -132,20 +158,22 @@ function spawnRoot() {
     let rootHue;
     let rootSat;
     let rootVal;
-    if (hyper_isRandomColourMode){
+    if (hyper_isRandomColourMode) {
         rootHue = random(360);
-    }else{
-        rootHue = hyper_colourHue-floor(random(40,100))
+    } else {
+        rootHue = hyper_colourHue + floor(random(-40, 20))
+            rootHue = rootHue % 360;
+        print(rootHue);
     }
-    if (hyper_isRandomColourMode){
+    if (hyper_isRandomColourMode) {
         rootSat = random(20, 100);
-    }else{
-        rootSat = hyper_colourHue-(random(0,100))
+    } else {
+        rootSat = random(0, 100);
     }
     rootVal = random(20, 100);
 
     //println("Initial colour is (" + rootHue + "," + rootSat + "," + rootVal + ")");
-    let turnProbability = (((hyper_temperature+1)**3)*floor((random(0, 30))))+2;
+    let turnProbability = (((hyper_temperature + 1) ** 3) * floor((random(0, 30)))) + 2;
     canvas.board[a][b] = new Cell(a, b, rootHue, rootSat, rootVal, invis, turnProbability); //places the root cell somewhere random on the board 
     headCells.push(canvas.board[a][b]);
 }

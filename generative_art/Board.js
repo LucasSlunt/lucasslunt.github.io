@@ -33,8 +33,8 @@ class Board {
         this.bgVar1 = floor(random(5, 12));
         this.showHead = false;
 
-        console.log("BackgroundMode: " + this.bgMode);
-        console.log("bgVar1: " + this.bgVar1);
+        //console.log("BackgroundMode: " + this.bgMode);
+        //console.log("bgVar1: " + this.bgVar1);
 
     }
 

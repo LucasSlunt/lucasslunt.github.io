@@ -42,6 +42,9 @@ class Cell {
 
             //colour
             this.hueChangeSpeed = (((random(0, 1))**(hyper_temperature+1)) / (min(numRoots,4)));
+            if (hyper_isRandomColourMode == false){
+                this.hueChangeSpeed/=2;
+            }
             if (creator.hue < 360)
                 this.hue = creator.hue + this.hueChangeSpeed;
             else
