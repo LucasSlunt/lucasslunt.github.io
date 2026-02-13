@@ -1,230 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-body {
-    background-color: #121212;
-    /* Dark Tech Background */
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 30px 30px;
-    /* Grid pattern */
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #e0e0e0;
-    /* Light text for dark mode */
-}
-
-/* Hero Section */
-#hero {
+body{
     background-image: url('./main_page_media/ski_hill_summer.JPG');
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
     background-attachment: fixed;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+}
+hr{
+    max-width: 90%;
 }
 
-/* Overlay to improve text readability */
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    /* Darker overlay */
-    z-index: 1;
+.page-container{
+    background-color: rgb(244, 244, 244);
+    max-width: 80%;
+    margin: auto;
+    padding-top:1em;
+    padding-right:1em;
+    padding-bottom:1em;
+
+    z-index: -2;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    background: rgba(20, 20, 20, 0.85);
-    /* Dark semi-transparent box */
-    backdrop-filter: blur(10px);
-    padding: 3rem;
-    border-radius: 1rem;
-    max-width: 800px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-    /* Subtle tech glow */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 1rem;
-}
-
-.title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    letter-spacing: -1px;
-}
-
-.description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #cccccc;
-}
-
-/* Projects Section */
-#projects {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-}
-
-/* Project Cards */
-.project-card {
-    border-radius: 1.5rem;
-    overflow: hidden;
+.project-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
     text-decoration: none;
-    color: white;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    color: rgb(0,0,0);
+
+    max-width: 3em;
+    margin-top: 10%;
+    margin-left: 0.5em;
+
+    
+}
+
+.project-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top:1em;
+    padding-right:1em;
+    padding-bottom:1em;
+
+    z-index: 2;
+    border-radius: 0em 4em 4em 0em;
+}
+
+.project-right-container{
+    display: flex;
+    flex-direction: row;
+
+    padding:1em;
+    padding-right: 3em;
+    background-color: rgb(183, 190, 196);
+    border-radius: 0em 3em 3em 0em;
+
+    text-decoration: none;
+
+    z-index: 2;
+}
+
+.project-right-container:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.4);
+
+    outline: 4px solid;
+    outline-color: aliceblue;
+
+}
+
+.project-desc{
+    text-align: right;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    max-width:50%;
+    margin-top: 4%;
+    margin-right: 0.5em;
+}
+
+.project-image{
+    width: 160px;
+    border: 4px solid;
+    border-color: rgb(123, 0, 0);
+    border-radius: 2em;
+    background-color: rgb(120, 223, 213);
+
+    margin-left:1em;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.title{
+    margin: auto;
+    padding: 0.5em;
+    padding-bottom: 0px;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+
+.description{
+
+    margin: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.spacer{
+    margin: 1em;
+}
+
+.left-line{
+    background-color: rgb(123, 0, 0);
+    display: block;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 11.5%;
+    top: 0%;
+    width:11em;
     height: 100%;
-    position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    border: 8px;
+    border-style: none solid solid solid;
+    border-color: rgb(168, 6, 6);
 }
 
-.project-card:hover {
-    transform: scale(1.03) translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-    z-index: 10;
+#apples-project{
+    background-color: rgb(134, 189, 119);
+    background-image: linear-gradient(to bottom right, rgb(113, 169, 98), rgb(175, 218, 130));
 }
 
-.card-image-wrapper {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.2);
-    /* Darker image background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    /* Add padding so image isn't cut off */
-    box-sizing: border-box;
-}
-
-.project-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    /* Ensure full image is visible */
-    transition: transform 0.5s ease;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-    /* Shadow on the image itself */
-}
-
-.project-card:hover .project-image {
-    transform: scale(1.1);
-}
-
-.card-content {
-    padding: 2rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.2);
-    /* Slight darken for content area */
-    backdrop-filter: blur(5px);
-}
-
-.project-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.project-desc {
-    font-size: 1rem;
-    line-height: 1.5;
-    opacity: 0.9;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-/* Specific Card Colors (Original Gradients) */
-#hello-stars {
-    background-color: rgb(213, 42, 116);
-    background-image: linear-gradient(to bottom right, rgb(51, 13, 122), rgb(213, 42, 116));
-}
-
-#climate-project {
-    background-color: rgb(231, 241, 255);
-    background-image: linear-gradient(to bottom right, rgb(145, 106, 183), rgb(231, 241, 255));
-    color: #1a1a1a;
-    /* Dark text for light background */
-}
-
-#climate-project .project-desc {
-    color: rgba(0, 0, 0, 0.8);
-}
-
-#climate-project .project-title {
-    text-shadow: none;
-}
-
-
-#virtual-world-project {
+#virtual-world-project{
     background-color: rgb(133, 167, 210);
     background-image: linear-gradient(to bottom right, rgb(106, 129, 183), lightblue);
 }
 
-#minecraft-mod-project {
+#minecraft-mod-project{
     background-color: bisque;
-    background-image: linear-gradient(to bottom right, rgb(211, 150, 93), bisque);
-    color: #1a1a1a;
-    /* Dark text for light background */
+    background-image: linear-gradient(to bottom right, rgb(211, 150, 93),bisque);
 }
 
-#minecraft-mod-project .project-desc {
-    color: rgba(0, 0, 0, 0.8);
+#hello-stars{
+    background-color: rgb(213, 42, 116);
+    background-image: linear-gradient(to bottom right, rgb(51, 13, 122),rgb(213, 42, 116));
 }
 
-#minecraft-mod-project .project-title {
-    text-shadow: none;
+#climate-project{
+    background-color: rgb(231, 241, 255);
+    background-image: linear-gradient(to bottom right, rgb(145, 106, 183), rgb(231, 241, 255));
 }
 
-#apples-project {
-    background-color: rgb(175, 218, 130);
-    background-image: linear-gradient(to bottom right, rgb(113, 169, 98), rgb(175, 218, 130));
-    color: #1a1a1a;
-    /* Dark text for light background */
-}
-
-#apples-project .project-desc {
-    color: rgba(0, 0, 0, 0.8);
-}
-
-#apples-project .project-title {
-    text-shadow: none;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    #hero {
-        min-height: 60vh;
-    }
-
-    .title {
-        font-size: 2.5rem;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+#title-box{
+    background-color: rgb(191, 201, 210);
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 2em;
 }
