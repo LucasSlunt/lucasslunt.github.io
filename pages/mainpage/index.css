@@ -203,9 +203,9 @@ hr {
     width: 100%;
     height: 100%;
 
-    /* Pattern: faint white dots (default) */
-    background-image: var(--pattern-image, radial-gradient(rgba(255, 255, 255, 0.3) var(--pattern-dot-size, 1px), transparent var(--pattern-dot-size, 1px)));
-    background-size: var(--pattern-size, 15px) var(--pattern-size, 15px);
+    /* Pattern: faint white dots */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+    background-size: 15px 15px;
 
     pointer-events: none;
     z-index: 1;
@@ -215,10 +215,5 @@ hr {
     mask-image: radial-gradient(circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 0%, transparent 100%);
     -webkit-mask-image: radial-gradient(circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 0%, transparent 100%);
 
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.project-container:hover .pattern-layer {
-    opacity: var(--pattern-opacity, 0.6);
+    opacity: 0.6;
 }
