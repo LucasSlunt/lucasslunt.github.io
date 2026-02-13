@@ -47,12 +47,17 @@
 //GLOBAL VARS
 //I would recommend not changing MAX_NODE_PLACEMENT_ATTEMPTS, 
 let MAX_NODE_PLACEMENT_ATTEMPTS = 3;
-let sizeX = 600;
-let sizeY = 600;
+let sizeX = 500;
+let sizeY = 500;
 let cellSize;
 let headCells = [];
 let canvas;
 let numRoots;
+
+//Hyper parameters
+//these should all scale between -1 and 1, defaulting at 0
+let hyper_temperature = 0; //how erratic the results are
+let hyper_colourDeviation = 0; //how much deviation there is in the colour of cells
 
 
 function setup() {
@@ -119,8 +124,8 @@ function draw() {
 
 //METHODS
 function spawnRoot() {
-    let a = floor(random(1, (sizeX) / cellSize) - 1);
-    let b = floor(random(1, (sizeY) / cellSize) - 1);
+    let a = floor(random(2, (sizeX) / cellSize) - 1);
+    let b = floor(random(2, (sizeY) / cellSize) - 1);
     let invis = false;
     //if(random(10)<3) invis = true;
     let rootHue;
@@ -131,7 +136,7 @@ function spawnRoot() {
     rootVal = random(20, 100);
 
     println("Initial colour is (" + rootHue + "," + rootSat + "," + rootVal + ")");
-    let turnProbability = floor(8 * (random(0, 5)) + 2);
+    let turnProbability = floor((random(2, 42)));
     canvas.board[a][b] = new Cell(a, b, rootHue, rootSat, rootVal, invis, turnProbability); //places the root cell somewhere random on the board 
     headCells.push(canvas.board[a][b]);
 }

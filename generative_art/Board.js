@@ -29,7 +29,7 @@ class Board {
         this.board = Array.from({ length: sizeX }, () => Array(sizeY).fill(null));
 
         this.head = color(170, 100, 100);
-        this.bgMode = floor(random(6)); //NumOfBgs = 6
+        this.bgMode = floor(random(7)); //NumOfBgs = 7
         this.bgVar1 = floor(random(5, 12));
         this.showHead = false;
 
@@ -74,6 +74,13 @@ class Board {
                 case 5:
                     //diagonal stripes with cutoff
                     if ((x + y - (5 * this.bgVar1)) % 4 < 2) {
+                        fill(this.emptyCells1);
+                    } else
+                        fill(this.emptyCells2);
+                    break;
+                case 6:
+                    //tree board?
+                    if (((sin(y^this.bgVar1)))<(cos(x-2))) {
                         fill(this.emptyCells1);
                     } else
                         fill(this.emptyCells2);
