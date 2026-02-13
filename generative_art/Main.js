@@ -66,7 +66,7 @@ function setup() {
     canvas.parent('canvas-container');
     colorMode(HSB, 360, 100, 100, 100);
     noStroke();
-    frameRate(90);
+    frameRate(100);
 
     // UI Event Listeners
     let tempSlider = select('#temperature');
@@ -77,11 +77,9 @@ function setup() {
     tempSlider.value(hyper_temperature);
     randomColorCheckbox.checked(hyper_isRandomColourMode);
     hueSlider.value(hyper_colourHue);
-    select('#temperature-val').html(hyper_temperature);
 
     tempSlider.input(() => {
         hyper_temperature = parseFloat(tempSlider.value());
-        select('#temperature-val').html(hyper_temperature);
     });
 
     randomColorCheckbox.changed(() => {

@@ -36,7 +36,11 @@ class Cell {
 
             //turning
             this.turnProbability = creator.turnProbability;
-            if (floor(random(this.turnProbability)) === 0) {
+            if(hyper_temperature == 1){
+                // do nothing
+            }else if (hyper_temperature == -1){
+                this.changeDirection();
+            }else if (floor(random(this.turnProbability)) === 0) {
                 this.changeDirection();
             }
 
