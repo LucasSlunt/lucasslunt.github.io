@@ -41,10 +41,6 @@ hr {
 
     z-index: 2;
     border-radius: 0em 4em 4em 0em;
-
-    position: relative;
-    /* Added for mouse trail positioning */
-    /* overflow: hidden; Removed to allow hang over */
 }
 
 .project-right-container {
@@ -88,10 +84,6 @@ hr {
     max-width: 50%;
     margin-top: 4%;
     margin-right: 0.5em;
-
-    position: relative;
-    z-index: 2;
-    /* Ensure text is above pattern */
 }
 
 .project-image {
@@ -193,27 +185,4 @@ hr {
     border: 4px solid rgb(123, 0, 0);
     border-right: 16px solid rgb(123, 0, 0);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-/* Hidden Pattern Reveal Effect */
-.pattern-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    /* Pattern: faint white dots */
-    background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px);
-    background-size: 15px 15px;
-
-    pointer-events: none;
-    z-index: 1;
-    /* pattern behind content (z-index 2) */
-
-    /* Mask to reveal pattern around cursor */
-    mask-image: radial-gradient(circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 0%, transparent 100%);
-    -webkit-mask-image: radial-gradient(circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 0%, transparent 100%);
-
-    opacity: 0.6;
 }
