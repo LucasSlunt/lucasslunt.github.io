@@ -56,7 +56,7 @@ let numRoots;
 
 //Hyper parameters
 //these should all scale between -1 and 1, defaulting at 0
-let hyper_temperature = 0; //how erratic the results are
+let hyper_temperature = 1; //how erratic the results are
 let hyper_colourDeviation = 0; //how much deviation there is in the colour of cells
 
 
@@ -124,8 +124,8 @@ function draw() {
 
 //METHODS
 function spawnRoot() {
-    let a = floor(random(2, (sizeX) / cellSize) - 1);
-    let b = floor(random(2, (sizeY) / cellSize) - 1);
+    let a = floor(random(2, ((sizeX) / cellSize) - 2));
+    let b = floor(random(2, ((sizeY) / cellSize) - 2));
     let invis = false;
     //if(random(10)<3) invis = true;
     let rootHue;

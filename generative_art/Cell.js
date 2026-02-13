@@ -22,7 +22,7 @@ class Cell {
 
             this.prev = null;
             this.root = true;
-            console.log("turnProbability = " + this.turnProbability);
+            //console.log("turnProbability = " + this.turnProbability);
             this.dir = floor(random(4));
 
         } else if (arguments.length === 3 && typeof arg1 === 'object') {
