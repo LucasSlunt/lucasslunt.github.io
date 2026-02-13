@@ -56,8 +56,9 @@ let numRoots;
 
 //Hyper parameters
 //these should all scale between -1 and 1, defaulting at 0
-let hyper_temperature = 1; //how erratic the results are
-let hyper_colourDeviation = 0; //how much deviation there is in the colour of cells
+let hyper_temperature = 0; //how erratic the results are
+let hyper_isRandomColourMode = true;
+let hyper_colourHue = 180; //colour to use
 
 
 function setup() {
@@ -131,8 +132,16 @@ function spawnRoot() {
     let rootHue;
     let rootSat;
     let rootVal;
-    rootHue = random(360);
-    rootSat = random(20, 100);
+    if (hyper_isRandomColourMode){
+        rootHue = random(360);
+    }else{
+        rootHue = hyper_colourHue-floor(random(40,100))
+    }
+    if (hyper_isRandomColourMode){
+        rootSat = random(20, 100);
+    }else{
+        rootSat = hyper_colourHue-(random(0,100))
+    }
     rootVal = random(20, 100);
 
     //println("Initial colour is (" + rootHue + "," + rootSat + "," + rootVal + ")");

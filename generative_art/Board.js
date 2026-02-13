@@ -80,7 +80,7 @@ class Board {
                     break;
                 case 6:
                     //tree board?
-                    if (((sin(y^this.bgVar1)))<(cos(x-2))) {
+                    if (((sin(y**this.bgVar1)))<(cos(x-2))) {
                         fill(this.emptyCells1);
                     } else
                         fill(this.emptyCells2);
