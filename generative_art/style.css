@@ -5,10 +5,29 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #222;
+    background-color: #0d47a1;
     overflow: hidden;
 }
 
 canvas {
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.restart-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #0d47a1;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.restart-button:hover {
+    background-color: #f0f0f0;
 }

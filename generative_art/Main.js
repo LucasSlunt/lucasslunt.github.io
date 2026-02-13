@@ -59,8 +59,12 @@ function setup() {
     createCanvas(sizeX, sizeY);
     colorMode(HSB, 360, 100, 100, 100);
     noStroke();
-    frameRate(60);
+    frameRate(90);
+    resetSketch();
+}
 
+function resetSketch() {
+    headCells = [];
     cellSize = 5 * ((floor(random(2, 10))));
     numRoots = floor(random(1, 6));
     println("number of roots: " + numRoots);
@@ -69,7 +73,6 @@ function setup() {
     background(canvas.emptyCells2);
     for (let i = 0; i < numRoots; i++) {
         spawnRoot();
-
     }
     if (random(100) < 33) {
         invisibleBox();
