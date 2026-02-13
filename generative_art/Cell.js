@@ -49,6 +49,9 @@ class Cell {
             if (hyper_isRandomColourMode == false){
                 this.hueChangeSpeed/=2;
             }
+            if (hyper_boardSize > 1){
+                this.hueChangeSpeed/=2;
+            }
             if (creator.hue < 360)
                 this.hue = creator.hue + this.hueChangeSpeed;
             else

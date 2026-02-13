@@ -58,6 +58,7 @@ let numRoots;
 let hyper_temperature = 0; //how erratic the results are. Scales between -1 and 1
 let hyper_isRandomColourMode = true; //whether to use random colours or the user selected colour.
 let hyper_colourHue = 0; //colour that the user has selected. Scales between 0 and 360.
+let hyper_boardSize = 0; //0 = small, 1 = medium, 2 = large
 
 
 
@@ -94,7 +95,21 @@ function setup() {
 
 function resetSketch() {
     headCells = [];
-    cellSize = 5 * ((floor(random(2, 10))));
+    switch (hyper_boardSize){
+        case 0: //small
+            cellSize = 5 * ((floor(random(5, 12))));
+            break;
+        case 1: //normal
+            cellSize = 5 * ((floor(random(3, 8))));
+            break;
+        case 2: //large
+            cellSize = 5 * ((floor(random(1, 4))));
+            break;
+        default:
+            cellSize = 5 * ((floor(random(2, 10))));
+            break;
+    }
+    
     numRoots = floor(random(1, 6));
     //println("number of roots: " + numRoots);
 
@@ -151,8 +166,6 @@ function draw() {
 function spawnRoot() {
     let a = floor(random(2, ((sizeX) / cellSize) - 2));
     let b = floor(random(2, ((sizeY) / cellSize) - 2));
-    let invis = false;
-    //if(random(10)<3) invis = true;
     let rootHue;
     let rootSat;
     let rootVal;
@@ -172,7 +185,7 @@ function spawnRoot() {
 
     //println("Initial colour is (" + rootHue + "," + rootSat + "," + rootVal + ")");
     let turnProbability = (((hyper_temperature + 1) ** 3) * floor((random(0, 30)))) + 2;
-    canvas.board[a][b] = new Cell(a, b, rootHue, rootSat, rootVal, invis, turnProbability); //places the root cell somewhere random on the board 
+    canvas.board[a][b] = new Cell(a, b, rootHue, rootSat, rootVal, false, turnProbability); //places the root cell somewhere random on the board 
     headCells.push(canvas.board[a][b]);
 }
 
