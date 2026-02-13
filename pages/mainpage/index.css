@@ -54,14 +54,23 @@ hr{
     text-decoration: none;
 
     z-index: 2;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-right-container:hover {
-    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.4), 0 10px 15px rgba(0, 0, 0, 0.3);
 
     outline: 4px solid;
     outline-color: aliceblue;
+    
+    transform: translateY(-5px);
+}
 
+.project-right-container:active {
+    transform: translateY(-2px);
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.4), 0 5px 8px rgba(0, 0, 0, 0.3);
 }
 
 .project-desc{
