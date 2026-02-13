@@ -7,6 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
         patternLayer.classList.add('pattern-layer');
         container.appendChild(patternLayer);
 
+        // Check for custom attributes
+        const customOpacity = container.getAttribute('data-pattern-opacity');
+        const customSize = container.getAttribute('data-pattern-size');
+        const customDotSize = container.getAttribute('data-pattern-dot-size');
+        const customImage = container.getAttribute('data-pattern-image');
+
+        if (customOpacity) container.style.setProperty('--pattern-opacity', customOpacity);
+        if (customSize) container.style.setProperty('--pattern-size', customSize);
+        if (customDotSize) container.style.setProperty('--pattern-dot-size', customDotSize);
+        if (customImage) container.style.setProperty('--pattern-image', `url('${customImage}')`);
+
         // Add mouse move listener
         container.addEventListener('mousemove', (e) => {
             const rect = container.getBoundingClientRect();
