@@ -135,8 +135,8 @@ function spawnRoot() {
     rootSat = random(20, 100);
     rootVal = random(20, 100);
 
-    println("Initial colour is (" + rootHue + "," + rootSat + "," + rootVal + ")");
-    let turnProbability = floor((random(2, 42)));
+    //println("Initial colour is (" + rootHue + "," + rootSat + "," + rootVal + ")");
+    let turnProbability = (((hyper_temperature+1)**3)*floor((random(0, 30))))+2;
     canvas.board[a][b] = new Cell(a, b, rootHue, rootSat, rootVal, invis, turnProbability); //places the root cell somewhere random on the board 
     headCells.push(canvas.board[a][b]);
 }

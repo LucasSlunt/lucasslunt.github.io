@@ -22,7 +22,6 @@ class Cell {
 
             this.prev = null;
             this.root = true;
-            //dir = (int)(random(3));
             console.log("turnProbability = " + this.turnProbability);
             this.dir = floor(random(4));
 
@@ -37,12 +36,12 @@ class Cell {
 
             //turning
             this.turnProbability = creator.turnProbability;
-            if (floor(random(this.turnProbability)) === 1) {
+            if (floor(random(this.turnProbability)) === 0) {
                 this.changeDirection();
             }
 
             //colour
-            this.hueChangeSpeed = (random(0, 1) / (numRoots));
+            this.hueChangeSpeed = (((random(0, 1))**(hyper_temperature+1)) / (min(numRoots,4)));
             if (creator.hue < 360)
                 this.hue = creator.hue + this.hueChangeSpeed;
             else
