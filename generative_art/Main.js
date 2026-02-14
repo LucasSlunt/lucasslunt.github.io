@@ -114,19 +114,18 @@ function resetSketch() {
             break;
     }
     
-    numRoots = floor(random(1, 6));
+    numRoots = floor(random(1, 5));
     //println("number of roots: " + numRoots);
 
     canvas = new Board(floor(sizeX / cellSize), floor(sizeY / cellSize), cellSize);
     background(canvas.emptyCells2);
-    for (let i = 0; i < numRoots; i++) {
-        spawnRoot();
-    }
-    if (random(100) < 33) {
+        if (random(100) < 33) {
         invisibleBox();
         //println("box spawned");
     }
-    //print(hyper_colourHue);
+    for (let i = 0; i < numRoots; i++) {
+        spawnRoot();
+    }
 }
 
 function draw() {
@@ -187,10 +186,23 @@ function spawnRoot() {
     }
     rootVal = random(20, 100);
 
-    //println("Initial colour is (" + rootHue + "," + rootSat + "," + rootVal + ")");
     let turnProbability = (((hyper_temperature + 1) ** 3) * floor((random(0, 30)))) + 2;
-    canvas.board[a][b] = new Cell(a, b, rootHue, rootSat, rootVal, false, turnProbability); //places the root cell somewhere random on the board 
-    headCells.push(canvas.board[a][b]);
+    if (
+        canvas.board[a][b] == null && 
+        canvas.board[a-1][b] == null  && 
+        canvas.board[a+1][b] == null  && 
+        canvas.board[a][b-1] == null && 
+        canvas.board[a][b+1] == null &&
+        canvas.board[a-1][b-1] == null  && 
+        canvas.board[a+1][b+1] == null  && 
+        canvas.board[a+1][b-1] == null && 
+        canvas.board[a-1][b+1] == null
+    ){ //if this space is free
+        canvas.board[a][b] = new Cell(a, b, rootHue, rootSat, rootVal, false, turnProbability); //places the root cell somewhere random on the board 
+        headCells.push(canvas.board[a][b]);
+    }else{
+        spawnRoot(); //try again
+    }
 }
 
 function displayAll() {
