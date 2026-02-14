@@ -172,6 +172,11 @@ hr {
     background-image: linear-gradient(to bottom right, rgb(145, 106, 183), rgb(231, 241, 255));
 }
 
+#generative-art {
+    background-color: rgb(231, 241, 255);
+    background-image: linear-gradient(to bottom right, #2f66b8, #82c2e9);
+}
+
 #title-box {
     position: relative;
     z-index: 10;
