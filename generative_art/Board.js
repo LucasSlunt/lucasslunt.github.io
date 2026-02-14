@@ -79,14 +79,14 @@ class Board {
                         fill(this.emptyCells2);
                     break;
                 case 6:
-                    //tree board?
-                    if (((sin(y**this.bgVar1)))<(cos(x-2))) {
+                    //stripe pattern board
+                    if ((this.bgVar1*(sin(y**2)))<(x%this.bgVar1)) {
                         fill(this.emptyCells1);
                     } else
                         fill(this.emptyCells2);
                     break;
                 case 7:
-                    //radial board?
+                    //radial board
                     if ((sqrt((x-this.sizeX/2)**2 + (y-this.sizeY/2)**2) % this.bgVar1) > 3) {
                         fill(this.emptyCells1);
                     } else
