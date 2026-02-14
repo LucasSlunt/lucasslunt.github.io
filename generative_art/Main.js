@@ -60,8 +60,6 @@ let hyper_isRandomColourMode = true; //whether to use random colours or the user
 let hyper_colourHue = 0; //colour that the user has selected. Scales between 0 and 360.
 let hyper_boardSize = 1; //0 = small, 1 = medium, 2 = large
 
-
-
 function setup() {
     let canvas = createCanvas(sizeX, sizeY);
     canvas.parent('canvas-container');
@@ -309,9 +307,32 @@ function invisibleBox() {
     let boxStartX = floor(random(5, (sizeX / cellSize) - boxSize - 5));
     let boxStartY = floor(random(5, (sizeY / cellSize) - boxSize - 5));
 
+    let doesInvisBoxHaveBorder = (random(0,2) > 1);
+    let invisBorderHue;
+    let invisBorderSat = (random(0,2) > 1) ? random(0,10) : random(80,100);
+    let invisBorderVal = 100;
+
+    if (hyper_isRandomColourMode) {
+        invisBorderHue = random(0,360);
+    } else {
+        invisBorderHue = hyper_colourHue + floor(random(-40, 20))
+            invisBorderHue = invisBorderHue % 360;
+    }
+
     for (let x = boxStartX; x < boxStartX + boxSize; x++) {
         for (let y = boxStartY; y < boxStartY + boxSize; y++) {
-            canvas.board[x][y] = new Cell(x, y, true);
+            if (!doesInvisBoxHaveBorder){
+                canvas.board[x][y] = new Cell(x, y, true);
+            }else{
+                if (x == boxStartX || x == boxStartX + boxSize - 1){
+                    canvas.board[x][y] = new Cell(x, y, invisBorderHue, invisBorderSat, invisBorderVal, false, 0);
+                }else if (y == boxStartY || y == boxStartY + boxSize - 1){
+                    canvas.board[x][y] = new Cell(x, y, invisBorderHue, invisBorderSat, invisBorderVal, false, 0);
+                }else{
+                canvas.board[x][y] = new Cell(x, y, true);
+                }
+            }
+         
         }
     }
     return true;
