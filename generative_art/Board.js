@@ -8,7 +8,7 @@ class Board {
     // cell[][] board;
     // int cellSize;
     // int bgMode;
-    // int NumOfBgs = 6;
+    // int NumOfBgs = ?;
     // int bgVar1;
     // boolean showHead = false;
 
@@ -29,7 +29,7 @@ class Board {
         this.board = Array.from({ length: sizeX }, () => Array(sizeY).fill(null));
 
         this.head = color(170, 100, 100);
-        this.bgMode = floor(random(7)); //NumOfBgs = 7
+        this.bgMode = floor(random(8)); //NumOfBgs = 8
         this.bgVar1 = floor(random(5, 12));
         this.showHead = false;
 
@@ -81,6 +81,13 @@ class Board {
                 case 6:
                     //tree board?
                     if (((sin(y**this.bgVar1)))<(cos(x-2))) {
+                        fill(this.emptyCells1);
+                    } else
+                        fill(this.emptyCells2);
+                    break;
+                case 7:
+                    //radial board?
+                    if ((sqrt((x-this.sizeX/2)**2 + (y-this.sizeY/2)**2) % this.bgVar1) > 3) {
                         fill(this.emptyCells1);
                     } else
                         fill(this.emptyCells2);
