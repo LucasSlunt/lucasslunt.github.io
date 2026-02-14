@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0d47a1;
+    overflow: hidden;
+    color: white;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+canvas {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+#dashboard {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.normal-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #aaa;
+    outline: none;
+}
+
+.normal-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+.temperature-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, red, white, cyan);
+    outline: none;
+}
+
+.temperature-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+.hue-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, red, yellow, lime, cyan, blue, magenta, red);
+    outline: none;
+}
+
+.hue-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+.button {
+    padding: 10px 20px;
+    color: #0d47a1;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #f0f0f0;
+}
+
+.settings-item {
+    background-color: #2f66b8;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+#reset-button {
+    background-color: #84ff8c;
+}
+
+#save-button {
+    background-color: #c5c5c5;
+}
