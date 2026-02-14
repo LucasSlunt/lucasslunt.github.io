@@ -58,7 +58,7 @@ let numRoots;
 let hyper_temperature = 0; //how erratic the results are. Scales between -1 and 1
 let hyper_isRandomColourMode = true; //whether to use random colours or the user selected colour.
 let hyper_colourHue = 0; //colour that the user has selected. Scales between 0 and 360.
-let hyper_boardSize = 0; //0 = small, 1 = medium, 2 = large
+let hyper_boardSize = 1; //0 = small, 1 = medium, 2 = large
 
 
 
@@ -73,11 +73,13 @@ function setup() {
     let tempSlider = select('#temperature');
     let randomColorCheckbox = select('#random-color');
     let hueSlider = select('#hue');
+    let sizeSlider = select('#size');
 
     // Initialize UI values
     tempSlider.value(hyper_temperature);
     randomColorCheckbox.checked(hyper_isRandomColourMode);
     hueSlider.value(hyper_colourHue);
+    sizeSlider.value(hyper_boardSize);
 
     tempSlider.input(() => {
         hyper_temperature = parseFloat(tempSlider.value());
@@ -89,6 +91,10 @@ function setup() {
 
     hueSlider.input(() => {
         hyper_colourHue = parseFloat(hueSlider.value());
+    });
+
+    sizeSlider.input(() => {
+        hyper_boardSize = parseFloat(sizeSlider.value());
     });
     resetSketch();
 }
