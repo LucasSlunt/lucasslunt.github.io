@@ -88,6 +88,8 @@ function setup() {
     });
 
     hueSlider.input(() => {
+        hyper_isRandomColourMode = false;
+        document.getElementById("random-color").checked = false;
         hyper_colourHue = parseFloat(hueSlider.value());
     });
 
@@ -104,7 +106,7 @@ function resetSketch() {
             cellSize = 5 * ((floor(random(5, 12))));
             break;
         case 1: //normal
-            cellSize = 5 * ((floor(random(3, 8))));
+            cellSize = 5 * ((floor(random(3, 7))));
             break;
         case 2: //large
             cellSize = 5 * ((floor(random(1, 4))));
@@ -119,10 +121,16 @@ function resetSketch() {
 
     canvas = new Board(floor(sizeX / cellSize), floor(sizeY / cellSize), cellSize);
     background(canvas.emptyCells2);
+    if (hyper_boardSize > 1){
+        if (random(100) < 40) {
+            invisibleBox();
+        }
+    }else{
         if (random(100) < 33) {
-        invisibleBox();
-        //println("box spawned");
+            invisibleBox();
+        }
     }
+
     for (let i = 0; i < numRoots; i++) {
         spawnRoot();
     }
@@ -341,7 +349,7 @@ function invisibleBox() {
                 }else if (y == boxStartY || y == boxStartY + boxSize - 1){
                     canvas.board[x][y] = new Cell(x, y, invisBorderHue, invisBorderSat, invisBorderVal, false, 0);
                 }else{
-                canvas.board[x][y] = new Cell(x, y, true);
+                //canvas.board[x][y] = new Cell(x, y, true);
                 }
             }
          
