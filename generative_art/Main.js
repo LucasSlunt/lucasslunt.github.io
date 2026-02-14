@@ -338,6 +338,10 @@ function invisibleBox() {
     return true;
 }
 
+function saveSketch(){
+    saveCanvas('ls-generative-art', 'png');
+}
+
 // Helper for println
 function println(msg) {
     console.log(msg);

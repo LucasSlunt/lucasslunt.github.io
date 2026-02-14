@@ -24,8 +24,8 @@
 
         <div class="control-group">
             <div class = "settings-item">
-                <div style="display: flex; flex-direction: row;"
-                    <label for="random-color">Random Colour</label>
+                <div style="display: flex; flex-direction: row;">
+                    <label for="random-color">Random Colours</label>
                     <input type="checkbox" id="random-color" checked>
                 </div>
                 <div style="height: 1em;">
@@ -42,7 +42,10 @@
             </div>
         </div>
 
-        <button class="restart-button" onclick="resetSketch()">Restart</button>
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+            <button class="button" id="reset-button" onclick="resetSketch()">Again!</button>
+            <button class="button" id="save-button" onclick="saveSketch()">Save Image</button>
+        </div>
     </div>
 </div>
 <script src="Cell.js"></script>

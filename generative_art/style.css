@@ -114,9 +114,8 @@ input[type="range"] {
     border: 2px solid #ccc;
 }
 
-.restart-button {
+.button {
     padding: 10px 20px;
-    background-color: #ffffff;
     color: #0d47a1;
     border: none;
     border-radius: 5px;
@@ -127,7 +126,7 @@ input[type="range"] {
     margin-top: 10px;
 }
 
-.restart-button:hover {
+.button:hover {
     background-color: #f0f0f0;
 }
 
@@ -135,4 +134,12 @@ input[type="range"] {
     background-color: #2f66b8;
     padding: 1em;
     border-radius: 0.5em;
+}
+
+#reset-button {
+    background-color: #84ff8c;
+}
+
+#save-button {
+    background-color: #c5c5c5;
 }
