@@ -11,7 +11,7 @@ class ApplesGraphManager {
         if (!this.graphContainer) return;
 
         try {
-            const response = await fetch('./apples.json');
+            const response = await fetch('./apples.json?t=${new Date().getTime()}');
             if (!response.ok) throw new Error("Failed to load apple data");
             const apples = await response.json();
             this.renderGraph(apples);
