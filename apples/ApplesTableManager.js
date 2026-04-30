@@ -40,7 +40,7 @@ class ApplesTableManager {
 
     async initializeData() {
         try {
-            const response = await fetch('./apples.json');
+            const response = await fetch('./apples.json?t=${new Date().getTime()}');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
