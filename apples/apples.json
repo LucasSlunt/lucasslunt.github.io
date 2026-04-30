@@ -1038,5 +1038,45 @@
         "notableTraits": "Official state apple of Ohio",
         "parents": "Johnathan x Red Delicious",
         "dateDocumented": "December 30 2025"
+    },
+    {
+        "id": 105,
+        "name": "Sinta",
+        "taste": "Sweet, flavourful, honey-like",
+        "texture": "Soft, almost buttery",
+        "rating": 7,
+        "notableTraits": "Regarded as a better version of Golden Delicious",
+        "parents": "Gold Delicious x Grimes Golden",
+        "dateDocumented": "February 9 2026"
+    },
+    {
+        "id": 106,
+        "name": "Newtown Pippin (Albemarle)",
+        "taste": "Tart, spitely",
+        "texture": "Crisp",
+        "rating": 6,
+        "notableTraits": "Benjamin Franklins favourite apple",
+        "parents": "Unknown",
+        "dateDocumented": "February 12 2026"
+    },
+    {
+        "id": 107,
+        "name": "Snapdragon",
+        "taste": "Sweet, like Honeycrisp and Kanzi",
+        "texture": "Very crisp",
+        "rating": 8,
+        "notableTraits": "The official apple of the Buffalo Bills NFL team",
+        "parents": "HoneyCrisp x NY752",
+        "dateDocumented": "March 13 2026"
+    },
+    {
+        "id": 108,
+        "name": "Posy",
+        "taste": "Sweet, similar to an Asian Pear",
+        "texture": "Crisp",
+        "rating": 6,
+        "notableTraits": "Popular in New Zealand and China",
+        "parents": "New Zealand Rose x Gala",
+        "dateDocumented": "April 29 2026"
     }
 ]
