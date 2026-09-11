@@ -1078,5 +1078,65 @@
         "notableTraits": "Popular in New Zealand and China",
         "parents": "New Zealand Rose x Gala",
         "dateDocumented": "April 29 2026"
+    },
+    {
+        "id": 109,
+        "name": "Roxy",
+        "taste": "Sweet, mild.",
+        "texture": "Softer, though not mealy",
+        "rating": 4,
+        "notableTraits": "The first apple variety developed by Fashion Foods",
+        "parents": "Cox's Orange Pippin x Gravenstein x Heritage Gala",
+        "dateDocumented": "May 2 2026"
+    },
+    {
+        "id": 110,
+        "name": "Tarzi",
+        "taste": "Sweet, mildly floral. Similar to a Gala crossed with Honeycrisp.",
+        "texture": "Crisp",
+        "rating": 6,
+        "notableTraits": "4 Sports removed from the original Gala variety",
+        "parents": "Gala",
+        "dateDocumented": "July 26 2026"
+    },
+    {
+        "id": 111,
+        "name": "Galamac",
+        "taste": "Sweet, tart, a hint of pear or Fuji.",
+        "texture": "crisp, yet a bit soft",
+        "rating": 8,
+        "notableTraits": "Very little information available online",
+        "parents": "Gala x Jersey Mac",
+        "dateDocumented": "August 23 2026"
+    },
+    {
+        "id": 112,
+        "name": "Wolf River",
+        "taste": "very sour, slightly dry.",
+        "texture": "Crisp",
+        "rating": 2,
+        "notableTraits": "Baking apple, makes great apple butter.",
+        "parents": "Unknown",
+        "dateDocumented": "September 5 2026"
+    },
+    {
+        "id": 113,
+        "name": "Zestar! (Minnewashka)",
+        "taste": "Pronounced tartness, though sweet. Like a SweetTart candy.",
+        "texture": "Crisp",
+        "rating": 7,
+        "notableTraits": "Stores up to 2 months even without refrigeration",
+        "parents": "MN1691 x State Fair",
+        "dateDocumented": "September 8 2026"
+    },
+    {
+        "id": 114,
+        "name": "Arlet (Swiss Gourmet)",
+        "taste": "Mild, fairly sweet",
+        "texture": "Crisp, dense",
+        "rating": 5,
+        "notableTraits": "Developed at the Swiss Federal Research",
+        "parents": "Golden Delicious x Idared",
+        "dateDocumented": "Spet 11 2026"
     }
 ]
