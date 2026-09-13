@@ -1103,7 +1103,7 @@
         "id": 111,
         "name": "Galamac",
         "taste": "Sweet, tart, a hint of pear or Fuji.",
-        "texture": "crisp, yet a bit soft",
+        "texture": "Crisp, yet a bit soft",
         "rating": 8,
         "notableTraits": "Very little information available online",
         "parents": "Gala x Jersey Mac",
@@ -1112,7 +1112,7 @@
     {
         "id": 112,
         "name": "Wolf River",
-        "taste": "very sour, slightly dry.",
+        "taste": "Very sour, slightly dry.",
         "texture": "Crisp",
         "rating": 2,
         "notableTraits": "Baking apple, makes great apple butter.",
@@ -1137,6 +1137,6 @@
         "rating": 5,
         "notableTraits": "Developed at the Swiss Federal Research",
         "parents": "Golden Delicious x Idared",
-        "dateDocumented": "Spet 11 2026"
+        "dateDocumented": "Sept 11 2026"
     }
 ]
