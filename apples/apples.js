@@ -32,7 +32,9 @@ function render() {
     const filteredApples = state.apples.filter(apple => apple.name.toLowerCase().includes(state.query)).sort(compareApples);
     elements.rows.innerHTML = filteredApples.map((apple, index) => `
         <article class="apple-row" style="animation-delay: ${Math.min(index * 18, 260)}ms">
-            <img class="apple-image" src="./ApplePictures/AllApples/${apple.id}.jpg" alt="${apple.name}" loading="lazy">
+            <div class="apple-image-frame">
+                <img class="apple-image" src="./ApplePictures/AllApples/${apple.id}.jpg" alt="${apple.name}" loading="lazy">
+            </div>
             <div class="apple-name">
                 <strong>${apple.name}</strong>
                 <span class="stars" aria-label="Rating not displayed"><span aria-hidden="true">☆ ☆ ☆ ☆ ☆</span></span>

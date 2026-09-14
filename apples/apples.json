@@ -222,7 +222,7 @@
         "sourness":  "Barely tart",
         "juiciness":  "Moderate",
         "texture":  "Hard",
-        "size":  "golf ball"
+        "size":  "Golf ball"
     },
     {
         "id":  16,
@@ -1045,7 +1045,7 @@
         "dateDocumented":  "November 17, 2024",
         "sweetness":  "Fairly sweet",
         "sourness":  "Barely sour",
-        "juiciness":  "dry",
+        "juiciness":  "Dry",
         "texture":  "Soft",
         "size":  "Fist"
     },
@@ -1164,7 +1164,7 @@
         "parents":  "Duchess x McIntosh",
         "dateDocumented":  "December 30, 2024",
         "sweetness":  "Sweet",
-        "sourness":  "tart",
+        "sourness":  "Tart",
         "juiciness":  "Dry",
         "texture":  "Mealy",
         "size":  "Fist"
