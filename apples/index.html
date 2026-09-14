@@ -7,6 +7,16 @@
 	<link rel="stylesheet" href="../pageElementFiles/css/navbar.css">
 	<link rel="stylesheet" href="./apples.css">
 	<script src="../pageElementFiles/scripts/navBar.js"></script>
+	<script src="./AcquiredFromSortingStrategy.js"></script>
+	<script src="./RatingSortingStrategy.js"></script>
+	<script src="./ParentsSortingStrategy.js"></script>
+	<script src="./DateDocumentedSortingStrategy.js"></script>
+	<script src="./NameSortingStrategy.js"></script>
+	<script src="./SweetnessSortingStrategy.js"></script>
+	<script src="./SournessSortingStrategy.js"></script>
+	<script src="./JuicinessSortingStrategy.js"></script>
+	<script src="./TextureSortingStrategy.js"></script>
+	<script src="./SizeSortingStrategy.js"></script>
 	<script src="./apples.js" defer></script>
 </head>
 
@@ -24,9 +34,16 @@
 				<div class="sort-control">
 					<label for="sort-field">sort by:</label>
 					<select id="sort-field">
+						<option value="acquiredFrom">Acquired From</option>
 						<option value="name">Name</option>
 						<option value="rating">Rating</option>
+						<option value="parents">Parents</option>
 						<option value="dateDocumented">Date Documented</option>
+						<option value="sweetness">Sweetness</option>
+						<option value="sourness">Sourness</option>
+						<option value="juiciness">Juiciness</option>
+						<option value="texture">Texture</option>
+						<option value="size">Size</option>
 					</select>
 					<button id="sort-direction" class="direction-button" type="button" aria-label="Sort ascending" title="Toggle sort direction">
 						<span class="arrow-up" aria-hidden="true"></span>

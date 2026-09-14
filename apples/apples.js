@@ -1,5 +1,28 @@
-const sortLabels = { name: 'name', rating: 'rating', dateDocumented: 'date documented' };
+const sortLabels = {
+    acquiredFrom: 'acquired from',
+    name: 'name',
+    rating: 'rating',
+    parents: 'parents',
+    dateDocumented: 'date documented',
+    sweetness: 'sweetness',
+    sourness: 'sourness',
+    juiciness: 'juiciness',
+    texture: 'texture',
+    size: 'size'
+};
 const state = { apples: [], query: '', sortField: 'name', ascending: true };
+const sortingStrategies = {
+    acquiredFrom: new AcquiredFromSortingStrategy(),
+    name: new NameSortingStrategy(),
+    rating: new RatingSortingStrategy(),
+    parents: new ParentsSortingStrategy(),
+    dateDocumented: new DateDocumentedSortingStrategy(),
+    sweetness: new SweetnessSortingStrategy(),
+    sourness: new SournessSortingStrategy(),
+    juiciness: new JuicinessSortingStrategy(),
+    texture: new TextureSortingStrategy(),
+    size: new SizeSortingStrategy()
+};
 const elements = {
     rows: document.getElementById('apple-rows'),
     search: document.getElementById('apple-search'),
@@ -8,24 +31,15 @@ const elements = {
     emptyState: document.getElementById('empty-state')
 };
 
-function formatDate(dateText) {
-    const date = new Date(dateText);
-    if (Number.isNaN(date.getTime())) return dateText;
-    return date.toLocaleDateString('en-CA', { month: 'short', day: 'numeric', year: 'numeric' });
-}
-
 function compareApples(first, second) {
-    let result;
-    if (state.sortField === 'rating') result = Number(first.rating) - Number(second.rating);
-    else if (state.sortField === 'dateDocumented') result = new Date(first.dateDocumented) - new Date(second.dateDocumented);
-    else result = first.name.localeCompare(second.name, undefined, { sensitivity: 'base' });
+    const result = sortingStrategies[state.sortField].compare(first, second);
     return state.ascending ? result : -result;
 }
 
 function getAttributeValue(apple) {
-    if (state.sortField === 'rating') return `${apple.rating} / 10`;
-    if (state.sortField === 'dateDocumented') return formatDate(apple.dateDocumented);
-    return apple.name;
+    if (state.sortField === 'name') return `${apple.rating} / 10`;
+    if (state.sortField === 'dateDocumented') return apple.dateDocumented;
+    return apple[state.sortField];
 }
 
 function render() {
@@ -44,7 +58,7 @@ function render() {
     `).join('');
     elements.emptyState.hidden = filteredApples.length !== 0;
     elements.sortDirection.classList.toggle('is-descending', !state.ascending);
-    elements.sortDirection.setAttribute('aria-label', `Sort ${state.ascending ? 'descending' : 'ascending'}`);
+    elements.sortDirection.setAttribute('aria-label', `Sort ${state.ascending ? 'descending' : 'ascending'} by ${sortLabels[state.sortField]}`);
 }
 
 async function loadApples() {
