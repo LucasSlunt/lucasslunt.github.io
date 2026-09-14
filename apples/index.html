@@ -3,8 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="A field guide to apples Lucas has eaten.">
-	<title>Apple Field Guide</title>
+	<title>Apples I have Eaten</title>
 	<link rel="stylesheet" href="../pageElementFiles/css/navbar.css">
 	<link rel="stylesheet" href="./apples.css">
 	<script src="../pageElementFiles/scripts/navBar.js"></script>
@@ -14,11 +13,6 @@
 <body onload="setupNavbar('../', '#f4e8d2', '#f8f1e5')">
 	<main class="apple-guide" aria-labelledby="page-title">
 		<header class="guide-header">
-			<div class="intro">
-				<p class="eyebrow">Orchard notes · 114 entries</p>
-				<h1 id="page-title">Apple Field Guide</h1>
-				<p class="intro-copy">A growing record of varieties, textures, and small discoveries.</p>
-			</div>
 
 			<div class="controls" aria-label="Apple list controls">
 				<label class="search-control" for="apple-search">
@@ -35,18 +29,14 @@
 						<option value="dateDocumented">Date Documented</option>
 					</select>
 					<button id="sort-direction" class="direction-button" type="button" aria-label="Sort ascending" title="Toggle sort direction">
-						<span aria-hidden="true">↑</span>
+						<span class="arrow-up" aria-hidden="true">↑</span>
+						<span class="arrow-down" aria-hidden="true">↓</span>
 					</button>
 				</div>
 			</div>
 		</header>
 
 		<section class="apple-list" aria-live="polite" aria-label="Apple entries">
-			<div class="list-heading" aria-hidden="true">
-				<span>specimen</span>
-				<span>variety</span>
-				<span id="attribute-heading">name</span>
-			</div>
 			<div id="apple-rows"></div>
 			<p id="empty-state" class="empty-state" hidden>No apples match that name.</p>
 		</section>

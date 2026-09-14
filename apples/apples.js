@@ -5,7 +5,6 @@ const elements = {
     search: document.getElementById('apple-search'),
     sortField: document.getElementById('sort-field'),
     sortDirection: document.getElementById('sort-direction'),
-    attributeHeading: document.getElementById('attribute-heading'),
     emptyState: document.getElementById('empty-state')
 };
 
@@ -41,9 +40,8 @@ function render() {
             <div class="attribute-panel"><div class="attribute-value">${getAttributeValue(apple)}</div></div>
         </article>
     `).join('');
-    elements.attributeHeading.textContent = sortLabels[state.sortField];
     elements.emptyState.hidden = filteredApples.length !== 0;
-    elements.sortDirection.innerHTML = `<span aria-hidden="true">${state.ascending ? '↑' : '↓'}</span>`;
+    elements.sortDirection.classList.toggle('is-descending', !state.ascending);
     elements.sortDirection.setAttribute('aria-label', `Sort ${state.ascending ? 'descending' : 'ascending'}`);
 }
 
