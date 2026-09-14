@@ -212,7 +212,7 @@
     {
         "id":  15,
         "name":  "Rockit",
-        "acquiredFrom":  "Safeway",
+        "acquiredFrom":  "Safeway, Alberta",
         "flavour":  "Very sweet, slightly bitter",
         "rating":  6,
         "notableTraits":  "Marketed as the world's first miniature apple.",
@@ -242,7 +242,7 @@
     {
         "id":  17,
         "name":  "Orin",
-        "acquiredFrom":  "Farmers market, Calgary AB.",
+        "acquiredFrom":  "Calgary Farmers Market",
         "flavour":  "Sweet, pear",
         "rating":  9,
         "notableTraits":  "Tastes like a pear",
@@ -437,7 +437,7 @@
     {
         "id":  30,
         "name":  "Lodi",
-        "acquiredFrom":  "Creston, B.C.",
+        "acquiredFrom":  "Wlonka Orchards, Creston, B.C.",
         "flavour":  "Very sour",
         "rating":  2,
         "notableTraits":  "Good for apple sauce, grows early in the season",
@@ -872,7 +872,7 @@
     {
         "id":  59,
         "name":  "Samboa",
-        "acquiredFrom":  "Edinburgh, Scotland",
+        "acquiredFrom":  "Rome, Italy",
         "flavour":  "Incredibly sweet, dry",
         "rating":  5,
         "notableTraits":  "'Samboa' is a brand name that cover 3 very similar apples, which only differ in their harvest times",
@@ -902,7 +902,7 @@
     {
         "id":  61,
         "name":  "Pixie",
-        "acquiredFrom":  "Edinburgh, Scotland",
+        "acquiredFrom":  "I.J. Mellis Cheesemonger, Edinburgh, Scotland",
         "flavour":  "Fairly sweet, sharp tang",
         "rating":  6,
         "notableTraits":  "Very small, barely larger than a mandarin orange",
@@ -917,7 +917,7 @@
     {
         "id":  62,
         "name":  "Delgoton",
-        "acquiredFrom":  "Edinburgh, Scotland",
+        "acquiredFrom":  "I.J. Mellis Cheesemonger, Edinburgh, Scotland",
         "flavour":  "Mild, little flavour",
         "rating":  3,
         "notableTraits":  "This variety may have been created through Delbard Orchards irradiating technique of 'regenesis'",
@@ -947,7 +947,7 @@
     {
         "id":  64,
         "name":  "Chantecler (Belchard)",
-        "acquiredFrom":  "Edinburgh, Scotland",
+        "acquiredFrom":  "I.J. Mellis Cheesemonger, Edinburgh, Scotland",
         "flavour":  "Sweet, refreshingly sour",
         "rating":  6,
         "notableTraits":  "Tastes similar to Golden delicious",
@@ -962,7 +962,7 @@
     {
         "id":  65,
         "name":  "Rubinette (Rafzubin)",
-        "acquiredFrom":  "Edinburgh, Scotland",
+        "acquiredFrom":  "I.J. Mellis Cheesemonger, Edinburgh, Scotland",
         "flavour":  "Very sweet, sharp honey flavour",
         "rating":  7,
         "notableTraits":  "Once in a job interview, I was asked why I rated this apple so low. (I got the job)",
@@ -977,7 +977,7 @@
     {
         "id":  66,
         "name":  "Amber",
-        "acquiredFrom":  "Edinburgh, Scotland",
+        "acquiredFrom":  "I.J. Mellis Cheesemonger, Edinburgh, Scotland",
         "flavour":  "Fairly sweet, soft, watery",
         "rating":  5,
         "notableTraits":  "Not to be confused with \"Apple Amber\" an Irish dessert similar to an apple custard pie",
@@ -1247,7 +1247,7 @@
     {
         "id":  84,
         "name":  "Snow Cloud",
-        "acquiredFrom":  "UBC Apple Festival",
+        "acquiredFrom":  "UBC Apple Festival Display",
         "flavour":  "Tart, Sweet, mildly bitter skin",
         "rating":  4,
         "notableTraits":  "A popular ornamental crabapple, the size of a dime",
@@ -1292,7 +1292,7 @@
     {
         "id":  87,
         "name":  "Easter Orange",
-        "acquiredFrom":  "UBC Apple Festival",
+        "acquiredFrom":  "UBC Apple Festival Display",
         "flavour":  "Sweet, intense",
         "rating":  6,
         "notableTraits":  "Very orange skin",
@@ -1322,7 +1322,7 @@
     {
         "id":  89,
         "name":  "Lady (Api)",
-        "acquiredFrom":  "UBC Apple Festival",
+        "acquiredFrom":  "UBC Apple Festival Display",
         "flavour":  "Sweet, bright, citrus, floral",
         "rating":  7,
         "notableTraits":  "A 400 year old variety, historically used in Christmas wreaths and garlands",
@@ -1382,7 +1382,7 @@
     {
         "id":  93,
         "name":  "Crawley Beauty",
-        "acquiredFrom":  "UBC Apple Festival",
+        "acquiredFrom":  "UBC Apple Festival Display",
         "flavour":  "Light, slightly sour",
         "rating":  5,
         "notableTraits":  "Blindingly white flesh",
@@ -1457,7 +1457,7 @@
     {
         "id":  98,
         "name":  "Dazzle",
-        "acquiredFrom":  "Vancouver, B.C.",
+        "acquiredFrom":  "Kins Farm Market, Vancouver, B.C.",
         "flavour":  "Sweet, candy-like, mild",
         "rating":  7,
         "notableTraits":  "Very popular in Asia",
@@ -1487,7 +1487,7 @@
     {
         "id":  100,
         "name":  "Evercrisp",
-        "acquiredFrom":  "Vancouver, B.C.",
+        "acquiredFrom":  "Kins Farm Market, Vancouver, B.C.",
         "flavour":  "Ridiculously sweet, tart",
         "rating":  8,
         "notableTraits":  "A very overpowering and intense apple",
@@ -1562,7 +1562,7 @@
     {
         "id":  105,
         "name":  "Sinta",
-        "acquiredFrom":  "Vancouver, B.C.",
+        "acquiredFrom":  "Kitsilano Farmers Market, Vancouver, B.C.",
         "flavour":  "Sweet, flavourful, honey-like",
         "rating":  7,
         "notableTraits":  "Regarded as a better version of Golden Delicious",
@@ -1577,7 +1577,7 @@
     {
         "id":  106,
         "name":  "Newtown Pippin (Albemarle)",
-        "acquiredFrom":  "Vancouver, B.C.",
+        "acquiredFrom":  "Kitsilano Farmers Market, Vancouver, B.C.",
         "flavour":  "Tart, spitely",
         "rating":  6,
         "notableTraits":  "Benjamin Franklins favourite apple",
@@ -1592,7 +1592,7 @@
     {
         "id":  107,
         "name":  "Snapdragon",
-        "acquiredFrom":  "Vancouver, B.C.",
+        "acquiredFrom":  "Kins Farm Market, Vancouver, B.C.",
         "flavour":  "Sweet, like Honeycrisp and Kanzi",
         "rating":  8,
         "notableTraits":  "The official apple of the Buffalo Bills NFL team",
@@ -1652,7 +1652,7 @@
     {
         "id":  111,
         "name":  "Galamac",
-        "acquiredFrom":  "Calgary, AB.",
+        "acquiredFrom":  "Calgary Farmers Market",
         "flavour":  "Sweet, tart, a hint of pear or Fuji.",
         "rating":  8,
         "notableTraits":  "Very little information available online",
