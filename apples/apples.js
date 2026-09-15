@@ -10,7 +10,7 @@ const sortLabels = {
     texture: 'texture',
     size: 'size'
 };
-const state = { apples: [], query: '', sortField: 'name', ascending: true };
+const state = { apples: [], query: '', sortField: 'rating', ascending: true };
 const sortingStrategies = {
     acquiredFrom: new AcquiredFromSortingStrategy(),
     name: new NameSortingStrategy(),
@@ -32,12 +32,14 @@ const elements = {
 };
 
 function compareApples(first, second) {
-    const result = sortingStrategies[state.sortField].compare(first, second);
+    const strategy = sortingStrategies[state.sortField];
+    const result = strategy.compare(first, second, state.ascending);
+    if (state.sortField === 'parents') return result;
     return state.ascending ? result : -result;
 }
 
 function getAttributeValue(apple) {
-    if (state.sortField === 'name') return `${apple.rating} / 10`;
+    if (state.sortField === 'name' || state.sortField === 'rating') return `${apple.rating} / 10`;
     if (state.sortField === 'dateDocumented') return apple.dateDocumented;
     return apple[state.sortField];
 }
