@@ -5,10 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Apples I have Eaten</title>
 	<link rel="stylesheet" href="../pageElementFiles/css/navbar.css">
-	<link rel="stylesheet" href="./apples.css">
+	<link rel="stylesheet" href="./apples.css?v=footer-fix-2">
+	<link rel="icon" type="image/x-icon" href="../pageElementFiles/icon.png">
 	<script src="../pageElementFiles/scripts/navBar.js"></script>
 	<script src="./AcquiredFromSortingStrategy.js"></script>
-	<script src="./RatingSortingStrategy.js"></script>
+	<script src="./RatingSortingStrategy.js?v=rating-fix"></script>
 	<script src="./ParentsSortingStrategy.js"></script>
 	<script src="./DateDocumentedSortingStrategy.js"></script>
 	<script src="./NameSortingStrategy.js"></script>
@@ -17,7 +18,7 @@
 	<script src="./JuicinessSortingStrategy.js"></script>
 	<script src="./TextureSortingStrategy.js"></script>
 	<script src="./SizeSortingStrategy.js"></script>
-	<script src="./apples.js" defer></script>
+	<script src="./apples.js?v=rating-fix" defer></script>
 </head>
 
 <body onload="setupNavbar('../', '#cee89d', '#e6f8bf')">
@@ -45,7 +46,7 @@
 						<option value="texture">Texture</option>
 						<option value="size">Size</option>
 					</select>
-					<button id="sort-direction" class="direction-button" type="button" aria-label="Sort ascending" title="Toggle sort direction">
+					<button id="sort-direction" class="direction-button is-descending" type="button" aria-label="Sort descending by rating" title="Toggle sort direction">
 						<span class="arrow-up" aria-hidden="true"></span>
 						<span class="arrow-down" aria-hidden="true"></span>
 					</button>
@@ -57,6 +58,28 @@
 			<div id="apple-rows"></div>
 			<p id="empty-state" class="empty-state" hidden>No apples match that name.</p>
 		</section>
+
 	</main>
 </body>
+<footer class="footer">
+	<div class="footer-content">
+		<div class="footer-row-box">
+			<span>Want to see more detailed descriptions of each apple? Visit</span>
+			<a href="https://www.instagram.com/apples.i.have.eaten/" target="_blank" rel="noopener noreferrer">@apples.i.have.eaten</a>
+			<span>on Instagram.</span>
+		</div>
+		<div class="footer-row-box">
+			<span class="footer-row-item">Larger apple collections:</span>
+			<a class="footer-row-item" href="https://pomiferous.com/" target="_blank" rel="noopener noreferrer">Pomiferous</a>
+			<a class="footer-row-item" href="https://www.orangepippin.com/" target="_blank" rel="noopener noreferrer">Orange Pippin</a>
+			<a class="footer-row-item" href="https://www.specialtyproduce.com/" target="_blank" rel="noopener noreferrer">Specialty Produce</a>
+			<a class="footer-row-item" href="https://www.nationalfruitcollection.org.uk/" target="_blank" rel="noopener noreferrer">National Fruit Collection UK</a>
+		</div>
+		<div class="footer-row-box">
+			<span class="footer-row-item">Background photo:</span>
+			<a href="https://www.flickr.com/photos/bcgovphotos/15985263355" target="_blank" rel="noopener noreferrer">&quot;Summerland&quot;</a>
+			<span class="footer-row-item">by Province of British Columbia on Flickr © 2008 CC-BY-ND 2.0</span>
+		</div>
+	</div>
+</footer>
 </html>

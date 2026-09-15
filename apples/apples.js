@@ -10,7 +10,7 @@ const sortLabels = {
     texture: 'texture',
     size: 'size'
 };
-const state = { apples: [], query: '', sortField: 'rating', ascending: true };
+const state = { apples: [], query: '', sortField: 'rating', ascending: false };
 const sortingStrategies = {
     acquiredFrom: new AcquiredFromSortingStrategy(),
     name: new NameSortingStrategy(),
