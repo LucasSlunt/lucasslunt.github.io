@@ -44,8 +44,14 @@ function getAttributeValue(apple) {
     return apple[state.sortField];
 }
 
+function matchesSearch(apple) {
+    const name = apple.name.toLowerCase();
+    const attribute = String(getAttributeValue(apple)).toLowerCase();
+    return name.includes(state.query) || attribute.includes(state.query);
+}
+
 function render() {
-    const filteredApples = state.apples.filter(apple => apple.name.toLowerCase().includes(state.query)).sort(compareApples);
+    const filteredApples = state.apples.filter(matchesSearch).sort(compareApples);
     elements.rows.innerHTML = filteredApples.map((apple, index) => `
         <article class="apple-row" style="animation-delay: ${Math.min(index * 18, 260)}ms">
             <div class="apple-image-frame">
