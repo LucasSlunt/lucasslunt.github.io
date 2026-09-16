@@ -58,7 +58,7 @@ function render() {
                 <img class="apple-image" src="./ApplePictures/AllApples/${apple.id}.jpg" alt="${apple.name}" loading="lazy">
             </div>
             <div class="apple-name">
-                <strong>${apple.name}</strong>
+                <a href="./apple_pages/${apple.id}.html"><strong>${apple.name}</strong></a>
                 <span class="stars" aria-label="Rating not displayed"><span aria-hidden="true">☆ ☆ ☆ ☆ ☆</span></span>
             </div>
             <div class="attribute-panel"><div class="attribute-value">${getAttributeValue(apple)}</div></div>

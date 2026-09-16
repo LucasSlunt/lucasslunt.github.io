@@ -115,7 +115,9 @@ select { min-width: 0; flex: 1; padding: 11px 34px 11px 13px; color: var(--ink);
 .apple-row:nth-child(even) .apple-image-frame { background: var(--brown-deep); }
 .apple-image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .apple-name { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; padding: 18px 20px; text-align: center; }
-.apple-name strong { color: #fff2df; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1rem, 2.2vw, 1.45rem); line-height: 1.12; }
+.apple-name a { color: #fff2df; text-decoration: none; }
+.apple-name a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.apple-name strong { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1rem, 2.2vw, 1.45rem); line-height: 1.12; }
 .stars { display: flex; gap: 4px; color: transparent; font-size: 1.8rem; line-height: 1; -webkit-text-stroke: 0.5px #c6beb8; text-shadow: 0 1px 0 rgba(255,255,255,0.25); }
 .attribute-panel { display: grid; align-self: stretch; min-width: 0; min-height: 0; width: 100%; aspect-ratio: 1; place-items: center; padding: 11px; overflow: hidden; background: var(--orange); border-radius: 0 12px 12px 0; box-shadow: inset 4px 4px 0 rgba(255, 194, 119, 0.42), inset -5px -5px 0 rgba(157, 61, 12, 0.26), 0 7px 0 rgba(147, 57, 12, 0.22), 0 12px 16px rgba(122, 55, 16, 0.2); }
 .attribute-value { display: grid; min-height: 0; width: 100%; height: 100%; place-items: center; padding: 10px 7px; color: #713b1e; font-size: clamp(0.77rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; background: var(--orange-soft); border-radius: 6px; box-shadow: inset -6px -6px 0 rgba(255, 223, 166, 0.42), inset 6px 6px 0 rgba(180, 87, 27, 0.24), 0 3px 5px rgba(154, 68, 16, 0.16); }

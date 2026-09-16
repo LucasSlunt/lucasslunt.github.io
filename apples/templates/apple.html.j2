@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ apple.name }} | Apples I Have Eaten</title>
+	<link rel="stylesheet" href="../../pageElementFiles/css/navbar.css">
+	<link rel="stylesheet" href="../apples.css">
+	<link rel="stylesheet" href="../apple-page.css">
+	<link rel="icon" type="image/x-icon" href="../../pageElementFiles/icon.png">
+	<script src="../../pageElementFiles/scripts/navBar.js"></script>
+</head>
+
+<body onload="setupNavbar('../../', '#cee89d', '#e6f8bf')">
+	<main class="apple-page" aria-labelledby="apple-title">
+		<a class="back-link" href="../index.html">&larr; Back to all apples</a>
+
+		<section class="apple-page-content">
+			<div class="apple-page-image-frame">
+				<img class="apple-page-image" src="../ApplePictures/AllApples/{{ apple.id }}.jpg" alt="{{ apple.name }}" loading="eager">
+			</div>
+
+			<div class="apple-page-details">
+				<header class="apple-page-header">
+					<h1 id="apple-title">{{ apple.name }}</h1>
+				</header>
+
+				<section class="rating-box" aria-labelledby="rating-heading">
+					<div class="rating-box-header">
+						<h2 id="rating-heading">{{ apple.rating }} / 10</h2>
+						<div class="stars" aria-label="{{ apple.rating }} out of 10 rating">
+							<span aria-hidden="true">☆ ☆ ☆ ☆ ☆</span>
+						</div>
+					</div>
+					<div class="apple-attributes">
+						<dl>
+							<div><dt>Sweetness</dt><dd>{{ apple.sweetness }}</dd></div>
+							<div><dt>Sourness</dt><dd>{{ apple.sourness }}</dd></div>
+							<div><dt>Juiciness</dt><dd>{{ apple.juiciness }}</dd></div>
+							<div><dt>Texture</dt><dd>{{ apple.texture }}</dd></div>
+							<div><dt>Size</dt><dd>{{ apple.size }}</dd></div>
+						</dl>
+					</div>
+				</section>
+
+				<section class="description-box" aria-labelledby="description-heading">
+					<h2 id="description-heading">Description</h2>
+					<p>placeholder text</p>
+				</section>
+
+				<dl class="apple-metadata">
+					<div><dt>Date documented</dt><dd>{{ apple.dateDocumented }}</dd></div>
+					<div><dt>Acquired from</dt><dd>{{ apple.acquiredFrom }}</dd></div>
+				</dl>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
