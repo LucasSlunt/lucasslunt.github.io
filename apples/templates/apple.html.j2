@@ -84,6 +84,15 @@
 						<div><dt>Date documented</dt><dd>{{ apple.dateDocumented }}</dd></div>
 					</dl>
 				</section>
+
+				<section class="similar-apples" aria-labelledby="similar-apples-heading">
+					<h2 id="similar-apples-heading">Similar apples</h2>
+					<ul>
+						{% for similar in apple.similar_apples %}
+						<li><a href="{{ similar.id }}.html">Apple {{ similar.id }}</a> differs most in {{ similar.differentiating_factor|capitalize }}.</li>
+						{% endfor %}
+					</ul>
+				</section>
 			</div>
 		</section>
 	</main>

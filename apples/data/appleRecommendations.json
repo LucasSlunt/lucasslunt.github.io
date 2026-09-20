@@ -1,0 +1,1142 @@
+{
+  "1": [
+    {
+      "id": 19,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 28,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "2": [
+    {
+      "id": 55,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 19,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "3": [
+    {
+      "id": 98,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 16,
+      "differentiating_factor": "size"
+    }
+  ],
+  "4": [
+    {
+      "id": 48,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 31,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "5": [
+    {
+      "id": 51,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 28,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "6": [
+    {
+      "id": 21,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 9,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "7": [
+    {
+      "id": 39,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 66,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "8": [
+    {
+      "id": 86,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 92,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "9": [
+    {
+      "id": 6,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 19,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "10": [
+    {
+      "id": 18,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 11,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "11": [
+    {
+      "id": 10,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 80,
+      "differentiating_factor": "size"
+    }
+  ],
+  "12": [
+    {
+      "id": 50,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 112,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "13": [
+    {
+      "id": 95,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 19,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "14": [
+    {
+      "id": 58,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 99,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "15": [
+    {
+      "id": 69,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 46,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "16": [
+    {
+      "id": 3,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 25,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "17": [
+    {
+      "id": 108,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 46,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "18": [
+    {
+      "id": 10,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 11,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "19": [
+    {
+      "id": 1,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 55,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "20": [
+    {
+      "id": 72,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 92,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "21": [
+    {
+      "id": 6,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 9,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "22": [
+    {
+      "id": 23,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 84,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "23": [
+    {
+      "id": 22,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 61,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "24": [
+    {
+      "id": 77,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 71,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "25": [
+    {
+      "id": 82,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 16,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "26": [
+    {
+      "id": 37,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 71,
+      "differentiating_factor": "size"
+    }
+  ],
+  "27": [
+    {
+      "id": 67,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 42,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "28": [
+    {
+      "id": 1,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 43,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "29": [
+    {
+      "id": 77,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 110,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "30": [
+    {
+      "id": 34,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 32,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "31": [
+    {
+      "id": 114,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 63,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "32": [
+    {
+      "id": 30,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 78,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "33": [
+    {
+      "id": 72,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 61,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "34": [
+    {
+      "id": 56,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 104,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "35": [
+    {
+      "id": 103,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 27,
+      "differentiating_factor": "size"
+    }
+  ],
+  "36": [
+    {
+      "id": 23,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 32,
+      "differentiating_factor": "size"
+    }
+  ],
+  "37": [
+    {
+      "id": 106,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 26,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "38": [
+    {
+      "id": 97,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 70,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "39": [
+    {
+      "id": 7,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 66,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "40": [
+    {
+      "id": 96,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 105,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "41": [
+    {
+      "id": 75,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 42,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "42": [
+    {
+      "id": 110,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 44,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "43": [
+    {
+      "id": 6,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 55,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "44": [
+    {
+      "id": 42,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 75,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "45": [
+    {
+      "id": 97,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 99,
+      "differentiating_factor": "size"
+    }
+  ],
+  "46": [
+    {
+      "id": 53,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 17,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "47": [
+    {
+      "id": 104,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 7,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "48": [
+    {
+      "id": 4,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 63,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "49": [
+    {
+      "id": 107,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 52,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "50": [
+    {
+      "id": 12,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 112,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "51": [
+    {
+      "id": 5,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 13,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "52": [
+    {
+      "id": 49,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 111,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "53": [
+    {
+      "id": 46,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 17,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "54": [
+    {
+      "id": 52,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 41,
+      "differentiating_factor": "size"
+    }
+  ],
+  "55": [
+    {
+      "id": 2,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 19,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "56": [
+    {
+      "id": 34,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 29,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "57": [
+    {
+      "id": 62,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 93,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "58": [
+    {
+      "id": 14,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 8,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "59": [
+    {
+      "id": 88,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 103,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "60": [
+    {
+      "id": 68,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 106,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "61": [
+    {
+      "id": 89,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 71,
+      "differentiating_factor": "size"
+    }
+  ],
+  "62": [
+    {
+      "id": 57,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 86,
+      "differentiating_factor": "size"
+    }
+  ],
+  "63": [
+    {
+      "id": 31,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 48,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "64": [
+    {
+      "id": 77,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 56,
+      "differentiating_factor": "size"
+    }
+  ],
+  "65": [
+    {
+      "id": 111,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 60,
+      "differentiating_factor": "size"
+    }
+  ],
+  "66": [
+    {
+      "id": 7,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 40,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "67": [
+    {
+      "id": 27,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 42,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "68": [
+    {
+      "id": 100,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 63,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "69": [
+    {
+      "id": 15,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 28,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "70": [
+    {
+      "id": 38,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 72,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "71": [
+    {
+      "id": 37,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 52,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "72": [
+    {
+      "id": 20,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 70,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "73": [
+    {
+      "id": 51,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 1,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "74": [
+    {
+      "id": 105,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 25,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "75": [
+    {
+      "id": 41,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 44,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "76": [
+    {
+      "id": 10,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 68,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "77": [
+    {
+      "id": 64,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 29,
+      "differentiating_factor": "size"
+    }
+  ],
+  "78": [
+    {
+      "id": 95,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 77,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "79": [
+    {
+      "id": 95,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 40,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "80": [
+    {
+      "id": 31,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 63,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "81": [
+    {
+      "id": 79,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 39,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "82": [
+    {
+      "id": 25,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 16,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "83": [
+    {
+      "id": 94,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 112,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "84": [
+    {
+      "id": 61,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 22,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "85": [
+    {
+      "id": 89,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 93,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "86": [
+    {
+      "id": 92,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 39,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "87": [
+    {
+      "id": 72,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 88,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "88": [
+    {
+      "id": 102,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 87,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "89": [
+    {
+      "id": 85,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 61,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "90": [
+    {
+      "id": 103,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 44,
+      "differentiating_factor": "size"
+    }
+  ],
+  "91": [
+    {
+      "id": 16,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 82,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "92": [
+    {
+      "id": 86,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 8,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "93": [
+    {
+      "id": 57,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 43,
+      "differentiating_factor": "size"
+    }
+  ],
+  "94": [
+    {
+      "id": 75,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 41,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "95": [
+    {
+      "id": 79,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 13,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "96": [
+    {
+      "id": 40,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 105,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "97": [
+    {
+      "id": 38,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 99,
+      "differentiating_factor": "size"
+    }
+  ],
+  "98": [
+    {
+      "id": 3,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 16,
+      "differentiating_factor": "size"
+    }
+  ],
+  "99": [
+    {
+      "id": 97,
+      "differentiating_factor": "size"
+    },
+    {
+      "id": 95,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "100": [
+    {
+      "id": 68,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 80,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "101": [
+    {
+      "id": 99,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 95,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "102": [
+    {
+      "id": 88,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 44,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "103": [
+    {
+      "id": 90,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 42,
+      "differentiating_factor": "size"
+    }
+  ],
+  "104": [
+    {
+      "id": 47,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 7,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "105": [
+    {
+      "id": 40,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 66,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "106": [
+    {
+      "id": 37,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 27,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "107": [
+    {
+      "id": 49,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 52,
+      "differentiating_factor": "texture"
+    }
+  ],
+  "108": [
+    {
+      "id": 55,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 17,
+      "differentiating_factor": "size"
+    }
+  ],
+  "109": [
+    {
+      "id": 40,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 105,
+      "differentiating_factor": "sourness"
+    }
+  ],
+  "110": [
+    {
+      "id": 42,
+      "differentiating_factor": "texture"
+    },
+    {
+      "id": 44,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "111": [
+    {
+      "id": 52,
+      "differentiating_factor": "sourness"
+    },
+    {
+      "id": 27,
+      "differentiating_factor": "size"
+    }
+  ],
+  "112": [
+    {
+      "id": 50,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 83,
+      "differentiating_factor": "sweetness"
+    }
+  ],
+  "113": [
+    {
+      "id": 27,
+      "differentiating_factor": "sweetness"
+    },
+    {
+      "id": 42,
+      "differentiating_factor": "juiciness"
+    }
+  ],
+  "114": [
+    {
+      "id": 31,
+      "differentiating_factor": "juiciness"
+    },
+    {
+      "id": 63,
+      "differentiating_factor": "sourness"
+    }
+  ]
+}

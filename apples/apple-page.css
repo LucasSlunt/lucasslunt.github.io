@@ -75,6 +75,11 @@
 .apple-metadata dt { color: var(--muted-ink); font-weight: 700; }
 .apple-metadata dd { overflow-wrap: anywhere; }
 
+.similar-apples { margin-top: 24px; padding: 20px; background: var(--paper); border: 2px solid var(--pale-green); border-radius: 12px; }
+.similar-apples h2 { margin: 0 0 12px; color: var(--brown-deep); font-family: 'Playfair Display', Georgia, serif; font-size: 1.45rem; }
+.similar-apples ul { display: grid; gap: 10px; margin: 0; padding-left: 20px; }
+.similar-apples a { color: var(--brown-deep); font-weight: 700; }
+
 @media (max-width: 700px) {
     .apple-page { width: calc(100% - 16px); margin-top: 12px; }
     .apple-page-content { grid-template-columns: 1fr; }

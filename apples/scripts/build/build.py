@@ -6,12 +6,19 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 
+from calculate_similarity import calculate_similarity_matrix
+from find_similar_apples import find_similar_apples
+from vectorize import vectorize_apples
+
 
 APPLE_DIR = Path(__file__).resolve().parents[2]
 DATA_FILE = APPLE_DIR / "data" / "apples.json"
 DESCRIPTION_FILE = APPLE_DIR / "data" / "appleDescriptionsLong.json"
 TEMPLATE_DIR = APPLE_DIR / "templates"
 DEFAULT_OUTPUT_DIR = APPLE_DIR / "apple_pages"
+VECTOR_FILE = APPLE_DIR / "data" / "appleVectors.json"
+SIMILARITY_FILE = APPLE_DIR / "data" / "appleSimilarities.json"
+RECOMMENDATIONS_FILE = APPLE_DIR / "data" / "appleRecommendations.json"
 REQUIRED_FIELDS = {
     "id",
     "name",
@@ -71,6 +78,13 @@ def build(output_dir):
         missing = ", ".join(str(apple_id) for apple_id in missing_descriptions)
         raise ValueError(f"Missing descriptions for apples: {missing}")
 
+    vectors = vectorize_apples(apples)
+    similarity_matrix = calculate_similarity_matrix(apples, vectors)
+    recommendations = find_similar_apples(apples, vectors, similarity_matrix)
+    VECTOR_FILE.write_text(json.dumps(vectors, indent=2) + "\n", encoding="utf-8")
+    SIMILARITY_FILE.write_text(json.dumps(similarity_matrix, indent=2) + "\n", encoding="utf-8")
+    RECOMMENDATIONS_FILE.write_text(json.dumps(recommendations, indent=2) + "\n", encoding="utf-8")
+
     environment = Environment(
         loader=FileSystemLoader(TEMPLATE_DIR),
         autoescape=select_autoescape(["html", "xml"]),
@@ -82,6 +96,7 @@ def build(output_dir):
     for apple in apples:
         output_file = output_dir / f"{apple['id']}.html"
         apple["description"] = descriptions[apple["id"]]
+        apple["similar_apples"] = recommendations[str(apple["id"])]
         output_file.write_text(template.render(apple=apple), encoding="utf-8")
 
     print(f"Generated {len(apples)} apple pages in {output_dir}")
