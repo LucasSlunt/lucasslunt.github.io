@@ -120,18 +120,20 @@ select { min-width: 0; flex: 1; padding: 11px 34px 11px 13px; color: var(--ink);
 .apple-row.is-one .apple-image-frame { background: #191512; }
 .apple-row:nth-child(even).is-one .apple-image-frame { background: #0d0b0a; }
 .apple-row.is-max-sweetness::before { background: linear-gradient(to right, var(--inset-side-light) 0 4px, transparent 4px); }
-.apple-row.is-max-sweetness .apple-image-frame { background-image: linear-gradient(to bottom, #ffd9e7 0 4px, rgba(255, 151, 192, 0.68) 4px, rgba(255, 203, 222, 0.4) 18%, rgba(255, 203, 222, 0) 33%, transparent 34% 100%); }
+.apple-image-frame::before { position: absolute; inset: 0; z-index: 1; content: ''; pointer-events: none; }
+.apple-row.is-max-sweetness .apple-image-frame::before { background: linear-gradient(to bottom, #ffd9e7 0 4px, rgba(255, 151, 192, 0.68) 4px, rgba(255, 203, 222, 0.4) 62%, rgba(255, 203, 222, 0) 100%); background-size: 100% 51%; background-position: top; background-repeat: no-repeat; mask-image: url('./ApplePictures/index_assets/bw_gradient.jpg'); mask-size: 100% 51%; mask-position: top; mask-repeat: no-repeat; mask-mode: luminance; }
 .apple-row.is-max-sourness::after { background: transparent; box-shadow: none; }
-.apple-row.is-max-sourness .apple-image-frame { background-image: linear-gradient(to bottom, transparent 0 67%, rgba(177, 242, 79, 0) 68%, rgba(177, 242, 79, 0.18) 76%, rgba(177, 242, 79, 0.38) 86%, rgba(126, 209, 48, 0.68) 100%); box-shadow: inset 0 -6px 0 #659f38; }
-.apple-row.is-perfect.is-max-sweetness .apple-image-frame { background-image: linear-gradient(to bottom, #ffd9e7 0 4px, rgba(255, 151, 192, 0.68) 4px, rgba(255, 203, 222, 0.4) 18%, rgba(255, 203, 222, 0) 33%, transparent 34% 100%), url('./ApplePictures/index_assets/gold_texture.jpg'); }
-.apple-row.is-perfect.is-max-sourness .apple-image-frame { background-image: linear-gradient(to bottom, transparent 0 67%, rgba(177, 242, 79, 0) 68%, rgba(177, 242, 79, 0.18) 76%, rgba(177, 242, 79, 0.38) 86%, rgba(126, 209, 48, 0.68) 100%), url('./ApplePictures/index_assets/gold_texture.jpg'); box-shadow: inset 0 -6px 0 #659f38; }
-.apple-image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.apple-row.is-max-sourness .apple-image-frame { box-shadow: none; }
+.apple-row.is-max-sourness .apple-image-frame::before { background: linear-gradient(to bottom, rgba(177, 242, 79, 0) 0%, rgba(177, 242, 79, 0.18) 28%, rgba(177, 242, 79, 0.38) 68%, rgba(126, 209, 48, 0.68) 100%); background-size: 100% 51%; background-position: bottom; background-repeat: no-repeat; mask-image: linear-gradient(#fff, #fff), url('./ApplePictures/index_assets/bw_gradient.jpg'); mask-size: 100% 51%, 100% 51%; mask-position: bottom; mask-repeat: no-repeat; mask-mode: luminance; mask-composite: subtract; box-shadow: inset 0 -6px 0 #659f38; }
+.apple-row.is-perfect.is-max-sweetness .apple-image-frame { background-image: url('./ApplePictures/index_assets/gold_texture.jpg'); }
+.apple-row.is-perfect.is-max-sourness .apple-image-frame { background-image: url('./ApplePictures/index_assets/gold_texture.jpg'); box-shadow: none; }
+.apple-image { position: relative; z-index: 2; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .apple-name { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; padding: 18px 20px; text-align: center; }
 .apple-name::before { position: absolute; inset: 0; z-index: 0; content: ''; pointer-events: none; }
 .apple-name::after { position: absolute; inset: 0; z-index: 1; content: ''; pointer-events: none; }
-.apple-row.is-max-sweetness .apple-name::before { background: linear-gradient(to bottom, rgba(255, 151, 192, 0.68) 0%, rgba(255, 203, 222, 0.4) 18%, rgba(255, 203, 222, 0) 33%, transparent 34% 100%); }
+.apple-row.is-max-sweetness .apple-name::before { background: linear-gradient(to bottom, rgba(255, 151, 192, 0.68) 0%, rgba(255, 203, 222, 0.4) 62%, rgba(255, 203, 222, 0) 100%); background-size: 100% 60%; background-position: top; background-repeat: no-repeat; mask-image: url('./ApplePictures/index_assets/bw_gradient.jpg'); mask-size: 100% 51%; mask-position: top; mask-repeat: no-repeat; mask-mode: luminance; }
 .apple-row.is-max-sweetness .apple-name::after { box-shadow: inset 0 4px 0 #ffd9e7; }
-.apple-row.is-max-sourness .apple-name::before { background: linear-gradient(to bottom, transparent 0 67%, rgba(177, 242, 79, 0) 68%, rgba(177, 242, 79, 0.38) 84%, rgba(126, 209, 48, 0.68) 100%); }
+.apple-row.is-max-sourness .apple-name::before { background: linear-gradient(to bottom, rgba(177, 242, 79, 0) 0%, rgba(177, 242, 79, 0.18) 28%, rgba(177, 242, 79, 0.38) 68%, rgba(126, 209, 48, 0.68) 100%); background-size: 100% 60%; background-position: bottom; background-repeat: no-repeat; mask-image: linear-gradient(#fff, #fff), url('./ApplePictures/index_assets/bw_gradient.jpg'); mask-size: 100% 51%, 100% 51%; mask-position: bottom; mask-repeat: no-repeat; mask-mode: luminance; mask-composite: subtract; }
 .apple-row.is-max-sourness .apple-name::after { box-shadow: inset 0 -6px 0 #659f38; }
 .apple-name a { color: #fff2df; text-decoration: none; }
 .apple-name a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
