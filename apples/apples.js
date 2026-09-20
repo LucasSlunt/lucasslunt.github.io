@@ -71,7 +71,7 @@ function render() {
 
 async function loadApples() {
     try {
-        const response = await fetch('./apples.json');
+        const response = await fetch('./data/apples.json');
         if (!response.ok) throw new Error(`Could not load apple data (${response.status})`);
         state.apples = await response.json();
         render();

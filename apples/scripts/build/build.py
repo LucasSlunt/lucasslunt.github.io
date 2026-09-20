@@ -1,4 +1,4 @@
-"""Generate one static detail page for every apple in apples.json."""
+"""Generate one static detail page for every apple in data/apples.json."""
 
 import argparse
 import json
@@ -7,8 +7,8 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 
 
-APPLE_DIR = Path(__file__).resolve().parent
-DATA_FILE = APPLE_DIR / "apples.json"
+APPLE_DIR = Path(__file__).resolve().parents[2]
+DATA_FILE = APPLE_DIR / "data" / "apples.json"
 TEMPLATE_DIR = APPLE_DIR / "templates"
 DEFAULT_OUTPUT_DIR = APPLE_DIR / "apple_pages"
 REQUIRED_FIELDS = {
