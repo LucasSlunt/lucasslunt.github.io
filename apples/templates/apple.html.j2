@@ -89,7 +89,12 @@
 					<h2 id="similar-apples-heading">Similar apples</h2>
 					<ul>
 						{% for similar in apple.similar_apples %}
-						<li><a href="{{ similar.id }}.html">Apple {{ similar.id }}</a> differs most in {{ similar.differentiating_factor|capitalize }}.</li>
+						<li class="similar-apple-item">
+							<a class="similar-apple-link" href="{{ similar.id }}.html">
+								<img src="../ApplePictures/AllApples/{{ similar.id }}.jpg" alt="{{ similar.name }}">
+								<span>{{ similar.name }} {{ similar.comparison }}.</span>
+							</a>
+						</li>
 						{% endfor %}
 					</ul>
 				</section>

@@ -6,6 +6,15 @@ from pathlib import Path
 from vectorize import VECTOR_FIELDS
 
 
+COMPARISON_WORDS = {
+    "sweetness": ("sweeter", "less sweet"),
+    "sourness": ("more sour", "less sour"),
+    "juiciness": ("juicier", "less juicy"),
+    "texture": ("crunchier", "softer"),
+    "size": ("larger", "smaller"),
+}
+
+
 def _differentiating_factor(first_vector, second_vector):
     return max(
         VECTOR_FIELDS,
@@ -13,9 +22,18 @@ def _differentiating_factor(first_vector, second_vector):
     )
 
 
+def _comparison(first_vector, second_vector, factor):
+    if factor == "very similar":
+        return "is very similar"
+    if second_vector[factor] > first_vector[factor]:
+        return f"is {COMPARISON_WORDS[factor][0]}"
+    return f"is {COMPARISON_WORDS[factor][1]}"
+
+
 def find_similar_apples(apples, vectors, similarity_matrix):
     recommendations = {}
     apple_ids = [str(apple["id"]) for apple in apples]
+    apples_by_id = {str(apple["id"]): apple for apple in apples}
 
     for apple_id in apple_ids:
         candidates = sorted(
@@ -29,10 +47,20 @@ def find_similar_apples(apples, vectors, similarity_matrix):
         selected = []
         factors = set()
         for _, candidate_id in candidates:
-            factor = _differentiating_factor(vectors[apple_id], vectors[candidate_id])
+            if similarity_matrix[apple_id][candidate_id] == 0:
+                factor = "very similar"
+            else:
+                factor = _differentiating_factor(vectors[apple_id], vectors[candidate_id])
             if factor in factors:
                 continue
-            selected.append({"id": int(candidate_id), "differentiating_factor": factor})
+            selected.append(
+                {
+                    "id": int(candidate_id),
+                    "name": apples_by_id[candidate_id]["name"],
+                    "differentiating_factor": factor,
+                    "comparison": _comparison(vectors[apple_id], vectors[candidate_id], factor),
+                }
+            )
             factors.add(factor)
             if len(selected) == 2:
                 break

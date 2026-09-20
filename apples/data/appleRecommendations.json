@@ -2,1141 +2,1597 @@
   "1": [
     {
       "id": 19,
-      "differentiating_factor": "texture"
+      "name": "Koru",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 28,
-      "differentiating_factor": "sourness"
+      "name": "Lucy Rose",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     }
   ],
   "2": [
     {
       "id": 55,
-      "differentiating_factor": "texture"
+      "name": "Rubens (Civni)",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 19,
-      "differentiating_factor": "juiciness"
+      "name": "Koru",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "3": [
     {
       "id": 98,
-      "differentiating_factor": "texture"
+      "name": "Dazzle",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 16,
-      "differentiating_factor": "size"
+      "name": "SugarBee",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "4": [
     {
       "id": 48,
-      "differentiating_factor": "sourness"
+      "name": "Alkmene (Red Windsor)",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     },
     {
       "id": 31,
-      "differentiating_factor": "sweetness"
+      "name": "Sunrise",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "5": [
     {
       "id": 51,
-      "differentiating_factor": "sweetness"
+      "name": "Egremont Russet",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     },
     {
       "id": 28,
-      "differentiating_factor": "juiciness"
+      "name": "Lucy Rose",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     }
   ],
   "6": [
     {
       "id": 21,
-      "differentiating_factor": "sweetness"
+      "name": "Smitten",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 9,
-      "differentiating_factor": "juiciness"
+      "name": "Opal",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "7": [
     {
       "id": 39,
-      "differentiating_factor": "juiciness"
+      "name": "McIntosh",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 66,
-      "differentiating_factor": "sourness"
+      "name": "Amber",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "8": [
     {
       "id": 86,
-      "differentiating_factor": "sourness"
+      "name": "Winter Banana",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     },
     {
       "id": 92,
-      "differentiating_factor": "texture"
+      "name": "Discovery",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     }
   ],
   "9": [
     {
       "id": 6,
-      "differentiating_factor": "juiciness"
+      "name": "Fuji",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 19,
-      "differentiating_factor": "sweetness"
+      "name": "Koru",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "10": [
     {
       "id": 18,
-      "differentiating_factor": "sweetness"
+      "name": "Kanzi",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 11,
-      "differentiating_factor": "texture"
+      "name": "Cosmic Crisp",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     }
   ],
   "11": [
     {
       "id": 10,
-      "differentiating_factor": "texture"
+      "name": "Honeycrisp",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 80,
-      "differentiating_factor": "size"
+      "name": "SweetTango (Minneiska)",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     }
   ],
   "12": [
     {
       "id": 50,
-      "differentiating_factor": "texture"
+      "name": "Bramley",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 112,
-      "differentiating_factor": "juiciness"
+      "name": "Wolf River",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "13": [
     {
       "id": 95,
-      "differentiating_factor": "texture"
+      "name": "Johnathan",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 19,
-      "differentiating_factor": "juiciness"
+      "name": "Koru",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     }
   ],
   "14": [
     {
       "id": 58,
-      "differentiating_factor": "size"
+      "name": "Reinette",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     },
     {
       "id": 99,
-      "differentiating_factor": "sweetness"
+      "name": "Gloster 69",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "15": [
     {
       "id": 69,
-      "differentiating_factor": "size"
+      "name": "Magic Star (Sprank, Kentish Kiss)",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     },
     {
       "id": 46,
-      "differentiating_factor": "sweetness"
+      "name": "Nicola",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "16": [
     {
       "id": 3,
-      "differentiating_factor": "size"
+      "name": "Aurora Golden Gala",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     },
     {
       "id": 25,
-      "differentiating_factor": "sweetness"
+      "name": "Silken",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "17": [
     {
       "id": 108,
-      "differentiating_factor": "size"
+      "name": "Posy",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     },
     {
       "id": 46,
-      "differentiating_factor": "sourness"
+      "name": "Nicola",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     }
   ],
   "18": [
     {
       "id": 10,
-      "differentiating_factor": "sweetness"
+      "name": "Honeycrisp",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 11,
-      "differentiating_factor": "texture"
+      "name": "Cosmic Crisp",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     }
   ],
   "19": [
     {
       "id": 1,
-      "differentiating_factor": "texture"
+      "name": "Lady Alice",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 55,
-      "differentiating_factor": "juiciness"
+      "name": "Rubens (Civni)",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     }
   ],
   "20": [
     {
       "id": 72,
-      "differentiating_factor": "sweetness"
+      "name": "Cameo",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     },
     {
       "id": 92,
-      "differentiating_factor": "texture"
+      "name": "Discovery",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     }
   ],
   "21": [
     {
       "id": 6,
-      "differentiating_factor": "sweetness"
+      "name": "Fuji",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 9,
-      "differentiating_factor": "juiciness"
+      "name": "Opal",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "22": [
     {
       "id": 23,
-      "differentiating_factor": "texture"
+      "name": "Unknown",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 84,
-      "differentiating_factor": "sweetness"
+      "name": "Snow Cloud",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "23": [
     {
       "id": 22,
-      "differentiating_factor": "texture"
+      "name": "Unknown",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 61,
-      "differentiating_factor": "sweetness"
+      "name": "Pixie",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "24": [
     {
       "id": 77,
-      "differentiating_factor": "size"
+      "name": "Gravenstein",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     },
     {
       "id": 71,
-      "differentiating_factor": "texture"
+      "name": "Cheerfull Gold",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     }
   ],
   "25": [
     {
       "id": 82,
-      "differentiating_factor": "texture"
+      "name": "Autumn Glory",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 16,
-      "differentiating_factor": "sweetness"
+      "name": "SugarBee",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "26": [
     {
       "id": 37,
-      "differentiating_factor": "sourness"
+      "name": "Jonaprince",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     },
     {
       "id": 71,
-      "differentiating_factor": "size"
+      "name": "Cheerfull Gold",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     }
   ],
   "27": [
     {
       "id": 67,
-      "differentiating_factor": "sweetness"
+      "name": "Kissabel (Y101)",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 42,
-      "differentiating_factor": "juiciness"
+      "name": "Salish",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "28": [
     {
       "id": 1,
-      "differentiating_factor": "sourness"
+      "name": "Lady Alice",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     },
     {
       "id": 43,
-      "differentiating_factor": "sweetness"
+      "name": "September Wonder",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "29": [
     {
       "id": 77,
-      "differentiating_factor": "size"
+      "name": "Gravenstein",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     },
     {
       "id": 110,
-      "differentiating_factor": "texture"
+      "name": "Tarzi",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     }
   ],
   "30": [
     {
       "id": 34,
-      "differentiating_factor": "size"
+      "name": "Earligold",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     },
     {
       "id": 32,
-      "differentiating_factor": "juiciness"
+      "name": "Transparent",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "31": [
     {
       "id": 114,
-      "differentiating_factor": "juiciness"
+      "name": "Arlet (Swiss Gourmet)",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 63,
-      "differentiating_factor": "sourness"
+      "name": "Red Dream",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     }
   ],
   "32": [
     {
       "id": 30,
-      "differentiating_factor": "juiciness"
+      "name": "Lodi",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 78,
-      "differentiating_factor": "sweetness"
+      "name": "Paula Red",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "33": [
     {
       "id": 72,
-      "differentiating_factor": "sweetness"
+      "name": "Cameo",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     },
     {
       "id": 61,
-      "differentiating_factor": "sourness"
+      "name": "Pixie",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     }
   ],
   "34": [
     {
       "id": 56,
-      "differentiating_factor": "size"
+      "name": "Unknown",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     },
     {
       "id": 104,
-      "differentiating_factor": "sourness"
+      "name": "Melrose",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "35": [
     {
       "id": 103,
-      "differentiating_factor": "juiciness"
+      "name": "Scarlet Spur",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 27,
-      "differentiating_factor": "size"
+      "name": "Lucy Glo",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     }
   ],
   "36": [
     {
       "id": 23,
-      "differentiating_factor": "texture"
+      "name": "Unknown",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 32,
-      "differentiating_factor": "size"
+      "name": "Transparent",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "37": [
     {
       "id": 106,
-      "differentiating_factor": "juiciness"
+      "name": "Newtown Pippin (Albemarle)",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 26,
-      "differentiating_factor": "sourness"
+      "name": "Nova Spy",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     }
   ],
   "38": [
     {
       "id": 97,
-      "differentiating_factor": "juiciness"
+      "name": "Snow Apple (Famuese)",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 70,
-      "differentiating_factor": "sweetness"
+      "name": "Robijn",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "39": [
     {
       "id": 7,
-      "differentiating_factor": "juiciness"
+      "name": "Pink Lady (Cripps Pink)",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 66,
-      "differentiating_factor": "sourness"
+      "name": "Amber",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "40": [
     {
       "id": 96,
-      "differentiating_factor": "sweetness"
+      "name": "Court Royal",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 105,
-      "differentiating_factor": "sourness"
+      "name": "Sinta",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "41": [
     {
       "id": 75,
-      "differentiating_factor": "juiciness"
+      "name": "Golden Rose",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 42,
-      "differentiating_factor": "sweetness"
+      "name": "Salish",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "42": [
     {
       "id": 110,
-      "differentiating_factor": "texture"
+      "name": "Tarzi",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 44,
-      "differentiating_factor": "juiciness"
+      "name": "Pinata",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "43": [
     {
       "id": 6,
-      "differentiating_factor": "sourness"
+      "name": "Fuji",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     },
     {
       "id": 55,
-      "differentiating_factor": "sweetness"
+      "name": "Rubens (Civni)",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "44": [
     {
       "id": 42,
-      "differentiating_factor": "juiciness"
+      "name": "Salish",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 75,
-      "differentiating_factor": "sweetness"
+      "name": "Golden Rose",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "45": [
     {
       "id": 97,
-      "differentiating_factor": "texture"
+      "name": "Snow Apple (Famuese)",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 99,
-      "differentiating_factor": "size"
+      "name": "Gloster 69",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "46": [
     {
       "id": 53,
-      "differentiating_factor": "juiciness"
+      "name": "Zari",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 17,
-      "differentiating_factor": "sourness"
+      "name": "Orin",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "47": [
     {
       "id": 104,
-      "differentiating_factor": "sourness"
+      "name": "Melrose",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     },
     {
       "id": 7,
-      "differentiating_factor": "sweetness"
+      "name": "Pink Lady (Cripps Pink)",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "48": [
     {
       "id": 4,
-      "differentiating_factor": "sourness"
+      "name": "Jazz",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     },
     {
       "id": 63,
-      "differentiating_factor": "sweetness"
+      "name": "Red Dream",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "49": [
     {
       "id": 107,
-      "differentiating_factor": "sweetness"
+      "name": "Snapdragon",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 52,
-      "differentiating_factor": "texture"
+      "name": "Pirouette",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     }
   ],
   "50": [
     {
       "id": 12,
-      "differentiating_factor": "texture"
+      "name": "Granny Smith",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 112,
-      "differentiating_factor": "juiciness"
+      "name": "Wolf River",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "51": [
     {
       "id": 5,
-      "differentiating_factor": "sweetness"
+      "name": "Envy",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     },
     {
       "id": 13,
-      "differentiating_factor": "texture"
+      "name": "Ambrosia",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     }
   ],
   "52": [
     {
       "id": 49,
-      "differentiating_factor": "texture"
+      "name": "Cox's Orange Pippin (Cox)",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 111,
-      "differentiating_factor": "sourness"
+      "name": "Galamac",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "53": [
     {
       "id": 46,
-      "differentiating_factor": "juiciness"
+      "name": "Nicola",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 17,
-      "differentiating_factor": "sourness"
+      "name": "Orin",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "54": [
     {
       "id": 52,
-      "differentiating_factor": "sweetness"
+      "name": "Pirouette",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     },
     {
       "id": 41,
-      "differentiating_factor": "size"
+      "name": "Hidden Rose",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "55": [
     {
       "id": 2,
-      "differentiating_factor": "texture"
+      "name": "Gala",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 19,
-      "differentiating_factor": "juiciness"
+      "name": "Koru",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "56": [
     {
       "id": 34,
-      "differentiating_factor": "size"
+      "name": "Earligold",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     },
     {
       "id": 29,
-      "differentiating_factor": "juiciness"
+      "name": "Pazazz",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "57": [
     {
       "id": 62,
-      "differentiating_factor": "texture"
+      "name": "Delgoton",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 93,
-      "differentiating_factor": "sweetness"
+      "name": "Crawley Beauty",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "58": [
     {
       "id": 14,
-      "differentiating_factor": "size"
+      "name": "Red Delicious",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     },
     {
       "id": 8,
-      "differentiating_factor": "texture"
+      "name": "Spartan",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     }
   ],
   "59": [
     {
       "id": 88,
-      "differentiating_factor": "sweetness"
+      "name": "Golden Russet",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     },
     {
       "id": 103,
-      "differentiating_factor": "juiciness"
+      "name": "Scarlet Spur",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     }
   ],
   "60": [
     {
       "id": 68,
-      "differentiating_factor": "texture"
+      "name": "CrimsonCrisp",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 106,
-      "differentiating_factor": "sweetness"
+      "name": "Newtown Pippin (Albemarle)",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "61": [
     {
       "id": 89,
-      "differentiating_factor": "sweetness"
+      "name": "Lady (Api)",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     },
     {
       "id": 71,
-      "differentiating_factor": "size"
+      "name": "Cheerfull Gold",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "62": [
     {
       "id": 57,
-      "differentiating_factor": "texture"
+      "name": "Maribelle",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 86,
-      "differentiating_factor": "size"
+      "name": "Winter Banana",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "63": [
     {
       "id": 31,
-      "differentiating_factor": "sourness"
+      "name": "Sunrise",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     },
     {
       "id": 48,
-      "differentiating_factor": "sweetness"
+      "name": "Alkmene (Red Windsor)",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "64": [
     {
       "id": 77,
-      "differentiating_factor": "sweetness"
+      "name": "Gravenstein",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     },
     {
       "id": 56,
-      "differentiating_factor": "size"
+      "name": "Unknown",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "65": [
     {
       "id": 111,
-      "differentiating_factor": "sweetness"
+      "name": "Galamac",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     },
     {
       "id": 60,
-      "differentiating_factor": "size"
+      "name": "Scarlett Paradise",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "66": [
     {
       "id": 7,
-      "differentiating_factor": "sourness"
+      "name": "Pink Lady (Cripps Pink)",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     },
     {
       "id": 40,
-      "differentiating_factor": "sweetness"
+      "name": "Golden Delicious",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "67": [
     {
       "id": 27,
-      "differentiating_factor": "sweetness"
+      "name": "Lucy Glo",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 42,
-      "differentiating_factor": "juiciness"
+      "name": "Salish",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "68": [
     {
       "id": 100,
-      "differentiating_factor": "texture"
+      "name": "Evercrisp",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 63,
-      "differentiating_factor": "sweetness"
+      "name": "Red Dream",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "69": [
     {
       "id": 15,
-      "differentiating_factor": "size"
+      "name": "Rockit",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     },
     {
       "id": 28,
-      "differentiating_factor": "sweetness"
+      "name": "Lucy Rose",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "70": [
     {
       "id": 38,
-      "differentiating_factor": "sweetness"
+      "name": "Ginger Gold",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     },
     {
       "id": 72,
-      "differentiating_factor": "texture"
+      "name": "Cameo",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     }
   ],
   "71": [
     {
       "id": 37,
-      "differentiating_factor": "size"
+      "name": "Jonaprince",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     },
     {
       "id": 52,
-      "differentiating_factor": "juiciness"
+      "name": "Pirouette",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     }
   ],
   "72": [
     {
       "id": 20,
-      "differentiating_factor": "sweetness"
+      "name": "Jonagold",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     },
     {
       "id": 70,
-      "differentiating_factor": "texture"
+      "name": "Robijn",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     }
   ],
   "73": [
     {
       "id": 51,
-      "differentiating_factor": "sweetness"
+      "name": "Egremont Russet",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     },
     {
       "id": 1,
-      "differentiating_factor": "juiciness"
+      "name": "Lady Alice",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     }
   ],
   "74": [
     {
       "id": 105,
-      "differentiating_factor": "size"
+      "name": "Sinta",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     },
     {
       "id": 25,
-      "differentiating_factor": "texture"
+      "name": "Silken",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     }
   ],
   "75": [
     {
       "id": 41,
-      "differentiating_factor": "juiciness"
+      "name": "Hidden Rose",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 44,
-      "differentiating_factor": "sweetness"
+      "name": "Pinata",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "76": [
     {
       "id": 10,
-      "differentiating_factor": "size"
+      "name": "Honeycrisp",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     },
     {
       "id": 68,
-      "differentiating_factor": "sweetness"
+      "name": "CrimsonCrisp",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "77": [
     {
       "id": 64,
-      "differentiating_factor": "sweetness"
+      "name": "Chantecler (Belchard)",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     },
     {
       "id": 29,
-      "differentiating_factor": "size"
+      "name": "Pazazz",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "78": [
     {
       "id": 95,
-      "differentiating_factor": "sourness"
+      "name": "Johnathan",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     },
     {
       "id": 77,
-      "differentiating_factor": "juiciness"
+      "name": "Gravenstein",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     }
   ],
   "79": [
     {
       "id": 95,
-      "differentiating_factor": "juiciness"
+      "name": "Johnathan",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 40,
-      "differentiating_factor": "sourness"
+      "name": "Golden Delicious",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "80": [
     {
       "id": 31,
-      "differentiating_factor": "juiciness"
+      "name": "Sunrise",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 63,
-      "differentiating_factor": "sourness"
+      "name": "Red Dream",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     }
   ],
   "81": [
     {
       "id": 79,
-      "differentiating_factor": "size"
+      "name": "Empire",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     },
     {
       "id": 39,
-      "differentiating_factor": "sweetness"
+      "name": "McIntosh",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "82": [
     {
       "id": 25,
-      "differentiating_factor": "texture"
+      "name": "Silken",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 16,
-      "differentiating_factor": "sweetness"
+      "name": "SugarBee",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "83": [
     {
       "id": 94,
-      "differentiating_factor": "sourness"
+      "name": "Chinook",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     },
     {
       "id": 112,
-      "differentiating_factor": "sweetness"
+      "name": "Wolf River",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "84": [
     {
       "id": 61,
-      "differentiating_factor": "juiciness"
+      "name": "Pixie",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 22,
-      "differentiating_factor": "sweetness"
+      "name": "Unknown",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "85": [
     {
       "id": 89,
-      "differentiating_factor": "size"
+      "name": "Lady (Api)",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     },
     {
       "id": 93,
-      "differentiating_factor": "sweetness"
+      "name": "Crawley Beauty",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "86": [
     {
       "id": 92,
-      "differentiating_factor": "juiciness"
+      "name": "Discovery",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 39,
-      "differentiating_factor": "sweetness"
+      "name": "McIntosh",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "87": [
     {
       "id": 72,
-      "differentiating_factor": "texture"
+      "name": "Cameo",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 88,
-      "differentiating_factor": "sourness"
+      "name": "Golden Russet",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     }
   ],
   "88": [
     {
       "id": 102,
-      "differentiating_factor": "juiciness"
+      "name": "Arkansas Black",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 87,
-      "differentiating_factor": "sourness"
+      "name": "Easter Orange",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "89": [
     {
       "id": 85,
-      "differentiating_factor": "size"
+      "name": "Elstar",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     },
     {
       "id": 61,
-      "differentiating_factor": "sweetness"
+      "name": "Pixie",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "90": [
     {
       "id": 103,
-      "differentiating_factor": "juiciness"
+      "name": "Scarlet Spur",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 44,
-      "differentiating_factor": "size"
+      "name": "Pinata",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     }
   ],
   "91": [
     {
       "id": 16,
-      "differentiating_factor": "size"
+      "name": "SugarBee",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     },
     {
       "id": 82,
-      "differentiating_factor": "sweetness"
+      "name": "Autumn Glory",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "92": [
     {
       "id": 86,
-      "differentiating_factor": "juiciness"
+      "name": "Winter Banana",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 8,
-      "differentiating_factor": "texture"
+      "name": "Spartan",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     }
   ],
   "93": [
     {
       "id": 57,
-      "differentiating_factor": "sweetness"
+      "name": "Maribelle",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     },
     {
       "id": 43,
-      "differentiating_factor": "size"
+      "name": "September Wonder",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "94": [
     {
       "id": 75,
-      "differentiating_factor": "sweetness"
+      "name": "Golden Rose",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     },
     {
       "id": 41,
-      "differentiating_factor": "juiciness"
+      "name": "Hidden Rose",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     }
   ],
   "95": [
     {
       "id": 79,
-      "differentiating_factor": "juiciness"
+      "name": "Empire",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 13,
-      "differentiating_factor": "texture"
+      "name": "Ambrosia",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     }
   ],
   "96": [
     {
       "id": 40,
-      "differentiating_factor": "sweetness"
+      "name": "Golden Delicious",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 105,
-      "differentiating_factor": "sourness"
+      "name": "Sinta",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "97": [
     {
       "id": 38,
-      "differentiating_factor": "juiciness"
+      "name": "Ginger Gold",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 99,
-      "differentiating_factor": "size"
+      "name": "Gloster 69",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "98": [
     {
       "id": 3,
-      "differentiating_factor": "texture"
+      "name": "Aurora Golden Gala",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 16,
-      "differentiating_factor": "size"
+      "name": "SugarBee",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "99": [
     {
       "id": 97,
-      "differentiating_factor": "size"
+      "name": "Snow Apple (Famuese)",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     },
     {
       "id": 95,
-      "differentiating_factor": "texture"
+      "name": "Johnathan",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     }
   ],
   "100": [
     {
       "id": 68,
-      "differentiating_factor": "texture"
+      "name": "CrimsonCrisp",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 80,
-      "differentiating_factor": "sweetness"
+      "name": "SweetTango (Minneiska)",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "101": [
     {
       "id": 99,
-      "differentiating_factor": "texture"
+      "name": "Gloster 69",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     },
     {
       "id": 95,
-      "differentiating_factor": "sourness"
+      "name": "Johnathan",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     }
   ],
   "102": [
     {
       "id": 88,
-      "differentiating_factor": "juiciness"
+      "name": "Golden Russet",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 44,
-      "differentiating_factor": "texture"
+      "name": "Pinata",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     }
   ],
   "103": [
     {
       "id": 90,
-      "differentiating_factor": "juiciness"
+      "name": "Winesap",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 42,
-      "differentiating_factor": "size"
+      "name": "Salish",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     }
   ],
   "104": [
     {
       "id": 47,
-      "differentiating_factor": "sourness"
+      "name": "Braeburn",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     },
     {
       "id": 7,
-      "differentiating_factor": "sweetness"
+      "name": "Pink Lady (Cripps Pink)",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "105": [
     {
       "id": 40,
-      "differentiating_factor": "sourness"
+      "name": "Golden Delicious",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     },
     {
       "id": 66,
-      "differentiating_factor": "sweetness"
+      "name": "Amber",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "106": [
     {
       "id": 37,
-      "differentiating_factor": "juiciness"
+      "name": "Jonaprince",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     },
     {
       "id": 27,
-      "differentiating_factor": "sourness"
+      "name": "Lucy Glo",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "107": [
     {
       "id": 49,
-      "differentiating_factor": "sweetness"
+      "name": "Cox's Orange Pippin (Cox)",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 52,
-      "differentiating_factor": "texture"
+      "name": "Pirouette",
+      "differentiating_factor": "texture",
+      "comparison": "is softer"
     }
   ],
   "108": [
     {
       "id": 55,
-      "differentiating_factor": "sourness"
+      "name": "Rubens (Civni)",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     },
     {
       "id": 17,
-      "differentiating_factor": "size"
+      "name": "Orin",
+      "differentiating_factor": "size",
+      "comparison": "is smaller"
     }
   ],
   "109": [
     {
       "id": 40,
-      "differentiating_factor": "sweetness"
+      "name": "Golden Delicious",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 105,
-      "differentiating_factor": "sourness"
+      "name": "Sinta",
+      "differentiating_factor": "sourness",
+      "comparison": "is less sour"
     }
   ],
   "110": [
     {
       "id": 42,
-      "differentiating_factor": "texture"
+      "name": "Salish",
+      "differentiating_factor": "texture",
+      "comparison": "is crunchier"
     },
     {
       "id": 44,
-      "differentiating_factor": "juiciness"
+      "name": "Pinata",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "111": [
     {
       "id": 52,
-      "differentiating_factor": "sourness"
+      "name": "Pirouette",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     },
     {
       "id": 27,
-      "differentiating_factor": "size"
+      "name": "Lucy Glo",
+      "differentiating_factor": "size",
+      "comparison": "is larger"
     }
   ],
   "112": [
     {
       "id": 50,
-      "differentiating_factor": "juiciness"
+      "name": "Bramley",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 83,
-      "differentiating_factor": "sweetness"
+      "name": "Mutsu (Crispin)",
+      "differentiating_factor": "sweetness",
+      "comparison": "is sweeter"
     }
   ],
   "113": [
     {
       "id": 27,
-      "differentiating_factor": "sweetness"
+      "name": "Lucy Glo",
+      "differentiating_factor": "very similar",
+      "comparison": "is very similar"
     },
     {
       "id": 42,
-      "differentiating_factor": "juiciness"
+      "name": "Salish",
+      "differentiating_factor": "juiciness",
+      "comparison": "is less juicy"
     }
   ],
   "114": [
     {
       "id": 31,
-      "differentiating_factor": "juiciness"
+      "name": "Sunrise",
+      "differentiating_factor": "juiciness",
+      "comparison": "is juicier"
     },
     {
       "id": 63,
-      "differentiating_factor": "sourness"
+      "name": "Red Dream",
+      "differentiating_factor": "sourness",
+      "comparison": "is more sour"
     }
   ]
 }
