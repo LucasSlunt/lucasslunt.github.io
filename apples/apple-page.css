@@ -48,6 +48,11 @@
 .apple-attributes dt, .apple-attributes dd, .apple-metadata dt, .apple-metadata dd { margin: 0; }
 .apple-attributes dt { font-weight: 700; }
 .apple-attributes dd { overflow-wrap: anywhere; }
+.rating-bar { display: block; min-width: 0; width: 100%; }
+.rating-bar-track { position: relative; display: grid; grid-template-columns: repeat(var(--rating-steps), minmax(0, 1fr)); align-items: center; min-height: 24px; }
+.rating-bar-track::before { position: absolute; right: 7px; left: 7px; height: 4px; content: ''; background: #b86d3b; border-radius: 4px; box-shadow: inset 0 1px 1px rgba(113, 59, 30, 0.3); }
+.rating-dot { position: relative; z-index: 1; justify-self: center; width: 14px; height: 14px; background: var(--orange-soft); border: 2px solid #713b1e; border-radius: 50%; box-shadow: 0 1px 2px rgba(113, 59, 30, 0.25); }
+.rating-dot.is-active { background: var(--granny-green); border-color: #456c1e; box-shadow: 0 0 0 2px rgba(142, 209, 66, 0.3), 0 1px 2px rgba(113, 59, 30, 0.25); }
 
 .description-box { margin-top: 24px; background: var(--pale-green); box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.35), inset -5px -5px 0 rgba(87, 128, 31, 0.2), 0 8px 0 rgba(87, 128, 31, 0.18); }
 .description-box h2 { color: var(--ink); }
