@@ -16,16 +16,13 @@
 		<a class="back-link" href="../index.html">&larr; Back to all apples</a>
 
 		<section class="apple-page-content">
-			<div class="apple-page-image-frame">
-				<img class="apple-page-image" src="../ApplePictures/AllApples/{{ apple.id }}.jpg" alt="{{ apple.name }}" loading="eager">
-			</div>
-
-			<div class="apple-page-details">
-				<header class="apple-page-header">
-					<h1 id="apple-title">{{ apple.name }}</h1>
-				</header>
+			<div class="apple-page-visual">
+				<div class="apple-page-image-frame">
+					<img class="apple-page-image" src="../ApplePictures/AllApples/{{ apple.id }}.jpg" alt="{{ apple.name }}" loading="eager">
+				</div>
 
 				<section class="rating-box" aria-labelledby="rating-heading">
+
 					<div class="rating-box-header">
 						<h2 id="rating-heading">{{ apple.rating }} / 10</h2>
 						<div class="stars" aria-label="{{ apple.rating }} out of 10 rating">
@@ -72,16 +69,21 @@
 						</dl>
 					</div>
 				</section>
+			</div>
+
+			<div class="apple-page-details">
+				<header class="apple-page-header">
+					<h1 id="apple-title">{{ apple.name }}</h1>
+				</header>
 
 				<section class="description-box" aria-labelledby="description-heading">
 					<h2 id="description-heading">Description</h2>
 					<p class="apple-description">{{ apple.description }}</p>
+					<dl class="apple-metadata">
+						<div><dt>Acquired from</dt><dd>{{ apple.acquiredFrom }}</dd></div>
+						<div><dt>Date documented</dt><dd>{{ apple.dateDocumented }}</dd></div>
+					</dl>
 				</section>
-
-				<dl class="apple-metadata">
-					<div><dt>Date documented</dt><dd>{{ apple.dateDocumented }}</dd></div>
-					<div><dt>Acquired from</dt><dd>{{ apple.acquiredFrom }}</dd></div>
-				</dl>
 			</div>
 		</section>
 	</main>
