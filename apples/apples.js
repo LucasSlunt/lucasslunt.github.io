@@ -10,6 +10,7 @@ const sortLabels = {
     texture: 'texture',
     size: 'size'
 };
+const sortPreferenceKey = 'apples-sort-preference';
 const state = { apples: [], query: '', sortField: 'rating', ascending: false };
 const sortingStrategies = {
     acquiredFrom: new AcquiredFromSortingStrategy(),
@@ -30,6 +31,26 @@ const elements = {
     sortDirection: document.getElementById('sort-direction'),
     emptyState: document.getElementById('empty-state')
 };
+
+function restoreSortPreference() {
+    try {
+        const preference = JSON.parse(localStorage.getItem(sortPreferenceKey));
+        if (preference && sortingStrategies[preference.sortField] && typeof preference.ascending === 'boolean') {
+            state.sortField = preference.sortField;
+            state.ascending = preference.ascending;
+        }
+    } catch (error) {
+        localStorage.removeItem(sortPreferenceKey);
+    }
+    elements.sortField.value = state.sortField;
+}
+
+function saveSortPreference() {
+    localStorage.setItem(sortPreferenceKey, JSON.stringify({
+        sortField: state.sortField,
+        ascending: state.ascending
+    }));
+}
 
 function compareApples(first, second) {
     const strategy = sortingStrategies[state.sortField];
@@ -82,6 +103,7 @@ async function loadApples() {
 }
 
 elements.search.addEventListener('input', event => { state.query = event.target.value.trim().toLowerCase(); render(); });
-elements.sortField.addEventListener('change', event => { state.sortField = event.target.value; render(); });
-elements.sortDirection.addEventListener('click', () => { state.ascending = !state.ascending; render(); });
+elements.sortField.addEventListener('change', event => { state.sortField = event.target.value; saveSortPreference(); render(); });
+elements.sortDirection.addEventListener('click', () => { state.ascending = !state.ascending; saveSortPreference(); render(); });
+restoreSortPreference();
 loadApples();
