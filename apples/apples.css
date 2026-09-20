@@ -111,8 +111,10 @@ select { min-width: 0; flex: 1; padding: 11px 34px 11px 13px; color: var(--ink);
 .apple-row::after { position: absolute; right: 0; bottom: 0; left: 0; z-index: 3; height: 6px; content: ''; pointer-events: none; background: var(--inset-bottom-shadow); box-shadow: 0 4px 8px var(--inset-bottom-shadow); }
 .apple-row:nth-child(even) { background: var(--brown-deep); }
 .apple-row:nth-child(even) { --inset-dark: rgba(68, 34, 17, 0.16); --inset-bottom-shadow: rgba(68, 34, 17, 0.24); background: var(--brown-deep); }
+.apple-row.is-perfect { background: url('./ApplePictures/index_assets/gold_texture.jpg') center / cover; }
 .apple-image-frame { display: block; width: 100%; height: 100%; padding: 8px; background: var(--brown); position: relative; }
 .apple-row:nth-child(even) .apple-image-frame { background: var(--brown-deep); }
+.apple-row.is-perfect .apple-image-frame { background: url('./ApplePictures/index_assets/gold_texture.jpg') center / cover; }
 .apple-image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .apple-name { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; padding: 18px 20px; text-align: center; }
 .apple-name a { color: #fff2df; text-decoration: none; }

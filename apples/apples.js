@@ -74,7 +74,7 @@ function matchesSearch(apple) {
 function render() {
     const filteredApples = state.apples.filter(matchesSearch).sort(compareApples);
     elements.rows.innerHTML = filteredApples.map((apple, index) => `
-        <article class="apple-row" style="animation-delay: ${Math.min(index * 18, 260)}ms">
+        <article class="apple-row${apple.rating === 10 ? ' is-perfect' : ''}" style="animation-delay: ${Math.min(index * 18, 260)}ms">
             <div class="apple-image-frame">
                 <img class="apple-image" src="./ApplePictures/AllApples/${apple.id}.jpg" alt="${apple.name}" loading="lazy">
             </div>
