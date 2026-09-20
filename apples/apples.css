@@ -119,8 +119,20 @@ select { min-width: 0; flex: 1; padding: 11px 34px 11px 13px; color: var(--ink);
 .apple-row.is-perfect .apple-image-frame { background: url('./ApplePictures/index_assets/gold_texture.jpg') center / cover; }
 .apple-row.is-one .apple-image-frame { background: #191512; }
 .apple-row:nth-child(even).is-one .apple-image-frame { background: #0d0b0a; }
+.apple-row.is-max-sweetness::before { background: linear-gradient(to right, var(--inset-side-light) 0 4px, transparent 4px); }
+.apple-row.is-max-sweetness .apple-image-frame { background-image: linear-gradient(to bottom, #ffd9e7 0 4px, rgba(255, 151, 192, 0.68) 4px, rgba(255, 203, 222, 0.4) 18%, rgba(255, 203, 222, 0) 33%, transparent 34% 100%); }
+.apple-row.is-max-sourness::after { background: transparent; box-shadow: none; }
+.apple-row.is-max-sourness .apple-image-frame { background-image: linear-gradient(to bottom, transparent 0 67%, rgba(177, 242, 79, 0) 68%, rgba(177, 242, 79, 0.38) 84%, #659f38 96% 100%); }
+.apple-row.is-perfect.is-max-sweetness .apple-image-frame { background-image: linear-gradient(to bottom, #ffd9e7 0 4px, rgba(255, 151, 192, 0.68) 4px, rgba(255, 203, 222, 0.4) 18%, rgba(255, 203, 222, 0) 33%, transparent 34% 100%), url('./ApplePictures/index_assets/gold_texture.jpg'); }
+.apple-row.is-perfect.is-max-sourness .apple-image-frame { background-image: linear-gradient(to bottom, transparent 0 67%, rgba(177, 242, 79, 0) 68%, rgba(177, 242, 79, 0.38) 84%, #659f38 96% 100%), url('./ApplePictures/index_assets/gold_texture.jpg'); }
 .apple-image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.apple-name { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; padding: 18px 20px; text-align: center; }
+.apple-name { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; padding: 18px 20px; text-align: center; }
+.apple-name::before { position: absolute; inset: 0; z-index: 0; content: ''; pointer-events: none; }
+.apple-name::after { position: absolute; inset: 0; z-index: 1; content: ''; pointer-events: none; }
+.apple-row.is-max-sweetness .apple-name::before { background: linear-gradient(to bottom, rgba(255, 151, 192, 0.68) 0%, rgba(255, 203, 222, 0.4) 18%, rgba(255, 203, 222, 0) 33%, transparent 34% 100%); }
+.apple-row.is-max-sweetness .apple-name::after { box-shadow: inset 0 4px 0 #ffd9e7; }
+.apple-row.is-max-sourness .apple-name::before { background: linear-gradient(to bottom, transparent 0 67%, rgba(177, 242, 79, 0) 68%, rgba(177, 242, 79, 0.38) 84%, rgba(126, 209, 48, 0.68) 100%); }
+.apple-row.is-max-sourness .apple-name::after { box-shadow: inset 0 -6px 0 #659f38, 0 4px 8px rgba(72, 126, 37, 0.48); }
 .apple-name a { color: #fff2df; text-decoration: none; }
 .apple-name a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .apple-name strong { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1rem, 2.2vw, 1.45rem); line-height: 1.12; }
