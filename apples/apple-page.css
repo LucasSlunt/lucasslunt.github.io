@@ -52,6 +52,7 @@
 .description-box { margin-top: 24px; background: var(--pale-green); box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.35), inset -5px -5px 0 rgba(87, 128, 31, 0.2), 0 8px 0 rgba(87, 128, 31, 0.18); }
 .description-box h2 { color: var(--ink); }
 .description-box p { min-height: 76px; margin: 0; padding: 14px; color: var(--muted-ink); background: rgba(255, 250, 243, 0.76); border-radius: 6px; }
+.apple-description { white-space: pre-wrap; }
 .apple-metadata { display: grid; gap: 12px; margin-top: 24px; }
 .apple-metadata > div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; padding-bottom: 9px; border-bottom: 1px solid rgba(112, 93, 77, 0.28); }
 .apple-metadata dt { color: var(--muted-ink); font-weight: 700; }

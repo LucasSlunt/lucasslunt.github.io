@@ -6,7 +6,7 @@
 	<title>{{ apple.name }} | Apples I Have Eaten</title>
 	<link rel="stylesheet" href="../../pageElementFiles/css/navbar.css">
 	<link rel="stylesheet" href="../apples.css">
-	<link rel="stylesheet" href="../apple-page.css">
+	<link rel="stylesheet" href="../apple-page.css?v=description-breaks">
 	<link rel="icon" type="image/x-icon" href="../../pageElementFiles/icon.png">
 	<script src="../../pageElementFiles/scripts/navBar.js"></script>
 </head>
@@ -45,7 +45,7 @@
 
 				<section class="description-box" aria-labelledby="description-heading">
 					<h2 id="description-heading">Description</h2>
-					<p>placeholder text</p>
+					<p class="apple-description">{{ apple.description }}</p>
 				</section>
 
 				<dl class="apple-metadata">
