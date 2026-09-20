@@ -37,27 +37,37 @@
 					{% set juiciness_groups = [['Very dry'], ['Dry'], ['Slightly dry'], ['Fairly juicy'], ['Moderate'], ['Juicy', 'Watery'], ['Very juicy'], ['Ridiculously juicy']] %}
 					{% set texture_groups = [['Muddy', 'Rubbery'], ['Mealy'], ['Very soft'], ['Soft'], ['Fairly soft'], ['Fairly crisp', 'Slightly crisp'], ['Crisp'], ['Very crisp', 'Hard'], ['Crunchy', 'Dense'], ['Very crunchy']] %}
 					{% set size_groups = [['Toonie'], ['Golf ball'], ['Fist'], ['Baseball'], ['Softball'], ['Humungous']] %}
+					{% macro rating_markers(groups, value, match_prefix=false) %}
+						{% for group in groups %}
+							{% set matching = namespace(found=value in group) %}
+							{% if match_prefix %}
+								{% set matching.found = false %}
+								{% for option in group %}{% if value == option or value.startswith(option ~ ',') %}{% set matching.found = true %}{% endif %}{% endfor %}
+							{% endif %}
+							<span class="rating-dot{% if matching.found %} is-active{% if loop.index0 == 0 %} is-low is-extreme{% elif loop.index0 == groups|length - 1 %} is-high is-extreme{% elif loop.index0 < groups|length / 3 %} is-low{% elif loop.index0 >= groups|length - groups|length / 3 %} is-high{% else %} is-middle{% endif %}{% endif %}"></span>
+						{% endfor %}
+					{% endmacro %}
 					<div class="apple-attributes">
 						<dl>
 							<div>
 								<dt><span class="sr-only">Sweetness: </span>{{ apple.sweetness }}</dt>
-								<dd><span class="rating-bar" role="img" aria-label="Sweetness: {{ apple.sweetness }}" style="--rating-steps: {{ sweetness_groups|length }}"><span class="rating-bar-track">{% for group in sweetness_groups %}<span class="rating-dot{% if apple.sweetness in group %} is-active{% endif %}"></span>{% endfor %}</span></span></dd>
+								<dd><span class="rating-bar" role="img" aria-label="Sweetness: {{ apple.sweetness }}" style="--rating-steps: {{ sweetness_groups|length }}"><span class="rating-bar-track">{{ rating_markers(sweetness_groups, apple.sweetness) }}</span></span></dd>
 							</div>
 							<div>
 								<dt><span class="sr-only">Sourness: </span>{{ apple.sourness }}</dt>
-								<dd><span class="rating-bar" role="img" aria-label="Sourness: {{ apple.sourness }}" style="--rating-steps: {{ sourness_groups|length }}"><span class="rating-bar-track">{% for group in sourness_groups %}<span class="rating-dot{% if apple.sourness in group %} is-active{% endif %}"></span>{% endfor %}</span></span></dd>
+								<dd><span class="rating-bar" role="img" aria-label="Sourness: {{ apple.sourness }}" style="--rating-steps: {{ sourness_groups|length }}"><span class="rating-bar-track">{{ rating_markers(sourness_groups, apple.sourness) }}</span></span></dd>
 							</div>
 							<div>
 								<dt><span class="sr-only">Juiciness: </span>{{ apple.juiciness }}</dt>
-								<dd><span class="rating-bar" role="img" aria-label="Juiciness: {{ apple.juiciness }}" style="--rating-steps: {{ juiciness_groups|length }}"><span class="rating-bar-track">{% for group in juiciness_groups %}<span class="rating-dot{% if apple.juiciness in group %} is-active{% endif %}"></span>{% endfor %}</span></span></dd>
+								<dd><span class="rating-bar" role="img" aria-label="Juiciness: {{ apple.juiciness }}" style="--rating-steps: {{ juiciness_groups|length }}"><span class="rating-bar-track">{{ rating_markers(juiciness_groups, apple.juiciness) }}</span></span></dd>
 							</div>
 							<div>
 								<dt><span class="sr-only">Texture: </span>{{ apple.texture }}</dt>
-								<dd><span class="rating-bar" role="img" aria-label="Texture: {{ apple.texture }}" style="--rating-steps: {{ texture_groups|length }}"><span class="rating-bar-track">{% for group in texture_groups %}<span class="rating-dot{% for option in group %}{% if apple.texture == option or apple.texture.startswith(option ~ ',') %} is-active{% endif %}{% endfor %}"></span>{% endfor %}</span></span></dd>
+								<dd><span class="rating-bar" role="img" aria-label="Texture: {{ apple.texture }}" style="--rating-steps: {{ texture_groups|length }}"><span class="rating-bar-track">{{ rating_markers(texture_groups, apple.texture, true) }}</span></span></dd>
 							</div>
 							<div>
-								<dt><span class="sr-only">Size: </span>{{ apple.size }}</dt>
-								<dd><span class="rating-bar" role="img" aria-label="Size: {{ apple.size }}" style="--rating-steps: {{ size_groups|length }}"><span class="rating-bar-track">{% for group in size_groups %}<span class="rating-dot{% if apple.size in group %} is-active{% endif %}"></span>{% endfor %}</span></span></dd>
+								<dt><span class="sr-only">Size: </span>{{ apple.size }} sized</dt>
+								<dd><span class="rating-bar" role="img" aria-label="Size: {{ apple.size }} sized" style="--rating-steps: {{ size_groups|length }}"><span class="rating-bar-track">{{ rating_markers(size_groups, apple.size) }}</span></span></dd>
 							</div>
 						</dl>
 					</div>
