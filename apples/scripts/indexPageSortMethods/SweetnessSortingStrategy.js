@@ -1,7 +1,18 @@
 class SweetnessSortingStrategy {
-    ranks = ['Incredibly sweet', 'Very sweet', 'Sweet', 'Fairly sweet', 'Mildly sweet', 'Barely sweet', 'Not sweet'];
+    rankGroups = [
+        ['Incredibly sweet'],
+        ['Very sweet'],
+        ['Sweet'],
+        ['Fairly sweet'],
+        ['Mildly sweet', 'Barely sweet'],
+        ['Not sweet']
+    ];
 
     compare(first, second) {
-        return this.ranks.indexOf(first.sweetness) - this.ranks.indexOf(second.sweetness);
+        return this.rank(first.sweetness) - this.rank(second.sweetness);
+    }
+
+    rank(value) {
+        return this.rankGroups.findIndex(group => group.includes(value));
     }
 }
