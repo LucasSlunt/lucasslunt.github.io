@@ -34,6 +34,9 @@ body {
     background: linear-gradient(rgba(47, 28, 17, 0.16), rgba(47, 28, 17, 0.35)), url('./ApplePictures/bcgovphoto.jpg') center / cover fixed;
 }
 
+.apple-site { padding-top: 70px; }
+.apple-site .apple-guide { margin-top: 16px; }
+
 .apple-guide {
     width: min(1120px, calc(100% - 32px));
     margin: 24px auto 48px;
@@ -43,7 +46,7 @@ body {
     box-shadow: var(--shadow);
 }
 
-.apple-page-sidebar { position: fixed; top: 104px; bottom: 0; left: 0; z-index: 10; width: 178px; min-width: 0; padding: 24px 0 14px 14px; overflow-y: auto; background: var(--paper); border-right: 1px solid rgba(112, 93, 77, 0.24); box-shadow: 8px 0 24px rgba(75, 42, 20, 0.12); transition: width 180ms ease; }
+.apple-page-sidebar { position: fixed; top: 70px; bottom: 0; left: 0; z-index: 10; width: 178px; min-width: 0; padding: 24px 0 14px 14px; overflow-y: auto; background: var(--paper); border-right: 1px solid rgba(112, 93, 77, 0.24); box-shadow: 8px 0 24px rgba(75, 42, 20, 0.12); transition: width 180ms ease; }
 .sidebar-toggle { display: flex; align-items: center; gap: 9px; width: 100%; padding: 6px 14px 12px 4px; color: var(--brown-deep); font: inherit; font-weight: 700; text-align: left; background: transparent; border: 0; cursor: pointer; }
 .sidebar-toggle-icon { font-size: 1.1rem; line-height: 1; }
 .apple-page-menu { display: grid; gap: 4px; padding-right: 14px; }
@@ -115,7 +118,7 @@ select { min-width: 0; flex: 1; padding: 11px 34px 11px 13px; color: var(--ink);
 .direction-button.is-descending .arrow-up { border-bottom-color: rgba(255, 255, 255, 0.5); }
 .direction-button.is-descending .arrow-down { border-top-color: #ffffff; }
 
-.apple-list { padding: 0; background: var(--paper); }
+.apple-list { margin-top: 0; padding: 0; background: var(--paper); }
 .apple-row { position: relative; display: grid; grid-template-columns: var(--row-grid); grid-template-rows: minmax(0, 1fr); height: clamp(116px, 14vw, 158px); overflow: hidden; background: var(--brown); box-shadow: 0 7px 16px rgba(111, 66, 32, 0.14); animation: row-arrive 420ms ease both; }
 .apple-row::before { position: absolute; inset: 0; z-index: 2; content: ''; pointer-events: none; background: linear-gradient(to bottom, var(--inset-light) 0 4px, transparent 4px), linear-gradient(to right, var(--inset-side-light) 0 4px, transparent 4px); }
 .apple-row::after { position: absolute; right: 0; bottom: 0; left: 0; z-index: 3; height: 6px; content: ''; pointer-events: none; background: var(--inset-bottom-shadow); box-shadow: 0 4px 8px var(--inset-bottom-shadow); }
@@ -158,7 +161,7 @@ select { min-width: 0; flex: 1; padding: 11px 34px 11px 13px; color: var(--ink);
 @media (max-width: 700px) {
     :root { --attribute-width: 104px; --orange-width: 104px; --row-grid: 104px minmax(0, 1fr) var(--orange-width); }
     .apple-guide { width: calc(100% - 16px); margin-top: 12px; }
-    .apple-page-sidebar { top: 92px; width: 178px; padding: 10px 20px 8px; border-right: 1px solid rgba(112, 93, 77, 0.24); border-bottom: 0; }
+    .apple-page-sidebar { top: 70px; width: 178px; padding: 10px 20px 8px; border-right: 1px solid rgba(112, 93, 77, 0.24); border-bottom: 0; }
     .sidebar-toggle { padding: 6px 0 10px; }
     .apple-page-menu { padding-right: 0; }
     .apple-page-sidebar.is-sidebar-collapsed { width: 52px; padding-left: 0; }
