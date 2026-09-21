@@ -1,4 +1,4 @@
-function setupSidebar(rootPath, activePage) {
+function buildSidebar({ rootPath, activePage, pages }) {
   const sidebar = document.createElement('aside');
   sidebar.className = 'apple-page-sidebar';
   sidebar.setAttribute('aria-label', 'Apple pages');
@@ -14,11 +14,6 @@ function setupSidebar(rootPath, activePage) {
   menu.id = 'apple-page-menu';
   menu.className = 'apple-page-menu';
   menu.setAttribute('aria-label', 'Page menu');
-
-  const pages = [
-    { id: 'index', label: 'Index', href: `${rootPath}index.html` },
-    { id: 'similarity-graph', label: 'Similarity graph', href: `${rootPath}similarity-graph.html` }
-  ];
 
   pages.forEach((page) => {
     const link = document.createElement('a');
@@ -38,5 +33,48 @@ function setupSidebar(rootPath, activePage) {
   });
 
   sidebar.append(toggle, menu);
+  return sidebar;
+}
+
+function setupSidebar(rootPath, activePage) {
+  const pages = [
+    { id: 'index', label: 'Index', href: `${rootPath}index.html` },
+    { id: 'similarity-graph', label: 'Similarity graph', href: `${rootPath}similarity-graph.html` }
+  ];
+
+  const sidebar = buildSidebar({ rootPath, activePage, pages });
   document.body.appendChild(sidebar);
 }
+
+function initializeApplePageBootstrap() {
+  if (!document.body || !document.body.dataset.page) {
+    return;
+  }
+
+  if (typeof setupNavbar === 'function') {
+    if (document.body.dataset.page === 'apple-index') {
+      setupNavbar('../', '#cee89d', '#e6f8bf');
+    }
+    if (document.body.dataset.page === 'similarity-graph') {
+      setupNavbar('../', '#cee89d', '#e6f8bf');
+    }
+  }
+
+  if (typeof setupSidebar === 'function') {
+    if (document.body.dataset.page === 'apple-index') {
+      const existingSidebar = document.querySelector('.apple-page-sidebar');
+      if (!existingSidebar) {
+        setupSidebar('./', 'index');
+      }
+    }
+
+    if (document.body.dataset.page === 'similarity-graph') {
+      const existingSidebar = document.querySelector('.apple-page-sidebar');
+      if (!existingSidebar) {
+        setupSidebar('./', 'similarity-graph');
+      }
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initializeApplePageBootstrap);

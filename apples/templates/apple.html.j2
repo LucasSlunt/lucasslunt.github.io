@@ -9,9 +9,14 @@
 	<link rel="stylesheet" href="../apple-page.css?v=similar-apples">
 	<link rel="icon" type="image/x-icon" href="../../pageElementFiles/icon.png">
 	<script src="../../pageElementFiles/scripts/navBar.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			setupNavbar('../../', '#cee89d', '#e6f8bf');
+		});
+	</script>
 </head>
 
-<body onload="setupNavbar('../../', '#cee89d', '#e6f8bf')">
+<body>
 	<main class="apple-page" aria-labelledby="apple-title">
 		<a class="back-link" href="../index.html">&larr; Back to all apples</a>
 

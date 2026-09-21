@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="./apples.css?v=fixed-sidebar-v5">
 	<link rel="icon" type="image/x-icon" href="../pageElementFiles/icon.png">
 	<script src="../pageElementFiles/scripts/navBar.js"></script>
-	<script src="./sidebar.js" defer></script>
 	<script src="./scripts/indexPageSortMethods/AcquiredFromSortingStrategy.js"></script>
 	<script src="./scripts/indexPageSortMethods/RatingSortingStrategy.js?v=rating-fix"></script>
 	<script src="./scripts/indexPageSortMethods/ParentsSortingStrategy.js"></script>
@@ -19,10 +18,15 @@
 	<script src="./scripts/indexPageSortMethods/JuicinessSortingStrategy.js"></script>
 	<script src="./scripts/indexPageSortMethods/TextureSortingStrategy.js"></script>
 	<script src="./scripts/indexPageSortMethods/SizeSortingStrategy.js"></script>
-	<script src="./apples.js?v=search-fix" defer></script>
+	<script src="./sidebar.js" defer></script>
+	<script src="./sortConfig.js" defer></script>
+	<script src="./sorting.js" defer></script>
+	<script src="./state.js" defer></script>
+	<script src="./render.js" defer></script>
+	<script src="./app.js" defer></script>
 </head>
 
-<body class="apple-site" onload="setupNavbar('../', '#cee89d', '#e6f8bf'); setupSidebar('./', 'index')">
+<body class="apple-site" data-page="apple-index">
 	<main class="apple-guide" aria-labelledby="page-title">
 			<header class="guide-header">
 
