@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="./apples.css?v=fixed-sidebar">
 	<link rel="icon" type="image/x-icon" href="../pageElementFiles/icon.png">
 	<script src="../pageElementFiles/scripts/navBar.js"></script>
-	<script src="./apple-page.js" defer></script>
+	<script src="./sidebar.js" defer></script>
 	<script src="./scripts/indexPageSortMethods/AcquiredFromSortingStrategy.js"></script>
 	<script src="./scripts/indexPageSortMethods/RatingSortingStrategy.js?v=rating-fix"></script>
 	<script src="./scripts/indexPageSortMethods/ParentsSortingStrategy.js"></script>
@@ -22,21 +22,8 @@
 	<script src="./apples.js?v=search-fix" defer></script>
 </head>
 
-<body onload="setupNavbar('../', '#cee89d', '#e6f8bf')">
+<body onload="setupNavbar('../', '#cee89d', '#e6f8bf'); setupSidebar('./', 'index')">
 	<main class="apple-guide" aria-labelledby="page-title">
-		<div class="apple-guide-layout">
-			<aside class="apple-page-sidebar" aria-label="Apple pages">
-				<button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="apple-page-menu">
-					<span class="sidebar-toggle-icon" aria-hidden="true">&#9776;</span>
-					<span class="sidebar-toggle-label">Pages</span>
-				</button>
-				<nav id="apple-page-menu" class="apple-page-menu" aria-label="Page menu">
-					<a class="apple-page-menu-link is-active" href="./index.html">Index</a>
-					<a class="apple-page-menu-link" href="./similarity-graph.html">Similarity graph</a>
-				</nav>
-			</aside>
-
-			<div class="apple-guide-main">
 			<header class="guide-header">
 
 			<div class="controls" aria-label="Apple list controls">
@@ -72,8 +59,6 @@
 				<div id="apple-rows"></div>
 				<p id="empty-state" class="empty-state" hidden>No apples match that name.</p>
 			</section>
-			</div>
-		</div>
 
 	</main>
 </body>
