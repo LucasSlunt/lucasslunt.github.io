@@ -26,12 +26,12 @@ async function loadSimilarityNetwork() {
 		const nodes = new vis.DataSet(apples.map((apple) => ({
 			id: apple.id,
 			label: apple.name,
-			title: `${apple.name}\nRating: ${apple.rating}/10`,
+			title: `${apple.name}`,
 			shape: 'dot',
-			font: { color: '#34261d', face: 'DM Sans', size: 14 },
+			font: { color: '#34261d', face: 'DM Sans', size: 18 },
 			color: { background: '#cee89d', border: '#659f38', highlight: { background: '#f4ae69', border: '#aa572a' } },
 			borderWidth: 2,
-			size: 18,
+			size: 45,
 			url: `./apple_pages/${apple.id}.html`
 		})));
 		const edges = new vis.DataSet(
@@ -43,8 +43,8 @@ async function loadSimilarityNetwork() {
 					arrows: 'to',
 					title: `${recommendation.differentiating_factor}: ${recommendation.comparison}`,
 					color: { color: '#b86d3b', highlight: '#aa572a', opacity: 0.72 },
-					width: 1.5,
-					selectionWidth: 3
+					width: 8,
+					selectionWidth: 15
 				})))
 		);
 

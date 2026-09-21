@@ -35,8 +35,11 @@ def find_similar_apples(apples, vectors, similarity_matrix):
     recommendations = {}
     apple_ids = [str(apple["id"]) for apple in apples]
     apples_by_id = {str(apple["id"]): apple for apple in apples}
+    remaining_apple_ids = apple_ids.copy()
 
-    for apple_id in apple_ids:
+    while remaining_apple_ids:
+        apple_id = random.choice(remaining_apple_ids)
+        remaining_apple_ids.remove(apple_id)
         candidates = [
             (similarity_matrix[apple_id][candidate_id], candidate_id)
             for candidate_id in apple_ids
