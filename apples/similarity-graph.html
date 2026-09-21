@@ -9,12 +9,23 @@
 	<link rel="icon" type="image/x-icon" href="../pageElementFiles/icon.png">
 	<script src="../pageElementFiles/scripts/navBar.js"></script>
 	<script src="./sidebar.js" defer></script>
+	<script src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js" defer></script>
+	<script src="./similarity-graph.js" defer></script>
 </head>
 <body class="apple-site" data-page="similarity-graph">
 	<main class="apple-guide" aria-labelledby="page-title">
 		<header class="guide-header">
 			<h1 id="page-title">Similarity graph</h1>
 		</header>
+		<section class="similarity-graph-panel" aria-labelledby="graph-heading">
+			<div class="similarity-graph-intro">
+				<div class="similarity-graph-key" aria-label="Graph legend">
+					<span class="similarity-graph-key-dot"></span>
+					<span>Apple variety</span>
+				</div>
+			</div>
+			<div id="similarity-network" class="similarity-network" role="img" aria-label="Directed network of apple recommendations"></div>
+		</section>
 	</main>
 </body>
 </html>
