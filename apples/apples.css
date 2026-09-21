@@ -43,6 +43,18 @@ body {
     box-shadow: var(--shadow);
 }
 
+.apple-guide-layout { display: block; }
+.apple-page-sidebar { position: fixed; top: 80px; bottom: 0; left: 0; z-index: 10; width: 178px; min-width: 0; padding: 24px 0 14px 14px; overflow-y: auto; background: var(--paper); border-right: 1px solid rgba(112, 93, 77, 0.24); box-shadow: 8px 0 24px rgba(75, 42, 20, 0.12); transition: width 180ms ease; }
+.sidebar-toggle { display: flex; align-items: center; gap: 9px; width: 100%; padding: 6px 14px 12px 4px; color: var(--brown-deep); font: inherit; font-weight: 700; text-align: left; background: transparent; border: 0; cursor: pointer; }
+.sidebar-toggle-icon { font-size: 1.1rem; line-height: 1; }
+.apple-page-menu { display: grid; gap: 4px; padding-right: 14px; }
+.apple-page-menu-link { display: block; padding: 8px 12px; color: var(--muted-ink); border-left: 3px solid transparent; text-decoration: none; }
+.apple-page-menu-link:hover, .apple-page-menu-link.is-active { color: var(--brown-deep); background: rgba(206, 232, 157, 0.42); border-left-color: var(--granny-green); }
+.apple-guide-main { min-width: 0; }
+.apple-guide.is-sidebar-collapsed .apple-page-sidebar { width: 52px; padding-left: 0; border-right: 0; }
+.is-sidebar-collapsed .sidebar-toggle { justify-content: center; padding-right: 0; padding-left: 0; }
+.is-sidebar-collapsed .sidebar-toggle-label, .is-sidebar-collapsed .apple-page-menu { display: none; }
+
 .guide-header {
     display: flex;
     align-items: stretch;
@@ -148,6 +160,11 @@ select { min-width: 0; flex: 1; padding: 11px 34px 11px 13px; color: var(--ink);
 @media (max-width: 700px) {
     :root { --attribute-width: 104px; --orange-width: 104px; --row-grid: 104px minmax(0, 1fr) var(--orange-width); }
     .apple-guide { width: calc(100% - 16px); margin-top: 12px; }
+    .apple-page-sidebar { top: 80px; width: 178px; padding: 10px 20px 8px; border-right: 1px solid rgba(112, 93, 77, 0.24); border-bottom: 0; }
+    .sidebar-toggle { padding: 6px 0 10px; }
+    .apple-page-menu { padding-right: 0; }
+    .apple-guide.is-sidebar-collapsed .apple-page-sidebar { width: 52px; padding-left: 0; }
+    .apple-guide.is-sidebar-collapsed .sidebar-toggle { justify-content: center; padding-left: 0; }
     .guide-header { flex-direction: column; gap: 25px; padding: 32px 20px 26px; }
     .guide-header { background: var(--pale-green); }
     .sort-control { width: 100%; margin: 0; }

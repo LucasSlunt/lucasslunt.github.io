@@ -7,6 +7,19 @@
     box-shadow: var(--shadow);
 }
 
+.apple-page-layout { display: grid; grid-template-columns: 178px minmax(0, 1fr); gap: clamp(24px, 4vw, 42px); align-items: start; }
+.apple-page-sidebar { position: sticky; top: 102px; min-width: 0; padding: 14px 0; border-right: 1px solid rgba(112, 93, 77, 0.24); }
+.sidebar-toggle { display: flex; align-items: center; gap: 9px; width: 100%; padding: 6px 14px 12px 4px; color: var(--brown-deep); font: inherit; font-weight: 700; text-align: left; background: transparent; border: 0; cursor: pointer; }
+.sidebar-toggle-icon { font-size: 1.1rem; line-height: 1; }
+.apple-page-menu { display: grid; gap: 4px; padding-right: 14px; }
+.apple-page-menu-link { display: block; padding: 8px 12px; color: var(--muted-ink); border-left: 3px solid transparent; text-decoration: none; }
+.apple-page-menu-link:hover, .apple-page-menu-link.is-active { color: var(--brown-deep); background: rgba(206, 232, 157, 0.42); border-left-color: var(--granny-green); }
+.apple-page-main { min-width: 0; }
+.apple-page.is-sidebar-collapsed { grid-template-columns: 52px minmax(0, 1fr); }
+.is-sidebar-collapsed .apple-page-sidebar { border-right: 0; }
+.is-sidebar-collapsed .sidebar-toggle { justify-content: center; padding-right: 0; padding-left: 0; }
+.is-sidebar-collapsed .sidebar-toggle-label, .is-sidebar-collapsed .apple-page-menu { display: none; }
+
 .back-link {
     display: inline-block;
     margin-bottom: 24px;
@@ -84,6 +97,12 @@
 
 @media (max-width: 700px) {
     .apple-page { width: calc(100% - 16px); margin-top: 12px; }
+    .apple-page-layout { grid-template-columns: 1fr; gap: 12px; }
+    .apple-page-sidebar { position: static; padding: 0 0 8px; border-right: 0; border-bottom: 1px solid rgba(112, 93, 77, 0.24); }
+    .sidebar-toggle { padding: 6px 0 10px; }
+    .apple-page-menu { padding-right: 0; }
+    .apple-page.is-sidebar-collapsed { grid-template-columns: 1fr; }
+    .is-sidebar-collapsed .sidebar-toggle { justify-content: flex-start; padding-left: 0; }
     .apple-page-content { grid-template-columns: 1fr; }
     .apple-page-image-frame { width: min(100%, 360px); margin: 0 auto; }
     .rating-box-header { align-items: flex-start; flex-direction: column; gap: 8px; }
