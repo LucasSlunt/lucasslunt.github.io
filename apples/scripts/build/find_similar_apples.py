@@ -1,6 +1,7 @@
 """Find two nearby apples with different strongest differentiating factors."""
 
 import json
+import random
 from pathlib import Path
 
 from vectorize import VECTOR_FIELDS
@@ -36,14 +37,13 @@ def find_similar_apples(apples, vectors, similarity_matrix):
     apples_by_id = {str(apple["id"]): apple for apple in apples}
 
     for apple_id in apple_ids:
-        candidates = sorted(
-            (
-                (similarity_matrix[apple_id][candidate_id], candidate_id)
-                for candidate_id in apple_ids
-                if candidate_id != apple_id
-            ),
-            key=lambda item: (item[0], apple_ids.index(item[1])),
-        )
+        candidates = [
+            (similarity_matrix[apple_id][candidate_id], candidate_id)
+            for candidate_id in apple_ids
+            if candidate_id != apple_id
+        ]
+        random.shuffle(candidates)
+        candidates.sort(key=lambda item: item[0])
         selected = []
         factors = set()
         for _, candidate_id in candidates:

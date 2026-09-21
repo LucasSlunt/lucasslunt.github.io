@@ -35,10 +35,10 @@
       "comparison": "is crunchier"
     },
     {
-      "id": 16,
-      "name": "SugarBee",
-      "differentiating_factor": "size",
-      "comparison": "is larger"
+      "id": 55,
+      "name": "Rubens (Civni)",
+      "differentiating_factor": "sweetness",
+      "comparison": "is less sweet"
     }
   ],
   "4": [
@@ -113,8 +113,8 @@
   ],
   "9": [
     {
-      "id": 6,
-      "name": "Fuji",
+      "id": 21,
+      "name": "Smitten",
       "differentiating_factor": "juiciness",
       "comparison": "is juicier"
     },
@@ -141,8 +141,8 @@
   ],
   "11": [
     {
-      "id": 10,
-      "name": "Honeycrisp",
+      "id": 18,
+      "name": "Kanzi",
       "differentiating_factor": "texture",
       "comparison": "is softer"
     },
@@ -547,8 +547,8 @@
   ],
   "40": [
     {
-      "id": 96,
-      "name": "Court Royal",
+      "id": 109,
+      "name": "Roxy",
       "differentiating_factor": "very similar",
       "comparison": "is very similar"
     },
@@ -1051,8 +1051,8 @@
   ],
   "76": [
     {
-      "id": 10,
-      "name": "Honeycrisp",
+      "id": 18,
+      "name": "Kanzi",
       "differentiating_factor": "size",
       "comparison": "is larger"
     },
@@ -1099,8 +1099,8 @@
       "comparison": "is less juicy"
     },
     {
-      "id": 40,
-      "name": "Golden Delicious",
+      "id": 109,
+      "name": "Roxy",
       "differentiating_factor": "sourness",
       "comparison": "is less sour"
     }
@@ -1331,8 +1331,8 @@
   ],
   "96": [
     {
-      "id": 40,
-      "name": "Golden Delicious",
+      "id": 109,
+      "name": "Roxy",
       "differentiating_factor": "very similar",
       "comparison": "is very similar"
     },
@@ -1477,8 +1477,8 @@
       "comparison": "is less juicy"
     },
     {
-      "id": 27,
-      "name": "Lucy Glo",
+      "id": 113,
+      "name": "Zestar! (Minnewashka)",
       "differentiating_factor": "sourness",
       "comparison": "is less sour"
     }
@@ -1513,8 +1513,8 @@
   ],
   "109": [
     {
-      "id": 40,
-      "name": "Golden Delicious",
+      "id": 96,
+      "name": "Court Royal",
       "differentiating_factor": "very similar",
       "comparison": "is very similar"
     },
