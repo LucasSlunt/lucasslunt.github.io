@@ -11,7 +11,7 @@ async function loadSimilarityNetwork() {
 	try {
 		const [applesResponse, recommendationsResponse] = await Promise.all([
 			fetch('./data/apples.json'),
-			fetch('./data/appleRecommendations.json')
+			fetch('./data/generatedAppleData/appleRecommendations.json')
 		]);
 
 		if (!applesResponse.ok || !recommendationsResponse.ok) {

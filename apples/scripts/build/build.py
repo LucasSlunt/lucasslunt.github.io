@@ -16,9 +16,10 @@ DATA_FILE = APPLE_DIR / "data" / "apples.json"
 DESCRIPTION_FILE = APPLE_DIR / "data" / "appleDescriptionsLong.json"
 TEMPLATE_DIR = APPLE_DIR / "templates"
 DEFAULT_OUTPUT_DIR = APPLE_DIR / "apple_pages"
-VECTOR_FILE = APPLE_DIR / "data" / "appleVectors.json"
-SIMILARITY_FILE = APPLE_DIR / "data" / "appleSimilarities.json"
-RECOMMENDATIONS_FILE = APPLE_DIR / "data" / "appleRecommendations.json"
+GENERATED_DATA_DIR = APPLE_DIR / "data" / "generatedAppleData"
+VECTOR_FILE = GENERATED_DATA_DIR / "appleVectors.json"
+SIMILARITY_FILE = GENERATED_DATA_DIR / "appleSimilarities.json"
+RECOMMENDATIONS_FILE = GENERATED_DATA_DIR / "appleRecommendations.json"
 REQUIRED_FIELDS = {
     "id",
     "name",
