@@ -57,7 +57,7 @@
 .rating-box { margin-top: 24px; }
 .rating-box-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
 .rating-box h2, .description-box h2 { margin: 0; color: #713b1e; font-family: 'Playfair Display', Georgia, serif; font-size: 1.45rem; }
-.rating-box-header .stars { flex-shrink: 0; }
+.rating-box-header .stars { flex-shrink: 0; font-family: sans-serif; }
 .apple-attributes { padding: 14px; background: var(--orange-soft); border-radius: 6px; box-shadow: inset -6px -6px 0 rgba(255, 223, 166, 0.42), inset 6px 6px 0 rgba(180, 87, 27, 0.24); }
 .apple-attributes dl, .apple-metadata { margin: 0; }
 .apple-attributes dl > div { display: grid; grid-template-columns: minmax(100px, 0.8fr) 1.2fr; gap: 12px; padding: 8px 0; border-bottom: 1px solid rgba(113, 59, 30, 0.22); }
@@ -68,7 +68,7 @@
 .rating-bar { display: block; min-width: 0; width: 100%; }
 .rating-bar-track { position: relative; display: block; width: 100%; min-height: 24px; }
 .rating-bar-track::before { position: absolute; top: 50%; right: 0; left: 0; height: 4px; content: ''; background: #b86d3b; border-radius: 4px; box-shadow: inset 0 1px 1px rgba(113, 59, 30, 0.3); transform: translateY(-50%); }
-.rating-dot { position: absolute; top: 50%; left: calc(var(--rating-index) * 100% / (var(--rating-steps) - 1)); z-index: 1; display: grid; place-items: center; width: 9px; height: 9px; color: #713b1e; background: var(--orange-soft); border: 1.5px solid #713b1e; border-radius: 50%; box-shadow: 0 1px 2px rgba(113, 59, 30, 0.25); transform: translate(-50%, -50%); }
+.rating-dot { position: absolute; top: 50%; left: calc(var(--rating-index) * 100% / (var(--rating-steps) - 1)); z-index: 1; display: grid; place-items: center; width: 9px; height: 9px; color: #713b1e; font-family: sans-serif; background: var(--orange-soft); border: 1.5px solid #713b1e; border-radius: 50%; box-shadow: 0 1px 2px rgba(113, 59, 30, 0.25); transform: translate(-50%, -50%); }
 .rating-dot.is-active.is-middle { width: 21px; height: 21px; background: #00c853; border-color: #006b2c; box-shadow: 0 0 0 2px rgba(0, 200, 83, 0.3), 0 1px 2px rgba(113, 59, 30, 0.25); }
 .rating-dot.is-active.is-low, .rating-dot.is-active.is-high { border: 0; border-radius: 0; background: transparent; box-shadow: none; }
 .rating-dot.is-active::after { position: absolute; top: 50%; left: 50%; display: block; width: max-content; font-size: 2.53rem; font-weight: 900; line-height: 1; text-align: center; white-space: nowrap; transform: translate(-50%, -50%); }

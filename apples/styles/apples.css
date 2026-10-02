@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Hey Gorgeous';
+    src: url('../../fonts/Hey-Gorgeous.ttf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --ink: #34261d;
@@ -22,12 +29,13 @@ body {
     margin: 0;
     padding-top: 80px;
     color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Hey Gorgeous', sans-serif;
     background: linear-gradient(rgba(47, 28, 17, 0.16), rgba(47, 28, 17, 0.35)), url('../ApplePictures/bcgovphoto.jpg') center / cover fixed;
 }
 
 .apple-site { padding-top: 70px; }
 .apple-site .apple-guide { margin-top: 16px; }
+.apple-guide, .apple-page { font-size: 50%; }
 
 .apple-guide {
     width: min(1120px, calc(100% - 32px));
