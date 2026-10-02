@@ -36,14 +36,14 @@ function buildSidebar({ rootPath, activePage, pages }) {
   return sidebar;
 }
 
-function setupSidebar(rootPath, activePage) {
+function setupSidebar(rootPath, activePage, container = document.body) {
   const pages = [
     { id: 'index', label: 'Index', href: `${rootPath}index.html` },
     { id: 'apple-graph', label: 'Apple graph', href: `${rootPath}similarity-graph.html` }
   ];
 
   const sidebar = buildSidebar({ rootPath, activePage, pages });
-  document.body.appendChild(sidebar);
+  container.appendChild(sidebar);
 }
 
 function initializeApplePageBootstrap() {
@@ -72,6 +72,13 @@ function initializeApplePageBootstrap() {
       const existingSidebar = document.querySelector('.apple-page-sidebar');
       if (!existingSidebar) {
         setupSidebar('./', 'apple-graph');
+      }
+    }
+
+    if (document.body.dataset.page === 'apple-detail') {
+      const existingSidebar = document.querySelector('.apple-page-sidebar');
+      if (!existingSidebar) {
+        setupSidebar('../', null);
       }
     }
   }

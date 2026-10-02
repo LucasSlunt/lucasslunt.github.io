@@ -6,9 +6,10 @@
 	<title>{{ apple.name }} | Apples I Have Eaten</title>
 	<link rel="stylesheet" href="../../pageElementFiles/css/navbar.css">
 	<link rel="stylesheet" href="../styles/apples.css">
-	<link rel="stylesheet" href="../styles/apple-page.css?v=similar-apples">
+	<link rel="stylesheet" href="../styles/apple-page.css?v=centered-detail-v1">
 	<link rel="icon" type="image/x-icon" href="../../pageElementFiles/icon.png">
 	<script src="../../pageElementFiles/scripts/navBar.js"></script>
+	<script src="../scripts/app/sidebar.js" defer></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 			setupNavbar('../../', '#cee89d', '#e6f8bf');
@@ -16,7 +17,7 @@
 	</script>
 </head>
 
-<body>
+<body class="apple-site" data-page="apple-detail">
 	<main class="apple-page" aria-labelledby="apple-title">
 		<a class="back-link" href="../index.html">&larr; Back to all apples</a>
 
