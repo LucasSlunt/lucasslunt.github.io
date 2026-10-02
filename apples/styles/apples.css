@@ -35,7 +35,8 @@ body {
 
 .apple-site { padding-top: 70px; }
 .apple-site .apple-guide { margin-top: 16px; }
-.apple-guide, .apple-page { font-size: 50%; }
+.apple-guide { font-size: 50%; }
+.apple-page { font-size: 75%; }
 
 .apple-guide {
     width: min(1120px, calc(100% - 32px));
