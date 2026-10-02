@@ -39,7 +39,7 @@ function buildSidebar({ rootPath, activePage, pages }) {
 function setupSidebar(rootPath, activePage) {
   const pages = [
     { id: 'index', label: 'Index', href: `${rootPath}index.html` },
-    { id: 'similarity-graph', label: 'Similarity graph', href: `${rootPath}similarity-graph.html` }
+    { id: 'apple-graph', label: 'Apple graph', href: `${rootPath}similarity-graph.html` }
   ];
 
   const sidebar = buildSidebar({ rootPath, activePage, pages });
@@ -55,7 +55,7 @@ function initializeApplePageBootstrap() {
     if (document.body.dataset.page === 'apple-index') {
       setupNavbar('../', '#cee89d', '#e6f8bf');
     }
-    if (document.body.dataset.page === 'similarity-graph') {
+    if (document.body.dataset.page === 'apple-graph') {
       setupNavbar('../', '#cee89d', '#e6f8bf');
     }
   }
@@ -68,10 +68,10 @@ function initializeApplePageBootstrap() {
       }
     }
 
-    if (document.body.dataset.page === 'similarity-graph') {
+    if (document.body.dataset.page === 'apple-graph') {
       const existingSidebar = document.querySelector('.apple-page-sidebar');
       if (!existingSidebar) {
-        setupSidebar('./', 'similarity-graph');
+        setupSidebar('./', 'apple-graph');
       }
     }
   }
