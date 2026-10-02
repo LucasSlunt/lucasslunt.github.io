@@ -12,3 +12,5 @@ python apples/scripts/build/build.py
 ```
 
 This creates one page per apple in `apples/apple_pages/`. The build validates that every record has the fields used by the template and that its image exists in `apples/ApplePictures/AllApples`.
+
+Apple UI source files are organized under `apples/scripts/app/` and `apples/styles/`. The generated pages, source data, image assets, build scripts, and templates remain in their existing locations so published paths stay stable.
