@@ -164,8 +164,19 @@ select { min-width: 0; flex: 1; padding: 11px 34px 11px 13px; color: var(--ink);
 .similarity-graph-key { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; color: var(--muted-ink); font-size: 0.9rem; }
 .similarity-graph-key-dot { width: 14px; height: 14px; background: var(--pale-green); border: 2px solid #659f38; border-radius: 50%; }
 .similarity-network { height: min(78vh, 900px); min-height: 760px; overflow: hidden; background: #fffaf3; border: 1px solid rgba(112, 93, 77, 0.3); border-radius: 12px; box-shadow: inset 0 2px 12px rgba(75, 42, 20, 0.08); }
-.similarity-network .vis-navigation button { opacity: 0.78; }
-.similarity-status { min-height: 1.4em; margin: 12px 0 0; color: var(--muted-ink); font-size: 0.9rem; text-align: right; }
+.apple-graph-legend { max-width: 860px; margin: 22px auto 0; padding: 11px; color: #713b1e, 'Comic Sans MS', cursive; font-size: 1rem; background: var(--orange); border-radius: 12px; box-shadow: inset 4px 4px 0 rgba(255, 194, 119, 0.42), inset -5px -5px 0 rgba(157, 61, 12, 0.26), 0 7px 0 rgba(147, 57, 12, 0.22), 0 12px 16px rgba(122, 55, 16, 0.2); }
+.apple-graph-legend-inner { padding: 10px 14px; background: var(--orange-soft); border-radius: 6px; box-shadow: inset -6px -6px 0 rgba(255, 223, 166, 0.42), inset 6px 6px 0 rgba(180, 87, 27, 0.24), 0 3px 5px rgba(154, 68, 16, 0.16); }
+.apple-graph-legend-rule { margin: 0 0 12px; color: #713b1e; font-weight: 700; }
+.apple-graph-legend ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px; margin: 0; padding: 0; list-style: none; }
+.apple-graph-legend li { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.apple-graph-legend strong { color: #713b1e; }
+.legend-node-frame { display: grid; flex: 0 0 42px; width: 42px; height: 42px; place-items: center; }
+.legend-node { display: block; width: 26px; height: 26px; background: #ffb5cc; border: 3px solid #84c43b; border-radius: 13px; box-shadow: 0 0 8px rgba(49, 102, 34, 0.55); }
+.legend-node-texture { border-radius: 0; }
+.legend-node-sweetness { background: #ff5c98; }
+.legend-node-sourness { border-width: 9px; border-color: #a6e22b; box-shadow: none; }
+.legend-node-size { width: 38px; height: 38px; border-radius: 19px; box-shadow: none; }
+.legend-node-juiciness { box-shadow: 0 0 22px rgba(49, 102, 34, 0.84); }
 @keyframes row-arrive { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 700px) {
@@ -191,7 +202,7 @@ select { min-width: 0; flex: 1; padding: 11px 34px 11px 13px; color: var(--ink);
     .similarity-graph-panel { padding: 24px 12px 22px; }
     .similarity-graph-intro { align-items: start; flex-direction: column; gap: 12px; }
     .similarity-network { height: 72vh; min-height: 620px; }
-    .similarity-status { text-align: left; }
+    .apple-graph-legend ul { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }

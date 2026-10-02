@@ -1,13 +1,6 @@
 'use strict';
 
 const networkElement = document.querySelector('#similarity-network');
-const statusElement = document.querySelector('#similarity-status');
-
-function setStatus(message) {
-	if (statusElement) {
-		statusElement.textContent = message;
-	}
-}
 
 function interpolateColor(start, end, amount) {
 	const channel = (index) => Math.round(start[index] + (end[index] - start[index]) * amount);
@@ -110,7 +103,7 @@ async function loadSimilarityNetwork() {
 		);
 
 		const network = new vis.Network(networkElement, { nodes, edges }, {
-			interaction: { hover: true, navigationButtons: true, tooltipDelay: 120 },
+			interaction: { hover: true, tooltipDelay: 120 },
 			physics: { solver: 'forceAtlas2Based', forceAtlas2Based: { gravitationalConstant: -90, springLength: 150, springConstant: 0.04, avoidOverlap: 1 }, stabilization: { iterations: 350 } },
 			nodes: { chosen: true },
 			edges: { smooth: false }
@@ -121,9 +114,7 @@ async function loadSimilarityNetwork() {
 				window.location.href = `./apple_pages/${selectedNodes[0]}.html`;
 			}
 		});
-		setStatus(`${nodes.length} apple varieties connected by ${edges.length} similarities`);
 	} catch (error) {
-		setStatus('The apple network could not be loaded.');
 		console.error(error);
 	}
 }

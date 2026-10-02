@@ -6,6 +6,9 @@
 	<title>Apple graph | Apples I Have Eaten</title>
 	<link rel="stylesheet" href="../pageElementFiles/css/navbar.css">
 	<link rel="stylesheet" href="./styles/apples.css?v=fixed-sidebar-v5">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="../pageElementFiles/icon.png">
 	<script src="../pageElementFiles/scripts/navBar.js"></script>
 	<script src="./scripts/app/sidebar.js" defer></script>
@@ -19,7 +22,18 @@
 		</header>
 		<section class="similarity-graph-panel" aria-labelledby="graph-heading">
 			<div id="similarity-network" class="similarity-network" role="img" aria-label="Apple graph showing similar apples"></div>
-			<p id="similarity-status" class="similarity-status" aria-live="polite"></p>
+			<div class="apple-graph-legend" aria-label="Apple graph legend">
+				<div class="apple-graph-legend-inner">
+					<p class="apple-graph-legend-rule">Two nodes are connected if they are similar.</p>
+					<ul>
+						<li><span class="legend-node-frame" aria-hidden="true"><span class="legend-node legend-node-texture"></span></span><span><strong>Texture:</strong> Round corners indicate soft apples, while sharp corners indicate crispness.</span></li>
+						<li><span class="legend-node-frame" aria-hidden="true"><span class="legend-node legend-node-sweetness"></span></span><span><strong>Sweetness:</strong> Indicated by the inner colour; bright pink is sweet, while lighter pinks are less so.</span></li>
+						<li><span class="legend-node-frame" aria-hidden="true"><span class="legend-node legend-node-sourness"></span></span><span><strong>Sourness:</strong> Bright thick outlines indicate a strong sour taste, while thinner, darker outlines are for apples which are less tart.</span></li>
+						<li><span class="legend-node-frame" aria-hidden="true"><span class="legend-node legend-node-size"></span></span><span><strong>Size:</strong> Larger icons represent larger apples, and smaller icons represent smaller apples. </span></li>
+						<li><span class="legend-node-frame" aria-hidden="true"><span class="legend-node legend-node-juiciness"></span></span><span><strong>Juiciness:</strong> A strong shadow indicates a juicier apple, a lack of shadow reveals a dry apple.</span></li>
+					</ul>
+				</div>
+			</div>
 		</section>
 	</main>
 </body>
