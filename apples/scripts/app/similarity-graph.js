@@ -14,29 +14,63 @@ function interpolateColor(start, end, amount) {
 	return `rgb(${channel(0)}, ${channel(1)}, ${channel(2)})`;
 }
 
+function drawRoundedNode({ ctx, x, y, state }, nodeSize, texture, juiciness, colors, borderWidth) {
+	const halfSize = nodeSize / 2;
+	const radius = (1 - texture) * halfSize;
+	const fillColor = state.hover || state.selected ? '#fff0f5' : colors.background;
+	const borderColor = state.hover || state.selected ? '#65a52c' : colors.border;
+
+	ctx.save();
+	ctx.shadowColor = 'rgba(49, 102, 34, 0.84)';
+	ctx.shadowBlur = (4 + juiciness * 18) * 2;
+	ctx.shadowOffsetX = 0;
+	ctx.shadowOffsetY = 0;
+	ctx.beginPath();
+	ctx.moveTo(x - halfSize + radius, y - halfSize);
+	ctx.arcTo(x + halfSize, y - halfSize, x + halfSize, y + halfSize, radius);
+	ctx.arcTo(x + halfSize, y + halfSize, x - halfSize, y + halfSize, radius);
+	ctx.arcTo(x - halfSize, y + halfSize, x - halfSize, y - halfSize, radius);
+	ctx.arcTo(x - halfSize, y - halfSize, x + halfSize, y - halfSize, radius);
+	ctx.closePath();
+	ctx.fillStyle = fillColor;
+	ctx.fill();
+	ctx.shadowColor = 'transparent';
+	ctx.lineWidth = state.selected ? borderWidth * 2 : borderWidth;
+	ctx.strokeStyle = borderColor;
+	ctx.stroke();
+	ctx.restore();
+}
+
 function createNode(apple, vector) {
-	const nodeSize = 18 + vector.size * 30;
-	const isCircular = vector.texture === 0;
+	const nodeSize = (18 + vector.size * 30) * 1.5;
+	const colors = {
+		background: interpolateColor([255, 255, 255], [255, 92, 152], vector.sweetness),
+		border: interpolateColor([99, 157, 55], [166, 226, 43], vector.sourness)
+	};
+	const borderWidth = 1 + (vector.sourness+0.5)**2 * 9;
 
 	return {
 		id: apple.id,
 		title: apple.name,
 		label: '',
-		shape: isCircular ? 'circle' : 'box',
+		shape: 'custom',
+		ctxRenderer: (rendererOptions) => ({
+			drawNode: () => drawRoundedNode(rendererOptions, nodeSize, vector.texture, vector.juiciness, colors, borderWidth),
+			nodeDimensions: { width: nodeSize, height: nodeSize }
+		}),
 		widthConstraint: { minimum: nodeSize, maximum: nodeSize },
 		heightConstraint: { minimum: nodeSize, maximum: nodeSize },
-		borderRadius: (1 - vector.texture) * nodeSize / 2,
 		size: nodeSize / 2,
-		borderWidth: 1 + vector.sourness * 5,
+		borderWidth,
 		color: {
-			background: interpolateColor([255, 255, 255], [255, 92, 152], vector.sweetness),
-			border: interpolateColor([99, 157, 55], [166, 226, 43], vector.sourness),
+			background: colors.background,
+			border: colors.border,
 			highlight: { background: '#fff0f5', border: '#65a52c' }
 		},
 		shadow: {
 			enabled: vector.juiciness > 0,
-			color: 'rgba(49, 102, 34, 0.42)',
-			size: 4 + vector.juiciness * 18,
+			color: 'rgba(49, 102, 34, 0.84)',
+			size: (4 + vector.juiciness * 18) * 2,
 			x: 0,
 			y: 0
 		},
