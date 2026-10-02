@@ -20,6 +20,8 @@ GENERATED_DATA_DIR = APPLE_DIR / "data" / "generatedAppleData"
 VECTOR_FILE = GENERATED_DATA_DIR / "appleVectors.json"
 SIMILARITY_FILE = GENERATED_DATA_DIR / "appleSimilarities.json"
 RECOMMENDATIONS_FILE = GENERATED_DATA_DIR / "appleRecommendations.json"
+EDGES_FILE = GENERATED_DATA_DIR / "appleEdges.json"
+GRAPH_SIMILARITY_THRESHOLD = 0.3
 REQUIRED_FIELDS = {
     "id",
     "name",
@@ -71,6 +73,15 @@ def load_descriptions():
     return description_by_id
 
 
+def build_graph_edges(similarity_matrix, threshold=GRAPH_SIMILARITY_THRESHOLD):
+    return [
+        {"from": int(source_id), "to": int(target_id)}
+        for source_id, scores in similarity_matrix.items()
+        for target_id, score in scores.items()
+        if int(source_id) < int(target_id) and score <= threshold
+    ]
+
+
 def build(output_dir):
     apples = load_apples()
     descriptions = load_descriptions()
@@ -82,9 +93,11 @@ def build(output_dir):
     vectors = vectorize_apples(apples)
     similarity_matrix = calculate_similarity_matrix(apples, vectors)
     recommendations = find_similar_apples(apples, vectors, similarity_matrix)
+    graph_edges = build_graph_edges(similarity_matrix)
     VECTOR_FILE.write_text(json.dumps(vectors, indent=2) + "\n", encoding="utf-8")
     SIMILARITY_FILE.write_text(json.dumps(similarity_matrix, indent=2) + "\n", encoding="utf-8")
     RECOMMENDATIONS_FILE.write_text(json.dumps(recommendations, indent=2) + "\n", encoding="utf-8")
+    EDGES_FILE.write_text(json.dumps(graph_edges, indent=2) + "\n", encoding="utf-8")
 
     environment = Environment(
         loader=FileSystemLoader(TEMPLATE_DIR),

@@ -73,33 +73,30 @@ function createNode(apple, vector) {
 
 async function loadSimilarityNetwork() {
 	try {
-		const [applesResponse, vectorsResponse, similaritiesResponse] = await Promise.all([
+		const [applesResponse, vectorsResponse, edgesResponse] = await Promise.all([
 			fetch('./data/apples.json'),
 			fetch('./data/generatedAppleData/appleVectors.json'),
-			fetch('./data/generatedAppleData/appleSimilarities.json')
+			fetch('./data/generatedAppleData/appleEdges.json')
 		]);
 
-		if (!applesResponse.ok || !vectorsResponse.ok || !similaritiesResponse.ok) {
+		if (!applesResponse.ok || !vectorsResponse.ok || !edgesResponse.ok) {
 			throw new Error('Could not load apple data');
 		}
 
-		const [apples, vectors, similarities] = await Promise.all([
+		const [apples, vectors, graphEdges] = await Promise.all([
 			applesResponse.json(),
 			vectorsResponse.json(),
-			similaritiesResponse.json()
+			edgesResponse.json()
 		]);
-		const applesById = new Map(apples.map((apple) => [apple.id, apple]));
 		const nodes = new vis.DataSet(apples.map((apple) => createNode(apple, vectors[String(apple.id)])));
 		const edges = new vis.DataSet(
-			Object.entries(similarities).flatMap(([sourceId, scores]) => Object.entries(scores)
-				.filter(([targetId, score]) => Number(sourceId) < Number(targetId) && applesById.has(Number(targetId)) && score <= 0.3)
-				.map(([targetId]) => ({
-					from: Number(sourceId),
-					to: Number(targetId),
+			graphEdges.map(({ from, to }) => ({
+					from,
+					to,
 					color: { color: '#b8a99a', highlight: '#8b6a51', opacity: 0.72 },
 					width: 1.5,
 					selectionWidth: 3
-				})))
+				}))
 		);
 
 		const network = new vis.Network(networkElement, { nodes, edges }, {
